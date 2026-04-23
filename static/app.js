@@ -86,13 +86,21 @@ function getISOWeek(d) {
 
 let _currentAudio = null;
 let _ttsAbort = null;
+let _audioCtx = null;
+
+function _getAudioCtx() {
+  if (!_audioCtx || _audioCtx.state === "closed") {
+    _audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  }
+  if (_audioCtx.state === "suspended") _audioCtx.resume();
+  return _audioCtx;
+}
 
 async function speak(text) {
   if (!ttsEnabled) return;
   const clean = text.replace(/<[^>]+>/g, "").trim();
   if (!clean) return;
-  // Stop any playing audio and cancel any in-flight fetch
-  if (_currentAudio) { _currentAudio.pause(); _currentAudio = null; }
+  if (_currentAudio) { try { _currentAudio.stop(); } catch {} _currentAudio = null; }
   if (_ttsAbort) { _ttsAbort.abort(); }
   _ttsAbort = new AbortController();
   try {
@@ -103,11 +111,15 @@ async function speak(text) {
       signal: _ttsAbort.signal,
     });
     if (!res.ok) return;
-    const blob = await res.blob();
-    const url = URL.createObjectURL(blob);
-    _currentAudio = new Audio(url);
-    _currentAudio.play();
-    _currentAudio.onended = () => { URL.revokeObjectURL(url); _currentAudio = null; };
+    const arrayBuffer = await res.arrayBuffer();
+    const ctx = _getAudioCtx();
+    const buffer = await ctx.decodeAudioData(arrayBuffer);
+    const source = ctx.createBufferSource();
+    source.buffer = buffer;
+    source.connect(ctx.destination);
+    source.start(0);
+    _currentAudio = source;
+    source.onended = () => { _currentAudio = null; };
   } catch (e) { if (e?.name !== "AbortError") console.warn("TTS:", e); }
 }
 
@@ -120,7 +132,7 @@ function ttsOn() {
 
 function ttsOff() {
   ttsEnabled = false;
-  if (_currentAudio) { _currentAudio.pause(); _currentAudio = null; }
+  if (_currentAudio) { try { _currentAudio.stop(); } catch {} _currentAudio = null; }
   if (_ttsAbort) { _ttsAbort.abort(); _ttsAbort = null; }
   _setAccessBtn("tts", false);
   saveAccessibility();
@@ -897,10 +909,10 @@ async function showHint(q) {
 }
 
 // ── Sound Effects (Web Audio API — no files needed) ───────────────────────────
-let _audioCtx = null;
+let _sfxCtx = null;
 function _ctx() {
-  if (!_audioCtx) _audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-  return _audioCtx;
+  if (!_sfxCtx) _sfxCtx = new (window.AudioContext || window.webkitAudioContext)();
+  return _sfxCtx;
 }
 
 function playSound(type) {

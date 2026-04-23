@@ -14,7 +14,7 @@
   <style>
     /* Exam-specific styles */
     .exam-page { padding: 28px 32px; max-width: 720px; margin: 0 auto; }
-    @media (max-width: 767px) { .exam-page { padding: 16px; } }
+    @media (max-width: 767px) { .exam-page { padding: 16px; padding-bottom: 80px; } }
 
     .exam-timer {
       font-size: 2.2rem; font-weight: 800; text-align: center;
@@ -298,11 +298,6 @@
       });
       $("answer-key-toggle-btn").addEventListener("click", buildAnswerKey);
 
-      // Sidebar accessibility buttons
-        document.body.classList.toggle("dyslexia");
-      });
-        document.body.classList.toggle("large-text");
-      });
     }
 
     function show(sectionId) {
