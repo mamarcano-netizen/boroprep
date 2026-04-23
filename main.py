@@ -43,17 +43,6 @@ def login(req: LoginRequest, response: Response):
     response.set_cookie("session", token, max_age=30*24*3600, httponly=True, samesite="lax")
     return {"user": _safe_user(user)}
 
-@app.get("/auth/google")
-def google_login():
-    return RedirectResponse(auth.get_google_auth_url())
-
-@app.get("/auth/google/callback")
-def google_callback(code: str, response: Response):
-    user = auth.handle_google_callback(code)
-    token = db.create_session(user["id"])
-    resp = RedirectResponse("/dashboard")
-    resp.set_cookie("session", token, max_age=30*24*3600, httponly=True, samesite="lax")
-    return resp
 
 @app.post("/auth/logout")
 def logout(response: Response, session: Optional[str] = Cookie(None)):
