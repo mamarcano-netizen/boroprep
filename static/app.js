@@ -147,6 +147,7 @@ async function initDashboard() {
   // Check login status
   let user = null;
   try { user = await api("/auth/me"); } catch {}
+  if (!user?.id) user = null;
 
   if (!user) {
     // Auth form is already visible in HTML — just wire it up
