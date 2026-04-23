@@ -132,19 +132,18 @@ async function initDashboard() {
   setupAccessButtons();
   setupDarkMode();
 
-  // Check login status first
+  // Check login status
   let user = null;
   try { user = await api("/auth/me"); } catch {}
 
   if (!user) {
-    $("auth-section").classList.remove("hidden");
-    $("dashboard-section").classList.add("hidden");
+    // Auth form is already visible in HTML — just wire it up
     setupAuthForms();
-    // Default to signup mode for new visitors
-    $("auth-toggle")?.click();
+    $("auth-toggle")?.click(); // default to signup mode
     return;
   }
 
+  // Logged in — hide auth, show dashboard
   $("auth-section").classList.add("hidden");
   $("dashboard-section").classList.remove("hidden");
 
