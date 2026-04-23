@@ -132,14 +132,25 @@ async function initDashboard() {
   setupAccessButtons();
   setupDarkMode();
 
-  // Always show dashboard — login optional
+  // Check login status first
+  let user = null;
+  try { user = await api("/auth/me"); } catch {}
+
+  if (!user) {
+    $("auth-section").classList.remove("hidden");
+    $("dashboard-section").classList.add("hidden");
+    setupAuthForms();
+    // Default to signup mode for new visitors
+    $("auth-toggle")?.click();
+    return;
+  }
+
   $("auth-section").classList.add("hidden");
   $("dashboard-section").classList.remove("hidden");
 
   loadExamCountdown();
   loadSmartSuggestion();
 
-  // Load subjects for everyone
   loadSubjectGrid("subject-grid", subjectId => {
     window.location.href = `/study?subject=${subjectId}`;
   });
@@ -155,9 +166,6 @@ async function initDashboard() {
   loadDailyChallenge();
   loadWeeklyQuests();
   loadExamDateSetter();
-
-  let user = null;
-  try { user = await api("/auth/me"); } catch {}
 
   if (user) {
     $("user-name").textContent = user.name.split(" ")[0];
