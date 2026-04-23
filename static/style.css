@@ -679,7 +679,7 @@ body:has(.mobile-bottom-nav) .container { padding-bottom: 80px; }
 
 /* ── Install Banner ── */
 .install-banner {
-  position: fixed; bottom: 0; left: 0; right: 0; z-index: 300;
+  position: fixed; bottom: 60px; left: 0; right: 0; z-index: 300;
   background: linear-gradient(135deg, #4f46e5, #7c3aed);
   color: white; padding: 14px 16px;
   display: flex; align-items: center; gap: 12px;
