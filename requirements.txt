@@ -12,3 +12,4 @@ requests==2.32.3
 httpx
 python-multipart==0.0.9
 pywebpush
+psycopg2-binary==2.9.9
