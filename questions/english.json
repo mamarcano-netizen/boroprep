@@ -843,5 +843,453 @@
     ],
     "answer": "Exercise improves cardiovascular health, strengthens muscles, and boosts mood.",
     "explanation": "Effective revision replaces vague, weak language with specific details. The improved sentence names concrete benefits, showing rather than telling and avoiding the weak 'there are' construction."
+  },
+  {
+    "id": "ela_p1_1",
+    "subject": "english",
+    "topic": "Reading Comprehension",
+    "question": "Read the passage below and answer the question.\n\n\"Maya had failed her driving test three times. Each time, she returned home with the same burning shame \u2014 the kind that makes you want to disappear into the floor. But after the third failure, something shifted. She stopped seeing the test as a verdict on who she was and started seeing it as a skill she hadn't mastered yet. On her fourth attempt, she passed.\"\n\nWhat is the central idea of this passage?",
+    "choices": [
+      "Driving tests are unfairly difficult.",
+      "Failure can be transformed into motivation when viewed as a learning process.",
+      "Maya lacked confidence throughout her life.",
+      "Passing a test on the first attempt is always best."
+    ],
+    "answer": "Failure can be transformed into motivation when viewed as a learning process.",
+    "explanation": "The passage shows Maya reframing failure as something to learn from rather than a judgment of her worth."
+  },
+  {
+    "id": "ela_p1_2",
+    "subject": "english",
+    "topic": "Literary Devices",
+    "question": "In the passage about Maya's driving test, the phrase \"burning shame\" is an example of which literary device?",
+    "choices": [
+      "Simile",
+      "Metaphor",
+      "Imagery",
+      "Alliteration"
+    ],
+    "answer": "Imagery",
+    "explanation": "\"Burning shame\" uses sensory language (heat/physical sensation) to make the emotion vivid \u2014 that's imagery."
+  },
+  {
+    "id": "ela_p1_3",
+    "subject": "english",
+    "topic": "Vocabulary in Context",
+    "question": "In the passage about Maya, the word \"verdict\" most nearly means:",
+    "choices": [
+      "a driving route",
+      "a final judgment",
+      "an excuse",
+      "a test score"
+    ],
+    "answer": "a final judgment",
+    "explanation": "A verdict is a formal decision or judgment, used here to mean Maya had been treating the test result as a definitive judgment of her worth."
+  },
+  {
+    "id": "ela_p2_1",
+    "subject": "english",
+    "topic": "Reading Comprehension",
+    "question": "Read the passage below and answer the question.\n\n\"The Bronx River, once so polluted that no living thing could survive in it, now supports over 30 species of fish. Decades of community cleanup efforts, led largely by teenagers from the South Bronx, transformed what had been an open sewer into a place where children swim and herons hunt. The river's revival is proof that ecosystems can recover \u2014 but only when people choose to act.\"\n\nAccording to the passage, what was the most important factor in the Bronx River's recovery?",
+    "choices": [
+      "Government environmental regulations",
+      "Natural rainfall and flooding",
+      "Community action, especially from young people",
+      "Introduction of new fish species"
+    ],
+    "answer": "Community action, especially from young people",
+    "explanation": "The passage credits 'community cleanup efforts, led largely by teenagers from the South Bronx' as the driving force behind the river's revival."
+  },
+  {
+    "id": "ela_p2_2",
+    "subject": "english",
+    "topic": "Author's Purpose",
+    "question": "In the Bronx River passage, what is the author's primary purpose?",
+    "choices": [
+      "To warn readers about water pollution dangers",
+      "To inspire action by showing that environmental recovery is possible",
+      "To criticize the government for neglecting the river",
+      "To describe the biology of river ecosystems"
+    ],
+    "answer": "To inspire action by showing that environmental recovery is possible",
+    "explanation": "The final sentence \u2014 'proof that ecosystems can recover \u2014 but only when people choose to act' \u2014 signals the author's purpose is to motivate readers."
+  },
+  {
+    "id": "ela_p2_3",
+    "subject": "english",
+    "topic": "Literary Devices",
+    "question": "In the Bronx River passage, 'herons hunt' is an example of:",
+    "choices": [
+      "Hyperbole",
+      "Alliteration",
+      "Personification",
+      "Irony"
+    ],
+    "answer": "Alliteration",
+    "explanation": "Alliteration is the repetition of the same consonant sound at the beginning of nearby words. Both 'herons' and 'hunt' begin with the 'h' sound."
+  },
+  {
+    "id": "ela_p3_1",
+    "subject": "english",
+    "topic": "Argument & Evidence",
+    "question": "Read the passage below and answer the question.\n\n\"Schools should eliminate standardized tests entirely. These tests measure a student's ability to take a test, not their intelligence or potential. Students from wealthier families can afford test prep courses, creating an uneven playing field. Meanwhile, creative thinkers, strong leaders, and gifted artists are penalized because their talents don't fit into a bubble sheet.\"\n\nWhich sentence best states the author's central claim?",
+    "choices": [
+      "Standardized tests are expensive to take.",
+      "Standardized tests are unfair and should be eliminated.",
+      "Schools need more funding for test preparation.",
+      "Students who take tests do better in college."
+    ],
+    "answer": "Standardized tests are unfair and should be eliminated.",
+    "explanation": "The opening sentence states the claim directly: 'Schools should eliminate standardized tests entirely,' supported by arguments about inequality and limited scope."
+  },
+  {
+    "id": "ela_p3_2",
+    "subject": "english",
+    "topic": "Argument & Evidence",
+    "question": "In the standardized testing passage, which piece of evidence best supports the author's argument about unfairness?",
+    "choices": [
+      "Creative thinkers are penalized.",
+      "Wealthier students can afford test prep courses, giving them an advantage.",
+      "Tests measure test-taking ability.",
+      "Bubble sheets are outdated technology."
+    ],
+    "answer": "Wealthier students can afford test prep courses, giving them an advantage.",
+    "explanation": "This is the most concrete, specific evidence \u2014 it identifies an actual systemic inequality rather than a general opinion."
+  },
+  {
+    "id": "ela_p3_3",
+    "subject": "english",
+    "topic": "Vocabulary in Context",
+    "question": "In the standardized testing passage, 'penalized' most nearly means:",
+    "choices": [
+      "rewarded",
+      "ignored",
+      "punished or disadvantaged",
+      "tested"
+    ],
+    "answer": "punished or disadvantaged",
+    "explanation": "To penalize means to put at a disadvantage or punish. The passage says creative students are penalized \u2014 meaning they are unfairly disadvantaged by the test format."
+  },
+  {
+    "id": "ela_p4_1",
+    "subject": "english",
+    "topic": "Reading Comprehension",
+    "question": "Read the passage below and answer the question.\n\n\"Shirley Chisholm became the first Black woman elected to Congress in 1968. In 1972, she ran for president \u2014 not because she thought she could win, but to prove that the door was open. 'I ran because somebody had to do it first,' she later said. Her campaign forced the Democratic Party to confront its own exclusions, and she received 152 delegate votes at the national convention.\"\n\nWhy did Chisholm run for president, according to the passage?",
+    "choices": [
+      "She believed she would win the election.",
+      "She wanted to earn delegate votes.",
+      "She ran to open doors for others by being the first.",
+      "She was asked to run by the Democratic Party."
+    ],
+    "answer": "She ran to open doors for others by being the first.",
+    "explanation": "Chisholm's own quote \u2014 'somebody had to do it first' \u2014 and the passage's framing make clear she ran to break barriers, not because she expected to win."
+  },
+  {
+    "id": "ela_p4_2",
+    "subject": "english",
+    "topic": "Inference",
+    "question": "Based on the Chisholm passage, what can the reader infer about the Democratic Party in 1972?",
+    "choices": [
+      "It fully supported Chisholm's candidacy.",
+      "It was diverse and inclusive.",
+      "It had not fully included Black women in its leadership.",
+      "It had no other presidential candidates."
+    ],
+    "answer": "It had not fully included Black women in its leadership.",
+    "explanation": "The passage says her campaign 'forced the Democratic Party to confront its own exclusions' \u2014 implying the party had been excluding people like Chisholm."
+  },
+  {
+    "id": "ela_p4_3",
+    "subject": "english",
+    "topic": "Literary Devices",
+    "question": "In the Chisholm passage, the phrase 'prove that the door was open' uses which literary device?",
+    "choices": [
+      "Simile",
+      "Metaphor",
+      "Onomatopoeia",
+      "Hyperbole"
+    ],
+    "answer": "Metaphor",
+    "explanation": "A door being 'open' is a metaphor for opportunity and access. The author uses it to mean Chisholm wanted to show that political opportunities existed for Black women."
+  },
+  {
+    "id": "ela_p5_1",
+    "subject": "english",
+    "topic": "Reading Comprehension",
+    "question": "Read the passage below and answer the question.\n\n\"Sleep deprivation among teenagers has reached epidemic levels. Studies show that 73% of high school students get fewer than the recommended 8-10 hours per night. Chronic sleep loss impairs memory formation, slows reaction time, and increases rates of anxiety and depression. Despite this, most U.S. schools still begin before 8 a.m. \u2014 a schedule designed for adult workers, not developing brains.\"\n\nWhat conclusion does the author draw from the evidence presented?",
+    "choices": [
+      "Teenagers are naturally lazy and sleep too much.",
+      "Schools should start later to match teenagers' biological needs.",
+      "Sleep research is unreliable.",
+      "Teenagers should go to bed earlier to solve the problem."
+    ],
+    "answer": "Schools should start later to match teenagers' biological needs.",
+    "explanation": "The evidence builds toward the implied conclusion: early school starts contradict what science says about teen sleep needs."
+  },
+  {
+    "id": "ela_p5_2",
+    "subject": "english",
+    "topic": "Vocabulary in Context",
+    "question": "In the sleep deprivation passage, 'chronic' most nearly means:",
+    "choices": [
+      "occasional",
+      "sudden and severe",
+      "persistent and long-lasting",
+      "medically treated"
+    ],
+    "answer": "persistent and long-lasting",
+    "explanation": "Chronic describes something that continues over a long time. Chronic sleep loss means ongoing, repeated sleep deprivation \u2014 not a one-time event."
+  },
+  {
+    "id": "ela_p5_3",
+    "subject": "english",
+    "topic": "Author's Purpose",
+    "question": "The author of the sleep deprivation passage includes the statistic '73% of high school students' primarily to:",
+    "choices": [
+      "entertain readers with surprising facts",
+      "show the problem is widespread and serious",
+      "prove that teenagers need less sleep",
+      "criticize parents for bad bedtime rules"
+    ],
+    "answer": "show the problem is widespread and serious",
+    "explanation": "Statistics are used to establish scale and credibility. The 73% figure shows this isn't a minor issue \u2014 it affects the majority of students."
+  },
+  {
+    "id": "ela_gram_1",
+    "subject": "english",
+    "topic": "Grammar & Usage",
+    "question": "Which sentence uses correct subject-verb agreement?",
+    "choices": [
+      "The group of students are going on a trip.",
+      "Neither the teacher nor the students was ready.",
+      "Each of the answers are correct.",
+      "The data shows a clear trend."
+    ],
+    "answer": "The data shows a clear trend.",
+    "explanation": "'Data' is treated as singular in formal writing. 'The group' takes singular 'is.' 'Neither/nor' uses the verb that agrees with the nearest subject ('students' \u2192 'were'). 'Each' takes singular 'is.'"
+  },
+  {
+    "id": "ela_gram_2",
+    "subject": "english",
+    "topic": "Grammar & Usage",
+    "question": "Which sentence contains a misplaced modifier?",
+    "choices": [
+      "Running quickly, Marcus reached the finish line.",
+      "She only eats vegetables on Mondays.",
+      "The dog that bit the mailman was brown.",
+      "After studying all night, he passed the exam."
+    ],
+    "answer": "She only eats vegetables on Mondays.",
+    "explanation": "'Only' is misplaced \u2014 it should be near what it modifies. The intended meaning is likely 'She eats only vegetables on Mondays' (she eats nothing but vegetables that day)."
+  },
+  {
+    "id": "ela_gram_3",
+    "subject": "english",
+    "topic": "Grammar & Usage",
+    "question": "Choose the sentence that uses the semicolon correctly.",
+    "choices": [
+      "I wanted to go; but it was raining.",
+      "She studied hard; she passed the test.",
+      "He brought snacks; and drinks to the party.",
+      "They ran; quickly down the street."
+    ],
+    "answer": "She studied hard; she passed the test.",
+    "explanation": "A semicolon connects two independent clauses. 'She studied hard' and 'she passed the test' are both complete sentences that are closely related."
+  },
+  {
+    "id": "ela_gram_4",
+    "subject": "english",
+    "topic": "Grammar & Usage",
+    "question": "Which sentence is written in the active voice?",
+    "choices": [
+      "The essay was written by the student.",
+      "The ball was kicked by Marcus.",
+      "The teacher graded the tests.",
+      "The decision was made by the committee."
+    ],
+    "answer": "The teacher graded the tests.",
+    "explanation": "Active voice: subject performs the action (teacher graded). Passive voice: subject receives the action (essay was written by)."
+  },
+  {
+    "id": "ela_p6_1",
+    "subject": "english",
+    "topic": "Poetry",
+    "question": "Read the poem excerpt below and answer the question.\n\n\"I am not resigned\nUnder the wide and starry sky,\nDig the grave and let me lie.\nGlad did I live and gladly die,\nAnd I laid me down with a will.\"\n\u2014 adapted from R.L. Stevenson, 'Requiem'\n\nWhat is the speaker's attitude toward death?",
+    "choices": [
+      "Fearful and reluctant",
+      "Peaceful and accepting",
+      "Angry and resistant",
+      "Confused and uncertain"
+    ],
+    "answer": "Peaceful and accepting",
+    "explanation": "The speaker says they lived and died 'gladly' and 'laid me down with a will' \u2014 showing acceptance and even willingness, not fear or resistance."
+  },
+  {
+    "id": "ela_p6_2",
+    "subject": "english",
+    "topic": "Poetry",
+    "question": "In the poem excerpt, 'Under the wide and starry sky' is an example of:",
+    "choices": [
+      "Personification",
+      "Imagery",
+      "Hyperbole",
+      "Allusion"
+    ],
+    "answer": "Imagery",
+    "explanation": "The phrase creates a visual picture \u2014 a vast open sky full of stars \u2014 appealing to the reader's senses."
+  },
+  {
+    "id": "ela_p7_1",
+    "subject": "english",
+    "topic": "Argument & Evidence",
+    "question": "Read the passage below.\n\n\"Social media companies must be held legally responsible for the mental health crisis among teenagers. Research shows a direct link between daily social media use and rising rates of anxiety and depression in teens. These companies profit from algorithms designed to maximize screen time \u2014 they know the harm their products cause and choose profits over people. Regulation is not optional; it is necessary.\"\n\nWhich of the following is an opinion stated as fact in the passage?",
+    "choices": [
+      "Research shows a link between social media use and depression.",
+      "Social media companies profit from their algorithms.",
+      "Regulation is not optional; it is necessary.",
+      "Teens use social media daily."
+    ],
+    "answer": "Regulation is not optional; it is necessary.",
+    "explanation": "Whether regulation is 'necessary' is a value judgment \u2014 an opinion. The author states it as if it's an obvious fact, but reasonable people can disagree."
+  },
+  {
+    "id": "ela_p7_2",
+    "subject": "english",
+    "topic": "Argument & Evidence",
+    "question": "Which type of appeal does the phrase 'they know the harm their products cause and choose profits over people' primarily use?",
+    "choices": [
+      "Logos (logic)",
+      "Ethos (credibility)",
+      "Pathos (emotion)",
+      "Statistical evidence"
+    ],
+    "answer": "Pathos (emotion)",
+    "explanation": "The phrase is designed to make readers feel angry at companies for knowingly harming children for profit \u2014 that's an emotional appeal (pathos)."
+  },
+  {
+    "id": "ela_skill_1",
+    "subject": "english",
+    "topic": "Reading Comprehension",
+    "question": "When an author uses the word 'however' at the start of a sentence, the reader should expect:",
+    "choices": [
+      "an example of the previous idea",
+      "a continuation of the same argument",
+      "a contrast or counterpoint to what was just said",
+      "a definition of a key term"
+    ],
+    "answer": "a contrast or counterpoint to what was just said",
+    "explanation": "'However' is a transition word that signals contrast \u2014 the sentence will go in a different or opposite direction from the previous one."
+  },
+  {
+    "id": "ela_skill_2",
+    "subject": "english",
+    "topic": "Reading Comprehension",
+    "question": "What is the difference between a theme and a main idea?",
+    "choices": [
+      "There is no difference \u2014 they mean the same thing.",
+      "A theme is a universal life lesson; a main idea is the specific topic of a text.",
+      "A theme is only found in poems; a main idea is only found in essays.",
+      "A main idea is one sentence; a theme is one word."
+    ],
+    "answer": "A theme is a universal life lesson; a main idea is the specific topic of a text.",
+    "explanation": "Main idea: what the text is specifically about (e.g., 'Maya failed her driving test three times'). Theme: the broader lesson (e.g., 'perseverance leads to success')."
+  },
+  {
+    "id": "ela_skill_3",
+    "subject": "english",
+    "topic": "Vocabulary in Context",
+    "question": "Which context clue strategy would be most helpful to determine the meaning of an unfamiliar word in a passage?",
+    "choices": [
+      "Skip the word and hope the sentence still makes sense.",
+      "Look for surrounding words and sentences that hint at meaning.",
+      "Assume the word means something similar to a word it looks like.",
+      "Count the syllables to guess the word's difficulty level."
+    ],
+    "answer": "Look for surrounding words and sentences that hint at meaning.",
+    "explanation": "Context clues \u2014 nearby words, examples, and contrasts \u2014 are the most reliable strategy for figuring out unfamiliar vocabulary while reading."
+  },
+  {
+    "id": "ela_skill_4",
+    "subject": "english",
+    "topic": "Literary Devices",
+    "question": "\"The classroom was a zoo.\" This sentence is an example of:",
+    "choices": [
+      "Simile",
+      "Metaphor",
+      "Personification",
+      "Hyperbole"
+    ],
+    "answer": "Metaphor",
+    "explanation": "A metaphor directly states that one thing IS another. 'The classroom was a zoo' doesn't say it's like a zoo \u2014 it says it is one."
+  },
+  {
+    "id": "ela_skill_5",
+    "subject": "english",
+    "topic": "Literary Devices",
+    "question": "\"The thunder grumbled like an old man waking up.\" This sentence contains:",
+    "choices": [
+      "Metaphor and personification",
+      "Simile and personification",
+      "Alliteration and imagery",
+      "Hyperbole and metaphor"
+    ],
+    "answer": "Simile and personification",
+    "explanation": "It's a simile (uses 'like' to compare thunder to an old man) AND personification (gives thunder a human quality \u2014 grumbling)."
+  },
+  {
+    "id": "ela_skill_6",
+    "subject": "english",
+    "topic": "Grammar & Usage",
+    "question": "Which sentence contains a comma splice (two independent clauses incorrectly joined by only a comma)?",
+    "choices": [
+      "I went to the store, and I bought milk.",
+      "She was tired, she went to bed.",
+      "After the game, we celebrated.",
+      "Although it was raining, we still played."
+    ],
+    "answer": "She was tired, she went to bed.",
+    "explanation": "A comma splice joins two complete sentences with just a comma. Fix it with a semicolon, a period, or a conjunction: 'She was tired, so she went to bed.'"
+  },
+  {
+    "id": "ela_p8_1",
+    "subject": "english",
+    "topic": "Reading Comprehension",
+    "question": "Read the passage below.\n\n\"Artificial intelligence is already writing news articles, passing the bar exam, and diagnosing cancer from medical scans. Supporters argue AI will free humans from repetitive work, allowing us to focus on creativity and connection. Critics worry AI will displace millions of workers, widen inequality, and make decisions that should belong to humans. The truth likely lies somewhere in between \u2014 but that middle ground must be shaped intentionally, not accidentally.\"\n\nWhat is the author's overall perspective on AI?",
+    "choices": [
+      "AI is entirely dangerous and should be banned.",
+      "AI is beneficial and needs no oversight.",
+      "AI presents both opportunities and risks that require careful management.",
+      "AI will definitely replace all human workers."
+    ],
+    "answer": "AI presents both opportunities and risks that require careful management.",
+    "explanation": "The author presents both sides and concludes the outcome 'must be shaped intentionally' \u2014 showing a balanced view that requires deliberate action."
+  },
+  {
+    "id": "ela_p8_2",
+    "subject": "english",
+    "topic": "Vocabulary in Context",
+    "question": "In the AI passage, 'displace' most nearly means:",
+    "choices": [
+      "train and improve",
+      "remove from a position or role",
+      "confuse or mislead",
+      "relocate to another country"
+    ],
+    "answer": "remove from a position or role",
+    "explanation": "To displace workers means to remove them from their jobs, typically by replacing them with something else (in this case, AI)."
+  },
+  {
+    "id": "ela_p8_3",
+    "subject": "english",
+    "topic": "Author's Purpose",
+    "question": "The final sentence of the AI passage \u2014 'that middle ground must be shaped intentionally, not accidentally' \u2014 serves to:",
+    "choices": [
+      "summarize the history of AI development",
+      "call readers to thoughtful action regarding AI policy",
+      "prove that AI is more beneficial than harmful",
+      "criticize scientists who develop AI"
+    ],
+    "answer": "call readers to thoughtful action regarding AI policy",
+    "explanation": "The word 'must' makes this a call to action. The author is urging readers/society to make deliberate choices about AI rather than letting outcomes happen by default."
   }
 ]

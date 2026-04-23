@@ -2,7 +2,7 @@
   {
     "id": "lsb_2",
     "subject": "life_science_biology",
-    "topic": "General",
+    "topic": "Cell Biology",
     "question": "Which statement describes how a process that occurs at X within the models results in the\nspecialized cells seen in the fetus\u2019s leg?",
     "choices": [
       "A fertilized egg cell divides into muscle and bone cells with different DNA.",
@@ -16,7 +16,7 @@
   {
     "id": "lsb_4",
     "subject": "life_science_biology",
-    "topic": "General",
+    "topic": "Cell Biology",
     "question": "A researcher wants to determine the cause of the amount of variation seen between identical\ntwins at 50 years old when compared to twins at 3 years old. Which question should they ask to\nhelp them determine the cause?",
     "choices": [
       "How does the number of methyl groups attached to the DNA of 50-year-olds compare\nto 3-year-olds?",
@@ -30,7 +30,7 @@
   {
     "id": "lsb_5",
     "subject": "life_science_biology",
-    "topic": "General",
+    "topic": "Genetics",
     "question": "One of the 50-year-old twins, twin C, has been identifi ed as being at risk for developing diabetes\nbecause a specifi c gene has been methylated. The same gene in twin D does not show signs of\nthis change. How might genetic technology be used to prevent twin C from developing diabetes\nlater in life?",
     "choices": [
       "Use splicing enzymes to remove the methyl groups on the amino acid sequence of\nthe gene that causes diabetes.",
@@ -44,7 +44,7 @@
   {
     "id": "lsb_6",
     "subject": "life_science_biology",
-    "topic": "General",
+    "topic": "Genetics",
     "question": "Which question would help a student gather information to correctly show the role of DNA in\nthe passing of traits from the original Hydrilla plant to the offspring that grow when broken off?",
     "choices": [
       "Do the new Hydrilla offspring have traits identical to the original because they\nreceived half of their DNA from each of their parent plants?",
@@ -58,7 +58,7 @@
   {
     "id": "lsb_8",
     "subject": "life_science_biology",
-    "topic": "General",
+    "topic": "Cell Biology",
     "question": "Which statement provides evidence from the mathematical representations provided and\nsupports the claim that Hydrilla\u2019s ability to effi ciently capture resources will have negative\neffects on the biodiversity of the waterway in which they live?",
     "choices": [
       "Hydrilla can produce more branches in fi ve weeks than native pondweed, resulting\nin more oxygen being produced by cellular respiration. This causes a decrease in the\nnumber of other organisms found in the ecosystem.",
@@ -72,7 +72,7 @@
   {
     "id": "lsb_9",
     "subject": "life_science_biology",
-    "topic": "General",
+    "topic": "Ecology",
     "question": "Which solution would best control the Hydrilla population in bodies of water without harming\nnative populations?",
     "choices": [
       "recruiting volunteers to remove pondweed out of a local waterway before fi shing season",
@@ -86,7 +86,7 @@
   {
     "id": "lsb_10",
     "subject": "life_science_biology",
-    "topic": "General",
+    "topic": "Ecology",
     "question": "Which statement provides evidence that supports the claim that the complex interactions of\nbottom-up and top-down cascading play a role in maintaining relatively consistent numbers of\norganisms in a stable ecosystem?",
     "choices": [
       "When both pike and phytoplankton populations increase in number, the ecosystem\nremains stable, indicating that all the organisms survive.",
@@ -100,7 +100,7 @@
   {
     "id": "lsb_11",
     "subject": "life_science_biology",
-    "topic": "General",
+    "topic": "Ecology",
     "question": "Which statement best uses the process of carbon cycling in the biosphere to explain why\nphytoplankton function as a keystone species for this ecosystem?",
     "choices": [
       "The phytoplankton return carbon to the atmosphere in the form of carbon dioxide by\nphotosynthesis, and that carbon can be consumed by other organisms.",
@@ -114,7 +114,7 @@
   {
     "id": "lsb_13",
     "subject": "life_science_biology",
-    "topic": "General",
+    "topic": "Ecology",
     "question": "Which statement would provide evidence that increased elk survival in Yellowstone is related to\nherd behavior?",
     "choices": [
       "The GPS information showed that larger elk herds had identical survival rates to elk\ntraveling alone.",
@@ -128,7 +128,7 @@
   {
     "id": "lsb_14",
     "subject": "life_science_biology",
-    "topic": "General",
+    "topic": "Cell Biology",
     "question": "Which statement supports the claim that the structure of DNA determines the structure of the\nFel d 1 protein molecule produced by cat cells?",
     "choices": [
       "Proteins within the DNA of cat cells store the code for specifi c amino acids that are\nrequired to produce Fel d 1.",
@@ -142,7 +142,7 @@
   {
     "id": "lsb_16",
     "subject": "life_science_biology",
-    "topic": "General",
+    "topic": "Cell Biology",
     "question": "Which statement explains the variation shown by week 10 in the amount of Fel d 1 per gram of\nhair in the cats in Group A?",
     "choices": [
       "The antibodies in the food acted as a genetic factor by preventing the cells of the\nsalivary glands in the cat from producing as much Fel d 1.",
@@ -156,7 +156,7 @@
   {
     "id": "lsb_17",
     "subject": "life_science_biology",
-    "topic": "General",
+    "topic": "Cell Biology",
     "question": "Which claim regarding the genetic makeup of the kittens produced by this technology is\nsupported by the information provided?",
     "choices": [
       "All cells within the bodies of the kittens will contain the genetic change, so it can be\npassed on to future offspring.",
@@ -170,7 +170,7 @@
   {
     "id": "lsb_19",
     "subject": "life_science_biology",
-    "topic": "General",
+    "topic": "Ecology",
     "question": "Using evidence from the graph, which statement best explains the resistance ratio of diamondback\nmoths?",
     "choices": [
       "The proportion of the population that was resistant to butane-fi pronil decreased over\ntime because moths with resistance are less likely to survive and reproduce.",
@@ -184,7 +184,7 @@
   {
     "id": "lsb_21",
     "subject": "life_science_biology",
-    "topic": "General",
+    "topic": "Genetics",
     "question": "Which statement best explains the variation in mortality observed in the two groups of\ndiamondback moth larvae?",
     "choices": [
       "Group 1 larvae most likely have the trait for resistance to Bt toxins because the\nmortality is higher.",
@@ -198,7 +198,7 @@
   {
     "id": "lsb_26",
     "subject": "life_science_biology",
-    "topic": "General",
+    "topic": "Genetics",
     "question": "Which evidence best supports the claim that a mutation would change the structure of insulin?",
     "choices": [
       "If the instructions that code for Cys change, then a different amino acid might be\nincluded in the amino acid chain, decreasing the ability to form a disulfi de bridge,\nwhich will change the structure of insulin.",
@@ -212,7 +212,7 @@
   {
     "id": "lsb_28",
     "subject": "life_science_biology",
-    "topic": "General",
+    "topic": "Ecology",
     "question": "Which solution could a community use to most effectively reduce the impact of human activity\non the honeybee populations?",
     "choices": [
       "Apply herbicides to limit the growth of plants that compete with bee food sources.",
@@ -226,7 +226,7 @@
   {
     "id": "lsb_29",
     "subject": "life_science_biology",
-    "topic": "General",
+    "topic": "Ecology",
     "question": "Based on the information above, how does the waggle dance of an individual bee have a benefi cial\neffect for the hive?",
     "choices": [
       "Being able to communicate through the waggle dance allows bees to fi nd other\nhives and share resources with them.",
@@ -254,7 +254,7 @@
   {
     "id": "lsb_33",
     "subject": "life_science_biology",
-    "topic": "General",
+    "topic": "Genetics",
     "question": "Which line of empirical evidence supports the claim that African baboons share a common\nancestor?",
     "choices": [
       "Changes in mtDNA affected skull shape over generations.",
@@ -268,7 +268,7 @@
   {
     "id": "lsb_34",
     "subject": "life_science_biology",
-    "topic": "General",
+    "topic": "Epigenetics",
     "question": "Which evidence best explains how the evolution of African baboons is the result of an\nenvironmental factor?",
     "choices": [
       "The facial hair of P. papio best protects it from desert sandstorms.",
@@ -282,7 +282,7 @@
   {
     "id": "lsb_36",
     "subject": "life_science_biology",
-    "topic": "General",
+    "topic": "Genetics",
     "question": "Which statement provides evidence that explains how an environmental factor could cause a\nchange in gene frequency for the likelihood of social behaviors in African baboons?",
     "choices": [
       "When average rainfall increases, increased grooming behavior decreases the probability\nof passing genes to offspring for the likelihood of participating in social grooming.",
@@ -296,7 +296,7 @@
   {
     "id": "lsb_37",
     "subject": "life_science_biology",
-    "topic": "General",
+    "topic": "Biochemistry",
     "question": "Using the model, which statement best identifi es the energy conversion that occurs in the\npitcher plant?",
     "choices": [
       "The chemical energy in carbon dioxide is transformed into light energy for glucose\nand oxygen.",
@@ -324,7 +324,7 @@
   {
     "id": "lsb_39",
     "subject": "life_science_biology",
-    "topic": "General",
+    "topic": "Biochemistry",
     "question": "How does this evidence support the scientists\u2019 claim that increased nitrogen makes the pitcher\nplants more effective at cycling carbon?",
     "choices": [
       "Pitcher plants that have suffi cient nitrogen in their soil have less of a need to undergo\nphotosynthesis, so they produce fewer pitchers.",
@@ -338,7 +338,7 @@
   {
     "id": "lsb_41",
     "subject": "life_science_biology",
-    "topic": "General",
+    "topic": "Cell Biology",
     "question": "Which question would help scientists understand why the spotted zebra\u2019s coat pattern is different\nfrom its striped parents?",
     "choices": [
       "Are the pattern differences in the zebras the result of heritable variations in DNA\nbetween parents and their offspring?",
@@ -352,7 +352,7 @@
   {
     "id": "lsb_43",
     "subject": "life_science_biology",
-    "topic": "General",
+    "topic": "Epigenetics",
     "question": "The researchers claimed that an environmental factor may have affected the evolution of the\nzebra\u2019s striped coat. Which row of the table uses evidence gathered by the researchers to justify\nwhy their claim is correct or incorrect?\nRow Claim Reasoning\nFlies are more attracted to the impala\u2019s solid coat, resulting in",
     "choices": [
       "Correct more fl ies biting the zebras, and decreasing the zebras\u2019 chance of\nsurviving and reproducing.\nStripes reduce the number of biting fl ies landing on zebras,",
@@ -366,7 +366,7 @@
   {
     "id": "lsb_44",
     "subject": "life_science_biology",
-    "topic": "General",
+    "topic": "Genetics",
     "question": "Which statement best uses the data gathered by the researchers to predict the variation and\ndistribution of coat patterns in future generations of plains zebras?",
     "choices": [
       "The probability of fi nding zebras with varied coat patterns will be highest in\nLake Mburo National Park because the population there is small and isolated.",

@@ -2,7 +2,7 @@
   {
     "id": "ess_3",
     "subject": "earth_space_sciences",
-    "topic": "General",
+    "topic": "Big Bang",
     "question": "How does the data in the graph support an explanation of the Big Bang theory?",
     "choices": [
       "Galaxies farther from Earth have greater recessional velocities, indicating an\nexpanding universe.",
@@ -16,7 +16,7 @@
   {
     "id": "ess_4",
     "subject": "earth_space_sciences",
-    "topic": "General",
+    "topic": "Big Bang",
     "question": "Which statement correctly explains the difference in the elements composing the two stars and\ncompares the lifespans of these two stars?",
     "choices": [
       "In Betelgeuse, helium has fused into heavier elements, and Betelgeuse has a shorter\nlifespan than the Sun.",
@@ -30,7 +30,7 @@
   {
     "id": "ess_7",
     "subject": "earth_space_sciences",
-    "topic": "General",
+    "topic": "Weather & Climate",
     "question": "Other than ocean currents, what other factor determines the global circulation of these plastic\ntoys?",
     "choices": [
       "stratosphere convection",
@@ -44,7 +44,7 @@
   {
     "id": "ess_8",
     "subject": "earth_space_sciences",
-    "topic": "General",
+    "topic": "Oceanography",
     "question": "Which statement explains how the removal of plastic bags in the GPGP will stabilize biodiversity\nin the area?",
     "choices": [
       "Decreasing the number of bags in the GPGP will cause the jellyfi sh population to\nincrease because the turtles will eat more plastic bags.",
@@ -58,7 +58,7 @@
   {
     "id": "ess_9",
     "subject": "earth_space_sciences",
-    "topic": "General",
+    "topic": "Weathering & Erosion",
     "question": "A student makes a claim that the river cleanup method is a more effective design solution than\nthe ocean cleanup method for reducing the impact of plastic pollution. Using all the information\nprovided, which statement provides the most correct evidence to support this claim?",
     "choices": [
       "The river method costs less than the ocean method and captures plastic before it\nenters the ocean, protecting river and ocean coastline biodiversity.",
@@ -72,7 +72,7 @@
   {
     "id": "ess_10",
     "subject": "earth_space_sciences",
-    "topic": "General",
+    "topic": "Weather & Climate",
     "question": "Which row in the table below correctly describes the evidence for the coevolution of Earth\nsystems as a result of the Great Oxidation Event?\nChange to Response Eff ect on\nRow\nAtmospheric Gas to Change Climate\nMethane level decreased; Less energy absorbed Led to earliest ice age due to",
     "choices": [
       "oxygen level increased by atmosphere increased refl ection of energy\nMethane level increased; More energy absorbed Led to earliest ice age due to",
@@ -86,7 +86,7 @@
   {
     "id": "ess_11",
     "subject": "earth_space_sciences",
-    "topic": "General",
+    "topic": "Earth's History",
     "question": "Which statement identifi es the evidence used to determine when the Huronian ice age occurred?",
     "choices": [
       "Radioactive dating of elements in rocks was used to determine ages of rocks in the\nHuronian Supergroup.",
@@ -100,7 +100,7 @@
   {
     "id": "ess_12",
     "subject": "earth_space_sciences",
-    "topic": "General",
+    "topic": "Earth's History",
     "question": "Which statement correctly uses information from the model and passages as evidence to support\nthe claim that, during the end of the Huronian ice age, changes in Earth\u2019s hydrosphere caused\na change in Earth\u2019s geosphere?",
     "choices": [
       "Microfossils found in the banded iron formations produced the iron in the oceans.",
@@ -114,7 +114,7 @@
   {
     "id": "ess_14",
     "subject": "earth_space_sciences",
-    "topic": "General",
+    "topic": "Earth's History",
     "question": "Based on the student\u2019s observations, which set of observations and mineral name correctly\nidentifi es the mineral crystals in the photograph?",
     "choices": [
       "Observations A, B, and C identify magnetite.",
@@ -128,7 +128,7 @@
   {
     "id": "ess_17",
     "subject": "earth_space_sciences",
-    "topic": "General",
+    "topic": "Environmental Science",
     "question": "Which statement below correctly identifi es a benefi t to a local community when comparing\nthese two design solutions for resurfacing roads?",
     "choices": [
       "Local quarries supplying natural paving materials will use more fuel for trucking and\nprocessing.",
@@ -142,7 +142,7 @@
   {
     "id": "ess_20",
     "subject": "earth_space_sciences",
-    "topic": "General",
+    "topic": "Stars & Solar System",
     "question": "Based on the information in the Pluto\u2019s Moons data table, which row in the table below correctly\ndescribes the orbital speed of Styx and the gravitational force of attraction exerted on Styx by\nPluto as it orbits Pluto?\nRow Orbital Speed Gravitational Force",
     "choices": [
       "Constant Constant",
@@ -156,7 +156,7 @@
   {
     "id": "ess_21",
     "subject": "earth_space_sciences",
-    "topic": "General",
+    "topic": "Stars & Solar System",
     "question": "Which pieces of evidence shown in the model and data table support the claim that the phases\nof Charon as viewed from Pluto change cyclically?",
     "choices": [
       "Pluto orbits the Sun every 90,560 Earth days.",
@@ -170,7 +170,7 @@
   {
     "id": "ess_23",
     "subject": "earth_space_sciences",
-    "topic": "General",
+    "topic": "Stars & Solar System",
     "question": "Which statement would provide evidence for the formation of Pluto\u2019s four smallest moons from\na possible impact with Pluto or Charon?",
     "choices": [
       "Pluto\u2019s surface is coated with methane ice.",
@@ -184,7 +184,7 @@
   {
     "id": "ess_25",
     "subject": "earth_space_sciences",
-    "topic": "General",
+    "topic": "Stars & Solar System",
     "question": "Which row correctly completes the passage below?\nWhen the Storegga Slide triggered a tsunami, the initial wave would have caused a A\nprocess at the coastline of the Shetland Islands. The coastline would have experienced\nB . The location of C experienced less impact from the tsunami with a wave\nheight of about D .\nRow A B C D",
     "choices": [
       "constructive erosion Faroe 14 meters",
@@ -198,7 +198,7 @@
   {
     "id": "ess_26",
     "subject": "earth_space_sciences",
-    "topic": "General",
+    "topic": "Oceanography",
     "question": "Which three claims provide correct interpretations from data collected at Hommelst\u00f8?",
     "choices": [
       "Claims I, II, and III",
@@ -212,7 +212,7 @@
   {
     "id": "ess_28",
     "subject": "earth_space_sciences",
-    "topic": "General",
+    "topic": "Weather & Climate",
     "question": "Based on the map, which evidence-based claim correctly identifi es how a change in climate\nmost likely affected the current pattern of ice thickness on Greenland?",
     "choices": [
       "Cooling of climate in polar regions caused no ice and more exposed land near\nBaffi n Bay than along the Denmark Strait.",
@@ -226,7 +226,7 @@
   {
     "id": "ess_30",
     "subject": "earth_space_sciences",
-    "topic": "General",
+    "topic": "Environmental Science",
     "question": "Based on the trend shown in the graph, which claim correctly describes the rate of change in ice\nmass from 2010 to 2022?",
     "choices": [
       "Ice mass rate of change was a loss of about 250 Gt/year.",
@@ -240,7 +240,7 @@
   {
     "id": "ess_34",
     "subject": "earth_space_sciences",
-    "topic": "General",
+    "topic": "Stars & Solar System",
     "question": "Which statement provides evidence about the formation and movement of Bennu through the\nsolar system?",
     "choices": [
       "Bennu formed inside Earth\u2019s orbit when the mass extinction of the dinosaurs occurred\nand then moved closer to Mars\u2019 orbit.",
@@ -254,7 +254,7 @@
   {
     "id": "ess_36",
     "subject": "earth_space_sciences",
-    "topic": "General",
+    "topic": "Stars & Solar System",
     "question": "Which statement describes why the speed of the DART spacecraft changed before it impacted\nDimorphos?",
     "choices": [
       "Its speed increased due to the Sun\u2019s gravitational pull.",
@@ -268,7 +268,7 @@
   {
     "id": "ess_39",
     "subject": "earth_space_sciences",
-    "topic": "General",
+    "topic": "Weather & Climate",
     "question": "Which sequence of terms best completes the claim?",
     "choices": [
       "A: X B: Y C: gravity D: landslides",
@@ -282,7 +282,7 @@
   {
     "id": "ess_41",
     "subject": "earth_space_sciences",
-    "topic": "General",
+    "topic": "Weathering & Erosion",
     "question": "Which statement identifi es how the construction of the Mount Morris Dam has impacted the\nability to control rain events?",
     "choices": [
       "Construction of the dam has controlled river elevations to increase the availability of\nfresh water for the residents of Rochester.",
@@ -296,7 +296,7 @@
   {
     "id": "ess_43",
     "subject": "earth_space_sciences",
-    "topic": "General",
+    "topic": "Environmental Science",
     "question": "When comparing gas-powered cars to electric cars, which statement correctly summarizes the\ntype of car that has a lower environmental impact related to the mining industry while providing\nreliable transportation for long distances?",
     "choices": [
       "The electric car has a lower environmental impact from mining because the motor\nonly weighs 76 kilograms and has an average driving range of 234 miles.",
@@ -310,7 +310,7 @@
   {
     "id": "ess_44",
     "subject": "earth_space_sciences",
-    "topic": "General",
+    "topic": "Environmental Science",
     "question": "Which explanation uses evidence from the infographic to most correctly explain how human\nactivity is being infl uenced by the availability of copper used in the manufacture of new electric\nvehicles?",
     "choices": [
       "As copper reserves are depleted, companies will be forced to lower the price of\ncopper below the 2019 average of $6042 per ton in countries with copper mines.",
@@ -324,7 +324,7 @@
   {
     "id": "ess_45",
     "subject": "earth_space_sciences",
-    "topic": "General",
+    "topic": "Stars & Solar System",
     "question": "Which evidence-based statement correctly describes how the electrical energy generation\nresources in the United States are projected to change as the demand for electricity increases?",
     "choices": [
       "By 2030, hydro will surpass nuclear electric generation.",
@@ -338,7 +338,7 @@
   {
     "id": "ess_46",
     "subject": "earth_space_sciences",
-    "topic": "General",
+    "topic": "Environmental Science",
     "question": "Which claim accurately identifi es a change in atmospheric oxygen levels due to a change in\nEarth\u2019s biosphere in the Carboniferous Period?",
     "choices": [
       "Oxygen levels increased as a result of deforestation in the biosphere.",
@@ -352,7 +352,7 @@
   {
     "id": "ess_49",
     "subject": "earth_space_sciences",
-    "topic": "General",
+    "topic": "Oceanography",
     "question": "Which pieces of evidence from the maps and graph support the students\u2019 claim?",
     "choices": [
       "An increase in glaciation added ice to the cryosphere and lowered ocean water levels\nin the hydrosphere.",

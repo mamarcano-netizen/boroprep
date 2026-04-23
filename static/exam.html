@@ -23,7 +23,9 @@
       border-radius: 12px; padding: 10px 24px; display: inline-block;
       transition: color 0.3s, border-color 0.3s;
     }
-    .exam-timer.urgent { color: var(--danger); border-color: var(--danger); }
+    .exam-timer.urgent { color: var(--danger); border-color: var(--danger); animation: pulse-timer 1s infinite; }
+    .exam-timer.warning { color: #f59e0b; border-color: #f59e0b; }
+    @keyframes pulse-timer { 0%,100%{transform:scale(1)} 50%{transform:scale(1.05)} }
 
     .exam-topbar {
       display: flex; align-items: center; justify-content: space-between;
@@ -300,6 +302,14 @@
 
     }
 
+    function showToast(msg) {
+      const t = document.createElement("div");
+      t.textContent = msg;
+      t.style.cssText = "position:fixed;top:80px;left:50%;transform:translateX(-50%);background:#1e293b;color:white;padding:10px 20px;border-radius:12px;font-weight:700;font-size:0.9rem;z-index:9999;box-shadow:0 4px 12px rgba(0,0,0,0.3)";
+      document.body.appendChild(t);
+      setTimeout(() => t.remove(), 3500);
+    }
+
     function show(sectionId) {
       ["exam-setup", "exam-taking", "exam-results"].forEach(id => {
         $(id).classList.toggle("hidden", id !== sectionId);
@@ -355,8 +365,10 @@
       examTimer = setInterval(() => {
         examTimeLeft--;
         $("exam-timer").textContent = formatTime(examTimeLeft);
-        const urgent = examTimeLeft <= 300;
-        $("exam-timer").classList.toggle("urgent", urgent);
+        $("exam-timer").classList.toggle("urgent", examTimeLeft <= 300);
+        $("exam-timer").classList.toggle("warning", examTimeLeft > 300 && examTimeLeft <= 600);
+        if (examTimeLeft === 600) showToast("⏰ 10 minutes remaining!");
+        if (examTimeLeft === 300) showToast("🚨 5 minutes left — finish up!");
         if (examTimeLeft <= 0) {
           clearInterval(examTimer);
           showExamResults();
