@@ -1,0 +1,13 @@
+{
+  "name": "BoroPrep - NYC Regents Prep",
+  "short_name": "BoroPrep",
+  "description": "Free AI-powered NYC Regents exam prep for every student",
+  "start_url": "/dashboard",
+  "display": "standalone",
+  "background_color": "#4f46e5",
+  "theme_color": "#4f46e5",
+  "icons": [
+    {"src": "/static/icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "/static/icon-512.png", "sizes": "512x512", "type": "image/png"}
+  ]
+}

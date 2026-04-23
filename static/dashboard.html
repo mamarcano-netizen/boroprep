@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="manifest" href="/static/manifest.json" />
+  <meta name="theme-color" content="#4f46e5" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BoroPrep — Dashboard</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <!-- Mobile navbar -->
+  <nav class="navbar">
+    <div class="nav-logo">🗽 Boro<span>Prep</span></div>
+    <div class="nav-menu">
+      <button class="nav-btn" id="logout-btn">Logout</button>
+    </div>
+  </nav>
+
+  <!-- Desktop sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">🗽 Boro<span>Prep</span></div>
+    <div class="sidebar-section">Menu</div>
+    <a href="/dashboard" class="sidebar-link active">🏠 Dashboard</a>
+    <a href="/study" class="sidebar-link">📝 Study</a>
+    <a href="/study?mode=photo" class="sidebar-link">📸 Photo Help</a>
+    <a href="/multiplayer" class="sidebar-link">🎮 Play vs Friends</a>
+    <a href="/classroom" class="sidebar-link">📚 Group Classroom</a>
+    <a href="/exam" class="sidebar-link">📋 Practice Exam</a>
+    <a href="/essay" class="sidebar-link">✍️ Essay Grader</a>
+    <a href="/parent" class="sidebar-link">👪 Parent View</a>
+    <a href="/teacher" class="sidebar-link">🍎 Teacher View</a>
+    <a href="/profile" class="sidebar-link">👤 My Profile</a>
+    <div class="sidebar-divider"></div>
+    <div class="sidebar-section">Accessibility</div>
+    <button class="sidebar-link" id="sb-tts">🔊 Read Aloud</button>
+    <button class="sidebar-link" id="sb-simple">✏️ Simple Words</button>
+    <button class="sidebar-link" id="sb-dark">🌙 Dark Mode</button>
+    <div class="sidebar-bottom">
+      <div class="sidebar-divider"></div>
+      <button class="sidebar-link" id="sb-logout">🚪 Logout</button>
+    </div>
+  </aside>
+
+  <div class="desktop-main">
+
+  <!-- Auth gate -->
+  <div id="auth-section" class="container hidden">
+    <div class="auth-page">
+      <h2>Welcome to BoroPrep! 🗽</h2>
+      <p>Sign in or create a free account to track your progress.</p>
+
+      <a href="/auth/google" class="btn btn-google" style="margin-bottom:16px">
+        <img src="https://www.google.com/favicon.ico" width="18" height="18" /> Continue with Google
+      </a>
+
+      <div class="divider">or</div>
+
+      <div id="login-form">
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="email" placeholder="your@email.com" />
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" id="password" placeholder="••••••••" />
+        </div>
+        <div id="signup-fields" class="hidden">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" id="name" placeholder="First name" />
+          </div>
+          <div class="form-group">
+            <label>I am a...</label>
+            <select id="role">
+              <option value="student">Student</option>
+              <option value="parent">Parent</option>
+              <option value="teacher">Teacher</option>
+            </select>
+          </div>
+        </div>
+        <p id="auth-error" class="error-msg hidden"></p>
+        <button class="btn btn-primary" id="auth-submit">Log In</button>
+        <p style="text-align:center;margin-top:12px;font-size:0.9rem">
+          <span id="auth-toggle-text">Don't have an account?</span>
+          <a href="#" id="auth-toggle" style="color:var(--primary);font-weight:600"> Sign up</a>
+        </p>
+      </div>
+
+      <p style="text-align:center;margin-top:20px;color:var(--muted);font-size:0.85rem">
+        <a href="/study" style="color:var(--primary)">Or study without an account →</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- Main Dashboard -->
+  <div id="dashboard-section" class="dashboard hidden">
+    <div class="dashboard-desktop">
+
+      <!-- LEFT COLUMN -->
+      <div class="dashboard-left">
+        <div class="welcome">
+          <h2>Hey <span id="user-name">there</span>! 👋</h2>
+          <p>Ready to study today?</p>
+        </div>
+
+        <!-- Streak -->
+        <div class="streak-bar">
+          <div class="fire">🔥</div>
+          <div>
+            <strong><span id="streak-count">0</span> day streak</strong><br>
+            <small style="opacity:0.8">Keep it going!</small>
+            <small id="streak-freeze-badge" style="display:none;font-size:0.75rem;margin-top:2px"></small>
+          </div>
+        </div>
+
+        <div id="streak-cal" style="display:flex;gap:5px;align-items:center"></div>
+        <script>
+        (function(){
+          const el = document.getElementById("streak-cal");
+          if (!el) return;
+          let dates = [];
+          try { dates = JSON.parse(localStorage.getItem("bp_study_dates") || "[]"); } catch {}
+          const today = new Date();
+          const days = ["S","M","T","W","T","F","S"];
+          const html = [];
+          for (let i = 6; i >= 0; i--) {
+            const d = new Date(today); d.setDate(today.getDate() - i);
+            const iso = d.toISOString().split("T")[0];
+            const studied = dates.includes(iso);
+            const isToday = i === 0;
+            html.push(`<div title="${iso}" style="display:flex;flex-direction:column;align-items:center;gap:3px">
+              <div style="width:26px;height:26px;border-radius:50%;background:${studied?"var(--primary)":"var(--border)"};border:${isToday?"2px solid var(--primary)":"none"};display:flex;align-items:center;justify-content:center;font-size:0.65rem;font-weight:700;color:${studied?"white":"var(--muted)"}">
+                ${studied?"✓":""}
+              </div>
+              <div style="font-size:0.6rem;color:var(--muted);font-weight:600">${days[d.getDay()]}</div>
+            </div>`);
+          }
+          el.innerHTML = html.join("");
+        })();
+        </script>
+
+        <div id="study-time-badge" style="display:none;font-size:0.82rem;font-weight:600;color:var(--primary);background:var(--card);border:1px solid var(--border);border-radius:10px;padding:8px 14px"></div>
+
+        <!-- XP / Level -->
+        <div id="xp-section" class="xp-section" style="display:none">
+          <div class="xp-header">
+            <div>
+              <div style="font-weight:800;font-size:1rem">Level <span id="xp-level">1</span></div>
+              <div style="font-size:0.8rem;opacity:0.8" id="xp-level-name">Beginner</div>
+            </div>
+            <div class="level-badge" id="level-badge">⭐ BEGINNER</div>
+          </div>
+          <div class="xp-bar-wrap"><div class="xp-bar-fill" id="xp-bar-fill" style="width:0%"></div></div>
+          <div class="xp-label"><span id="xp-current">0</span> XP · <span id="xp-next">100</span> XP to next level</div>
+        </div>
+
+        <!-- Accessibility (mobile only — hidden on desktop via CSS) -->
+        <div class="access-row-mobile">
+          <div class="section-title">Accessibility</div>
+          <div class="access-row" style="margin-bottom:4px">
+                    <button class="access-btn" id="btn-tts">🔊 Read Aloud</button>
+                    <button class="access-btn" id="btn-simple">✏️ Simple Words</button>
+                  </div>
+        </div>
+
+        <!-- Tonight Mode -->
+        <button class="tonight-btn" id="tonight-btn">🔥 Help me pass TONIGHT!</button>
+
+        <!-- Subjects -->
+        <div class="section-title">Pick a Subject</div>
+        <div class="subject-grid" id="subject-grid"></div>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="dashboard-right">
+        <!-- Daily Challenge -->
+        <div id="daily-challenge-card" class="card" style="display:none;margin-bottom:16px;border:2px solid var(--primary)">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+            <div style="font-weight:800;font-size:1rem">⚡ Daily Challenge</div>
+            <div id="dc-streak" style="font-size:0.8rem;font-weight:700;color:var(--primary)"></div>
+          </div>
+          <div id="dc-question" style="font-size:0.92rem;line-height:1.5;margin-bottom:12px;font-weight:600"></div>
+          <div id="dc-choices" style="display:flex;flex-direction:column;gap:8px"></div>
+          <div id="dc-result" class="hidden" style="margin-top:12px;padding:10px 14px;border-radius:10px;font-size:0.9rem;line-height:1.5"></div>
+          <div id="dc-done" class="hidden" style="text-align:center;padding:12px;color:var(--success);font-weight:700">✅ Already completed today! Come back tomorrow.</div>
+        </div>
+
+        <!-- Weekly Quests -->
+        <div class="card" style="margin-bottom:16px;padding:14px 16px">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+            <div style="font-weight:800;font-size:0.95rem">🎯 Weekly Quests</div>
+            <div style="font-size:0.72rem;color:var(--muted)">Resets Monday</div>
+          </div>
+          <div id="weekly-quests"></div>
+        </div>
+
+        <!-- Study Reminder -->
+        <div id="notify-banner" style="display:none;font-size:0.8rem;color:var(--muted);margin-bottom:12px;align-items:center;gap:8px">
+          <span>🔔 Daily reminders?</span>
+          <button class="btn btn-outline" id="notify-btn" style="padding:4px 12px;font-size:0.78rem">Turn On</button>
+        </div>
+
+        <!-- Today's Plan -->
+        <div id="daily-plan-card" class="daily-plan-card" style="display:none">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div class="plan-title">📅 Today's Study Plan</div>
+            <button class="plan-read-btn" title="Read aloud"
+              style="background:none;border:none;cursor:pointer;font-size:1rem;opacity:0.65;padding:0">🔊</button>
+          </div>
+          <div id="daily-plan-text" style="font-size:0.88rem;line-height:1.6;color:#065f46"></div>
+        </div>
+
+        <!-- Smart Suggestion -->
+        <div id="smart-suggestion" class="card" style="background:linear-gradient(135deg,#eef2ff,#e0e7ff);border-color:#c7d2fe;display:none">
+          <div style="font-size:0.8rem;font-weight:700;color:var(--primary);margin-bottom:4px">🤖 AI RECOMMENDATION</div>
+          <div id="suggestion-text" style="font-size:0.9rem;line-height:1.5"></div>
+        </div>
+
+        <!-- Exam Countdown (compact pills) -->
+        <div style="margin-bottom:16px">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+            <div style="font-size:0.75rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em">⏰ Exam Countdown</div>
+            <button id="add-exam-toggle" style="background:none;border:none;color:var(--primary);font-size:0.8rem;font-weight:700;cursor:pointer">+ Add Date</button>
+          </div>
+          <div id="exam-countdown" style="display:flex;flex-wrap:wrap;gap:6px"></div>
+          <div id="exam-date-setter" style="display:none;margin-top:10px;background:var(--card);border:1.5px solid var(--border);border-radius:12px;padding:12px">
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <select id="exam-subject-pick" style="flex:1;min-width:120px;padding:7px 10px;border-radius:8px;border:1.5px solid var(--border);background:var(--bg);color:var(--text);font-size:0.83rem">
+                <option value="">Pick subject…</option>
+                <option value="chemistry">⚗️ Chemistry</option>
+                <option value="biology">🧬 Living Environment</option>
+                <option value="algebra1">➕ Algebra I</option>
+                <option value="algebra2">📐 Algebra II</option>
+                <option value="geometry">📏 Geometry</option>
+                <option value="physics">⚡ Physics</option>
+                <option value="earthscience">🌎 Earth Science</option>
+                <option value="history">🇺🇸 US History</option>
+                <option value="global">🌍 Global History</option>
+                <option value="english">📖 English ELA</option>
+              </select>
+              <input type="date" id="exam-date-pick" style="flex:1;min-width:120px;padding:7px 10px;border-radius:8px;border:1.5px solid var(--border);background:var(--bg);color:var(--text);font-size:0.83rem" />
+              <button class="btn btn-primary" id="save-exam-date-btn" style="padding:7px 12px;font-size:0.82rem">Save</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Badges + Leaderboard combined card -->
+        <div class="card" style="margin-bottom:16px;padding:16px" id="badges-leaderboard-card">
+          <div style="font-weight:800;font-size:1rem;margin-bottom:10px">🏅 Badges</div>
+          <div class="badge-row" id="badge-row" style="margin-bottom:16px">
+            <span style="color:var(--muted);font-size:0.85rem">Complete quizzes to earn badges! 🏆</span>
+          </div>
+          <div style="font-weight:800;font-size:1rem;margin-bottom:8px">🏆 Top Students</div>
+          <div id="leaderboard-list" style="display:flex;flex-direction:column;gap:4px">
+            <span style="color:var(--muted);font-size:0.85rem">Loading…</span>
+          </div>
+        </div>
+
+        <!-- Progress -->
+        <div class="card" style="margin-bottom:16px;padding:16px">
+          <div style="font-weight:800;font-size:0.95rem;margin-bottom:10px">📊 My Progress</div>
+          <div id="progress-list" style="display:flex;flex-direction:column;gap:8px"></div>
+        </div>
+
+        <!-- Predicted Scores -->
+        <div class="card" style="margin-bottom:40px;padding:16px">
+          <div style="font-weight:800;font-size:0.95rem;margin-bottom:10px">🎯 Predicted Regents Score</div>
+          <div id="predicted-scores" style="display:flex;flex-direction:column;gap:8px">
+            <span style="color:var(--muted);font-size:0.85rem">Loading…</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /dashboard-desktop -->
+  </div>
+
+  <!-- Tonight Modal -->
+  <div id="tonight-modal" class="hidden" style="position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:200;display:flex;align-items:flex-end">
+    <div style="background:white;width:100%;border-radius:20px 20px 0 0;padding:24px;max-height:80vh;overflow-y:auto">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+        <h3 style="font-size:1.1rem;font-weight:800">🔥 Tonight Mode</h3>
+        <button id="close-tonight" style="background:none;border:none;font-size:1.4rem;cursor:pointer">✕</button>
+      </div>
+      <div class="section-title">Pick your subject</div>
+      <div id="tonight-subjects" style="display:flex;flex-direction:column;gap:8px;margin-bottom:16px"></div>
+      <div id="tonight-plan" class="tonight-card hidden"></div>
+    </div>
+  </div>
+
+  </div><!-- /desktop-main -->
+
+  <!-- Mobile Bottom Nav -->
+  <nav class="mobile-bottom-nav">
+    <a href="/dashboard" class="active"><span class="nav-icon">🏠</span>Home</a>
+    <a href="/study"><span class="nav-icon">📝</span>Study</a>
+    <a href="/exam"><span class="nav-icon">📋</span>Exam</a>
+    <a href="/essay"><span class="nav-icon">✍️</span>Essay</a>
+    <a href="/multiplayer"><span class="nav-icon">🎮</span>Play</a>
+  </nav>
+
+  <!-- Onboarding Modal -->
+  <div id="onboarding-modal" class="onboard-overlay" style="display:none">
+    <div class="onboard-box">
+      <div style="font-size:3rem;margin-bottom:8px">🗽</div>
+      <h2>Welcome to BoroPrep!</h2>
+      <p>NYC's free Regents exam prep — made just for students like you.</p>
+      <div class="section-title" style="text-align:left;margin-bottom:8px">What's your exam?</div>
+      <select id="onboard-subject" style="width:100%;padding:10px 14px;border-radius:10px;border:2px solid var(--border);font-size:1rem;margin-bottom:16px">
+        <option value="">Pick a subject…</option>
+        <option value="chemistry">⚗️ Chemistry</option>
+        <option value="biology">🧬 Living Environment</option>
+        <option value="algebra1">➕ Algebra I</option>
+        <option value="algebra2">📐 Algebra II</option>
+        <option value="geometry">📏 Geometry</option>
+        <option value="physics">⚡ Physics</option>
+        <option value="earthscience">🌎 Earth Science</option>
+        <option value="history">🇺🇸 US History</option>
+        <option value="global">🌍 Global History</option>
+        <option value="english">📖 English ELA</option>
+      </select>
+      <button class="btn btn-primary" id="onboard-start" style="width:100%;margin-bottom:12px">Let's Study! 🚀</button>
+      <button class="btn btn-outline" id="onboard-skip" style="width:100%;font-size:0.85rem">Explore first →</button>
+    </div>
+  </div>
+
+  <script src="/static/videos.js"></script>
+  <script src="/static/app.js"></script>
+  <script>
+    initDashboard();
+    document.getElementById("sb-tts")?.addEventListener("click", () => ttsEnabled ? ttsOff() : ttsOn());
+    document.getElementById("sb-simple")?.addEventListener("click", () => { simpleMode=!simpleMode; _setAccessBtn("simple",simpleMode); saveAccessibility(); });
+    document.getElementById("sb-logout")?.addEventListener("click", async () => {
+      await fetch("/auth/logout",{method:"POST",credentials:"include"});
+      window.location.reload();
+    });
+    // Apply dark mode immediately before render
+    (function(){var s=localStorage.getItem("bp_dark");if(s==="1"||(s===null&&window.matchMedia?.("(prefers-color-scheme: dark)").matches))document.body.classList.add("dark");})();
+    if ("serviceWorker" in navigator) navigator.serviceWorker.register("/static/sw.js");
+  </script>
+</body>
+</html>

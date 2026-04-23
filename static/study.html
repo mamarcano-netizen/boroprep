@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="manifest" href="/static/manifest.json" />
+  <meta name="theme-color" content="#4f46e5" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BoroPrep — Study</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-logo">🗽 Boro<span>Prep</span></div>
+    <div class="nav-menu"><a href="/dashboard" class="nav-btn">Home</a></div>
+  </nav>
+
+  <aside class="sidebar">
+    <div class="sidebar-logo">🗽 Boro<span>Prep</span></div>
+    <div class="sidebar-section">Menu</div>
+    <a href="/dashboard" class="sidebar-link">🏠 Dashboard</a>
+    <a href="/study" class="sidebar-link active">📝 Study</a>
+    <a href="/study?mode=photo" class="sidebar-link">📸 Photo Help</a>
+    <a href="/multiplayer" class="sidebar-link">🎮 Play vs Friends</a>
+    <a href="/exam" class="sidebar-link">📋 Practice Exam</a>
+    <a href="/essay" class="sidebar-link">✍️ Essay Grader</a>
+    <a href="/parent" class="sidebar-link">👪 Parent View</a>
+    <a href="/teacher" class="sidebar-link">🍎 Teacher View</a>
+    <a href="/reference" class="sidebar-link" id="ref-link">📚 Reference Sheets</a>
+    <div class="sidebar-divider"></div>
+    <div class="sidebar-section">Accessibility</div>
+    <button class="sidebar-link" id="sb-tts">🔊 Read Aloud</button>
+    <button class="sidebar-link" id="sb-simple">✏️ Simple Words</button>
+    <button class="sidebar-link" id="sb-dark">🌙 Dark Mode</button>
+    <div class="sidebar-bottom">
+      <div class="sidebar-divider"></div>
+      <a href="/dashboard" class="sidebar-link">🚪 Back</a>
+    </div>
+  </aside>
+
+  <div class="desktop-main">
+
+  <!-- Subject Selector -->
+  <div id="subject-selector" class="subject-selector">
+    <h2>What are you studying? 📚</h2>
+    <div class="mode-tabs">
+      <button class="mode-tab active" data-mode="quiz">📝 Quiz</button>
+      <button class="mode-tab" data-mode="flash">📇 Flashcards</button>
+      <button class="mode-tab" data-mode="chat">🤖 AI Tutor</button>
+      <button class="mode-tab" data-mode="photo">📸 Photo Help</button>
+    </div>
+    <div id="bookmarks-bar" style="margin-bottom:12px;display:flex;align-items:center;gap:10px">
+      <button class="btn btn-outline" style="font-size:0.85rem;padding:7px 14px" onclick="selectSubject('bookmarks','Bookmarked Questions','bookmarks')">⭐ Study Bookmarks</button>
+      <span id="bookmarks-count" style="font-size:0.8rem;color:var(--muted)"></span>
+    </div>
+    <div id="selector-grid" class="subject-grid"></div>
+  </div>
+
+  <!-- Photo Help -->
+  <div id="photo-section" class="study-page hidden">
+    <div class="card" style="text-align:center;padding:32px 20px">
+      <div style="font-size:3rem;margin-bottom:12px">📸</div>
+      <h2 style="margin-bottom:8px">Snap a Question</h2>
+      <p style="color:var(--muted);margin-bottom:24px">Take a photo of any question and get instant AI help!</p>
+      <input type="file" id="photo-input" accept="image/*" capture="environment" style="display:none" />
+      <button class="btn btn-primary" onclick="document.getElementById('photo-input').click()">📷 Take Photo or Upload</button>
+      <div id="photo-preview" style="margin-top:16px;display:none">
+        <img id="preview-img" style="max-width:100%;border-radius:12px;margin-bottom:16px" />
+        <button class="btn btn-success" id="analyze-btn">🤖 Get AI Help</button>
+      </div>
+      <div id="photo-answer" class="explanation-box hidden" style="margin-top:16px;text-align:left"></div>
+    </div>
+  </div>
+
+  <!-- Quiz Mode -->
+  <div id="quiz-section" class="study-page hidden">
+    <div class="progress-bar-wrap">
+      <div class="progress-bar-fill" id="quiz-progress" style="width:0%"></div>
+    </div>
+
+    <div class="card question-card">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
+        <div class="question-num" id="question-num">Question 1 of 10</div>
+        <div id="topic-tag" style="font-size:0.75rem;background:#eef2ff;color:var(--primary);padding:2px 8px;border-radius:10px"></div>
+      </div>
+      <div id="timer-wrap" class="timer-wrap hidden">
+        <div class="timer-bar-inner"><div class="timer-fill" id="timer-fill"></div></div>
+        <span class="timer-num" id="timer-num">30</span>
+      </div>
+      <div style="display:flex;align-items:flex-start">
+        <div class="question-text" id="question-text"></div>
+        <button class="tts-btn" id="tts-btn" title="Read aloud">🔊</button>
+      </div>
+      <div class="choices" id="choices"></div>
+      <div id="hint-box" class="hint-box hidden"></div>
+      <button id="hint-btn" style="background:none;border:none;color:var(--muted);font-size:0.85rem;cursor:pointer;margin-top:8px;padding:4px 0;display:none">💡 Need a hint?</button>
+      <div id="explanation" class="hidden"></div>
+      <div id="video-embed" class="hidden"></div>
+      <div id="feedback-row" class="feedback-row hidden">
+        <span>Was this helpful?</span>
+        <button class="thumb-btn" id="thumb-up">👍</button>
+        <button class="thumb-btn" id="thumb-down">👎</button>
+      </div>
+    </div>
+
+    <button class="btn btn-primary next-btn hidden" id="next-btn">Next Question →</button>
+  </div>
+
+  <!-- Score Screen -->
+  <div id="score-section" class="study-page hidden">
+    <div class="card score-card">
+      <div class="score-big" id="score-display">0/10</div>
+      <p id="score-msg"></p>
+      <div id="score-badges" style="margin-bottom:16px"></div>
+      <button class="btn btn-primary" id="retry-btn">Try Again 🔄</button>
+      <a class="btn btn-outline" id="share-btn" href="#" style="margin-top:10px;display:block;width:100%;text-align:center">📤 Share My Score</a>
+      <button class="btn btn-outline" id="answer-key-btn" style="margin-top:10px;display:none;width:100%">📚 Full Answer Key + Explanations</button>
+      <button class="btn btn-outline" id="review-btn" style="margin-top:10px;display:none;width:100%">❌ Review My Mistakes Only</button>
+      <button class="btn btn-outline" id="gen-questions-btn" style="margin-top:10px;display:none;width:100%">🤖 Generate New Questions with AI</button>
+      <a href="/dashboard" class="btn btn-outline" style="margin-top:10px">Back to Dashboard</a>
+    </div>
+  </div>
+
+  <!-- Full Answer Key -->
+  <div id="answer-key-section" class="study-page hidden">
+    <div class="review-page">
+      <h3 style="margin-bottom:4px;font-size:1.1rem;font-weight:800">📚 Full Answer Key</h3>
+      <p style="color:var(--muted);font-size:0.85rem;margin-bottom:16px">Every question with the correct answer and a plain-English explanation.</p>
+      <div id="answer-key-list"></div>
+      <button class="btn btn-outline" id="back-from-key" style="margin-top:8px">← Back to Score</button>
+    </div>
+  </div>
+
+  <!-- Review Mistakes -->
+  <div id="review-section" class="study-page hidden">
+    <div class="review-page">
+      <h3 style="margin-bottom:16px;font-size:1.1rem;font-weight:800">📋 Review My Mistakes</h3>
+      <div id="review-list"></div>
+      <button class="btn btn-outline" id="back-from-review" style="margin-top:8px">← Back to Score</button>
+    </div>
+  </div>
+
+  <!-- Flashcard Mode -->
+  <div id="flash-section" class="study-page hidden">
+    <div style="padding:20px;max-width:600px;margin:0 auto">
+      <div class="flash-progress"><div class="flash-progress-fill" id="flash-progress-fill" style="width:0%"></div></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+        <div id="flash-speed-countdown" style="font-size:1.5rem;font-weight:800;color:var(--primary);min-width:24px"></div>
+        <button id="flash-speed-toggle" style="background:none;border:1.5px solid var(--border);border-radius:20px;padding:5px 14px;font-size:0.8rem;font-weight:700;cursor:pointer;color:var(--muted)">⚡ Speed Mode: OFF</button>
+      </div>
+      <div class="flashcard" id="flashcard">
+        <div class="flash-question-text" id="flash-question"></div>
+        <button class="btn btn-outline" id="flash-reveal-btn">👇 Show Answer</button>
+        <div id="flash-back" class="hidden">
+          <div class="explanation-box" id="flash-answer"></div>
+          <div style="display:flex;gap:10px;margin-top:12px">
+            <button class="btn btn-success" id="flash-got-it" style="flex:1">✅ Got it!</button>
+            <button class="btn btn-danger" id="flash-review-it" style="flex:1">🔄 Keep studying</button>
+          </div>
+        </div>
+        <div style="text-align:center;font-size:0.8rem;color:var(--muted)" id="flash-num"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AI Tutor Chat -->
+  <div id="chat-section" class="chat-page hidden">
+    <div id="chat-messages" class="chat-messages">
+      <div class="bubble bot" id="chat-welcome"></div>
+    </div>
+    <div class="chat-input-row">
+      <input type="text" id="chat-input" placeholder="Ask anything… or say 'quiz me'!" />
+      <button class="chat-send" id="chat-send">➤</button>
+    </div>
+  </div>
+
+  </div><!-- /desktop-main -->
+
+  <!-- Mobile Bottom Nav -->
+  <nav class="mobile-bottom-nav">
+    <a href="/dashboard"><span class="nav-icon">🏠</span>Home</a>
+    <a href="/study" class="active"><span class="nav-icon">📝</span>Study</a>
+    <a href="/exam"><span class="nav-icon">📋</span>Exam</a>
+    <a href="/essay"><span class="nav-icon">✍️</span>Essay</a>
+    <a href="/multiplayer"><span class="nav-icon">🎮</span>Play</a>
+  </nav>
+
+  <script src="/static/videos.js"></script>
+  <script src="/static/app.js"></script>
+  <script>
+    (function(){var s=localStorage.getItem("bp_dark");if(s==="1"||(s===null&&window.matchMedia?.("(prefers-color-scheme: dark)").matches))document.body.classList.add("dark");})();
+    initStudy();
+    document.getElementById("sb-tts")?.addEventListener("click", () => ttsEnabled ? ttsOff() : ttsOn());
+    document.getElementById("sb-simple")?.addEventListener("click", () => { simpleMode=!simpleMode; _setAccessBtn("simple",simpleMode); saveAccessibility(); });
+    if ("serviceWorker" in navigator) navigator.serviceWorker.register("/static/sw.js");
+
+    // Wire up Share button — update href when score screen becomes visible
+    (function() {
+      const scoreSection = document.getElementById("score-section");
+      if (!scoreSection) return;
+      const observer = new MutationObserver(() => {
+        if (!scoreSection.classList.contains("hidden")) {
+          const scoreDisplay = document.getElementById("score-display")?.textContent || "";
+          // scoreDisplay is like "8/10" — convert to percentage
+          const parts = scoreDisplay.split("/");
+          const pct = parts.length === 2
+            ? Math.round(parseInt(parts[0]) / parseInt(parts[1]) * 100)
+            : scoreDisplay;
+          const subject = (typeof currentSubject !== "undefined" && currentSubject?.name) || "Regents";
+          const name = (() => {
+            try { const u = JSON.parse(localStorage.getItem("bp_user") || "null"); return u?.name?.split(" ")[0] || "Student"; } catch { return "Student"; }
+          })();
+          const shareBtn = document.getElementById("share-btn");
+          if (shareBtn) {
+            shareBtn.href = `/share?score=${pct}&subject=${encodeURIComponent(subject)}&name=${encodeURIComponent(name)}`;
+          }
+        }
+      });
+      observer.observe(scoreSection, { attributes: true, attributeFilter: ["class"] });
+    })();
+  </script>
+</body>
+</html>

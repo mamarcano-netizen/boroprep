@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="manifest" href="/static/manifest.json" />
+  <meta name="theme-color" content="#4f46e5" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BoroPrep — Reference Sheets</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <style>
+    .ref-header { padding: 24px 0 16px; }
+    .ref-header h1 { font-size: 1.6rem; font-weight: 800; margin-bottom: 4px; }
+    .ref-header p { color: var(--muted); margin: 0; }
+    .ref-section { margin-bottom: 20px; }
+    .ref-section h2 { font-size: 1rem; font-weight: 700; margin-bottom: 10px; color: var(--primary); }
+    .ref-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin-bottom: 4px; }
+    .ref-table th { text-align: left; padding: 6px 10px; background: #f1f5f9; font-weight: 700; border-bottom: 2px solid var(--border); }
+    .ref-table td { padding: 6px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .ref-table tr:last-child td { border-bottom: none; }
+    .ref-ul { margin: 0; padding-left: 20px; font-size: 0.88rem; line-height: 1.8; }
+    .ref-formula { font-family: monospace; background: #f8fafc; border: 1px solid var(--border); border-radius: 6px; padding: 6px 12px; margin: 4px 0; font-size: 0.9rem; display: inline-block; }
+    .formula-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+    .element-card { background: #f8fafc; border: 1px solid var(--border); border-radius: 6px; padding: 6px 8px; text-align: center; font-size: 0.78rem; }
+    .element-card .el-sym { font-size: 1.2rem; font-weight: 800; color: var(--primary); }
+    .element-card .el-name { color: var(--text); font-weight: 600; }
+    .element-card .el-num { color: var(--muted); font-size: 0.72rem; }
+    .element-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); gap: 6px; }
+    .subject-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+    .subject-tab { padding: 8px 16px; border: 2px solid var(--border); border-radius: 20px; cursor: pointer; font-weight: 600; font-size: 0.85rem; background: white; transition: all 0.2s; }
+    .subject-tab:hover { border-color: var(--primary); color: var(--primary); }
+    .subject-tab.active { background: var(--primary); color: white; border-color: var(--primary); }
+    body.dark .subject-tab { background: #1e293b; color: #f1f5f9; }
+    body.dark .subject-tab.active { background: var(--primary); color: white; }
+    body.dark .element-card { background: #1e293b; border-color: #334155; }
+    body.dark .ref-table th { background: #0f172a; border-color: #334155; }
+    body.dark .ref-table td { border-color: #1e293b; }
+    body.dark .ref-formula { background: #1e293b; border-color: #334155; color: #f1f5f9; }
+    .activity-list { list-style: none; padding: 0; margin: 0; font-size: 0.88rem; }
+    .activity-list li { padding: 3px 0; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; }
+    .activity-list li:last-child { border-bottom: none; }
+    .activity-most { color: var(--success); font-weight: 700; font-size: 0.75rem; }
+    .activity-least { color: var(--danger); font-weight: 700; font-size: 0.75rem; }
+    @media print {
+      .sidebar, .navbar, .mobile-bottom-nav, .no-print { display: none !important; }
+      .desktop-main { margin-left: 0 !important; }
+      body { background: white !important; color: black !important; font-size: 11pt; }
+      .card { border: 1px solid #ccc !important; box-shadow: none !important; break-inside: avoid; }
+      a { color: black !important; text-decoration: none !important; }
+      .print-btn { display: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-logo">🗽 Boro<span>Prep</span></div>
+    <div class="nav-menu"><a href="/dashboard" class="nav-btn">Home</a></div>
+  </nav>
+
+  <aside class="sidebar">
+    <div class="sidebar-logo">🗽 Boro<span>Prep</span></div>
+    <div class="sidebar-section">Menu</div>
+    <a href="/dashboard" class="sidebar-link">🏠 Dashboard</a>
+    <a href="/study" class="sidebar-link">📝 Study</a>
+    <a href="/study?mode=photo" class="sidebar-link">📸 Photo Help</a>
+    <a href="/multiplayer" class="sidebar-link">🎮 Play vs Friends</a>
+    <a href="/classroom" class="sidebar-link">📚 Group Classroom</a>
+    <a href="/essay" class="sidebar-link">✍️ Essay Grader</a>
+    <a href="/parent" class="sidebar-link">👪 Parent View</a>
+    <a href="/reference" class="sidebar-link active">📚 Reference Sheets</a>
+    <div class="sidebar-divider"></div>
+    <div class="sidebar-section">Accessibility</div>
+    <button class="sidebar-link" id="sb-tts">🔊 Read Aloud</button>
+    <button class="sidebar-link" id="sb-simple">✏️ Simple Words</button>
+    <div class="sidebar-bottom">
+      <div class="sidebar-divider"></div>
+      <a href="/dashboard" class="sidebar-link">🚪 Back</a>
+    </div>
+  </aside>
+
+  <div class="desktop-main">
+    <div style="padding: 0 20px; max-width: 800px;">
+      <div class="ref-header">
+        <h1 id="ref-title">📚 Reference Sheets</h1>
+        <p id="ref-subtitle">Quick facts and formulas for your Regents exam</p>
+      </div>
+
+      <div class="subject-tabs" id="subject-tabs"></div>
+
+      <div id="ref-content"></div>
+    </div>
+
+    <button class="print-btn no-print" onclick="window.print()" style="position:fixed;bottom:80px;right:20px;background:var(--primary);color:white;border:none;border-radius:50%;width:50px;height:50px;font-size:1.3rem;cursor:pointer;box-shadow:0 4px 14px rgba(79,70,229,0.4);z-index:80" title="Print this page">🖨️</button>
+  </div>
+
+  <script>
+    (function(){var s=localStorage.getItem("bp_dark");if(s==="1"||(s===null&&window.matchMedia?.("(prefers-color-scheme: dark)").matches))document.body.classList.add("dark");})();
+
+    function el(sym, name, num, mass) {
+      return `<div class="element-card"><div class="el-sym">${sym}</div><div class="el-name">${name}</div><div class="el-num">#${num} · ${mass}</div></div>`;
+    }
+
+    const REFS = {
+      chemistry: {
+        name: "Chemistry",
+        emoji: "⚗️",
+        sections: [
+          {
+            title: "First 20 Elements",
+            html: `<div class="element-grid">
+              ${el("H","Hydrogen",1,"1.008")}
+              ${el("He","Helium",2,"4.003")}
+              ${el("Li","Lithium",3,"6.941")}
+              ${el("Be","Beryllium",4,"9.012")}
+              ${el("B","Boron",5,"10.81")}
+              ${el("C","Carbon",6,"12.01")}
+              ${el("N","Nitrogen",7,"14.01")}
+              ${el("O","Oxygen",8,"16.00")}
+              ${el("F","Fluorine",9,"19.00")}
+              ${el("Ne","Neon",10,"20.18")}
+              ${el("Na","Sodium",11,"22.99")}
+              ${el("Mg","Magnesium",12,"24.31")}
+              ${el("Al","Aluminum",13,"26.98")}
+              ${el("Si","Silicon",14,"28.09")}
+              ${el("P","Phosphorus",15,"30.97")}
+              ${el("S","Sulfur",16,"32.07")}
+              ${el("Cl","Chlorine",17,"35.45")}
+              ${el("Ar","Argon",18,"39.95")}
+              ${el("K","Potassium",19,"39.10")}
+              ${el("Ca","Calcium",20,"40.08")}
+            </div>`
+          },
+          {
+            title: "Common Polyatomic Ions",
+            html: `<table class="ref-table">
+              <thead><tr><th>Formula</th><th>Name</th><th>Charge</th></tr></thead>
+              <tbody>
+                <tr><td>OH⁻</td><td>Hydroxide</td><td>−1</td></tr>
+                <tr><td>SO₄²⁻</td><td>Sulfate</td><td>−2</td></tr>
+                <tr><td>NO₃⁻</td><td>Nitrate</td><td>−1</td></tr>
+                <tr><td>NH₄⁺</td><td>Ammonium</td><td>+1</td></tr>
+                <tr><td>CO₃²⁻</td><td>Carbonate</td><td>−2</td></tr>
+                <tr><td>PO₄³⁻</td><td>Phosphate</td><td>−3</td></tr>
+                <tr><td>HCO₃⁻</td><td>Bicarbonate (Hydrogen carbonate)</td><td>−1</td></tr>
+                <tr><td>ClO₃⁻</td><td>Chlorate</td><td>−1</td></tr>
+              </tbody>
+            </table>`
+          },
+          {
+            title: "Solubility Rules",
+            html: `<ul class="ref-ul">
+              <li><strong>Always soluble:</strong> Group 1 metals (Li, Na, K, Rb, Cs) and NH₄⁺</li>
+              <li><strong>Always soluble:</strong> NO₃⁻ (nitrates), C₂H₃O₂⁻ (acetates)</li>
+              <li><strong>Usually soluble:</strong> Cl⁻, Br⁻, I⁻ — except with Ag⁺, Pb²⁺, Hg₂²⁺</li>
+              <li><strong>Usually soluble:</strong> SO₄²⁻ — except with Ba²⁺, Pb²⁺, Sr²⁺</li>
+              <li><strong>Usually insoluble:</strong> OH⁻ — except Group 1, Ba²⁺, Sr²⁺, Ca²⁺</li>
+              <li><strong>Usually insoluble:</strong> CO₃²⁻, PO₄³⁻, S²⁻ — except Group 1 and NH₄⁺</li>
+            </ul>`
+          },
+          {
+            title: "Activity Series (Most → Least Active)",
+            html: `<ul class="activity-list">
+              <li><span>Li</span><span class="activity-most">Most Active</span></li>
+              <li><span>K</span><span></span></li>
+              <li><span>Ba</span><span></span></li>
+              <li><span>Ca</span><span></span></li>
+              <li><span>Na</span><span></span></li>
+              <li><span>Mg</span><span></span></li>
+              <li><span>Al</span><span></span></li>
+              <li><span>Zn</span><span></span></li>
+              <li><span>Fe</span><span></span></li>
+              <li><span>Ni</span><span></span></li>
+              <li><span>Sn</span><span></span></li>
+              <li><span>Pb</span><span></span></li>
+              <li><span>H</span><span style="font-size:0.72rem;color:var(--muted)">(reference)</span></li>
+              <li><span>Cu</span><span></span></li>
+              <li><span>Ag</span><span></span></li>
+              <li><span>Au</span><span class="activity-least">Least Active</span></li>
+            </ul>`
+          },
+          {
+            title: "Key Formulas",
+            html: `<div class="formula-grid">
+              <div class="ref-formula">pH = −log[H⁺]</div>
+              <div class="ref-formula">pOH = −log[OH⁻]</div>
+              <div class="ref-formula">pH + pOH = 14</div>
+              <div class="ref-formula">PV = nRT</div>
+              <div class="ref-formula">Molarity = moles / liters</div>
+              <div class="ref-formula">% yield = (actual / theoretical) × 100</div>
+            </div>`
+          }
+        ]
+      },
+
+      algebra1: {
+        name: "Algebra I",
+        emoji: "📐",
+        sections: [
+          {
+            title: "Quadratic Formula",
+            html: `<div class="ref-formula" style="font-size:1rem">x = (−b ± √(b²−4ac)) / 2a</div>
+              <p style="font-size:0.82rem;color:var(--muted);margin-top:6px">For ax² + bx + c = 0</p>`
+          },
+          {
+            title: "Linear Equations",
+            html: `<div class="formula-grid">
+              <div><div style="font-size:0.78rem;color:var(--muted);margin-bottom:3px">Slope formula</div><div class="ref-formula">m = (y₂−y₁) / (x₂−x₁)</div></div>
+              <div><div style="font-size:0.78rem;color:var(--muted);margin-bottom:3px">Slope-intercept</div><div class="ref-formula">y = mx + b</div></div>
+              <div><div style="font-size:0.78rem;color:var(--muted);margin-bottom:3px">Point-slope</div><div class="ref-formula">y − y₁ = m(x − x₁)</div></div>
+              <div><div style="font-size:0.78rem;color:var(--muted);margin-bottom:3px">Standard form</div><div class="ref-formula">Ax + By = C</div></div>
+            </div>`
+          },
+          {
+            title: "Properties of Exponents",
+            html: `<table class="ref-table">
+              <thead><tr><th>Rule</th><th>Example</th></tr></thead>
+              <tbody>
+                <tr><td>xᵃ · xᵇ = x^(a+b)</td><td>x³ · x⁴ = x⁷</td></tr>
+                <tr><td>xᵃ / xᵇ = x^(a−b)</td><td>x⁶ / x² = x⁴</td></tr>
+                <tr><td>(xᵃ)ᵇ = x^(ab)</td><td>(x³)² = x⁶</td></tr>
+                <tr><td>x⁰ = 1</td><td>5⁰ = 1</td></tr>
+                <tr><td>x⁻ⁿ = 1/xⁿ</td><td>3⁻² = 1/9</td></tr>
+                <tr><td>(xy)ⁿ = xⁿyⁿ</td><td>(2x)³ = 8x³</td></tr>
+              </tbody>
+            </table>`
+          },
+          {
+            title: "Factoring Patterns",
+            html: `<div class="formula-grid">
+              <div><div style="font-size:0.78rem;color:var(--muted);margin-bottom:3px">Difference of squares</div><div class="ref-formula">a²−b² = (a+b)(a−b)</div></div>
+              <div><div style="font-size:0.78rem;color:var(--muted);margin-bottom:3px">Perfect square trinomial</div><div class="ref-formula">a²±2ab+b² = (a±b)²</div></div>
+            </div>`
+          },
+          {
+            title: "Systems of Equations",
+            html: `<table class="ref-table">
+              <thead><tr><th>Method</th><th>Steps</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Substitution</strong></td><td>Solve one equation for one variable, substitute into the other</td></tr>
+                <tr><td><strong>Elimination</strong></td><td>Add or subtract equations to cancel one variable</td></tr>
+                <tr><td><strong>Parallel lines</strong></td><td>No solution (same slope, different y-intercept)</td></tr>
+                <tr><td><strong>Same line</strong></td><td>Infinite solutions (identical equations)</td></tr>
+              </tbody>
+            </table>`
+          }
+        ]
+      },
+
+      geometry: {
+        name: "Geometry",
+        emoji: "📏",
+        sections: [
+          {
+            title: "Area Formulas",
+            html: `<table class="ref-table">
+              <thead><tr><th>Shape</th><th>Formula</th></tr></thead>
+              <tbody>
+                <tr><td>Triangle</td><td>A = ½bh</td></tr>
+                <tr><td>Rectangle</td><td>A = lw</td></tr>
+                <tr><td>Parallelogram</td><td>A = bh</td></tr>
+                <tr><td>Trapezoid</td><td>A = ½(b₁+b₂)h</td></tr>
+                <tr><td>Circle</td><td>A = πr²</td></tr>
+                <tr><td>Sector</td><td>A = (θ/360)πr²</td></tr>
+              </tbody>
+            </table>`
+          },
+          {
+            title: "Volume Formulas",
+            html: `<table class="ref-table">
+              <thead><tr><th>Solid</th><th>Formula</th></tr></thead>
+              <tbody>
+                <tr><td>Rectangular prism</td><td>V = lwh</td></tr>
+                <tr><td>Cylinder</td><td>V = πr²h</td></tr>
+                <tr><td>Cone</td><td>V = ⅓πr²h</td></tr>
+                <tr><td>Sphere</td><td>V = (4/3)πr³</td></tr>
+                <tr><td>Pyramid</td><td>V = ⅓Bh (B = base area)</td></tr>
+              </tbody>
+            </table>`
+          },
+          {
+            title: "Pythagorean Theorem & Special Right Triangles",
+            html: `<div class="ref-formula">a² + b² = c²</div>
+              <table class="ref-table" style="margin-top:10px">
+                <thead><tr><th>Triangle</th><th>Side Ratios</th><th>Example (short leg = 1)</th></tr></thead>
+                <tbody>
+                  <tr><td>30-60-90</td><td>1 : √3 : 2</td><td>1, √3, 2</td></tr>
+                  <tr><td>45-45-90</td><td>1 : 1 : √2</td><td>1, 1, √2</td></tr>
+                </tbody>
+              </table>`
+          },
+          {
+            title: "Circle Formulas",
+            html: `<div class="formula-grid">
+              <div><div style="font-size:0.78rem;color:var(--muted);margin-bottom:3px">Circumference</div><div class="ref-formula">C = 2πr = πd</div></div>
+              <div><div style="font-size:0.78rem;color:var(--muted);margin-bottom:3px">Area</div><div class="ref-formula">A = πr²</div></div>
+              <div><div style="font-size:0.78rem;color:var(--muted);margin-bottom:3px">Arc length</div><div class="ref-formula">L = (θ/360) × 2πr</div></div>
+              <div><div style="font-size:0.78rem;color:var(--muted);margin-bottom:3px">Sector area</div><div class="ref-formula">A = (θ/360) × πr²</div></div>
+            </div>`
+          },
+          {
+            title: "Coordinate Geometry",
+            html: `<div class="formula-grid">
+              <div><div style="font-size:0.78rem;color:var(--muted);margin-bottom:3px">Distance formula</div><div class="ref-formula">d = √[(x₂−x₁)²+(y₂−y₁)²]</div></div>
+              <div><div style="font-size:0.78rem;color:var(--muted);margin-bottom:3px">Midpoint formula</div><div class="ref-formula">M = ((x₁+x₂)/2, (y₁+y₂)/2)</div></div>
+            </div>`
+          }
+        ]
+      },
+
+      physics: {
+        name: "Physics",
+        emoji: "⚡",
+        sections: [
+          {
+            title: "Kinematics",
+            html: `<div class="formula-grid">
+              <div class="ref-formula">v = v₀ + at</div>
+              <div class="ref-formula">d = v₀t + ½at²</div>
+              <div class="ref-formula">v² = v₀² + 2ad</div>
+              <div class="ref-formula">d = (v + v₀)/2 × t</div>
+            </div>
+            <p style="font-size:0.82rem;color:var(--muted);margin-top:8px">v = final velocity, v₀ = initial velocity, a = acceleration, d = displacement, t = time</p>`
+          },
+          {
+            title: "Forces",
+            html: `<div class="formula-grid">
+              <div><div style="font-size:0.78rem;color:var(--muted);margin-bottom:3px">Newton's 2nd Law</div><div class="ref-formula">F = ma</div></div>
+              <div><div style="font-size:0.78rem;color:var(--muted);margin-bottom:3px">Gravity</div><div class="ref-formula">F_g = mg (g ≈ 9.8 m/s²)</div></div>
+              <div><div style="font-size:0.78rem;color:var(--muted);margin-bottom:3px">Friction</div><div class="ref-formula">F_f = μN</div></div>
+              <div><div style="font-size:0.78rem;color:var(--muted);margin-bottom:3px">Weight</div><div class="ref-formula">W = mg</div></div>
+            </div>`
+          },
+          {
+            title: "Energy & Work",
+            html: `<div class="formula-grid">
+              <div><div style="font-size:0.78rem;color:var(--muted);margin-bottom:3px">Kinetic energy</div><div class="ref-formula">KE = ½mv²</div></div>
+              <div><div style="font-size:0.78rem;color:var(--muted);margin-bottom:3px">Potential energy</div><div class="ref-formula">PE = mgh</div></div>
+              <div><div style="font-size:0.78rem;color:var(--muted);margin-bottom:3px">Work</div><div class="ref-formula">W = Fd</div></div>
+              <div><div style="font-size:0.78rem;color:var(--muted);margin-bottom:3px">Power</div><div class="ref-formula">P = W/t</div></div>
+            </div>`
+          },
+          {
+            title: "Waves",
+            html: `<div class="formula-grid">
+              <div><div style="font-size:0.78rem;color:var(--muted);margin-bottom:3px">Wave speed</div><div class="ref-formula">v = fλ</div></div>
+              <div><div style="font-size:0.78rem;color:var(--muted);margin-bottom:3px">Period</div><div class="ref-formula">T = 1/f</div></div>
+            </div>
+            <p style="font-size:0.82rem;color:var(--muted);margin-top:8px">v = wave speed, f = frequency, λ = wavelength, T = period</p>`
+          },
+          {
+            title: "Electricity",
+            html: `<div class="formula-grid">
+              <div><div style="font-size:0.78rem;color:var(--muted);margin-bottom:3px">Ohm's Law</div><div class="ref-formula">V = IR</div></div>
+              <div><div style="font-size:0.78rem;color:var(--muted);margin-bottom:3px">Power</div><div class="ref-formula">P = IV</div></div>
+              <div><div style="font-size:0.78rem;color:var(--muted);margin-bottom:3px">Power (alt)</div><div class="ref-formula">P = I²R</div></div>
+              <div><div style="font-size:0.78rem;color:var(--muted);margin-bottom:3px">Power (alt 2)</div><div class="ref-formula">P = V²/R</div></div>
+            </div>`
+          }
+        ]
+      },
+
+      biology: {
+        name: "Living Environment",
+        emoji: "🧬",
+        sections: [
+          {
+            title: "Cell Organelles",
+            html: `<table class="ref-table">
+              <thead><tr><th>Organelle</th><th>Function</th></tr></thead>
+              <tbody>
+                <tr><td>Nucleus</td><td>Controls cell activity; contains DNA</td></tr>
+                <tr><td>Mitochondria</td><td>Produces ATP (energy) via cellular respiration; "powerhouse"</td></tr>
+                <tr><td>Ribosome</td><td>Synthesizes (makes) proteins</td></tr>
+                <tr><td>Chloroplast</td><td>Performs photosynthesis; converts light to sugar (plant cells only)</td></tr>
+                <tr><td>Cell membrane</td><td>Controls what enters and exits the cell (selective permeability)</td></tr>
+                <tr><td>Vacuole</td><td>Stores water, nutrients, waste; large central vacuole in plants</td></tr>
+                <tr><td>Golgi apparatus</td><td>Packages and ships proteins to where they're needed</td></tr>
+                <tr><td>Endoplasmic reticulum</td><td>Rough ER: folds proteins; Smooth ER: makes lipids</td></tr>
+                <tr><td>Lysosome</td><td>Digests waste materials and old organelles ("cleanup crew")</td></tr>
+              </tbody>
+            </table>`
+          },
+          {
+            title: "DNA & RNA",
+            html: `<table class="ref-table" style="margin-bottom:10px">
+              <thead><tr><th>Molecule</th><th>Base Pairs</th><th>Sugar</th><th>Strands</th></tr></thead>
+              <tbody>
+                <tr><td>DNA</td><td>A−T, G−C</td><td>Deoxyribose</td><td>Double</td></tr>
+                <tr><td>mRNA</td><td>A−U, G−C</td><td>Ribose</td><td>Single</td></tr>
+              </tbody>
+            </table>
+            <ul class="ref-ul">
+              <li><strong>Transcription:</strong> DNA → mRNA (in nucleus)</li>
+              <li><strong>Translation:</strong> mRNA → protein at ribosome (codon = 3 bases = 1 amino acid)</li>
+            </ul>`
+          },
+          {
+            title: "Photosynthesis & Cellular Respiration",
+            html: `<div style="margin-bottom:8px"><div style="font-size:0.78rem;color:var(--muted);font-weight:700;margin-bottom:4px">Photosynthesis (chloroplast)</div>
+              <div class="ref-formula">6CO₂ + 6H₂O + light → C₆H₁₂O₆ + 6O₂</div></div>
+              <div><div style="font-size:0.78rem;color:var(--muted);font-weight:700;margin-bottom:4px">Cellular Respiration (mitochondria)</div>
+              <div class="ref-formula">C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ATP</div></div>`
+          },
+          {
+            title: "Genetics Terms",
+            html: `<table class="ref-table">
+              <thead><tr><th>Term</th><th>Definition</th></tr></thead>
+              <tbody>
+                <tr><td>Dominant</td><td>Allele that is expressed when present (capital letter, e.g. A)</td></tr>
+                <tr><td>Recessive</td><td>Allele expressed only when two copies present (lowercase, e.g. a)</td></tr>
+                <tr><td>Homozygous</td><td>Two identical alleles (AA or aa)</td></tr>
+                <tr><td>Heterozygous</td><td>Two different alleles (Aa)</td></tr>
+                <tr><td>Genotype</td><td>Genetic makeup (e.g. Aa)</td></tr>
+                <tr><td>Phenotype</td><td>Physical appearance / expressed trait</td></tr>
+                <tr><td>Punnett square</td><td>Grid used to predict offspring genotype ratios</td></tr>
+              </tbody>
+            </table>`
+          }
+        ]
+      },
+
+      earthscience: {
+        name: "Earth Science",
+        emoji: "🌍",
+        sections: [
+          {
+            title: "Rock Cycle",
+            html: `<table class="ref-table">
+              <thead><tr><th>Rock Type</th><th>Formed From</th><th>Process</th></tr></thead>
+              <tbody>
+                <tr><td>Igneous</td><td>Magma/lava</td><td>Cooling and solidification</td></tr>
+                <tr><td>Sedimentary</td><td>Sediment (particles)</td><td>Compaction and cementation</td></tr>
+                <tr><td>Metamorphic</td><td>Any rock</td><td>Heat and pressure (no melting)</td></tr>
+              </tbody>
+            </table>
+            <ul class="ref-ul" style="margin-top:8px">
+              <li>Igneous → Sedimentary: weathering, erosion, deposition</li>
+              <li>Any rock → Metamorphic: heat + pressure</li>
+              <li>Any rock → Igneous: melting then cooling</li>
+            </ul>`
+          },
+          {
+            title: "Layers of Earth",
+            html: `<table class="ref-table">
+              <thead><tr><th>Layer</th><th>Depth</th><th>State</th><th>Key Facts</th></tr></thead>
+              <tbody>
+                <tr><td>Crust</td><td>0–70 km</td><td>Solid</td><td>Oceanic (basalt) and continental (granite)</td></tr>
+                <tr><td>Mantle</td><td>70–2,900 km</td><td>Solid (plastically flows)</td><td>Convection drives plate tectonics</td></tr>
+                <tr><td>Outer core</td><td>2,900–5,100 km</td><td>Liquid</td><td>Iron and nickel; generates magnetic field</td></tr>
+                <tr><td>Inner core</td><td>5,100–6,371 km</td><td>Solid</td><td>Iron and nickel; extreme pressure</td></tr>
+              </tbody>
+            </table>`
+          },
+          {
+            title: "Atmosphere Layers",
+            html: `<table class="ref-table">
+              <thead><tr><th>Layer</th><th>Altitude</th><th>Key Facts</th></tr></thead>
+              <tbody>
+                <tr><td>Troposphere</td><td>0–12 km</td><td>Weather occurs here; temp decreases with altitude</td></tr>
+                <tr><td>Stratosphere</td><td>12–50 km</td><td>Ozone layer; temp increases with altitude</td></tr>
+                <tr><td>Mesosphere</td><td>50–80 km</td><td>Meteors burn up here; coldest layer</td></tr>
+                <tr><td>Thermosphere</td><td>80–700 km</td><td>Auroras; very hot but low density</td></tr>
+              </tbody>
+            </table>`
+          },
+          {
+            title: "Moon Phases (in order)",
+            html: `<ul class="ref-ul">
+              <li>🌑 New Moon</li>
+              <li>🌒 Waxing Crescent</li>
+              <li>🌓 First Quarter</li>
+              <li>🌔 Waxing Gibbous</li>
+              <li>🌕 Full Moon</li>
+              <li>🌖 Waning Gibbous</li>
+              <li>🌗 Third Quarter</li>
+              <li>🌘 Waning Crescent</li>
+            </ul>
+            <p style="font-size:0.82rem;color:var(--muted);margin-top:6px">Waxing = growing; Waning = shrinking. One complete cycle ≈ 29.5 days.</p>`
+          },
+          {
+            title: "Key Concepts",
+            html: `<ul class="ref-ul">
+              <li><strong>Erosion:</strong> movement of sediment by water, wind, ice, or gravity</li>
+              <li><strong>Deposition:</strong> sediment settles when agent loses energy</li>
+              <li><strong>Doppler effect:</strong> frequency appears higher as source approaches, lower as it recedes</li>
+              <li><strong>Plate tectonics:</strong> convergent (collision), divergent (spreading), transform (sliding)</li>
+              <li><strong>Water cycle:</strong> evaporation → condensation → precipitation → runoff/infiltration</li>
+            </ul>`
+          }
+        ]
+      }
+    };
+
+    const SUBJECTS = [
+      { id: "chemistry",   label: "⚗️ Chemistry" },
+      { id: "algebra1",    label: "📐 Algebra I" },
+      { id: "geometry",    label: "📏 Geometry" },
+      { id: "physics",     label: "⚡ Physics" },
+      { id: "biology",     label: "🧬 Living Env." },
+      { id: "earthscience",label: "🌍 Earth Science" },
+    ];
+
+    function renderRef(subjectId) {
+      const ref = REFS[subjectId];
+      if (!ref) {
+        document.getElementById("ref-content").innerHTML = `<div class="card" style="padding:24px;text-align:center;color:var(--muted)">No reference sheet available yet for this subject.</div>`;
+        document.getElementById("ref-title").textContent = "📚 Reference Sheets";
+        document.getElementById("ref-subtitle").textContent = "Quick facts and formulas for your Regents exam";
+        return;
+      }
+      document.getElementById("ref-title").textContent = `${ref.emoji} ${ref.name} Reference Sheet`;
+      document.getElementById("ref-subtitle").textContent = "Quick-access facts and formulas — open this during study sessions";
+      document.title = `BoroPrep — ${ref.name} Reference`;
+
+      document.getElementById("ref-content").innerHTML = ref.sections.map(sec => `
+        <div class="card ref-section" style="padding:18px 20px">
+          <h2>${sec.title}</h2>
+          ${sec.html}
+        </div>
+      `).join("");
+    }
+
+    // Build subject tabs
+    const tabsEl = document.getElementById("subject-tabs");
+    tabsEl.innerHTML = SUBJECTS.map(s =>
+      `<button class="subject-tab" data-id="${s.id}">${s.label}</button>`
+    ).join("");
+
+    tabsEl.querySelectorAll(".subject-tab").forEach(btn => {
+      btn.addEventListener("click", () => {
+        tabsEl.querySelectorAll(".subject-tab").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        const newUrl = `/reference?subject=${btn.dataset.id}`;
+        history.replaceState(null, "", newUrl);
+        renderRef(btn.dataset.id);
+      });
+    });
+
+    // Read URL param and load
+    const params = new URLSearchParams(location.search);
+    const subjectParam = params.get("subject") || "chemistry";
+    const activeTab = tabsEl.querySelector(`[data-id="${subjectParam}"]`);
+    if (activeTab) activeTab.classList.add("active");
+    renderRef(subjectParam);
+  </script>
+</body>
+</html>

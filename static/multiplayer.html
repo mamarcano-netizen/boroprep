@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="manifest" href="/static/manifest.json" />
+  <meta name="theme-color" content="#4f46e5" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BoroPrep — Play vs Friends</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-logo">🗽 Boro<span>Prep</span></div>
+    <div class="nav-menu"><a href="/dashboard" class="nav-btn">Home</a></div>
+  </nav>
+
+  <aside class="sidebar">
+    <div class="sidebar-logo">🗽 Boro<span>Prep</span></div>
+    <div class="sidebar-section">Menu</div>
+    <a href="/dashboard" class="sidebar-link">🏠 Dashboard</a>
+    <a href="/study" class="sidebar-link">📝 Study</a>
+    <a href="/study?mode=photo" class="sidebar-link">📸 Photo Help</a>
+    <a href="/multiplayer" class="sidebar-link active">🎮 Play vs Friends</a>
+    <a href="/exam" class="sidebar-link">📋 Practice Exam</a>
+    <a href="/essay" class="sidebar-link">✍️ Essay Grader</a>
+    <a href="/parent" class="sidebar-link">👪 Parent View</a>
+    <div class="sidebar-divider"></div>
+    <div class="sidebar-section">Accessibility</div>
+    <button class="sidebar-link" id="sb-tts">🔊 Read Aloud</button>
+    <button class="sidebar-link" id="sb-simple">✏️ Simple Words</button>
+    <button class="sidebar-link" id="sb-dark">🌙 Dark Mode</button>
+    <div class="sidebar-bottom">
+      <div class="sidebar-divider"></div>
+      <a href="/dashboard" class="sidebar-link">🚪 Back</a>
+    </div>
+  </aside>
+
+  <div class="desktop-main">
+
+  <!-- Lobby -->
+  <div id="lobby" class="container" style="padding:24px 16px">
+    <h2 style="font-size:1.4rem;font-weight:800;margin-bottom:8px">🎮 Play vs Friends</h2>
+    <p style="color:var(--muted);margin-bottom:24px">Race your friends to answer Regents questions!</p>
+
+    <button class="btn btn-primary" id="create-btn" style="margin-bottom:12px">🚀 Create a Room</button>
+
+    <div style="text-align:center;color:var(--muted);margin:12px 0">— or —</div>
+
+    <div class="form-group">
+      <label>Enter Room Code</label>
+      <input type="text" id="join-code" placeholder="ABC123" style="text-transform:uppercase;letter-spacing:0.1em;font-size:1.2rem;text-align:center" maxlength="6" />
+    </div>
+    <button class="btn btn-outline" id="join-btn">Join Room</button>
+    <p id="lobby-error" class="error-msg hidden"></p>
+  </div>
+
+  <!-- Waiting Room -->
+  <div id="waiting-room" class="container hidden" style="padding:24px 16px;text-align:center">
+    <div style="font-size:3rem;margin-bottom:12px">⏳</div>
+    <h2 style="margin-bottom:8px">Room Code</h2>
+    <div id="room-code-display" style="font-size:3rem;font-weight:800;color:var(--primary);letter-spacing:0.15em;margin-bottom:16px"></div>
+    <p style="color:var(--muted);margin-bottom:24px">Share this code with your friends!</p>
+    <div id="players-list" style="margin-bottom:24px;display:flex;flex-direction:column;gap:8px"></div>
+    <button class="btn btn-success" id="start-btn">▶ Start Game</button>
+  </div>
+
+  <!-- Game -->
+  <div id="game-section" class="study-page hidden">
+    <div class="progress-bar-wrap">
+      <div class="progress-bar-fill" id="game-progress" style="width:0%"></div>
+    </div>
+
+    <!-- Scores -->
+    <div id="scoreboard" class="card" style="padding:12px 16px;margin-bottom:16px;display:flex;gap:12px;flex-wrap:wrap"></div>
+
+    <div class="card question-card">
+      <div class="question-num" id="game-q-num">Question 1 of 10</div>
+      <div class="question-text" id="game-q-text"></div>
+      <div class="choices" id="game-choices"></div>
+      <div id="game-explanation" class="hidden" style="margin-top:12px"></div>
+    </div>
+    <button class="btn btn-primary next-btn hidden" id="game-next">Next →</button>
+  </div>
+
+  <!-- Results -->
+  <div id="results-section" class="study-page hidden">
+    <div class="card score-card">
+      <div style="font-size:3rem;margin-bottom:8px">🏆</div>
+      <h2 style="font-size:1.5rem;margin-bottom:16px">Game Over!</h2>
+      <div id="final-scores" style="display:flex;flex-direction:column;gap:8px;margin-bottom:24px"></div>
+      <a href="/multiplayer" class="btn btn-primary">Play Again</a>
+      <a href="/dashboard" class="btn btn-outline" style="margin-top:10px">Back to Dashboard</a>
+    </div>
+  </div>
+
+  </div><!-- /desktop-main -->
+
+  <script src="/static/app.js"></script>
+  <script>
+    (function(){var s=localStorage.getItem("bp_dark");if(s==="1"||(s===null&&window.matchMedia?.("(prefers-color-scheme: dark)").matches))document.body.classList.add("dark");})();
+    document.getElementById("sb-tts")?.addEventListener("click", () => ttsEnabled ? ttsOff() : ttsOn());
+    document.getElementById("sb-simple")?.addEventListener("click", () => { simpleMode=!simpleMode; _setAccessBtn("simple",simpleMode); saveAccessibility(); });
+    document.getElementById("sb-dark")?.addEventListener("click", () => { document.body.classList.toggle("dark"); localStorage.setItem("bp_dark", document.body.classList.contains("dark") ? "1" : "0"); });
+    initMultiplayer();
+  </script>
+
+  <!-- Mobile Bottom Nav -->
+  <nav class="mobile-bottom-nav">
+    <a href="/dashboard"><span class="nav-icon">🏠</span>Home</a>
+    <a href="/study"><span class="nav-icon">📝</span>Study</a>
+    <a href="/exam"><span class="nav-icon">📋</span>Exam</a>
+    <a href="/essay"><span class="nav-icon">✍️</span>Essay</a>
+    <a href="/multiplayer" class="active"><span class="nav-icon">🎮</span>Play</a>
+  </nav>
+</body>
+</html>

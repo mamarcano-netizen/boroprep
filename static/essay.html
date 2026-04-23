@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="manifest" href="/static/manifest.json" />
+  <meta name="theme-color" content="#4f46e5" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BoroPrep — Essay Grader</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <style>
+    /* ── Page shell ── */
+    .essay-page { max-width: 760px; margin: 0 auto; padding: 24px 20px; }
+    @media (min-width: 768px) { .essay-page { padding: 32px 40px; } }
+
+    /* ── Step indicator ── */
+    .step-bar {
+      display: flex; align-items: center; gap: 0;
+      margin-bottom: 28px; font-size: 0.82rem; font-weight: 700;
+    }
+    .step-dot {
+      width: 28px; height: 28px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.78rem; font-weight: 800; flex-shrink: 0;
+      background: var(--border); color: var(--muted); transition: all 0.2s;
+    }
+    .step-dot.active   { background: var(--primary); color: white; }
+    .step-dot.done     { background: var(--success); color: white; }
+    .step-line { flex: 1; height: 2px; background: var(--border); }
+    .step-label { font-size: 0.75rem; color: var(--muted); margin-top: 4px; text-align: center; }
+
+    /* ── Type selector ── */
+    .type-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 24px; }
+    .type-card {
+      border: 2px solid var(--border); border-radius: 14px; padding: 18px 16px;
+      cursor: pointer; background: var(--card); text-align: center;
+      transition: all 0.15s;
+    }
+    .type-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+    .type-card.selected { border-color: var(--primary); background: #eef2ff; }
+    body.dark .type-card.selected { background: #1e1b4b; }
+    .type-card .type-emoji { font-size: 2rem; margin-bottom: 8px; }
+    .type-card .type-name { font-weight: 800; font-size: 0.95rem; margin-bottom: 4px; }
+    .type-card .type-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.4; }
+
+    /* ── Passage selector ── */
+    .passage-choice {
+      border: 2px solid var(--border); border-radius: 12px; padding: 14px 16px;
+      cursor: pointer; background: var(--card); margin-bottom: 10px;
+      transition: all 0.15s; display: flex; align-items: center; gap: 12px;
+    }
+    .passage-choice:hover { border-color: var(--primary); }
+    .passage-choice.selected { border-color: var(--primary); background: #eef2ff; }
+    body.dark .passage-choice.selected { background: #1e1b4b; }
+    .passage-choice-title { font-weight: 700; font-size: 0.95rem; }
+    .passage-choice-meta { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
+
+    /* ── Reading area ── */
+    .reading-area {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 14px; padding: 24px; margin-bottom: 20px;
+    }
+    .reading-area h3 { font-size: 1rem; font-weight: 800; margin-bottom: 4px; }
+    .reading-area .source-tag {
+      font-size: 0.75rem; color: var(--muted); margin-bottom: 16px;
+      font-style: italic;
+    }
+    .text-block {
+      border-left: 3px solid var(--primary); padding: 16px 18px;
+      margin-bottom: 20px; background: var(--bg); border-radius: 0 10px 10px 0;
+    }
+    .text-block h4 {
+      font-size: 0.85rem; font-weight: 700; color: var(--primary);
+      margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.04em;
+    }
+    .text-block p { font-size: 0.92rem; line-height: 1.75; color: var(--text); white-space: pre-line; }
+
+    /* ── Prompt box ── */
+    .prompt-box {
+      background: linear-gradient(135deg, #eef2ff, #e0e7ff);
+      border: 1.5px solid #c7d2fe; border-radius: 14px;
+      padding: 18px 20px; margin-bottom: 24px;
+    }
+    body.dark .prompt-box { background: linear-gradient(135deg, #1e1b4b, #1a103a); border-color: #4338ca; }
+    .prompt-box .prompt-label {
+      font-size: 0.72rem; font-weight: 800; color: var(--primary);
+      text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px;
+    }
+    .prompt-box p { font-size: 0.92rem; line-height: 1.65; color: var(--text); margin: 0; }
+
+    /* ── Essay textarea ── */
+    .essay-textarea {
+      width: 100%; min-height: 260px; padding: 14px 16px; border-radius: 12px;
+      border: 1.5px solid var(--border); background: var(--card); color: var(--text);
+      font-size: 1rem; font-family: inherit; resize: vertical; box-sizing: border-box;
+      outline: none; transition: border-color 0.15s; line-height: 1.7;
+    }
+    .essay-textarea:focus { border-color: var(--primary); }
+    .word-count { font-size: 0.8rem; color: var(--muted); text-align: right; margin-top: 6px; }
+
+    /* ── Results ── */
+    .score-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+    .score-label { min-width: 170px; font-size: 0.88rem; color: var(--text); }
+    .score-bar-wrap { flex: 1; background: var(--bg); border-radius: 20px; height: 14px; overflow: hidden; border: 1px solid var(--border); }
+    .score-bar-fill { height: 100%; border-radius: 20px; transition: width 0.6s cubic-bezier(0.34,1.56,0.64,1); }
+    .score-num { min-width: 32px; text-align: right; font-weight: 700; font-size: 0.9rem; }
+    .overall-badge {
+      display: inline-block; padding: 5px 16px; border-radius: 20px;
+      font-weight: 800; font-size: 0.95rem; margin-left: 10px;
+    }
+    .pass-badge { background: #d1fae5; color: #065f46; }
+    .fail-badge { background: #fee2e2; color: #991b1b; }
+    body.dark .pass-badge { background: #065f46; color: #d1fae5; }
+    body.dark .fail-badge { background: #7f1d1d; color: #fee2e2; }
+    .score-total-row {
+      display: flex; align-items: center; gap: 8px; font-size: 1.1rem; font-weight: 800;
+      margin-bottom: 16px; padding-bottom: 14px; border-bottom: 1px solid var(--border);
+    }
+    .feedback-section { margin-top: 18px; }
+    .feedback-section h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 10px; }
+    .feedback-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 7px; }
+    .strength-item { background: #d1fae5; color: #065f46; padding: 8px 13px; border-radius: 8px; font-size: 0.88rem; line-height: 1.5; }
+    .improve-item  { background: #fef3c7; color: #92400e; padding: 8px 13px; border-radius: 8px; font-size: 0.88rem; line-height: 1.5; }
+    body.dark .strength-item { background: #065f46; color: #d1fae5; }
+    body.dark .improve-item  { background: #78350f; color: #fef3c7; }
+    .line-feedback-box {
+      background: var(--bg); border: 1px solid var(--border); border-radius: 10px;
+      padding: 14px 16px; font-size: 0.9rem; line-height: 1.7; color: var(--text);
+    }
+    .overall-comment-box {
+      background: var(--card); border-left: 4px solid var(--primary);
+      border-radius: 0 10px 10px 0; padding: 12px 16px;
+      font-size: 0.92rem; color: var(--text); margin-bottom: 16px; font-style: italic;
+    }
+
+    /* loading */
+    .spinner {
+      display: inline-block; width: 18px; height: 18px;
+      border: 3px solid var(--border); border-top-color: var(--primary);
+      border-radius: 50%; animation: spin 0.7s linear infinite; vertical-align: middle; margin-right: 8px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-logo">🗽 Boro<span>Prep</span></div>
+    <div class="nav-menu"><a href="/dashboard" class="nav-btn">Home</a></div>
+  </nav>
+
+  <aside class="sidebar">
+    <div class="sidebar-logo">🗽 Boro<span>Prep</span></div>
+    <div class="sidebar-section">Menu</div>
+    <a href="/dashboard" class="sidebar-link">🏠 Dashboard</a>
+    <a href="/study" class="sidebar-link">📝 Study</a>
+    <a href="/study?mode=photo" class="sidebar-link">📸 Photo Help</a>
+    <a href="/multiplayer" class="sidebar-link">🎮 Play vs Friends</a>
+    <a href="/exam" class="sidebar-link">📋 Practice Exam</a>
+    <a href="/essay" class="sidebar-link active">✍️ Essay Grader</a>
+    <a href="/parent" class="sidebar-link">👪 Parent View</a>
+    <a href="/teacher" class="sidebar-link">🍎 Teacher View</a>
+    <div class="sidebar-divider"></div>
+    <div class="sidebar-section">Accessibility</div>
+    <button class="sidebar-link" id="sb-tts">🔊 Read Aloud</button>
+    <button class="sidebar-link" id="sb-simple">✏️ Simple Words</button>
+    <button class="sidebar-link" id="sb-dark">🌙 Dark Mode</button>
+    <div class="sidebar-bottom">
+      <div class="sidebar-divider"></div>
+      <a href="/dashboard" class="sidebar-link">🚪 Back</a>
+    </div>
+  </aside>
+
+  <div class="desktop-main">
+  <div class="essay-page">
+
+    <h2 style="font-size:1.3rem;font-weight:800;margin-bottom:4px">✍️ Essay Grader</h2>
+    <p style="color:var(--muted);font-size:0.88rem;margin-bottom:20px">Practice the NYS Regents ELA essay — read a passage, then write and get AI feedback.</p>
+
+    <!-- Step indicator -->
+    <div>
+      <div class="step-bar">
+        <div class="step-dot active" id="step-1">1</div>
+        <div class="step-line"></div>
+        <div class="step-dot" id="step-2">2</div>
+        <div class="step-line"></div>
+        <div class="step-dot" id="step-3">3</div>
+        <div class="step-line"></div>
+        <div class="step-dot" id="step-4">4</div>
+      </div>
+      <div style="display:flex;justify-content:space-between;margin-bottom:24px">
+        <span class="step-label">Choose Type</span>
+        <span class="step-label">Pick Passage</span>
+        <span class="step-label">Read &amp; Write</span>
+        <span class="step-label">Feedback</span>
+      </div>
+    </div>
+
+    <!-- Step 1: Choose essay type -->
+    <div id="step1-panel">
+      <div class="type-grid">
+        <div class="type-card selected" data-type="text_analysis">
+          <div class="type-emoji">📖</div>
+          <div class="type-name">Text Analysis</div>
+          <div class="type-desc">Read a literary text. Analyze a central idea and a literary element.</div>
+        </div>
+        <div class="type-card" data-type="argument">
+          <div class="type-emoji">✍️</div>
+          <div class="type-name">Argument Essay</div>
+          <div class="type-desc">Read 3–4 texts on a topic. Write an argument using evidence.</div>
+        </div>
+        <div class="type-card" data-type="document_analysis">
+          <div class="type-emoji">🔍</div>
+          <div class="type-name">Document Analysis</div>
+          <div class="type-desc">Read historical documents. Analyze themes and strategies.</div>
+        </div>
+      </div>
+      <button class="btn btn-primary" id="next-to-step2" style="width:100%">Next: Pick a Passage →</button>
+    </div>
+
+    <!-- Step 2: Pick a passage -->
+    <div id="step2-panel" style="display:none">
+      <p style="color:var(--muted);font-size:0.88rem;margin-bottom:14px">Choose a practice passage:</p>
+      <div id="passage-list"></div>
+      <div style="display:flex;gap:10px;margin-top:16px">
+        <button class="btn btn-outline" id="back-to-step1">← Back</button>
+        <button class="btn btn-primary" id="next-to-step3" style="flex:1" disabled>Read Passage & Write →</button>
+      </div>
+    </div>
+
+    <!-- Step 3: Read passage + write essay -->
+    <div id="step3-panel" style="display:none">
+      <!-- Passage reading area -->
+      <div class="reading-area" id="reading-area">
+        <div style="display:flex;justify-content:flex-end;margin-bottom:8px">
+          <button onclick="essaySpeak('passage')" style="background:none;border:1px solid var(--border);border-radius:8px;padding:4px 10px;cursor:pointer;font-size:0.82rem;color:var(--primary)">🔊 Read Passage</button>
+        </div>
+      </div>
+
+      <!-- Writing prompt -->
+      <div class="prompt-box">
+        <div class="prompt-label" style="display:flex;justify-content:space-between;align-items:center">
+          <span>✏️ Your Writing Prompt</span>
+          <button onclick="essaySpeak('prompt')" style="background:none;border:none;cursor:pointer;font-size:0.85rem;color:var(--primary);padding:0">🔊</button>
+        </div>
+        <p id="writing-prompt"></p>
+      </div>
+
+      <!-- Essay textarea -->
+      <label style="font-weight:700;font-size:0.95rem;display:block;margin-bottom:8px">Your Essay</label>
+      <textarea id="essay-input" class="essay-textarea" placeholder="Write your essay here. Use evidence from the passage(s) above — quote or paraphrase specific parts to support your argument."></textarea>
+      <div class="word-count" id="word-count">0 words · aim for 300–600</div>
+
+      <div style="display:flex;gap:10px;margin-top:16px">
+        <button class="btn btn-outline" id="back-to-step2">← Back</button>
+        <button class="btn btn-primary" id="grade-btn" style="flex:1">🤖 Grade My Essay</button>
+      </div>
+    </div>
+
+    <!-- Step 4: Feedback -->
+    <div id="step4-panel" style="display:none">
+      <div class="overall-comment-box" id="overall-comment"></div>
+
+      <div class="score-total-row">
+        <span id="total-score-text">Overall: —/24</span>
+        <span class="overall-badge" id="pass-fail-badge"></span>
+      </div>
+
+      <div id="score-bars"></div>
+
+      <div class="feedback-section">
+        <h4 style="color:#059669">✅ Strengths</h4>
+        <ul class="feedback-list" id="strengths-list"></ul>
+      </div>
+
+      <div class="feedback-section">
+        <h4 style="color:#d97706">🔧 Areas to Improve</h4>
+        <ul class="feedback-list" id="improvements-list"></ul>
+      </div>
+
+      <div class="feedback-section">
+        <h4>💬 Specific Suggestions</h4>
+        <div class="line-feedback-box" id="line-feedback"></div>
+      </div>
+
+      <div style="display:flex;gap:10px;margin-top:20px">
+        <button class="btn btn-outline" id="try-again-btn" style="flex:1">🔄 Try a Different Passage</button>
+        <button class="btn btn-primary" id="revise-btn" style="flex:1">✏️ Revise My Essay</button>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+  <script src="/static/passages.js"></script>
+  <script src="/static/app.js"></script>
+  <script>
+    (function(){var s=localStorage.getItem("bp_dark");if(s==="1"||(s===null&&window.matchMedia?.("(prefers-color-scheme: dark)").matches))document.body.classList.add("dark");})();
+    document.getElementById("sb-tts")?.addEventListener("click", () => ttsEnabled ? ttsOff() : ttsOn());
+    document.getElementById("sb-simple")?.addEventListener("click", () => { simpleMode=!simpleMode; _setAccessBtn("simple",simpleMode); saveAccessibility(); });
+    document.getElementById("sb-dark")?.addEventListener("click", () => { document.body.classList.toggle("dark"); localStorage.setItem("bp_dark", document.body.classList.contains("dark") ? "1" : "0"); });
+
+    let selectedType = "text_analysis";
+    let selectedPassage = null;
+
+    // ── Step helpers ──────────────────────────────────────────────────────────
+    function setStep(n) {
+      [1,2,3,4].forEach(i => {
+        const dot = document.getElementById("step-" + i);
+        dot.className = "step-dot" + (i < n ? " done" : i === n ? " active" : "");
+        document.getElementById("step" + i + "-panel").style.display = i === n ? "block" : "none";
+      });
+    }
+
+    // ── Step 1: type selection ────────────────────────────────────────────────
+    document.querySelectorAll(".type-card").forEach(card => {
+      card.addEventListener("click", () => {
+        document.querySelectorAll(".type-card").forEach(c => c.classList.remove("selected"));
+        card.classList.add("selected");
+        selectedType = card.dataset.type;
+      });
+    });
+
+    document.getElementById("next-to-step2").addEventListener("click", () => {
+      buildPassageList();
+      setStep(2);
+    });
+
+    // ── Step 2: passage selection ─────────────────────────────────────────────
+    function buildPassageList() {
+      const list = document.getElementById("passage-list");
+      const matching = PASSAGES.filter(p => p.type === selectedType);
+      if (matching.length === 0) {
+        list.innerHTML = `<p style="color:var(--muted)">No passages available for this type yet.</p>`;
+        return;
+      }
+      list.innerHTML = matching.map(p => `
+        <div class="passage-choice" data-id="${p.id}">
+          <div style="font-size:1.5rem">${p.type === "text_analysis" ? "📖" : p.type === "argument" ? "✍️" : "🔍"}</div>
+          <div>
+            <div class="passage-choice-title">${p.title}</div>
+            <div class="passage-choice-meta">${p.source} · ${p.texts.length} text${p.texts.length > 1 ? "s" : ""}</div>
+          </div>
+        </div>`).join("");
+
+      list.querySelectorAll(".passage-choice").forEach(el => {
+        el.addEventListener("click", () => {
+          list.querySelectorAll(".passage-choice").forEach(c => c.classList.remove("selected"));
+          el.classList.add("selected");
+          selectedPassage = PASSAGES.find(p => p.id === el.dataset.id);
+          document.getElementById("next-to-step3").disabled = false;
+        });
+      });
+    }
+
+    document.getElementById("back-to-step1").addEventListener("click", () => setStep(1));
+    document.getElementById("next-to-step3").addEventListener("click", () => {
+      if (!selectedPassage) return;
+      buildReadingArea();
+      setStep(3);
+    });
+
+    let _essayAudio = null;
+    let _essayAbort = null;
+    async function essaySpeak(target) {
+      let text = "";
+      if (target === "passage" && selectedPassage) {
+        text = selectedPassage.texts.map(t => t.title + ". " + t.body).join(". ");
+      } else if (target === "prompt" && selectedPassage) {
+        text = selectedPassage.prompt;
+      }
+      if (!text.trim()) return;
+      // If already playing, stop it
+      if (_essayAudio) { _essayAudio.pause(); _essayAudio = null; }
+      if (_essayAbort) { _essayAbort.abort(); _essayAbort = null; return; }
+      _essayAbort = new AbortController();
+      try {
+        const res = await fetch("/api/tts", {
+          method: "POST",
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify({text: text.slice(0, 1500)}),
+          signal: _essayAbort.signal,
+        });
+        if (!res.ok) return;
+        const blob = await res.blob();
+        const url = URL.createObjectURL(blob);
+        _essayAudio = new Audio(url);
+        _essayAudio.play();
+        _essayAudio.onended = () => { URL.revokeObjectURL(url); _essayAudio = null; _essayAbort = null; };
+      } catch (e) { if (e?.name !== "AbortError") console.warn("TTS:", e); _essayAbort = null; }
+    }
+
+    // ── Step 3: reading area + essay ──────────────────────────────────────────
+    function buildReadingArea() {
+      const area = document.getElementById("reading-area");
+      const p = selectedPassage;
+      area.innerHTML = `
+        <div style="display:flex;justify-content:flex-end;margin-bottom:8px">
+          <button onclick="essaySpeak('passage')" style="background:none;border:1px solid var(--border);border-radius:8px;padding:4px 10px;cursor:pointer;font-size:0.82rem;color:var(--primary)">🔊 Read Passage</button>
+        </div>
+        <h3>${p.title}</h3>
+        <div class="source-tag">${p.source}</div>
+        ${p.texts.map(t => `
+          <div class="text-block">
+            <h4>${t.title}</h4>
+            <p>${t.body.replace(/</g,"&lt;").replace(/>/g,"&gt;")}</p>
+          </div>`).join("")}`;
+
+      document.getElementById("writing-prompt").textContent = p.prompt;
+      document.getElementById("essay-input").value = "";
+      document.getElementById("word-count").textContent = "0 words · aim for 300–600";
+    }
+
+    const essayInput = document.getElementById("essay-input");
+    essayInput.addEventListener("input", () => {
+      const words = essayInput.value.trim().split(/\s+/).filter(w => w);
+      const count = words.length;
+      const color = count < 100 ? "var(--danger)" : count < 300 ? "var(--warning)" : "var(--success)";
+      document.getElementById("word-count").innerHTML =
+        `<span style="color:${color};font-weight:700">${count} words</span> · aim for 300–600`;
+    });
+
+    document.getElementById("back-to-step2").addEventListener("click", () => setStep(2));
+
+    document.getElementById("grade-btn").addEventListener("click", async () => {
+      const text = essayInput.value.trim();
+      if (text.split(/\s+/).filter(w => w).length < 30) {
+        alert("Please write at least a few sentences before grading.");
+        return;
+      }
+      const btn = document.getElementById("grade-btn");
+      btn.disabled = true;
+      btn.innerHTML = '<span class="spinner"></span>Grading your essay…';
+
+      try {
+        const passageContext = selectedPassage.texts.map(t => t.title + ":\n" + t.body).join("\n\n---\n\n");
+        const res = await fetch("/api/essay/grade", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          credentials: "include",
+          body: JSON.stringify({
+            essay_text: text,
+            prompt_type: selectedType,
+            passage_text: passageContext,
+            prompt_text: selectedPassage.prompt,
+            simple_mode: false
+          })
+        });
+        const data = await res.json();
+        renderResults(data);
+        setStep(4);
+      } catch {
+        alert("Something went wrong. Please try again.");
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = "🤖 Grade My Essay";
+      }
+    });
+
+    // ── Step 4: results ───────────────────────────────────────────────────────
+    function barColor(s) {
+      return s >= 5 ? "#10b981" : s >= 3 ? "#f59e0b" : "#ef4444";
+    }
+
+    function renderResults(data) {
+      const scores = data.scores || {};
+      const total  = data.total ?? 0;
+      const passed = data.passed ?? false;
+
+      document.getElementById("overall-comment").textContent = data.overall_comment || "";
+      document.getElementById("total-score-text").textContent = `Overall: ${total}/24`;
+      const badge = document.getElementById("pass-fail-badge");
+      badge.textContent = passed ? "✅ Passing" : "❌ Needs Work";
+      badge.className = "overall-badge " + (passed ? "pass-badge" : "fail-badge");
+
+      const cats = [
+        { key: "content",   label: "Content & Analysis" },
+        { key: "evidence",  label: "Command of Evidence" },
+        { key: "coherence", label: "Coherence & Organization" },
+        { key: "language",  label: "Language Use" },
+      ];
+      document.getElementById("score-bars").innerHTML = cats.map(c => {
+        const s = scores[c.key] ?? 0;
+        return `<div class="score-row">
+          <div class="score-label">${c.label}</div>
+          <div class="score-bar-wrap"><div class="score-bar-fill" style="width:0%;background:${barColor(s)}" data-pct="${Math.round(s/6*100)}"></div></div>
+          <div class="score-num">${s}/6</div>
+        </div>`;
+      }).join("");
+      // Animate bars after paint
+      setTimeout(() => {
+        document.querySelectorAll(".score-bar-fill").forEach(el => {
+          el.style.width = el.dataset.pct + "%";
+        });
+      }, 80);
+
+      document.getElementById("strengths-list").innerHTML =
+        (data.strengths || []).map(s => `<li class="strength-item">${s}</li>`).join("");
+      document.getElementById("improvements-list").innerHTML =
+        (data.improvements || []).map(s => `<li class="improve-item">${s}</li>`).join("");
+      document.getElementById("line-feedback").textContent = data.line_feedback || "";
+    }
+
+    document.getElementById("try-again-btn").addEventListener("click", () => {
+      selectedPassage = null;
+      document.getElementById("next-to-step3").disabled = true;
+      document.querySelectorAll(".passage-choice").forEach(c => c.classList.remove("selected"));
+      setStep(1);
+    });
+
+    document.getElementById("revise-btn").addEventListener("click", () => setStep(3));
+  </script>
+
+  <!-- Mobile Bottom Nav -->
+  <nav class="mobile-bottom-nav">
+    <a href="/dashboard"><span class="nav-icon">🏠</span>Home</a>
+    <a href="/study"><span class="nav-icon">📝</span>Study</a>
+    <a href="/exam"><span class="nav-icon">📋</span>Exam</a>
+    <a href="/essay" class="active"><span class="nav-icon">✍️</span>Essay</a>
+    <a href="/multiplayer"><span class="nav-icon">🎮</span>Play</a>
+  </nav>
+</body>
+</html>

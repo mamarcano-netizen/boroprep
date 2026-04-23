@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="manifest" href="/static/manifest.json" />
+  <meta name="theme-color" content="#4f46e5" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BoroPrep — Parent View</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-logo">🗽 Boro<span>Prep</span></div>
+    <div class="nav-menu"><a href="/dashboard" class="nav-btn">Home</a></div>
+  </nav>
+
+  <aside class="sidebar">
+    <div class="sidebar-logo">🗽 Boro<span>Prep</span></div>
+    <div class="sidebar-section">Menu</div>
+    <a href="/dashboard" class="sidebar-link">🏠 Dashboard</a>
+    <a href="/study" class="sidebar-link">📝 Study</a>
+    <a href="/multiplayer" class="sidebar-link">🎮 Play vs Friends</a>
+    <a href="/parent" class="sidebar-link active">👪 Parent View</a>
+    <div class="sidebar-bottom">
+      <div class="sidebar-divider"></div>
+      <button class="sidebar-link" id="sb-logout">🚪 Logout</button>
+    </div>
+  </aside>
+
+  <div class="desktop-main">
+    <!-- Not logged in -->
+    <div id="parent-auth" class="container hidden">
+      <div class="auth-page" style="text-align:center;padding-top:40px">
+        <div style="font-size:3rem;margin-bottom:12px">👪</div>
+        <h2>Parent View</h2>
+        <p style="color:var(--muted);margin-bottom:24px">Sign in to track your student's progress.</p>
+        <a href="/dashboard" class="btn btn-primary">Sign In →</a>
+      </div>
+    </div>
+
+    <!-- Parent dashboard -->
+    <div id="parent-dash" style="padding:24px;max-width:700px;margin:0 auto;display:none">
+      <div class="welcome">
+        <h2>👪 Parent View</h2>
+        <p style="color:var(--muted)">See how your student is doing</p>
+      </div>
+
+      <!-- Link a student -->
+      <div class="card" style="margin-bottom:20px">
+        <div style="font-weight:700;margin-bottom:10px">➕ Link a Student Account</div>
+        <p style="font-size:0.85rem;color:var(--muted);margin-bottom:12px">Enter your student's email to connect their account.</p>
+        <div style="display:flex;gap:8px">
+          <input type="email" id="student-email" placeholder="student@email.com"
+            style="flex:1;padding:10px 14px;border:2px solid var(--border);border-radius:10px;font-size:0.9rem" />
+          <button class="btn btn-primary" id="link-btn">Link</button>
+        </div>
+        <p id="link-msg" style="font-size:0.85rem;margin-top:8px;display:none"></p>
+      </div>
+
+      <!-- Children list -->
+      <div id="children-section">
+        <div class="section-title">My Students</div>
+        <div id="children-list">
+          <p style="color:var(--muted);font-size:0.9rem">No students linked yet — use the form above.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+  <script>
+    loadAccessibility();
+    (async () => {
+      let user = null;
+      try { user = await api("/auth/me"); } catch {}
+
+      if (!user) {
+        document.getElementById("parent-auth").classList.remove("hidden");
+        return;
+      }
+
+      document.getElementById("parent-dash").style.display = "block";
+      loadChildren();
+
+      document.getElementById("link-btn").addEventListener("click", async () => {
+        const email = document.getElementById("student-email").value.trim();
+        const msg = document.getElementById("link-msg");
+        if (!email) return;
+        try {
+          const data = await api("/api/parent/link", {method:"POST", body:{student_email:email}});
+          msg.textContent = `✅ Linked ${data.student.name}!`;
+          msg.style.color = "var(--success)";
+          msg.style.display = "block";
+          document.getElementById("student-email").value = "";
+          loadChildren();
+        } catch {
+          msg.textContent = "❌ Student not found. Make sure they've signed up first.";
+          msg.style.color = "var(--danger)";
+          msg.style.display = "block";
+        }
+      });
+    })();
+
+    async function loadChildren() {
+      try {
+        const children = await api("/api/parent/children");
+        const list = document.getElementById("children-list");
+        if (!children.length) {
+          list.innerHTML = `<p style="color:var(--muted);font-size:0.9rem">No students linked yet — use the form above.</p>`;
+          return;
+        }
+        list.innerHTML = children.map(c => {
+          const bySubject = {};
+          (c.progress||[]).forEach(p => {
+            if (!bySubject[p.subject]) bySubject[p.subject] = {correct:0, attempts:0};
+            bySubject[p.subject].correct += p.correct;
+            bySubject[p.subject].attempts += p.attempts;
+          });
+          const subjectRows = Object.entries(bySubject).map(([sub, d]) => {
+            const pct = d.attempts ? Math.round(d.correct/d.attempts*100) : 0;
+            const color = pct >= 70 ? "var(--success)" : pct >= 50 ? "var(--warning)" : "var(--danger)";
+            return `<div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
+              <span style="width:100px;font-size:0.8rem;text-transform:capitalize">${sub}</span>
+              <div style="flex:1;height:8px;background:var(--border);border-radius:4px;overflow:hidden">
+                <div style="height:8px;width:${pct}%;background:${color};border-radius:4px"></div>
+              </div>
+              <span style="font-size:0.8rem;font-weight:700;color:${color};min-width:36px">${pct}%</span>
+            </div>`;
+          }).join("") || `<p style="font-size:0.85rem;color:var(--muted)">No quizzes taken yet.</p>`;
+
+          return `<div class="card" style="margin-bottom:16px;padding:20px">
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px">
+              <div style="width:44px;height:44px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:1.1rem">${c.user.name[0]}</div>
+              <div style="flex:1">
+                <div style="font-weight:800;font-size:1rem">${c.user.name}</div>
+                <div style="font-size:0.8rem;color:var(--muted)">${c.user.email} · 🔥 ${c.user.streak||0} day streak</div>
+              </div>
+              <a href="/api/parent/digest/${c.user.id}" target="_blank" class="btn btn-outline" style="font-size:0.8rem;padding:6px 12px">📧 Weekly Report</a>
+            </div>
+            <div class="section-title" style="margin-bottom:8px">Progress by Subject</div>
+            ${subjectRows}
+          </div>`;
+        }).join("");
+      } catch {}
+    }
+
+    document.getElementById("sb-logout")?.addEventListener("click", async () => {
+      await fetch("/auth/logout",{method:"POST",credentials:"include"});
+      window.location.href = "/dashboard";
+    });
+    (function(){var s=localStorage.getItem("bp_dark");if(s==="1"||(s===null&&window.matchMedia?.("(prefers-color-scheme: dark)").matches))document.body.classList.add("dark");})();
+  </script>
+</body>
+</html>
