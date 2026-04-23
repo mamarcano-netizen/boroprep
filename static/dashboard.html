@@ -245,7 +245,19 @@
           <div class="badge-row" id="badge-row" style="margin-bottom:16px">
             <span style="color:var(--muted);font-size:0.85rem">Complete quizzes to earn badges! 🏆</span>
           </div>
-          <div style="font-weight:800;font-size:1rem;margin-bottom:8px">🏆 Top Students</div>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+            <div style="font-weight:800;font-size:1rem">🏆 Top Students</div>
+            <select id="lb-subject-filter" style="font-size:0.75rem;padding:3px 8px;border-radius:8px;border:1px solid var(--border);background:var(--card);color:var(--text);cursor:pointer">
+              <option value="">Overall XP</option>
+              <option value="chemistry">Chemistry</option>
+              <option value="algebra1">Algebra I</option>
+              <option value="biology">Biology</option>
+              <option value="earth_science">Earth Science</option>
+              <option value="global_history">Global History</option>
+              <option value="us_history">US History</option>
+              <option value="english">English</option>
+            </select>
+          </div>
           <div id="leaderboard-list" style="display:flex;flex-direction:column;gap:4px">
             <span style="color:var(--muted);font-size:0.85rem">Loading…</span>
           </div>

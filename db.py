@@ -120,7 +120,8 @@ def init_db():
             student_email TEXT NOT NULL,
             subject TEXT NOT NULL,
             topic TEXT NOT NULL,
-            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            completed_at TEXT DEFAULT NULL
         );
         CREATE TABLE IF NOT EXISTS teacher_students (
             teacher_id TEXT NOT NULL,
@@ -135,6 +136,14 @@ def init_db():
         )
     """)
     conn.commit()
+    # Add completed_at to assignments if it was created before this column existed
+    try:
+        conn2 = get_conn()
+        _exec(conn2, "ALTER TABLE assignments ADD COLUMN completed_at TEXT DEFAULT NULL")
+        conn2.commit()
+        conn2.close()
+    except Exception:
+        pass
     conn.close()
 
 # ── Users ─────────────────────────────────────────────────────────────────────
@@ -300,6 +309,26 @@ def get_assignments(teacher_id):
     conn.close()
     return [_row(r) for r in rows]
 
+def mark_assignment_done(teacher_id, student_email, subject, topic):
+    conn = get_conn()
+    _exec(conn, """
+        UPDATE assignments SET completed_at = CURRENT_TIMESTAMP
+        WHERE teacher_id = ? AND student_email = ? AND subject = ? AND topic = ?
+    """, (teacher_id, student_email, subject, topic))
+    conn.commit()
+    conn.close()
+
+def get_assignment_status(teacher_id):
+    conn = get_conn()
+    rows = _exec(conn, "SELECT *, (completed_at IS NOT NULL) as completed FROM assignments WHERE teacher_id=? ORDER BY created_at DESC", (teacher_id,)).fetchall()
+    conn.close()
+    result = []
+    for r in rows:
+        r = _row(r)
+        r["completed"] = bool(r["completed"])
+        result.append(r)
+    return result
+
 def get_all_students():
     conn = get_conn()
     rows = _exec(conn, "SELECT * FROM users WHERE role='student'").fetchall()
@@ -322,6 +351,28 @@ def get_leaderboard(limit=10):
                  (limit,)).fetchall()
     conn.close()
     return [_row(r) for r in rows]
+
+def get_subject_leaderboard(subject, limit=10):
+    conn = get_conn()
+    rows = _exec(conn, """
+        SELECT u.name,
+          COALESCE(SUM(p.correct),0) as correct,
+          COALESCE(SUM(p.attempts),0) as attempts
+        FROM users u
+        JOIN progress p ON p.user_id = u.id
+        WHERE p.subject = ?
+        GROUP BY u.id, u.name
+        HAVING SUM(p.attempts) >= 3
+        ORDER BY (CAST(SUM(p.correct) AS FLOAT)/SUM(p.attempts)) DESC
+        LIMIT ?
+    """, (subject, limit)).fetchall()
+    conn.close()
+    result = []
+    for r in rows:
+        r = _row(r)
+        accuracy = round(r["correct"] / r["attempts"] * 100) if r["attempts"] else 0
+        result.append({"name": r["name"], "correct": r["correct"], "attempts": r["attempts"], "accuracy": accuracy})
+    return result
 
 # ── Teacher / Students ────────────────────────────────────────────────────────
 

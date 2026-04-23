@@ -51,6 +51,7 @@
       <button class="mode-tab" data-mode="flash">📇 Flashcards</button>
       <button class="mode-tab" data-mode="chat">🤖 AI Tutor</button>
       <button class="mode-tab" data-mode="photo">📸 Photo Help</button>
+      <button class="mode-tab" data-mode="vocab">📖 Vocab</button>
     </div>
     <div id="bookmarks-bar" style="margin-bottom:12px;display:flex;align-items:center;gap:10px">
       <button class="btn btn-outline" style="font-size:0.85rem;padding:7px 14px" onclick="selectSubject('bookmarks','Bookmarked Questions','bookmarks')">⭐ Study Bookmarks</button>
@@ -166,6 +167,29 @@
     </div>
   </div>
 
+  <!-- Vocab Flashcard Mode -->
+  <div id="vocab-section" class="hidden" style="max-width:480px;margin:0 auto;padding:16px">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
+      <h3 style="font-weight:800;font-size:1.1rem;margin:0">Vocabulary</h3>
+      <span id="vocab-progress-text" style="font-size:0.85rem;color:var(--muted)">1 / 20</span>
+    </div>
+    <div id="vocab-card" class="flashcard" style="min-height:200px;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:28px">
+      <div id="vocab-front" style="font-size:1.3rem;font-weight:800"></div>
+      <div id="vocab-back" class="hidden" style="margin-top:16px">
+        <div id="vocab-def" style="font-size:0.95rem;line-height:1.6;color:var(--text)"></div>
+        <div id="vocab-example" style="font-size:0.82rem;color:var(--muted);margin-top:8px;font-style:italic"></div>
+      </div>
+      <div id="vocab-tap-hint" style="font-size:0.75rem;color:var(--muted);margin-top:20px">Tap to reveal definition</div>
+    </div>
+    <div id="vocab-actions" class="hidden" style="display:flex;gap:10px;margin-top:14px">
+      <button id="vocab-knew-it" class="btn btn-primary" style="flex:1">✓ Got it</button>
+      <button id="vocab-missed-it" class="btn btn-outline" style="flex:1">✗ Review later</button>
+    </div>
+    <div style="display:flex;justify-content:center;margin-top:12px">
+      <button id="vocab-restart" class="btn btn-outline btn-sm hidden">🔄 Start Over</button>
+    </div>
+  </div>
+
   <!-- AI Tutor Chat -->
   <div id="chat-section" class="chat-page hidden">
     <div id="chat-messages" class="chat-messages">
@@ -189,6 +213,7 @@
   </nav>
 
   <script src="/static/videos.js"></script>
+  <script src="/static/vocab.js"></script>
   <script src="/static/app.js"></script>
   <script>
     (function(){var s=localStorage.getItem("bp_dark");if(s==="1"||(s===null&&window.matchMedia?.("(prefers-color-scheme: dark)").matches))document.body.classList.add("dark");})();

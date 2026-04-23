@@ -179,21 +179,41 @@ def predicted_score(session: Optional[str] = Cookie(None)):
     for p in progress:
         s = p["subject"]
         if s not in by_subject:
-            by_subject[s] = {"correct": 0, "attempts": 0}
+            by_subject[s] = {"correct": 0, "attempts": 0, "topics": []}
         by_subject[s]["correct"] += p["correct"]
         by_subject[s]["attempts"] += p["attempts"]
+        by_subject[s]["topics"].append({
+            "topic": p["topic"],
+            "correct": p["correct"],
+            "attempts": p["attempts"],
+        })
     result = []
     for subject, d in by_subject.items():
         if d["attempts"] < 5:
             continue
         accuracy = d["correct"] / d["attempts"]
-        predicted = max(0, min(100, round(accuracy * 100)))
+        # Find weak topics (< 60% accuracy with >= 2 attempts)
+        weak = [t["topic"] for t in d["topics"]
+                if t["attempts"] >= 2 and t["correct"] / t["attempts"] < 0.6 and t["topic"]]
+        # Trend: if more than half of topics are strong, boost prediction slightly
+        strong_topics = sum(1 for t in d["topics"] if t["attempts"] >= 2 and t["correct"] / t["attempts"] >= 0.75)
+        trend_boost = min(5, strong_topics * 1)
+        predicted = max(0, min(100, round(accuracy * 100 + trend_boost)))
+        # Days until nearest exam for this subject
+        exam_info = EXAM_DATES.get(subject, {})
+        days_left = None
+        if exam_info.get("date"):
+            from datetime import date as _date
+            days_left = (date.fromisoformat(exam_info["date"]) - date.today()).days
         result.append({
             "subject": subject,
             "accuracy": round(accuracy, 3),
             "predicted_score": predicted,
             "questions_done": d["attempts"],
             "on_track": predicted >= 65,
+            "weak_topics": weak[:3],
+            "days_left": days_left,
+            "trend_boost": trend_boost,
         })
     return result
 
@@ -236,7 +256,9 @@ def exam_dates():
 # ── Leaderboard ──────────────────────────────────────────────────────────────
 
 @app.get("/api/leaderboard")
-def leaderboard():
+def leaderboard(subject: Optional[str] = None):
+    if subject:
+        return db.get_subject_leaderboard(subject, 10)
     return db.get_leaderboard(10)
 
 # ── Daily Study Plan ──────────────────────────────────────────────────────────
@@ -279,12 +301,18 @@ async def photo_help(file: UploadFile = File(...), simple_mode: str = "false"):
 
 ROOMS = {}  # in-memory rooms: {code: {players, questions, scores, current_q, started}}
 
+class CreateRoomRequest(BaseModel):
+    subject: Optional[str] = None
+
 @app.post("/api/room/create")
-async def create_room(session: Optional[str] = Cookie(None)):
+async def create_room(req: CreateRoomRequest = CreateRoomRequest(), session: Optional[str] = Cookie(None)):
     user = auth.get_current_user(session)
     name = user["name"].split()[0] if user else "Player1"
     code = secrets.token_hex(3).upper()
-    questions = regents.get_questions("chemistry", 5) + regents.get_questions("algebra1", 5)
+    if req.subject:
+        questions = regents.get_questions(req.subject, 10)
+    else:
+        questions = regents.get_questions("chemistry", 5) + regents.get_questions("algebra1", 5)
     ROOMS[code] = {
         "players": {name: 0},
         "questions": questions,
@@ -471,6 +499,31 @@ class AssignRequest(BaseModel):
 def teacher_assign(req: AssignRequest, session: Optional[str] = Cookie(None)):
     teacher = _require_auth(session)
     db.create_assignment(teacher["id"], req.student_email, req.subject, req.topic)
+    return {"ok": True}
+
+@app.get("/api/teacher/assignments")
+def teacher_assignments(session: Optional[str] = Cookie(None)):
+    teacher = _require_auth(session)
+    if teacher.get("role") != "teacher":
+        raise HTTPException(403, "Teacher access only")
+    return db.get_assignment_status(teacher["id"])
+
+class CompleteAssignmentRequest(BaseModel):
+    subject: str
+    topic: str
+
+@app.post("/api/assignments/complete")
+def complete_assignment(req: CompleteAssignmentRequest, session: Optional[str] = Cookie(None)):
+    user = _require_auth(session)
+    # Find assignments for this student by email and mark them done across all teachers
+    student_email = user.get("email", "")
+    conn_assignments = db.get_conn()
+    rows = db._exec(conn_assignments, "SELECT DISTINCT teacher_id FROM assignments WHERE student_email=? AND subject=? AND topic=?",
+                    (student_email, req.subject, req.topic)).fetchall()
+    conn_assignments.close()
+    for row in rows:
+        teacher_id = db._row(row)["teacher_id"]
+        db.mark_assignment_done(teacher_id, student_email, req.subject, req.topic)
     return {"ok": True}
 
 # ── Pages ─────────────────────────────────────────────────────────────────────

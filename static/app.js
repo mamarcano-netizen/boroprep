@@ -170,6 +170,7 @@ async function initDashboard() {
   checkOnboarding();
   setupNotificationBanner();
   loadLeaderboard();
+  $("lb-subject-filter")?.addEventListener("change", e => loadLeaderboard(e.target.value || null));
   loadDailyPlan();
   loadXpBar();
 
@@ -178,6 +179,7 @@ async function initDashboard() {
   loadDailyChallenge();
   loadWeeklyQuests();
   loadExamDateSetter();
+  checkStudyReminder();
 
   if (user) {
     $("user-name").textContent = user.name.split(" ")[0];
@@ -279,6 +281,12 @@ async function loadPredictedScores() {
     el.innerHTML = data.map(d => {
       const color = d.predicted_score >= 80 ? "#059669" : d.predicted_score >= 65 ? "#d97706" : "#dc2626";
       const status = d.on_track ? "On track ✅" : "Needs work ⚠️";
+      const daysLine = d.days_left != null
+        ? (d.days_left > 0 ? `${d.days_left} days to exam` : d.days_left === 0 ? "Exam TODAY!" : "Exam passed")
+        : `${d.questions_done} questions done`;
+      const weakLine = d.weak_topics?.length
+        ? `<div style="font-size:0.75rem;color:#dc2626;margin-top:4px">⚠️ Study more: ${d.weak_topics.map(t=>esc(t)).join(", ")}</div>`
+        : "";
       return `<div class="card" style="padding:12px 16px">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
           <strong style="text-transform:capitalize">${esc(d.subject)}</strong>
@@ -288,9 +296,10 @@ async function loadPredictedScores() {
           <div style="background:${color};width:${d.predicted_score}%;height:8px;border-radius:6px;transition:width 0.5s"></div>
         </div>
         <div style="display:flex;justify-content:space-between;font-size:0.8rem;color:var(--muted)">
-          <span>${d.questions_done} questions done</span>
+          <span>${esc(daysLine)}</span>
           <span style="font-weight:600;color:${color}">${status}</span>
         </div>
+        ${weakLine}
       </div>`;
     }).join("");
   } catch {
@@ -521,10 +530,24 @@ async function initStudy() {
       if (currentMode === "photo") {
         $("subject-selector").classList.add("hidden");
         $("flash-section")?.classList.add("hidden");
+        $("vocab-section")?.classList.add("hidden");
         initPhotoMode();
+      } else if (currentMode === "vocab") {
+        $("photo-section")?.classList.add("hidden");
+        $("flash-section")?.classList.add("hidden");
+        if (currentSubject) {
+          $("subject-selector").classList.add("hidden");
+          $("quiz-section")?.classList.add("hidden");
+          $("score-section")?.classList.add("hidden");
+          $("vocab-section")?.classList.remove("hidden");
+          initVocabMode(currentSubject.id);
+        } else {
+          $("subject-selector").classList.remove("hidden");
+        }
       } else {
         $("photo-section")?.classList.add("hidden");
         $("flash-section")?.classList.add("hidden");
+        $("vocab-section")?.classList.add("hidden");
         $("subject-selector").classList.remove("hidden");
       }
     });
@@ -569,6 +592,17 @@ async function initStudy() {
       btn.disabled = false;
     }
   });
+
+  // Wire vocab buttons
+  $("vocab-knew-it")?.addEventListener("click", () => { vocabIndex++; showVocabCard(); });
+  $("vocab-missed-it")?.addEventListener("click", () => {
+    vocabList.push(vocabList[vocabIndex]);
+    vocabIndex++;
+    showVocabCard();
+  });
+  $("vocab-restart")?.addEventListener("click", () => {
+    if (currentSubject) initVocabMode(currentSubject.id);
+  });
 }
 
 async function showWeakTopicsBanner(subjectId) {
@@ -593,9 +627,14 @@ function selectSubject(id, name, mode) {
   $("subject-selector").classList.add("hidden");
   const refLink = document.getElementById("ref-link");
   if (refLink) refLink.href = "/reference?subject=" + id;
-  if (mode === "chat") {
+  if (mode === "vocab") {
+    $("vocab-section")?.classList.remove("hidden");
+    initVocabMode(id);
+  } else if (mode === "chat") {
+    $("vocab-section")?.classList.add("hidden");
     startChat(id, name);
   } else if (mode === "flash") {
+    $("vocab-section")?.classList.add("hidden");
     startFlashcards(id, name);
   } else if (mode === "bookmarks") {
     const saved = getBookmarks();
@@ -610,6 +649,7 @@ function selectSubject(id, name, mode) {
     $("subject-selector").classList.add("hidden");
     showQuestion();
   } else {
+    $("vocab-section")?.classList.add("hidden");
     startQuiz(id, name);
   }
 }
@@ -1073,6 +1113,66 @@ function showFlashcard() {
   startFlashSpeedTimer();
 }
 
+// ── Vocabulary Flashcards ─────────────────────────────────────────────────────
+let vocabList = [];
+let vocabIndex = 0;
+let vocabTotal = 0;
+let vocabRevealed = false;
+
+function initVocabMode(subjectId) {
+  const rawList = (typeof VOCAB !== "undefined" && VOCAB[subjectId]) ? VOCAB[subjectId] : [];
+  if (rawList.length === 0) {
+    const card = $("vocab-card");
+    if (card) card.innerHTML = `<div style="text-align:center;padding:20px;color:var(--muted)">No vocabulary available for this subject yet.</div>`;
+    $("vocab-section")?.classList.remove("hidden");
+    return;
+  }
+  vocabList = rawList.slice().sort(() => Math.random() - 0.5);
+  vocabIndex = 0;
+  vocabTotal = vocabList.length;
+  $("vocab-restart")?.classList.add("hidden");
+  showVocabCard();
+}
+
+function showVocabCard() {
+  vocabRevealed = false;
+  if (!$("vocab-section")) return;
+
+  if (vocabIndex >= vocabList.length) {
+    const card = $("vocab-card");
+    if (card) card.innerHTML = `
+      <div style="text-align:center;padding:20px">
+        <div style="font-size:3rem;margin-bottom:12px">🎉</div>
+        <h3 style="margin-bottom:8px">Deck complete!</h3>
+        <p style="color:var(--muted);margin-bottom:4px">${vocabTotal} terms reviewed</p>
+      </div>`;
+    $("vocab-actions")?.classList.add("hidden");
+    $("vocab-restart")?.classList.remove("hidden");
+    if ($("vocab-progress-text")) $("vocab-progress-text").textContent = `${vocabTotal} / ${vocabTotal}`;
+    return;
+  }
+
+  const item = vocabList[vocabIndex];
+  if ($("vocab-front")) $("vocab-front").textContent = item.term;
+  if ($("vocab-def")) $("vocab-def").textContent = item.def;
+  if ($("vocab-example")) $("vocab-example").textContent = item.example ? `e.g. ${item.example}` : "";
+  $("vocab-back")?.classList.add("hidden");
+  $("vocab-tap-hint")?.classList.remove("hidden");
+  $("vocab-actions")?.classList.add("hidden");
+  if ($("vocab-progress-text")) $("vocab-progress-text").textContent = `${vocabIndex + 1} / ${vocabTotal}`;
+
+  const card = $("vocab-card");
+  if (card) {
+    card.onclick = () => {
+      if (vocabRevealed) return;
+      vocabRevealed = true;
+      $("vocab-back")?.classList.remove("hidden");
+      $("vocab-tap-hint")?.classList.add("hidden");
+      $("vocab-actions")?.classList.remove("hidden");
+    };
+  }
+}
+
 // ── Onboarding ────────────────────────────────────────────────────────────────
 function checkOnboarding() {
   if (localStorage.getItem("bp_onboarded")) return;
@@ -1279,7 +1379,8 @@ let pollInterval = null;
 
 function initMultiplayer() {
   $("create-btn").addEventListener("click", async () => {
-    const data = await api("/api/room/create", {method:"POST"});
+    const subject = $("room-subject")?.value || null;
+    const data = await api("/api/room/create", {method:"POST", body: subject ? {subject} : {}});
     myRoomCode = data.code;
     myPlayerName = data.player_name;
     showWaitingRoom(data.code);
@@ -1439,18 +1540,54 @@ function showXpPopup(text, anchorEl) {
 }
 
 // ── Leaderboard ───────────────────────────────────────────────────────────────
-async function loadLeaderboard() {
+// ── Daily Study Reminder ──────────────────────────────────────────────────────
+function checkStudyReminder() {
   try {
-    const board = await api("/api/leaderboard");
+    const today = new Date().toISOString().slice(0, 10);
+    const dates = JSON.parse(localStorage.getItem("bp_study_dates") || "[]");
+    if (dates.includes(today)) return;
+    const dismissed = localStorage.getItem("bp_reminder_dismissed");
+    if (dismissed === today) return;
+
+    const banner = document.createElement("div");
+    banner.id = "study-reminder-banner";
+    banner.style.cssText = "background:#fff7ed;border:1px solid #fed7aa;border-radius:12px;padding:12px 16px;margin-bottom:16px;display:flex;align-items:center;gap:12px;font-size:0.9rem";
+    banner.innerHTML = `
+      <span style="font-size:1.5rem">📚</span>
+      <div style="flex:1">
+        <strong>You haven't studied today yet!</strong>
+        <div style="color:#92400e;font-size:0.82rem;margin-top:2px">Even 5 questions keeps your streak alive 🔥</div>
+      </div>
+      <a href="/study" class="btn btn-primary" style="padding:6px 14px;font-size:0.82rem">Study now</a>
+      <button onclick="localStorage.setItem('bp_reminder_dismissed','${today}');this.closest('#study-reminder-banner').remove()" style="background:none;border:none;color:#92400e;cursor:pointer;font-size:1.1rem;padding:4px">✕</button>
+    `;
+    const section = $("dashboard-section");
+    if (section) section.prepend(banner);
+  } catch {}
+}
+
+async function loadLeaderboard(subject = null) {
+  try {
+    const url = subject ? `/api/leaderboard?subject=${encodeURIComponent(subject)}` : "/api/leaderboard";
+    const board = await api(url);
     const list = $("leaderboard-list");
     if (!list || !board.length) return;
     const medals = ["🥇","🥈","🥉"];
-    list.innerHTML = board.map((p, i) => `
-      <div class="leaderboard-row">
-        <span class="lb-rank">${medals[i] || `${i+1}.`}</span>
-        <span class="lb-name">${esc(p.name.split(" ")[0])} ${p.streak > 2 ? "🔥" : ""}</span>
-        <span class="lb-xp">${p.xp || 0} XP</span>
-      </div>`).join("");
+    if (subject) {
+      list.innerHTML = board.map((p, i) => `
+        <div class="leaderboard-row">
+          <span class="lb-rank">${medals[i] || `${i+1}.`}</span>
+          <span class="lb-name">${esc(p.name.split(" ")[0])}</span>
+          <span class="lb-xp">${p.accuracy}%</span>
+        </div>`).join("");
+    } else {
+      list.innerHTML = board.map((p, i) => `
+        <div class="leaderboard-row">
+          <span class="lb-rank">${medals[i] || `${i+1}.`}</span>
+          <span class="lb-name">${esc(p.name.split(" ")[0])} ${p.streak > 2 ? "🔥" : ""}</span>
+          <span class="lb-xp">${p.xp || 0} XP</span>
+        </div>`).join("");
+    }
   } catch {}
 }
 

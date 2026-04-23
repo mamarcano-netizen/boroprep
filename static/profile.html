@@ -285,6 +285,20 @@
         <span style="color:var(--muted);font-size:0.85rem">No subjects studied yet. Start a quiz!</span>
       </div>
 
+      <!-- Progress chart -->
+      <div class="section-title" id="chart-title" style="display:none">Accuracy Chart</div>
+      <div class="card" id="progress-chart-card" style="display:none;padding:20px">
+        <svg id="progress-chart" width="100%" height="180" style="overflow:visible"></svg>
+        <div id="chart-legend" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;font-size:0.75rem"></div>
+      </div>
+
+      <!-- Weekly study activity -->
+      <div class="section-title">This Week's Activity</div>
+      <div class="card" style="padding:16px">
+        <div id="weekly-bars" style="display:flex;align-items:flex-end;gap:6px;height:80px;justify-content:space-between"></div>
+        <div id="weekly-labels" style="display:flex;gap:6px;justify-content:space-between;margin-top:6px;font-size:0.7rem;color:var(--muted)"></div>
+      </div>
+
     </div>
   </div>
 
@@ -433,10 +447,11 @@
       document.getElementById("stat-accuracy").textContent = totalAttempts ? overallPct + "%" : "—";
 
       const subjectRow = document.getElementById("subject-row");
-      if (Object.keys(bySubject).length === 0) {
+      const entries = Object.entries(bySubject).sort((a,b) => b[1].attempts - a[1].attempts);
+      if (entries.length === 0) {
         subjectRow.innerHTML = `<span style="color:var(--muted);font-size:0.85rem">No subjects studied yet. <a href="/study" style="color:var(--primary)">Start a quiz!</a></span>`;
       } else {
-        subjectRow.innerHTML = Object.entries(bySubject).sort((a,b) => b[1].attempts - a[1].attempts).map(([sub, data]) => {
+        subjectRow.innerHTML = entries.map(([sub, data]) => {
           const pct = data.attempts ? Math.round(data.correct / data.attempts * 100) : 0;
           const color = accColor(pct);
           return `<div class="subject-item">
@@ -450,7 +465,60 @@
             <div class="subject-item-meta">${data.correct}/${data.attempts} correct</div>
           </div>`;
         }).join("");
+
+        // Draw SVG bar chart
+        if (entries.length > 0) {
+          document.getElementById("chart-title").style.display = "";
+          const chartCard = document.getElementById("progress-chart-card");
+          chartCard.style.display = "";
+          const svg = document.getElementById("progress-chart");
+          const colors = ["#4f46e5","#10b981","#f59e0b","#ef4444","#8b5cf6","#06b6d4","#f97316"];
+          const barW = Math.min(60, Math.floor(300 / entries.length));
+          const gap = 8;
+          const totalW = entries.length * (barW + gap);
+          const H = 150;
+          let svgContent = "";
+          entries.forEach(([sub, data], i) => {
+            const pct = data.attempts ? Math.round(data.correct / data.attempts * 100) : 0;
+            const bh = Math.max(4, Math.round(pct / 100 * H));
+            const x = i * (barW + gap);
+            const y = H - bh;
+            const col = colors[i % colors.length];
+            svgContent += `<rect x="${x}" y="${y}" width="${barW}" height="${bh}" rx="4" fill="${col}" opacity="0.85"/>`;
+            svgContent += `<text x="${x + barW/2}" y="${y - 4}" text-anchor="middle" font-size="11" font-weight="700" fill="${col}">${pct}%</text>`;
+          });
+          svgContent += `<line x1="0" y1="${H}" x2="${totalW}" y2="${H}" stroke="var(--border)" stroke-width="1"/>`;
+          svg.setAttribute("viewBox", `0 0 ${totalW} ${H + 10}`);
+          svg.innerHTML = svgContent;
+          document.getElementById("chart-legend").innerHTML = entries.map(([sub], i) =>
+            `<span style="display:flex;align-items:center;gap:4px"><span style="display:inline-block;width:10px;height:10px;border-radius:3px;background:${colors[i%colors.length]}"></span>${sub}</span>`
+          ).join("");
+        }
       }
+
+      // Weekly study activity chart
+      const times = JSON.parse(localStorage.getItem("bp_study_times") || "{}");
+      const days = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+      const today = new Date();
+      const weekData = Array.from({length:7}, (_,i) => {
+        const d = new Date(today); d.setDate(today.getDate() - (6-i));
+        const key = d.toISOString().slice(0,10);
+        return {label: days[d.getDay()], mins: times[key] || 0, isToday: i===6};
+      });
+      const maxMins = Math.max(1, ...weekData.map(d=>d.mins));
+      const barsEl = document.getElementById("weekly-bars");
+      const labelsEl = document.getElementById("weekly-labels");
+      barsEl.innerHTML = weekData.map(d => {
+        const h = Math.max(4, Math.round((d.mins / maxMins) * 70));
+        const col = d.isToday ? "#4f46e5" : d.mins > 0 ? "#a5b4fc" : "var(--border)";
+        return `<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:3px">
+          ${d.mins > 0 ? `<span style="font-size:0.65rem;color:var(--muted)">${d.mins}m</span>` : ""}
+          <div style="width:100%;background:${col};border-radius:4px 4px 0 0;height:${h}px;transition:height 0.3s"></div>
+        </div>`;
+      }).join("");
+      labelsEl.innerHTML = weekData.map(d =>
+        `<span style="flex:1;text-align:center;${d.isToday?"color:var(--primary);font-weight:700":""}">${d.label}</span>`
+      ).join("");
     }
 
     initProfile();

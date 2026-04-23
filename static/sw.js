@@ -1,12 +1,20 @@
-const CACHE_NAME = "boroprep-v1";
+const CACHE_NAME = "boroprep-v3";
 const APP_SHELL = [
   "/",
   "/dashboard",
   "/study",
   "/exam",
+  "/essay",
+  "/profile",
+  "/multiplayer",
+  "/classroom",
+  "/reference",
   "/static/style.css",
   "/static/app.js",
   "/static/videos.js",
+  "/static/passages.js",
+  "/static/vocab.js",
+  "/static/manifest.json",
 ];
 
 const OFFLINE_HTML = `<!DOCTYPE html>
@@ -58,7 +66,26 @@ self.addEventListener("fetch", event => {
   // Only handle same-origin requests
   if (url.origin !== self.location.origin) return;
 
-  // Network-first for API calls
+  // Cache-then-network for safe read-only API endpoints (questions, subjects)
+  const cacheable = ["/api/subjects", "/api/questions/", "/api/leaderboard"];
+  const isCacheable = cacheable.some(p => url.pathname.startsWith(p)) && event.request.method === "GET";
+  if (isCacheable) {
+    event.respondWith(
+      caches.open(CACHE_NAME).then(async cache => {
+        try {
+          const res = await fetch(event.request);
+          if (res.ok) cache.put(event.request, res.clone());
+          return res;
+        } catch {
+          const cached = await cache.match(event.request);
+          return cached || new Response(JSON.stringify([]), {status:200, headers:{"Content-Type":"application/json"}});
+        }
+      })
+    );
+    return;
+  }
+
+  // Network-first for other API/auth calls
   if (url.pathname.startsWith("/api/") || url.pathname.startsWith("/auth/")) {
     event.respondWith(
       fetch(event.request).catch(() =>
