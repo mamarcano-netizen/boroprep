@@ -235,6 +235,8 @@ EXAM_DATES = {
     "global":     {"name": "Global History",     "date": "2026-06-24"},
     "algebra2":   {"name": "Algebra II",         "date": "2026-06-24"},
     "physics":    {"name": "Physics",            "date": "2026-06-25"},
+    "earth_space_sciences": {"name": "Earth & Space Sciences", "date": "2026-06-19"},
+    "life_science_biology": {"name": "Life Science: Biology",  "date": "2026-06-18"},
 }
 
 @app.get("/api/exam-dates")
