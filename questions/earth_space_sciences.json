@@ -1,0 +1,366 @@
+[
+  {
+    "id": "ess_3",
+    "subject": "earth_space_sciences",
+    "topic": "General",
+    "question": "How does the data in the graph support an explanation of the Big Bang theory?",
+    "choices": [
+      "Galaxies farther from Earth have greater recessional velocities, indicating an\nexpanding universe.",
+      "Galaxies closer to Earth have negative recessional velocities, indicating that the rate\nof the expansion of the universe only occurs around distant galaxies.",
+      "Galaxies located approximately one million (106) parsecs away from Earth are\ntraveling toward and away from Earth, indicating that the universe does not expand\nfurther than this distance.",
+      "Galaxies travel away from"
+    ],
+    "answer": "Galaxies farther from Earth have greater recessional velocities, indicating an\nexpanding universe.",
+    "explanation": "This is from the January 2026 Earth & Space Sciences Regents Exam."
+  },
+  {
+    "id": "ess_4",
+    "subject": "earth_space_sciences",
+    "topic": "General",
+    "question": "Which statement correctly explains the difference in the elements composing the two stars and\ncompares the lifespans of these two stars?",
+    "choices": [
+      "In Betelgeuse, helium has fused into heavier elements, and Betelgeuse has a shorter\nlifespan than the Sun.",
+      "In Betelgeuse, hydrogen has yet to be fused from heavier elements, and Betelgeuse\nhas a longer lifespan than the Sun.",
+      "In the Sun, heavier elements have completely fused into helium, and the Sun has a\nshorter lifespan than Betelgeuse.",
+      "In the"
+    ],
+    "answer": "In Betelgeuse, helium has fused into heavier elements, and Betelgeuse has a shorter\nlifespan than the Sun.",
+    "explanation": "This is from the January 2026 Earth & Space Sciences Regents Exam."
+  },
+  {
+    "id": "ess_7",
+    "subject": "earth_space_sciences",
+    "topic": "General",
+    "question": "Other than ocean currents, what other factor determines the global circulation of these plastic\ntoys?",
+    "choices": [
+      "stratosphere convection",
+      "prevailing winds",
+      "elevation",
+      "cloud cover"
+    ],
+    "answer": "prevailing winds",
+    "explanation": "This is from the January 2026 Earth & Space Sciences Regents Exam."
+  },
+  {
+    "id": "ess_8",
+    "subject": "earth_space_sciences",
+    "topic": "General",
+    "question": "Which statement explains how the removal of plastic bags in the GPGP will stabilize biodiversity\nin the area?",
+    "choices": [
+      "Decreasing the number of bags in the GPGP will cause the jellyfi sh population to\nincrease because the turtles will eat more plastic bags.",
+      "Decreasing the number of bags in the GPGP will cause the turtle population to\nincrease because the turtles will eat more jellyfi sh.",
+      "Decreasing the number of bags in the GPGP will cause the jellyfi sh population to\ndecrease because the turtles will eat less jellyfi sh.",
+      "Decreasing the number of bags in the GPGP will cause the turtle population to\ndecrease because the turtles will eat less jellyfi sh."
+    ],
+    "answer": "Decreasing the number of bags in the GPGP will cause the turtle population to\nincrease because the turtles will eat more jellyfi sh.",
+    "explanation": "This is from the January 2026 Earth & Space Sciences Regents Exam."
+  },
+  {
+    "id": "ess_9",
+    "subject": "earth_space_sciences",
+    "topic": "General",
+    "question": "A student makes a claim that the river cleanup method is a more effective design solution than\nthe ocean cleanup method for reducing the impact of plastic pollution. Using all the information\nprovided, which statement provides the most correct evidence to support this claim?",
+    "choices": [
+      "The river method costs less than the ocean method and captures plastic before it\nenters the ocean, protecting river and ocean coastline biodiversity.",
+      "The river method can collect plastic over a larger area and has lower maintenance\ncosts than the ocean method.",
+      "The river method is able to capture plastics of all sizes that are both fl oating and\nunderwater, while the ocean method only collects large plastic pieces.",
+      "The river method captures more plastic than the ocean method because more plastics\nare found in the ocean than in the rivers."
+    ],
+    "answer": "The river method costs less than the ocean method and captures plastic before it\nenters the ocean, protecting river and ocean coastline biodiversity.",
+    "explanation": "This is from the January 2026 Earth & Space Sciences Regents Exam."
+  },
+  {
+    "id": "ess_10",
+    "subject": "earth_space_sciences",
+    "topic": "General",
+    "question": "Which row in the table below correctly describes the evidence for the coevolution of Earth\nsystems as a result of the Great Oxidation Event?\nChange to Response Eff ect on\nRow\nAtmospheric Gas to Change Climate\nMethane level decreased; Less energy absorbed Led to earliest ice age due to",
+    "choices": [
+      "oxygen level increased by atmosphere increased refl ection of energy\nMethane level increased; More energy absorbed Led to earliest ice age due to",
+      "oxygen level decreased by atmosphere decreased refl ection of energy\nMethane level increased; Less energy absorbed Led to earliest ice age due to",
+      "oxygen level decreased by atmosphere increased refl ection of energy\nMethane level decreased; More energy absorbed Led to earliest ice age due to",
+      "oxygen level increased by atmosphere decreased refl ection of energy"
+    ],
+    "answer": "oxygen level increased by atmosphere increased refl ection of energy\nMethane level increased; More energy absorbed Led to earliest ice age due to",
+    "explanation": "This is from the January 2026 Earth & Space Sciences Regents Exam."
+  },
+  {
+    "id": "ess_11",
+    "subject": "earth_space_sciences",
+    "topic": "General",
+    "question": "Which statement identifi es the evidence used to determine when the Huronian ice age occurred?",
+    "choices": [
+      "Radioactive dating of elements in rocks was used to determine ages of rocks in the\nHuronian Supergroup.",
+      "Index fossils were identifi ed in the Huronian Supergroup to determine the ages of\nrocks.",
+      "Rocks in the Huronian Supergroup were carbon dated to determine their age.",
+      "The ages of the dropstones in the sedimentary rock are younger than the particles\nthat make up the rock itself."
+    ],
+    "answer": "Radioactive dating of elements in rocks was used to determine ages of rocks in the\nHuronian Supergroup.",
+    "explanation": "This is from the January 2026 Earth & Space Sciences Regents Exam."
+  },
+  {
+    "id": "ess_12",
+    "subject": "earth_space_sciences",
+    "topic": "General",
+    "question": "Which statement correctly uses information from the model and passages as evidence to support\nthe claim that, during the end of the Huronian ice age, changes in Earth\u2019s hydrosphere caused\na change in Earth\u2019s geosphere?",
+    "choices": [
+      "Microfossils found in the banded iron formations produced the iron in the oceans.",
+      "Iron in the ocean was used for energy by the photosynthesizing stromatolites in the\nshallow part of the ocean.",
+      "The presence of carbon dioxide and methane in the ocean led to the formation of\nblack smokers on the bedrock of the ocean bottom.",
+      "The presence of iron and oxygen in the oceans led to the formation of banded iron\nrock layers on the bottom of the ocean."
+    ],
+    "answer": "The presence of iron and oxygen in the oceans led to the formation of banded iron\nrock layers on the bottom of the ocean.",
+    "explanation": "This is from the January 2026 Earth & Space Sciences Regents Exam."
+  },
+  {
+    "id": "ess_14",
+    "subject": "earth_space_sciences",
+    "topic": "General",
+    "question": "Based on the student\u2019s observations, which set of observations and mineral name correctly\nidentifi es the mineral crystals in the photograph?",
+    "choices": [
+      "Observations A, B, and C identify magnetite.",
+      "Observations D, E, and F identify olivine.",
+      "Observations A, C, and E identify garnet.",
+      "Observations B, D, and F identify hematite."
+    ],
+    "answer": "Observations A, C, and E identify garnet.",
+    "explanation": "This is from the January 2026 Earth & Space Sciences Regents Exam."
+  },
+  {
+    "id": "ess_17",
+    "subject": "earth_space_sciences",
+    "topic": "General",
+    "question": "Which statement below correctly identifi es a benefi t to a local community when comparing\nthese two design solutions for resurfacing roads?",
+    "choices": [
+      "Local quarries supplying natural paving materials will use more fuel for trucking and\nprocessing.",
+      "Recycled asphalt pavement will use more petroleum products in the form of fuel and\nemulsifi er.",
+      "Recycled asphalt pavement does not require reclamation and will extend the life span\nof existing quarries.",
+      "Blasting, crushing, and processing costs are higher with recycled asphalt pavement."
+    ],
+    "answer": "Recycled asphalt pavement does not require reclamation and will extend the life span\nof existing quarries.",
+    "explanation": "This is from the January 2026 Earth & Space Sciences Regents Exam."
+  },
+  {
+    "id": "ess_20",
+    "subject": "earth_space_sciences",
+    "topic": "General",
+    "question": "Based on the information in the Pluto\u2019s Moons data table, which row in the table below correctly\ndescribes the orbital speed of Styx and the gravitational force of attraction exerted on Styx by\nPluto as it orbits Pluto?\nRow Orbital Speed Gravitational Force",
+    "choices": [
+      "Constant Constant",
+      "Not constant Constant",
+      "Constant Not constant",
+      "Not constant"
+    ],
+    "answer": "Not constant",
+    "explanation": "This is from the January 2026 Earth & Space Sciences Regents Exam."
+  },
+  {
+    "id": "ess_21",
+    "subject": "earth_space_sciences",
+    "topic": "General",
+    "question": "Which pieces of evidence shown in the model and data table support the claim that the phases\nof Charon as viewed from Pluto change cyclically?",
+    "choices": [
+      "Pluto orbits the Sun every 90,560 Earth days.",
+      "Charon orbits the Sun every 90,560 Earth days.",
+      "Charon orbits Pluto every 6.4 Earth days.",
+      "Charon orbits the"
+    ],
+    "answer": "Charon orbits Pluto every 6.4 Earth days.",
+    "explanation": "This is from the January 2026 Earth & Space Sciences Regents Exam."
+  },
+  {
+    "id": "ess_23",
+    "subject": "earth_space_sciences",
+    "topic": "General",
+    "question": "Which statement would provide evidence for the formation of Pluto\u2019s four smallest moons from\na possible impact with Pluto or Charon?",
+    "choices": [
+      "Pluto\u2019s surface is coated with methane ice.",
+      "Craters with diameters as large as 240 kilometers exist on Charon\u2019s surface.",
+      "The four smallest moons spin more rapidly on their axes than Pluto or Charon.",
+      "Both"
+    ],
+    "answer": "Craters with diameters as large as 240 kilometers exist on Charon\u2019s surface.",
+    "explanation": "This is from the January 2026 Earth & Space Sciences Regents Exam."
+  },
+  {
+    "id": "ess_25",
+    "subject": "earth_space_sciences",
+    "topic": "General",
+    "question": "Which row correctly completes the passage below?\nWhen the Storegga Slide triggered a tsunami, the initial wave would have caused a A\nprocess at the coastline of the Shetland Islands. The coastline would have experienced\nB . The location of C experienced less impact from the tsunami with a wave\nheight of about D .\nRow A B C D",
+    "choices": [
+      "constructive erosion Faroe 14 meters",
+      "constructive deposition Lyngen 2 meters",
+      "destructive erosion Hommelst\u00f8 3 meters",
+      "destructive deposition"
+    ],
+    "answer": "destructive erosion Hommelst\u00f8 3 meters",
+    "explanation": "This is from the January 2026 Earth & Space Sciences Regents Exam."
+  },
+  {
+    "id": "ess_26",
+    "subject": "earth_space_sciences",
+    "topic": "General",
+    "question": "Which three claims provide correct interpretations from data collected at Hommelst\u00f8?",
+    "choices": [
+      "Claims I, II, and III",
+      "Claims II, IV, and V",
+      "Claims III, IV, and V",
+      "Claims I, II, and V"
+    ],
+    "answer": "Claims I, II, and V",
+    "explanation": "This is from the January 2026 Earth & Space Sciences Regents Exam."
+  },
+  {
+    "id": "ess_28",
+    "subject": "earth_space_sciences",
+    "topic": "General",
+    "question": "Based on the map, which evidence-based claim correctly identifi es how a change in climate\nmost likely affected the current pattern of ice thickness on Greenland?",
+    "choices": [
+      "Cooling of climate in polar regions caused no ice and more exposed land near\nBaffi n Bay than along the Denmark Strait.",
+      "A warmer climate at lower elevations caused ice to be thickest near the center of\nGreenland where it is over 3000 m and thins to 0 m along coastlines.",
+      "Cold climates caused ice ranges from 0 m at the edges to over 2500 m near the\nGISP 2 drill location.",
+      "A warming climate produced no general ice-thickness pattern since land is exposed\nalong the edges of the entire coastline."
+    ],
+    "answer": "A warmer climate at lower elevations caused ice to be thickest near the center of\nGreenland where it is over 3000 m and thins to 0 m along coastlines.",
+    "explanation": "This is from the January 2026 Earth & Space Sciences Regents Exam."
+  },
+  {
+    "id": "ess_30",
+    "subject": "earth_space_sciences",
+    "topic": "General",
+    "question": "Based on the trend shown in the graph, which claim correctly describes the rate of change in ice\nmass from 2010 to 2022?",
+    "choices": [
+      "Ice mass rate of change was a loss of about 250 Gt/year.",
+      "Ice mass rate of change was a loss of about 250 Gt in 12 years.",
+      "The rate of change in ice mass loss was less from 2010 to 2022 than it was in any\nprevious 12-year span.",
+      "From 2010 to 2022, ice mass loss was 3000"
+    ],
+    "answer": "Ice mass rate of change was a loss of about 250 Gt/year.",
+    "explanation": "This is from the January 2026 Earth & Space Sciences Regents Exam."
+  },
+  {
+    "id": "ess_34",
+    "subject": "earth_space_sciences",
+    "topic": "General",
+    "question": "Which statement provides evidence about the formation and movement of Bennu through the\nsolar system?",
+    "choices": [
+      "Bennu formed inside Earth\u2019s orbit when the mass extinction of the dinosaurs occurred\nand then moved closer to Mars\u2019 orbit.",
+      "Bennu formed near the orbit of Saturn when the oxygen revolution occurred on\nEarth and then moved closer to Neptune.",
+      "Bennu formed in the asteroid belt when stromatolites were abundant on Earth and\nthen moved closer to Saturn.",
+      "Bennu formed near the orbit of"
+    ],
+    "answer": "Bennu formed near the orbit of",
+    "explanation": "This is from the January 2026 Earth & Space Sciences Regents Exam."
+  },
+  {
+    "id": "ess_36",
+    "subject": "earth_space_sciences",
+    "topic": "General",
+    "question": "Which statement describes why the speed of the DART spacecraft changed before it impacted\nDimorphos?",
+    "choices": [
+      "Its speed increased due to the Sun\u2019s gravitational pull.",
+      "Its speed increased due to Dimorphos\u2019 gravitational pull.",
+      "Its speed decreased due to Earth\u2019s gravitational pull.",
+      "Its speed decreased due to"
+    ],
+    "answer": "Its speed increased due to Dimorphos\u2019 gravitational pull.",
+    "explanation": "This is from the January 2026 Earth & Space Sciences Regents Exam."
+  },
+  {
+    "id": "ess_39",
+    "subject": "earth_space_sciences",
+    "topic": "General",
+    "question": "Which sequence of terms best completes the claim?",
+    "choices": [
+      "A: X B: Y C: gravity D: landslides",
+      "A: X B: Y C: gravity D: fl ooding",
+      "A: Y B: X C: wind D: landslides",
+      "A: Y B: X C: wind D: fl ooding"
+    ],
+    "answer": "A: X B: Y C: gravity D: landslides",
+    "explanation": "This is from the January 2026 Earth & Space Sciences Regents Exam."
+  },
+  {
+    "id": "ess_41",
+    "subject": "earth_space_sciences",
+    "topic": "General",
+    "question": "Which statement identifi es how the construction of the Mount Morris Dam has impacted the\nability to control rain events?",
+    "choices": [
+      "Construction of the dam has controlled river elevations to increase the availability of\nfresh water for the residents of Rochester.",
+      "Construction of the dam has controlled water levels in the Genesee River, reducing\nthe chance of fl ooding and property loss for residents of Rochester.",
+      "Construction of the dam has controlled river elevations so that more swimming areas\ncould be created within Letchworth State Park.",
+      "Construction of the dam has controlled the amount of erosion in the"
+    ],
+    "answer": "Construction of the dam has controlled water levels in the Genesee River, reducing\nthe chance of fl ooding and property loss for residents of Rochester.",
+    "explanation": "This is from the January 2026 Earth & Space Sciences Regents Exam."
+  },
+  {
+    "id": "ess_43",
+    "subject": "earth_space_sciences",
+    "topic": "General",
+    "question": "When comparing gas-powered cars to electric cars, which statement correctly summarizes the\ntype of car that has a lower environmental impact related to the mining industry while providing\nreliable transportation for long distances?",
+    "choices": [
+      "The electric car has a lower environmental impact from mining because the motor\nonly weighs 76 kilograms and has an average driving range of 234 miles.",
+      "The electric car has a lower environmental impact because it emits only 32 grams\nper mile and uses only 53.2 kilograms of copper.",
+      "The gas-powered car has a lower environmental impact because it only uses 22.3\nkilograms of copper to manufacture and has a median driving range of 403 miles.",
+      "The gas-powered car has a lower environmental impact because it costs about $500\nmore to operate than an electric car and releases only 411 grams of CO per mile."
+    ],
+    "answer": "The gas-powered car has a lower environmental impact because it only uses 22.3\nkilograms of copper to manufacture and has a median driving range of 403 miles.",
+    "explanation": "This is from the January 2026 Earth & Space Sciences Regents Exam."
+  },
+  {
+    "id": "ess_44",
+    "subject": "earth_space_sciences",
+    "topic": "General",
+    "question": "Which explanation uses evidence from the infographic to most correctly explain how human\nactivity is being infl uenced by the availability of copper used in the manufacture of new electric\nvehicles?",
+    "choices": [
+      "As copper reserves are depleted, companies will be forced to lower the price of\ncopper below the 2019 average of $6042 per ton in countries with copper mines.",
+      "The fi ve countries with 65% of copper reserves will need to reduce copper\nproduction to conserve resources in order to make more electric cars.",
+      "Since global copper production more than doubled between 1995 and 2019, all\ncountries with copper reserves will need to open new mines to meet the immediate\ndemand for the manufacture of electric cars.",
+      "Copper recycling will need to increase in order to meet the demand for electric car\nmanufacture beyond 105 years from now."
+    ],
+    "answer": "Copper recycling will need to increase in order to meet the demand for electric car\nmanufacture beyond 105 years from now.",
+    "explanation": "This is from the January 2026 Earth & Space Sciences Regents Exam."
+  },
+  {
+    "id": "ess_45",
+    "subject": "earth_space_sciences",
+    "topic": "General",
+    "question": "Which evidence-based statement correctly describes how the electrical energy generation\nresources in the United States are projected to change as the demand for electricity increases?",
+    "choices": [
+      "By 2030, hydro will surpass nuclear electric generation.",
+      "By 2050, renewables will surpass natural gas as the largest source of electric\ngeneration.",
+      "Energy generation from coal is projected to increase by 2035.",
+      "From 2020 to 2050, wind energy is projected to increase more than solar energy."
+    ],
+    "answer": "By 2050, renewables will surpass natural gas as the largest source of electric\ngeneration.",
+    "explanation": "This is from the January 2026 Earth & Space Sciences Regents Exam."
+  },
+  {
+    "id": "ess_46",
+    "subject": "earth_space_sciences",
+    "topic": "General",
+    "question": "Which claim accurately identifi es a change in atmospheric oxygen levels due to a change in\nEarth\u2019s biosphere in the Carboniferous Period?",
+    "choices": [
+      "Oxygen levels increased as a result of deforestation in the biosphere.",
+      "Oxygen levels increased as a result of decreased respiration in the biosphere.",
+      "Oxygen levels increased as a result of increased photosynthesis in the biosphere.",
+      "Oxygen levels increased as a result of decreased transpiration in the biosphere."
+    ],
+    "answer": "Oxygen levels increased as a result of increased photosynthesis in the biosphere.",
+    "explanation": "This is from the January 2026 Earth & Space Sciences Regents Exam."
+  },
+  {
+    "id": "ess_49",
+    "subject": "earth_space_sciences",
+    "topic": "General",
+    "question": "Which pieces of evidence from the maps and graph support the students\u2019 claim?",
+    "choices": [
+      "An increase in glaciation added ice to the cryosphere and lowered ocean water levels\nin the hydrosphere.",
+      "An increase in water levels in the hydrosphere were a result of melting ice from the\ncryosphere.",
+      "Water levels in Earth\u2019s hydrosphere and the amount of ice in the cryosphere both\nincreased.",
+      "Water levels in the hydrosphere and ice levels in the cryosphere both decreased."
+    ],
+    "answer": "An increase in glaciation added ice to the cryosphere and lowered ocean water levels\nin the hydrosphere.",
+    "explanation": "This is from the January 2026 Earth & Space Sciences Regents Exam."
+  }
+]

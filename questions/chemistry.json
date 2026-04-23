@@ -1,77 +1,1187 @@
 [
-  {"id":"chem_001","topic":"Atomic Structure","question":"An atom of which element has the greatest nuclear charge?","choices":["Carbon","Oxygen","Nitrogen","Fluorine"],"answer":"Fluorine","explanation":"Nuclear charge equals the number of protons. Fluorine has 9 protons, the most of these four elements."},
-  {"id":"chem_002","topic":"Atomic Structure","question":"Which subatomic particle has a negative charge?","choices":["Proton","Neutron","Electron","Nucleus"],"answer":"Electron","explanation":"Electrons carry a negative charge (-1). Protons are positive (+1) and neutrons have no charge."},
-  {"id":"chem_003","topic":"Periodic Table","question":"Elements in the same group on the periodic table have the same number of:","choices":["Protons","Neutrons","Valence electrons","Mass numbers"],"answer":"Valence electrons","explanation":"Elements in the same group (column) have the same number of valence electrons, which is why they have similar chemical properties."},
-  {"id":"chem_004","topic":"Bonding","question":"Which type of bond forms between a metal and a nonmetal?","choices":["Covalent","Ionic","Metallic","Hydrogen"],"answer":"Ionic","explanation":"Ionic bonds form when a metal transfers electrons to a nonmetal. The metal becomes a positive ion and the nonmetal becomes a negative ion."},
-  {"id":"chem_005","topic":"Bonding","question":"A covalent bond is formed by the:","choices":["Transfer of electrons","Sharing of electrons","Transfer of protons","Sharing of neutrons"],"answer":"Sharing of electrons","explanation":"Covalent bonds form when two nonmetals share electrons. This is different from ionic bonds where electrons are transferred."},
-  {"id":"chem_006","topic":"Acids and Bases","question":"A solution with a pH of 3 is best described as:","choices":["Strongly basic","Weakly basic","Neutral","Acidic"],"answer":"Acidic","explanation":"pH below 7 is acidic. pH 7 is neutral. pH above 7 is basic. pH 3 is a strong acid."},
-  {"id":"chem_007","topic":"Acids and Bases","question":"Which ion is responsible for the properties of an acid in water?","choices":["OH-","Na+","H+","Cl-"],"answer":"H+","explanation":"Acids release hydrogen ions (H+) in water. The more H+ ions, the stronger the acid and the lower the pH."},
-  {"id":"chem_008","topic":"Redox","question":"In a redox reaction, oxidation is the:","choices":["Gain of electrons","Loss of electrons","Gain of protons","Loss of protons"],"answer":"Loss of electrons","explanation":"Remember OIL RIG — Oxidation Is Loss, Reduction Is Gain (of electrons)."},
-  {"id":"chem_009","topic":"Redox","question":"In the reaction Zn + CuSO4 → ZnSO4 + Cu, which element is oxidized?","choices":["Zn","Cu","S","O"],"answer":"Zn","explanation":"Zinc (Zn) loses electrons and becomes Zn2+. When something loses electrons it is oxidized. Copper gains electrons (is reduced)."},
-  {"id":"chem_010","topic":"Nuclear Chemistry","question":"During alpha decay, the nucleus releases a particle containing:","choices":["2 protons and 2 neutrons","1 proton and 1 neutron","2 protons and 1 neutron","1 proton and 2 neutrons"],"answer":"2 protons and 2 neutrons","explanation":"An alpha particle is identical to a helium-4 nucleus — it contains 2 protons and 2 neutrons."},
-  {"id":"chem_011","topic":"Nuclear Chemistry","question":"What happens to the atomic number of a nucleus during beta decay?","choices":["Increases by 1","Decreases by 1","Stays the same","Increases by 2"],"answer":"Increases by 1","explanation":"During beta decay, a neutron turns into a proton and releases a beta particle (electron). This increases the atomic number by 1."},
-  {"id":"chem_012","topic":"Stoichiometry","question":"In the reaction N2 + 3H2 → 2NH3, how many moles of H2 are needed to produce 4 moles of NH3?","choices":["2","4","6","8"],"answer":"6","explanation":"The ratio is 3 moles H2 : 2 moles NH3. To make 4 moles NH3: (4 × 3) ÷ 2 = 6 moles of H2."},
-  {"id":"chem_013","topic":"Physical vs Chemical","question":"Which is an example of a chemical change?","choices":["Ice melting","Water boiling","Iron rusting","Salt dissolving"],"answer":"Iron rusting","explanation":"Rusting is a chemical change because a new substance (iron oxide) is formed. Melting, boiling, and dissolving are physical changes — no new substance is created."},
-  {"id":"chem_014","topic":"Gas Laws","question":"According to Boyle's Law, if the pressure of a gas increases at constant temperature, the volume will:","choices":["Increase","Decrease","Stay the same","Double"],"answer":"Decrease","explanation":"Boyle's Law states pressure and volume are inversely related at constant temperature. More pressure = less volume."},
-  {"id":"chem_015","topic":"Organic Chemistry","question":"Which functional group identifies an alcohol?","choices":["-COOH","-OH","-NH2","-CHO"],"answer":"-OH","explanation":"Alcohols contain the hydroxyl group (-OH). For example, ethanol (drinking alcohol) has the formula C2H5OH."},
-  {"id":"chem_016","topic":"Atomic Structure","question":"The atomic mass of an element is approximately equal to the number of:","choices":["Protons only","Electrons only","Protons plus neutrons","Neutrons only"],"answer":"Protons plus neutrons","explanation":"Atomic mass ≈ number of protons + number of neutrons (in amu). Electrons have negligible mass."},
-  {"id":"chem_017","topic":"Atomic Structure","question":"Isotopes of the same element differ in the number of:","choices":["Protons","Electrons","Neutrons","Valence electrons"],"answer":"Neutrons","explanation":"Isotopes are atoms of the same element (same protons) with different numbers of neutrons, giving them different mass numbers."},
-  {"id":"chem_018","topic":"Atomic Structure","question":"In the Bohr model, electrons orbit the nucleus in:","choices":["Random paths","Fixed energy levels","Elliptical paths","A cloud"],"answer":"Fixed energy levels","explanation":"In Bohr's model, electrons occupy specific energy levels (shells) at fixed distances from the nucleus. They can jump between levels by absorbing or emitting energy."},
-  {"id":"chem_019","topic":"Atomic Structure","question":"Which scientist discovered the electron?","choices":["Ernest Rutherford","Niels Bohr","J.J. Thomson","John Dalton"],"answer":"J.J. Thomson","explanation":"J.J. Thomson discovered the electron in 1897 using cathode ray tubes. He proposed the 'plum pudding' model of the atom with electrons embedded in a positive sphere."},
-  {"id":"chem_020","topic":"Periodic Table","question":"Which group of elements is the least reactive?","choices":["Alkali metals","Halogens","Noble gases","Alkaline earth metals"],"answer":"Noble gases","explanation":"Noble gases (Group 18) have full valence shells and do not readily react with other elements. They are also called inert gases."},
-  {"id":"chem_021","topic":"Periodic Table","question":"As you move left to right across a period, atomic radius generally:","choices":["Increases","Decreases","Stays the same","First increases then decreases"],"answer":"Decreases","explanation":"Moving left to right across a period, nuclear charge increases while electrons are added to the same shell. Greater nuclear pull shrinks the atomic radius."},
-  {"id":"chem_022","topic":"Periodic Table","question":"Metals are generally located on which side of the periodic table?","choices":["Right side","Left side","Top row","Center only"],"answer":"Left side","explanation":"Metals are on the left and center of the periodic table. Nonmetals are on the upper right. The 'staircase' line separates metals from nonmetals."},
-  {"id":"chem_023","topic":"Bonding","question":"Which of the following is a property of ionic compounds?","choices":["Low melting point","Conducts electricity when dissolved in water","Does not dissolve in water","Soft and pliable"],"answer":"Conducts electricity when dissolved in water","explanation":"Ionic compounds dissociate into ions when dissolved, allowing the solution to conduct electricity. In solid form they do not conduct because ions cannot move freely."},
-  {"id":"chem_024","topic":"Bonding","question":"How many covalent bonds does carbon typically form?","choices":["1","2","3","4"],"answer":"4","explanation":"Carbon has 4 valence electrons and needs 4 more to complete its outer shell, so it forms 4 covalent bonds. This makes carbon the basis of organic chemistry."},
-  {"id":"chem_025","topic":"Acids and Bases","question":"What is produced when an acid and a base react?","choices":["A gas only","Water and a salt","A metal oxide","An ester"],"answer":"Water and a salt","explanation":"Neutralization: acid + base → salt + water. For example, HCl + NaOH → NaCl + H2O. The H+ from the acid combines with OH- from the base to form water."},
-  {"id":"chem_026","topic":"Acids and Bases","question":"Which indicator turns red in acid and blue in base?","choices":["Phenolphthalein","Universal indicator","Litmus","Methyl orange"],"answer":"Litmus","explanation":"Litmus paper is red in acidic solutions (pH < 7) and blue in basic solutions (pH > 7). It is one of the simplest indicators used in lab settings."},
-  {"id":"chem_027","topic":"Redox","question":"In an electrochemical cell, which electrode does oxidation occur at?","choices":["Cathode","Anode","Both electrodes","Neither electrode"],"answer":"Anode","explanation":"At the anode, oxidation (loss of electrons) occurs. At the cathode, reduction (gain of electrons) occurs. Remember: AN OX and RED CAT."},
-  {"id":"chem_028","topic":"Redox","question":"Assign the oxidation state of sulfur in H2SO4.","choices":["+2","+4","+6","-2"],"answer":"+6","explanation":"In H2SO4: hydrogen is +1 each (×2 = +2), oxygen is -2 each (×4 = -8). Sum must equal 0: +2 + S + (-8) = 0, so S = +6."},
-  {"id":"chem_029","topic":"Nuclear Chemistry","question":"If Carbon-14 has a half-life of 5,730 years, how much of a sample remains after two half-lives?","choices":["1/2","1/4","1/8","1/3"],"answer":"1/4","explanation":"After one half-life, 1/2 remains. After two half-lives, 1/2 × 1/2 = 1/4 remains. After each half-life, the amount is halved again."},
-  {"id":"chem_030","topic":"Nuclear Chemistry","question":"Which type of radiation has the greatest penetrating power?","choices":["Alpha","Beta","Gamma","Proton"],"answer":"Gamma","explanation":"Gamma rays are high-energy electromagnetic radiation that can penetrate through most materials. Alpha particles are stopped by paper; beta particles by thin metal; gamma rays require thick lead or concrete."},
-  {"id":"chem_031","topic":"Stoichiometry","question":"What is the molar mass of water (H2O)? (H=1, O=16)","choices":["8 g/mol","16 g/mol","18 g/mol","20 g/mol"],"answer":"18 g/mol","explanation":"Add atomic masses: 2(1) + 16 = 18 g/mol. One mole of water has a mass of 18 grams."},
-  {"id":"chem_032","topic":"Stoichiometry","question":"How many moles are in 44 grams of CO2? (C=12, O=16)","choices":["0.5","1","2","4"],"answer":"1","explanation":"Molar mass of CO2 = 12 + 2(16) = 44 g/mol. 44 g ÷ 44 g/mol = 1 mole."},
-  {"id":"chem_033","topic":"Gas Laws","question":"Charles's Law states that at constant pressure, the volume of a gas is:","choices":["Inversely proportional to temperature","Directly proportional to temperature","Independent of temperature","Inversely proportional to pressure"],"answer":"Directly proportional to temperature","explanation":"Charles's Law: V1/T1 = V2/T2 at constant pressure. As temperature increases, gas molecules move faster and take up more volume."},
-  {"id":"chem_034","topic":"Gas Laws","question":"What is the pressure of a gas at STP?","choices":["0 atm","0.5 atm","1 atm","2 atm"],"answer":"1 atm","explanation":"STP (Standard Temperature and Pressure) is defined as 0°C (273 K) and 1 atm pressure. At STP, 1 mole of any ideal gas occupies 22.4 L."},
-  {"id":"chem_035","topic":"Gas Laws","question":"According to Gay-Lussac's Law, at constant volume, pressure and temperature are:","choices":["Inversely related","Directly related","Unrelated","Equal"],"answer":"Directly related","explanation":"Gay-Lussac's Law: P1/T1 = P2/T2 at constant volume. Heating a gas increases the speed of its molecules, which increases pressure."},
-  {"id":"chem_036","topic":"Organic Chemistry","question":"Which type of organic compound contains only carbon and hydrogen?","choices":["Alcohol","Carboxylic acid","Hydrocarbon","Amine"],"answer":"Hydrocarbon","explanation":"Hydrocarbons contain only carbon and hydrogen atoms. Examples include methane (CH4) and ethane (C2H6). They are the main component of fossil fuels."},
-  {"id":"chem_037","topic":"Organic Chemistry","question":"Which of the following is a saturated hydrocarbon?","choices":["Ethene (C2H4)","Ethyne (C2H2)","Ethane (C2H6)","Benzene (C6H6)"],"answer":"Ethane (C2H6)","explanation":"Saturated hydrocarbons (alkanes) have only single C-C bonds. Ethane (C2H6) is an alkane. Unsaturated hydrocarbons have double or triple bonds."},
-  {"id":"chem_038","topic":"Organic Chemistry","question":"Which functional group is present in carboxylic acids?","choices":["-OH","-NH2","-COOH","-CHO"],"answer":"-COOH","explanation":"Carboxylic acids contain the carboxyl group (-COOH), which consists of a carbonyl group (C=O) and a hydroxyl group (-OH) on the same carbon."},
-  {"id":"chem_039","topic":"Stoichiometry","question":"In a chemical reaction, the substance that is entirely used up is called the:","choices":["Excess reagent","Catalyst","Limiting reagent","Product"],"answer":"Limiting reagent","explanation":"The limiting reagent is the reactant that is completely consumed first, stopping the reaction. It determines the maximum amount of product that can be formed."},
-  {"id":"chem_040","topic":"Atomic Structure","question":"The electron configuration of sodium (Na, Z=11) is:","choices":["2,8,1","2,8,2","2,9","2,7,2"],"answer":"2,8,1","explanation":"Sodium has 11 electrons: 2 fill the first shell, 8 fill the second shell, and 1 is in the third shell. This single outer electron explains why Na is very reactive."},
-  {"id":"chem_041","topic":"Bonding","question":"A molecule with a bent shape and polar bonds will be:","choices":["Nonpolar","Polar","Ionic","Metallic"],"answer":"Polar","explanation":"If a molecule has polar bonds AND an asymmetric shape (like water, bent), the dipoles don't cancel and the molecule is polar overall."},
-  {"id":"chem_042","topic":"Acids and Bases","question":"A solution has [OH-] = 1 × 10-3 M. What is the pOH?","choices":["3","7","11","14"],"answer":"3","explanation":"pOH = -log[OH-] = -log(10-3) = 3. Then pH = 14 - 3 = 11, confirming the solution is basic."},
-  {"id":"chem_043","topic":"Redox","question":"In galvanic cells, which direction do electrons flow in the external circuit?","choices":["From cathode to anode","From anode to cathode","From positive to negative","No electron flow occurs"],"answer":"From anode to cathode","explanation":"Electrons are released at the anode (oxidation) and flow through the external wire to the cathode (reduction). This electron flow is the electric current."},
-  {"id":"chem_044","topic":"Stoichiometry","question":"What does the law of conservation of mass state?","choices":["Matter can be created","Matter can be destroyed","Mass is conserved in a reaction","Energy is not conserved"],"answer":"Mass is conserved in a reaction","explanation":"In a chemical reaction, mass is neither created nor destroyed. The total mass of reactants equals the total mass of products. This is why equations must be balanced."},
-  {"id":"chem_045","topic":"Gas Laws","question":"At constant temperature and pressure, equal volumes of different gases contain:","choices":["The same number of moles","Different numbers of moles","The same mass","Different numbers of molecules"],"answer":"The same number of moles","explanation":"Avogadro's Law: equal volumes of gases at the same temperature and pressure contain equal numbers of moles (and molecules)."},
-  {"id":"chem_046","topic":"Nuclear Chemistry","question":"Nuclear fission involves:","choices":["Combining small nuclei","Splitting a heavy nucleus","Loss of electrons","Gain of protons"],"answer":"Splitting a heavy nucleus","explanation":"Fission splits a large, unstable nucleus (like uranium-235) into smaller nuclei, releasing enormous energy. This is the principle behind nuclear power plants and atomic bombs."},
-  {"id":"chem_047","topic":"Organic Chemistry","question":"Which reaction joins two monomers together to form a polymer, releasing water?","choices":["Substitution","Condensation polymerization","Addition polymerization","Combustion"],"answer":"Condensation polymerization","explanation":"In condensation polymerization, monomers link together and a small molecule (usually water) is released with each bond formed. Proteins and nylon form this way."},
-  {"id":"chem_048","topic":"Periodic Table","question":"Which element is a metalloid?","choices":["Sodium","Silicon","Sulfur","Silver"],"answer":"Silicon","explanation":"Silicon is a metalloid — it has properties between metals and nonmetals. Metalloids are located along the staircase on the periodic table and are useful as semiconductors."},
-  {"id":"chem_049","topic":"Bonding","question":"Which type of bonding is present in a metallic solid like copper?","choices":["Ionic","Covalent","Metallic","Hydrogen"],"answer":"Metallic","explanation":"In metallic bonding, metal cations are surrounded by a 'sea of delocalized electrons' that flow freely. This explains why metals conduct electricity and heat well."},
-  {"id":"chem_050","topic":"Stoichiometry","question":"A reaction produces 3.6 g of water. How many moles of water is this? (Molar mass H2O = 18 g/mol)","choices":["0.1","0.2","0.5","18"],"answer":"0.2","explanation":"Moles = mass / molar mass = 3.6 g ÷ 18 g/mol = 0.2 moles of water."},
-  {"id":"chem_051","topic":"Stoichiometry","question":"What is the percent composition by mass of hydrogen in water (H2O)? (H=1, O=16)","choices":["5.6%","11.1%","22.2%","88.9%"],"answer":"11.1%","explanation":"Molar mass of H2O = 18 g/mol. Mass of 2 H = 2 g. Percent = (2/18) × 100% ≈ 11.1%."},
-  {"id":"chem_052","topic":"Stoichiometry","question":"How many atoms are in 2 moles of iron (Fe)?","choices":["2","6.02 × 10²³","1.20 × 10²⁴","3.01 × 10²³"],"answer":"1.20 × 10²⁴","explanation":"1 mole contains 6.02 × 10²³ atoms (Avogadro's number). 2 moles × 6.02 × 10²³ = 1.20 × 10²⁴ atoms."},
-  {"id":"chem_053","topic":"Stoichiometry","question":"In the reaction 2H2 + O2 → 2H2O, what is the mole ratio of H2 to O2?","choices":["1:1","2:1","1:2","3:1"],"answer":"2:1","explanation":"From the balanced equation, 2 moles of H2 react with 1 mole of O2. The mole ratio of H2 to O2 is 2:1."},
-  {"id":"chem_054","topic":"Atomic Structure","question":"Which model of the atom described electrons as existing in an electron cloud rather than fixed orbits?","choices":["Dalton's model","Thomson's model","Bohr's model","Quantum mechanical model"],"answer":"Quantum mechanical model","explanation":"The modern quantum mechanical model describes electrons as existing in orbitals — regions of probability — rather than fixed orbits as Bohr proposed. Schrödinger's equation defines these probability clouds."},
-  {"id":"chem_055","topic":"Atomic Structure","question":"An atom has 17 protons, 18 neutrons, and 17 electrons. What is its mass number?","choices":["17","18","34","35"],"answer":"35","explanation":"Mass number = protons + neutrons = 17 + 18 = 35. This is chlorine-35, one of the two common chlorine isotopes."},
-  {"id":"chem_056","topic":"Periodic Table","question":"Which group of elements on the periodic table is known as the alkali metals?","choices":["Group 1","Group 2","Group 17","Group 18"],"answer":"Group 1","explanation":"Group 1 elements (Li, Na, K, Rb, Cs, Fr) are alkali metals. They have 1 valence electron, are very reactive, and react vigorously with water to form hydroxides and hydrogen gas."},
-  {"id":"chem_057","topic":"Periodic Table","question":"What is the general trend for electronegativity as you move across a period from left to right?","choices":["It decreases","It increases","It stays the same","It first increases then decreases"],"answer":"It increases","explanation":"Electronegativity (the ability to attract bonding electrons) increases from left to right across a period because nuclear charge increases while atomic radius decreases."},
-  {"id":"chem_058","topic":"Periodic Table","question":"Which element has the highest electronegativity on the periodic table?","choices":["Oxygen","Chlorine","Fluorine","Nitrogen"],"answer":"Fluorine","explanation":"Fluorine (F) has the highest electronegativity value (3.98 on the Pauling scale) of all elements. This is why it forms very strong polar bonds."},
-  {"id":"chem_059","topic":"Bonding","question":"What type of intermolecular force exists between water molecules?","choices":["London dispersion","Dipole-dipole","Hydrogen bonding","Ionic bonding"],"answer":"Hydrogen bonding","explanation":"Water molecules form hydrogen bonds — a special strong dipole-dipole attraction between the O-H bond in one molecule and the lone pair of oxygen in another. This gives water its unusually high boiling point."},
-  {"id":"chem_060","topic":"Bonding","question":"Which of the following molecules has a trigonal planar shape?","choices":["H2O","NH3","CH4","BF3"],"answer":"BF3","explanation":"BF3 (boron trifluoride) has 3 bonding pairs and no lone pairs around the central atom, giving it a trigonal planar shape with 120° bond angles."},
-  {"id":"chem_061","topic":"Acids and Bases","question":"According to the Brønsted-Lowry definition, an acid is a substance that:","choices":["Produces OH- ions in water","Accepts a proton (H+)","Donates a proton (H+)","Accepts an electron pair"],"answer":"Donates a proton (H+)","explanation":"Brønsted-Lowry acids are proton donors — they give away H+ ions. Brønsted-Lowry bases are proton acceptors. This definition is broader than the Arrhenius definition."},
-  {"id":"chem_062","topic":"Acids and Bases","question":"Which of the following is a strong acid?","choices":["Acetic acid (CH3COOH)","Carbonic acid (H2CO3)","Hydrochloric acid (HCl)","Phosphoric acid (H3PO4)"],"answer":"Hydrochloric acid (HCl)","explanation":"HCl is a strong acid — it completely dissociates into H+ and Cl- ions in water. Acetic, carbonic, and phosphoric acids are weak acids that only partially dissociate."},
-  {"id":"chem_063","topic":"Acids and Bases","question":"A buffer solution resists changes in:","choices":["Temperature","Concentration","pH","Color"],"answer":"pH","explanation":"A buffer is a solution that resists significant changes in pH when small amounts of acid or base are added. It typically contains a weak acid and its conjugate base (or vice versa)."},
-  {"id":"chem_064","topic":"Redox","question":"Which element is reduced in the reaction: Fe2O3 + 3CO → 2Fe + 3CO2?","choices":["Fe","O","C","All elements"],"answer":"Fe","explanation":"In Fe2O3, iron has oxidation state +3. In the product Fe, it is 0. A decrease in oxidation state = reduction. Iron gains electrons and is reduced."},
-  {"id":"chem_065","topic":"Redox","question":"The substance that causes another substance to be oxidized is called the:","choices":["Reducing agent","Oxidizing agent","Catalyst","Electrolyte"],"answer":"Oxidizing agent","explanation":"The oxidizing agent accepts electrons from the reducing agent, causing the reducing agent to be oxidized. The oxidizing agent itself gets reduced."},
-  {"id":"chem_066","topic":"Gas Laws","question":"A gas occupies 5.0 L at 300 K. At constant pressure, what volume does it occupy at 600 K?","choices":["2.5 L","5.0 L","10.0 L","15.0 L"],"answer":"10.0 L","explanation":"Charles's Law: V1/T1 = V2/T2. (5.0)/(300) = V2/(600). V2 = 10.0 L. When temperature doubles at constant pressure, volume doubles."},
-  {"id":"chem_067","topic":"Gas Laws","question":"The ideal gas law is expressed as:","choices":["PV = nRT","PV = mRT","PV = kT","P = nRT/m"],"answer":"PV = nRT","explanation":"The ideal gas law PV = nRT combines Boyle's, Charles's, and Avogadro's Laws. P = pressure, V = volume, n = moles, R = gas constant, T = temperature (Kelvin)."},
-  {"id":"chem_068","topic":"Nuclear Chemistry","question":"What is the product of uranium-238 after it undergoes alpha decay?","choices":["Thorium-234","Radium-234","Lead-206","Thorium-236"],"answer":"Thorium-234","explanation":"Alpha decay: mass number decreases by 4, atomic number decreases by 2. Uranium-238 (Z=92) → Thorium-234 (Z=90). The alpha particle carries away 2 protons and 2 neutrons."},
-  {"id":"chem_069","topic":"Nuclear Chemistry","question":"Nuclear fusion is the process by which:","choices":["A heavy nucleus splits into lighter nuclei","Two light nuclei combine to form a heavier nucleus","Electrons are emitted from the nucleus","Gamma rays are released from unstable atoms"],"answer":"Two light nuclei combine to form a heavier nucleus","explanation":"Fusion combines light nuclei (like hydrogen isotopes) into heavier ones, releasing enormous energy. This is the reaction that powers stars, including our Sun."},
-  {"id":"chem_070","topic":"Organic Chemistry","question":"Which functional group identifies a ketone?","choices":["R-OH","R-CHO","R-CO-R'","R-COOH"],"answer":"R-CO-R'","explanation":"Ketones contain a carbonyl group (C=O) bonded to two carbon atoms (R-CO-R'). If the carbonyl is at the end of the chain (bonded to at least one H), it is an aldehyde (R-CHO)."},
-  {"id":"chem_071","topic":"Organic Chemistry","question":"What is the name of the process by which crude oil is separated into fractions based on boiling points?","choices":["Cracking","Fractional distillation","Combustion","Polymerization"],"answer":"Fractional distillation","explanation":"Fractional distillation separates petroleum into components (gasoline, diesel, kerosene, etc.) by heating and collecting fractions at different boiling points. Shorter chains have lower boiling points."},
-  {"id":"chem_072","topic":"Solutions","question":"A solution that cannot dissolve any more solute at a given temperature is:","choices":["Unsaturated","Dilute","Saturated","Supersaturated"],"answer":"Saturated","explanation":"A saturated solution holds the maximum amount of dissolved solute at a given temperature. An unsaturated solution can dissolve more solute; a supersaturated solution holds more than the normal maximum."},
-  {"id":"chem_073","topic":"Solutions","question":"Which factor does NOT increase the rate at which a solid solute dissolves?","choices":["Stirring","Increasing temperature","Decreasing particle size","Increasing pressure"],"answer":"Increasing pressure","explanation":"Pressure affects the solubility of gases in liquids (Henry's Law) but has little effect on the dissolution rate of solids. Stirring, heating, and grinding increase dissolution rate for solids."},
-  {"id":"chem_074","topic":"Thermochemistry","question":"An exothermic reaction:","choices":["Absorbs heat from the surroundings","Has a positive ΔH","Releases heat to the surroundings","Requires a catalyst"],"answer":"Releases heat to the surroundings","explanation":"Exothermic reactions release energy (heat) to the surroundings. ΔH is negative for exothermic reactions. Combustion and neutralization are common examples."},
-  {"id":"chem_075","topic":"Thermochemistry","question":"Hess's Law states that the total enthalpy change of a reaction:","choices":["Depends on the path taken","Is always positive","Is independent of the pathway taken","Equals the activation energy"],"answer":"Is independent of the pathway taken","explanation":"Hess's Law: the total enthalpy change depends only on initial and final states, not the steps in between. This allows calculation of ΔH for reactions that can't be measured directly."}
+  {
+    "id": "chem_001",
+    "topic": "Atomic Structure",
+    "question": "An atom of which element has the greatest nuclear charge?",
+    "choices": [
+      "Carbon",
+      "Oxygen",
+      "Nitrogen",
+      "Fluorine"
+    ],
+    "answer": "Fluorine",
+    "explanation": "Nuclear charge equals the number of protons. Fluorine has 9 protons, the most of these four elements."
+  },
+  {
+    "id": "chem_002",
+    "topic": "Atomic Structure",
+    "question": "Which subatomic particle has a negative charge?",
+    "choices": [
+      "Proton",
+      "Neutron",
+      "Electron",
+      "Nucleus"
+    ],
+    "answer": "Electron",
+    "explanation": "Electrons carry a negative charge (-1). Protons are positive (+1) and neutrons have no charge."
+  },
+  {
+    "id": "chem_003",
+    "topic": "Periodic Table",
+    "question": "Elements in the same group on the periodic table have the same number of:",
+    "choices": [
+      "Protons",
+      "Neutrons",
+      "Valence electrons",
+      "Mass numbers"
+    ],
+    "answer": "Valence electrons",
+    "explanation": "Elements in the same group (column) have the same number of valence electrons, which is why they have similar chemical properties."
+  },
+  {
+    "id": "chem_004",
+    "topic": "Bonding",
+    "question": "Which type of bond forms between a metal and a nonmetal?",
+    "choices": [
+      "Covalent",
+      "Ionic",
+      "Metallic",
+      "Hydrogen"
+    ],
+    "answer": "Ionic",
+    "explanation": "Ionic bonds form when a metal transfers electrons to a nonmetal. The metal becomes a positive ion and the nonmetal becomes a negative ion."
+  },
+  {
+    "id": "chem_005",
+    "topic": "Bonding",
+    "question": "A covalent bond is formed by the:",
+    "choices": [
+      "Transfer of electrons",
+      "Sharing of electrons",
+      "Transfer of protons",
+      "Sharing of neutrons"
+    ],
+    "answer": "Sharing of electrons",
+    "explanation": "Covalent bonds form when two nonmetals share electrons. This is different from ionic bonds where electrons are transferred."
+  },
+  {
+    "id": "chem_006",
+    "topic": "Acids and Bases",
+    "question": "A solution with a pH of 3 is best described as:",
+    "choices": [
+      "Strongly basic",
+      "Weakly basic",
+      "Neutral",
+      "Acidic"
+    ],
+    "answer": "Acidic",
+    "explanation": "pH below 7 is acidic. pH 7 is neutral. pH above 7 is basic. pH 3 is a strong acid."
+  },
+  {
+    "id": "chem_007",
+    "topic": "Acids and Bases",
+    "question": "Which ion is responsible for the properties of an acid in water?",
+    "choices": [
+      "OH-",
+      "Na+",
+      "H+",
+      "Cl-"
+    ],
+    "answer": "H+",
+    "explanation": "Acids release hydrogen ions (H+) in water. The more H+ ions, the stronger the acid and the lower the pH."
+  },
+  {
+    "id": "chem_008",
+    "topic": "Redox",
+    "question": "In a redox reaction, oxidation is the:",
+    "choices": [
+      "Gain of electrons",
+      "Loss of electrons",
+      "Gain of protons",
+      "Loss of protons"
+    ],
+    "answer": "Loss of electrons",
+    "explanation": "Remember OIL RIG \u2014 Oxidation Is Loss, Reduction Is Gain (of electrons)."
+  },
+  {
+    "id": "chem_009",
+    "topic": "Redox",
+    "question": "In the reaction Zn + CuSO4 \u2192 ZnSO4 + Cu, which element is oxidized?",
+    "choices": [
+      "Zn",
+      "Cu",
+      "S",
+      "O"
+    ],
+    "answer": "Zn",
+    "explanation": "Zinc (Zn) loses electrons and becomes Zn2+. When something loses electrons it is oxidized. Copper gains electrons (is reduced)."
+  },
+  {
+    "id": "chem_010",
+    "topic": "Nuclear Chemistry",
+    "question": "During alpha decay, the nucleus releases a particle containing:",
+    "choices": [
+      "2 protons and 2 neutrons",
+      "1 proton and 1 neutron",
+      "2 protons and 1 neutron",
+      "1 proton and 2 neutrons"
+    ],
+    "answer": "2 protons and 2 neutrons",
+    "explanation": "An alpha particle is identical to a helium-4 nucleus \u2014 it contains 2 protons and 2 neutrons."
+  },
+  {
+    "id": "chem_011",
+    "topic": "Nuclear Chemistry",
+    "question": "What happens to the atomic number of a nucleus during beta decay?",
+    "choices": [
+      "Increases by 1",
+      "Decreases by 1",
+      "Stays the same",
+      "Increases by 2"
+    ],
+    "answer": "Increases by 1",
+    "explanation": "During beta decay, a neutron turns into a proton and releases a beta particle (electron). This increases the atomic number by 1."
+  },
+  {
+    "id": "chem_012",
+    "topic": "Stoichiometry",
+    "question": "In the reaction N2 + 3H2 \u2192 2NH3, how many moles of H2 are needed to produce 4 moles of NH3?",
+    "choices": [
+      "2",
+      "4",
+      "6",
+      "8"
+    ],
+    "answer": "6",
+    "explanation": "The ratio is 3 moles H2 : 2 moles NH3. To make 4 moles NH3: (4 \u00d7 3) \u00f7 2 = 6 moles of H2."
+  },
+  {
+    "id": "chem_013",
+    "topic": "Physical vs Chemical",
+    "question": "Which is an example of a chemical change?",
+    "choices": [
+      "Ice melting",
+      "Water boiling",
+      "Iron rusting",
+      "Salt dissolving"
+    ],
+    "answer": "Iron rusting",
+    "explanation": "Rusting is a chemical change because a new substance (iron oxide) is formed. Melting, boiling, and dissolving are physical changes \u2014 no new substance is created."
+  },
+  {
+    "id": "chem_014",
+    "topic": "Gas Laws",
+    "question": "According to Boyle's Law, if the pressure of a gas increases at constant temperature, the volume will:",
+    "choices": [
+      "Increase",
+      "Decrease",
+      "Stay the same",
+      "Double"
+    ],
+    "answer": "Decrease",
+    "explanation": "Boyle's Law states pressure and volume are inversely related at constant temperature. More pressure = less volume."
+  },
+  {
+    "id": "chem_015",
+    "topic": "Organic Chemistry",
+    "question": "Which functional group identifies an alcohol?",
+    "choices": [
+      "-COOH",
+      "-OH",
+      "-NH2",
+      "-CHO"
+    ],
+    "answer": "-OH",
+    "explanation": "Alcohols contain the hydroxyl group (-OH). For example, ethanol (drinking alcohol) has the formula C2H5OH."
+  },
+  {
+    "id": "chem_016",
+    "topic": "Atomic Structure",
+    "question": "The atomic mass of an element is approximately equal to the number of:",
+    "choices": [
+      "Protons only",
+      "Electrons only",
+      "Protons plus neutrons",
+      "Neutrons only"
+    ],
+    "answer": "Protons plus neutrons",
+    "explanation": "Atomic mass \u2248 number of protons + number of neutrons (in amu). Electrons have negligible mass."
+  },
+  {
+    "id": "chem_017",
+    "topic": "Atomic Structure",
+    "question": "Isotopes of the same element differ in the number of:",
+    "choices": [
+      "Protons",
+      "Electrons",
+      "Neutrons",
+      "Valence electrons"
+    ],
+    "answer": "Neutrons",
+    "explanation": "Isotopes are atoms of the same element (same protons) with different numbers of neutrons, giving them different mass numbers."
+  },
+  {
+    "id": "chem_018",
+    "topic": "Atomic Structure",
+    "question": "In the Bohr model, electrons orbit the nucleus in:",
+    "choices": [
+      "Random paths",
+      "Fixed energy levels",
+      "Elliptical paths",
+      "A cloud"
+    ],
+    "answer": "Fixed energy levels",
+    "explanation": "In Bohr's model, electrons occupy specific energy levels (shells) at fixed distances from the nucleus. They can jump between levels by absorbing or emitting energy."
+  },
+  {
+    "id": "chem_019",
+    "topic": "Atomic Structure",
+    "question": "Which scientist discovered the electron?",
+    "choices": [
+      "Ernest Rutherford",
+      "Niels Bohr",
+      "J.J. Thomson",
+      "John Dalton"
+    ],
+    "answer": "J.J. Thomson",
+    "explanation": "J.J. Thomson discovered the electron in 1897 using cathode ray tubes. He proposed the 'plum pudding' model of the atom with electrons embedded in a positive sphere."
+  },
+  {
+    "id": "chem_020",
+    "topic": "Periodic Table",
+    "question": "Which group of elements is the least reactive?",
+    "choices": [
+      "Alkali metals",
+      "Halogens",
+      "Noble gases",
+      "Alkaline earth metals"
+    ],
+    "answer": "Noble gases",
+    "explanation": "Noble gases (Group 18) have full valence shells and do not readily react with other elements. They are also called inert gases."
+  },
+  {
+    "id": "chem_021",
+    "topic": "Periodic Table",
+    "question": "As you move left to right across a period, atomic radius generally:",
+    "choices": [
+      "Increases",
+      "Decreases",
+      "Stays the same",
+      "First increases then decreases"
+    ],
+    "answer": "Decreases",
+    "explanation": "Moving left to right across a period, nuclear charge increases while electrons are added to the same shell. Greater nuclear pull shrinks the atomic radius."
+  },
+  {
+    "id": "chem_022",
+    "topic": "Periodic Table",
+    "question": "Metals are generally located on which side of the periodic table?",
+    "choices": [
+      "Right side",
+      "Left side",
+      "Top row",
+      "Center only"
+    ],
+    "answer": "Left side",
+    "explanation": "Metals are on the left and center of the periodic table. Nonmetals are on the upper right. The 'staircase' line separates metals from nonmetals."
+  },
+  {
+    "id": "chem_023",
+    "topic": "Bonding",
+    "question": "Which of the following is a property of ionic compounds?",
+    "choices": [
+      "Low melting point",
+      "Conducts electricity when dissolved in water",
+      "Does not dissolve in water",
+      "Soft and pliable"
+    ],
+    "answer": "Conducts electricity when dissolved in water",
+    "explanation": "Ionic compounds dissociate into ions when dissolved, allowing the solution to conduct electricity. In solid form they do not conduct because ions cannot move freely."
+  },
+  {
+    "id": "chem_024",
+    "topic": "Bonding",
+    "question": "How many covalent bonds does carbon typically form?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": "4",
+    "explanation": "Carbon has 4 valence electrons and needs 4 more to complete its outer shell, so it forms 4 covalent bonds. This makes carbon the basis of organic chemistry."
+  },
+  {
+    "id": "chem_025",
+    "topic": "Acids and Bases",
+    "question": "What is produced when an acid and a base react?",
+    "choices": [
+      "A gas only",
+      "Water and a salt",
+      "A metal oxide",
+      "An ester"
+    ],
+    "answer": "Water and a salt",
+    "explanation": "Neutralization: acid + base \u2192 salt + water. For example, HCl + NaOH \u2192 NaCl + H2O. The H+ from the acid combines with OH- from the base to form water."
+  },
+  {
+    "id": "chem_026",
+    "topic": "Acids and Bases",
+    "question": "Which indicator turns red in acid and blue in base?",
+    "choices": [
+      "Phenolphthalein",
+      "Universal indicator",
+      "Litmus",
+      "Methyl orange"
+    ],
+    "answer": "Litmus",
+    "explanation": "Litmus paper is red in acidic solutions (pH < 7) and blue in basic solutions (pH > 7). It is one of the simplest indicators used in lab settings."
+  },
+  {
+    "id": "chem_027",
+    "topic": "Redox",
+    "question": "In an electrochemical cell, which electrode does oxidation occur at?",
+    "choices": [
+      "Cathode",
+      "Anode",
+      "Both electrodes",
+      "Neither electrode"
+    ],
+    "answer": "Anode",
+    "explanation": "At the anode, oxidation (loss of electrons) occurs. At the cathode, reduction (gain of electrons) occurs. Remember: AN OX and RED CAT."
+  },
+  {
+    "id": "chem_028",
+    "topic": "Redox",
+    "question": "Assign the oxidation state of sulfur in H2SO4.",
+    "choices": [
+      "+2",
+      "+4",
+      "+6",
+      "-2"
+    ],
+    "answer": "+6",
+    "explanation": "In H2SO4: hydrogen is +1 each (\u00d72 = +2), oxygen is -2 each (\u00d74 = -8). Sum must equal 0: +2 + S + (-8) = 0, so S = +6."
+  },
+  {
+    "id": "chem_029",
+    "topic": "Nuclear Chemistry",
+    "question": "If Carbon-14 has a half-life of 5,730 years, how much of a sample remains after two half-lives?",
+    "choices": [
+      "1/2",
+      "1/4",
+      "1/8",
+      "1/3"
+    ],
+    "answer": "1/4",
+    "explanation": "After one half-life, 1/2 remains. After two half-lives, 1/2 \u00d7 1/2 = 1/4 remains. After each half-life, the amount is halved again."
+  },
+  {
+    "id": "chem_030",
+    "topic": "Nuclear Chemistry",
+    "question": "Which type of radiation has the greatest penetrating power?",
+    "choices": [
+      "Alpha",
+      "Beta",
+      "Gamma",
+      "Proton"
+    ],
+    "answer": "Gamma",
+    "explanation": "Gamma rays are high-energy electromagnetic radiation that can penetrate through most materials. Alpha particles are stopped by paper; beta particles by thin metal; gamma rays require thick lead or concrete."
+  },
+  {
+    "id": "chem_031",
+    "topic": "Stoichiometry",
+    "question": "What is the molar mass of water (H2O)? (H=1, O=16)",
+    "choices": [
+      "8 g/mol",
+      "16 g/mol",
+      "18 g/mol",
+      "20 g/mol"
+    ],
+    "answer": "18 g/mol",
+    "explanation": "Add atomic masses: 2(1) + 16 = 18 g/mol. One mole of water has a mass of 18 grams."
+  },
+  {
+    "id": "chem_032",
+    "topic": "Stoichiometry",
+    "question": "How many moles are in 44 grams of CO2? (C=12, O=16)",
+    "choices": [
+      "0.5",
+      "1",
+      "2",
+      "4"
+    ],
+    "answer": "1",
+    "explanation": "Molar mass of CO2 = 12 + 2(16) = 44 g/mol. 44 g \u00f7 44 g/mol = 1 mole."
+  },
+  {
+    "id": "chem_033",
+    "topic": "Gas Laws",
+    "question": "Charles's Law states that at constant pressure, the volume of a gas is:",
+    "choices": [
+      "Inversely proportional to temperature",
+      "Directly proportional to temperature",
+      "Independent of temperature",
+      "Inversely proportional to pressure"
+    ],
+    "answer": "Directly proportional to temperature",
+    "explanation": "Charles's Law: V1/T1 = V2/T2 at constant pressure. As temperature increases, gas molecules move faster and take up more volume."
+  },
+  {
+    "id": "chem_034",
+    "topic": "Gas Laws",
+    "question": "What is the pressure of a gas at STP?",
+    "choices": [
+      "0 atm",
+      "0.5 atm",
+      "1 atm",
+      "2 atm"
+    ],
+    "answer": "1 atm",
+    "explanation": "STP (Standard Temperature and Pressure) is defined as 0\u00b0C (273 K) and 1 atm pressure. At STP, 1 mole of any ideal gas occupies 22.4 L."
+  },
+  {
+    "id": "chem_035",
+    "topic": "Gas Laws",
+    "question": "According to Gay-Lussac's Law, at constant volume, pressure and temperature are:",
+    "choices": [
+      "Inversely related",
+      "Directly related",
+      "Unrelated",
+      "Equal"
+    ],
+    "answer": "Directly related",
+    "explanation": "Gay-Lussac's Law: P1/T1 = P2/T2 at constant volume. Heating a gas increases the speed of its molecules, which increases pressure."
+  },
+  {
+    "id": "chem_036",
+    "topic": "Organic Chemistry",
+    "question": "Which type of organic compound contains only carbon and hydrogen?",
+    "choices": [
+      "Alcohol",
+      "Carboxylic acid",
+      "Hydrocarbon",
+      "Amine"
+    ],
+    "answer": "Hydrocarbon",
+    "explanation": "Hydrocarbons contain only carbon and hydrogen atoms. Examples include methane (CH4) and ethane (C2H6). They are the main component of fossil fuels."
+  },
+  {
+    "id": "chem_037",
+    "topic": "Organic Chemistry",
+    "question": "Which of the following is a saturated hydrocarbon?",
+    "choices": [
+      "Ethene (C2H4)",
+      "Ethyne (C2H2)",
+      "Ethane (C2H6)",
+      "Benzene (C6H6)"
+    ],
+    "answer": "Ethane (C2H6)",
+    "explanation": "Saturated hydrocarbons (alkanes) have only single C-C bonds. Ethane (C2H6) is an alkane. Unsaturated hydrocarbons have double or triple bonds."
+  },
+  {
+    "id": "chem_038",
+    "topic": "Organic Chemistry",
+    "question": "Which functional group is present in carboxylic acids?",
+    "choices": [
+      "-OH",
+      "-NH2",
+      "-COOH",
+      "-CHO"
+    ],
+    "answer": "-COOH",
+    "explanation": "Carboxylic acids contain the carboxyl group (-COOH), which consists of a carbonyl group (C=O) and a hydroxyl group (-OH) on the same carbon."
+  },
+  {
+    "id": "chem_039",
+    "topic": "Stoichiometry",
+    "question": "In a chemical reaction, the substance that is entirely used up is called the:",
+    "choices": [
+      "Excess reagent",
+      "Catalyst",
+      "Limiting reagent",
+      "Product"
+    ],
+    "answer": "Limiting reagent",
+    "explanation": "The limiting reagent is the reactant that is completely consumed first, stopping the reaction. It determines the maximum amount of product that can be formed."
+  },
+  {
+    "id": "chem_040",
+    "topic": "Atomic Structure",
+    "question": "The electron configuration of sodium (Na, Z=11) is:",
+    "choices": [
+      "2,8,1",
+      "2,8,2",
+      "2,9",
+      "2,7,2"
+    ],
+    "answer": "2,8,1",
+    "explanation": "Sodium has 11 electrons: 2 fill the first shell, 8 fill the second shell, and 1 is in the third shell. This single outer electron explains why Na is very reactive."
+  },
+  {
+    "id": "chem_041",
+    "topic": "Bonding",
+    "question": "A molecule with a bent shape and polar bonds will be:",
+    "choices": [
+      "Nonpolar",
+      "Polar",
+      "Ionic",
+      "Metallic"
+    ],
+    "answer": "Polar",
+    "explanation": "If a molecule has polar bonds AND an asymmetric shape (like water, bent), the dipoles don't cancel and the molecule is polar overall."
+  },
+  {
+    "id": "chem_042",
+    "topic": "Acids and Bases",
+    "question": "A solution has [OH-] = 1 \u00d7 10-3 M. What is the pOH?",
+    "choices": [
+      "3",
+      "7",
+      "11",
+      "14"
+    ],
+    "answer": "3",
+    "explanation": "pOH = -log[OH-] = -log(10-3) = 3. Then pH = 14 - 3 = 11, confirming the solution is basic."
+  },
+  {
+    "id": "chem_043",
+    "topic": "Redox",
+    "question": "In galvanic cells, which direction do electrons flow in the external circuit?",
+    "choices": [
+      "From cathode to anode",
+      "From anode to cathode",
+      "From positive to negative",
+      "No electron flow occurs"
+    ],
+    "answer": "From anode to cathode",
+    "explanation": "Electrons are released at the anode (oxidation) and flow through the external wire to the cathode (reduction). This electron flow is the electric current."
+  },
+  {
+    "id": "chem_044",
+    "topic": "Stoichiometry",
+    "question": "What does the law of conservation of mass state?",
+    "choices": [
+      "Matter can be created",
+      "Matter can be destroyed",
+      "Mass is conserved in a reaction",
+      "Energy is not conserved"
+    ],
+    "answer": "Mass is conserved in a reaction",
+    "explanation": "In a chemical reaction, mass is neither created nor destroyed. The total mass of reactants equals the total mass of products. This is why equations must be balanced."
+  },
+  {
+    "id": "chem_045",
+    "topic": "Gas Laws",
+    "question": "At constant temperature and pressure, equal volumes of different gases contain:",
+    "choices": [
+      "The same number of moles",
+      "Different numbers of moles",
+      "The same mass",
+      "Different numbers of molecules"
+    ],
+    "answer": "The same number of moles",
+    "explanation": "Avogadro's Law: equal volumes of gases at the same temperature and pressure contain equal numbers of moles (and molecules)."
+  },
+  {
+    "id": "chem_046",
+    "topic": "Nuclear Chemistry",
+    "question": "Nuclear fission involves:",
+    "choices": [
+      "Combining small nuclei",
+      "Splitting a heavy nucleus",
+      "Loss of electrons",
+      "Gain of protons"
+    ],
+    "answer": "Splitting a heavy nucleus",
+    "explanation": "Fission splits a large, unstable nucleus (like uranium-235) into smaller nuclei, releasing enormous energy. This is the principle behind nuclear power plants and atomic bombs."
+  },
+  {
+    "id": "chem_047",
+    "topic": "Organic Chemistry",
+    "question": "Which reaction joins two monomers together to form a polymer, releasing water?",
+    "choices": [
+      "Substitution",
+      "Condensation polymerization",
+      "Addition polymerization",
+      "Combustion"
+    ],
+    "answer": "Condensation polymerization",
+    "explanation": "In condensation polymerization, monomers link together and a small molecule (usually water) is released with each bond formed. Proteins and nylon form this way."
+  },
+  {
+    "id": "chem_048",
+    "topic": "Periodic Table",
+    "question": "Which element is a metalloid?",
+    "choices": [
+      "Sodium",
+      "Silicon",
+      "Sulfur",
+      "Silver"
+    ],
+    "answer": "Silicon",
+    "explanation": "Silicon is a metalloid \u2014 it has properties between metals and nonmetals. Metalloids are located along the staircase on the periodic table and are useful as semiconductors."
+  },
+  {
+    "id": "chem_049",
+    "topic": "Bonding",
+    "question": "Which type of bonding is present in a metallic solid like copper?",
+    "choices": [
+      "Ionic",
+      "Covalent",
+      "Metallic",
+      "Hydrogen"
+    ],
+    "answer": "Metallic",
+    "explanation": "In metallic bonding, metal cations are surrounded by a 'sea of delocalized electrons' that flow freely. This explains why metals conduct electricity and heat well."
+  },
+  {
+    "id": "chem_050",
+    "topic": "Stoichiometry",
+    "question": "A reaction produces 3.6 g of water. How many moles of water is this? (Molar mass H2O = 18 g/mol)",
+    "choices": [
+      "0.1",
+      "0.2",
+      "0.5",
+      "18"
+    ],
+    "answer": "0.2",
+    "explanation": "Moles = mass / molar mass = 3.6 g \u00f7 18 g/mol = 0.2 moles of water."
+  },
+  {
+    "id": "chem_051",
+    "topic": "Stoichiometry",
+    "question": "What is the percent composition by mass of hydrogen in water (H2O)? (H=1, O=16)",
+    "choices": [
+      "5.6%",
+      "11.1%",
+      "22.2%",
+      "88.9%"
+    ],
+    "answer": "11.1%",
+    "explanation": "Molar mass of H2O = 18 g/mol. Mass of 2 H = 2 g. Percent = (2/18) \u00d7 100% \u2248 11.1%."
+  },
+  {
+    "id": "chem_052",
+    "topic": "Stoichiometry",
+    "question": "How many atoms are in 2 moles of iron (Fe)?",
+    "choices": [
+      "2",
+      "6.02 \u00d7 10\u00b2\u00b3",
+      "1.20 \u00d7 10\u00b2\u2074",
+      "3.01 \u00d7 10\u00b2\u00b3"
+    ],
+    "answer": "1.20 \u00d7 10\u00b2\u2074",
+    "explanation": "1 mole contains 6.02 \u00d7 10\u00b2\u00b3 atoms (Avogadro's number). 2 moles \u00d7 6.02 \u00d7 10\u00b2\u00b3 = 1.20 \u00d7 10\u00b2\u2074 atoms."
+  },
+  {
+    "id": "chem_053",
+    "topic": "Stoichiometry",
+    "question": "In the reaction 2H2 + O2 \u2192 2H2O, what is the mole ratio of H2 to O2?",
+    "choices": [
+      "1:1",
+      "2:1",
+      "1:2",
+      "3:1"
+    ],
+    "answer": "2:1",
+    "explanation": "From the balanced equation, 2 moles of H2 react with 1 mole of O2. The mole ratio of H2 to O2 is 2:1."
+  },
+  {
+    "id": "chem_054",
+    "topic": "Atomic Structure",
+    "question": "Which model of the atom described electrons as existing in an electron cloud rather than fixed orbits?",
+    "choices": [
+      "Dalton's model",
+      "Thomson's model",
+      "Bohr's model",
+      "Quantum mechanical model"
+    ],
+    "answer": "Quantum mechanical model",
+    "explanation": "The modern quantum mechanical model describes electrons as existing in orbitals \u2014 regions of probability \u2014 rather than fixed orbits as Bohr proposed. Schr\u00f6dinger's equation defines these probability clouds."
+  },
+  {
+    "id": "chem_055",
+    "topic": "Atomic Structure",
+    "question": "An atom has 17 protons, 18 neutrons, and 17 electrons. What is its mass number?",
+    "choices": [
+      "17",
+      "18",
+      "34",
+      "35"
+    ],
+    "answer": "35",
+    "explanation": "Mass number = protons + neutrons = 17 + 18 = 35. This is chlorine-35, one of the two common chlorine isotopes."
+  },
+  {
+    "id": "chem_056",
+    "topic": "Periodic Table",
+    "question": "Which group of elements on the periodic table is known as the alkali metals?",
+    "choices": [
+      "Group 1",
+      "Group 2",
+      "Group 17",
+      "Group 18"
+    ],
+    "answer": "Group 1",
+    "explanation": "Group 1 elements (Li, Na, K, Rb, Cs, Fr) are alkali metals. They have 1 valence electron, are very reactive, and react vigorously with water to form hydroxides and hydrogen gas."
+  },
+  {
+    "id": "chem_057",
+    "topic": "Periodic Table",
+    "question": "What is the general trend for electronegativity as you move across a period from left to right?",
+    "choices": [
+      "It decreases",
+      "It increases",
+      "It stays the same",
+      "It first increases then decreases"
+    ],
+    "answer": "It increases",
+    "explanation": "Electronegativity (the ability to attract bonding electrons) increases from left to right across a period because nuclear charge increases while atomic radius decreases."
+  },
+  {
+    "id": "chem_058",
+    "topic": "Periodic Table",
+    "question": "Which element has the highest electronegativity on the periodic table?",
+    "choices": [
+      "Oxygen",
+      "Chlorine",
+      "Fluorine",
+      "Nitrogen"
+    ],
+    "answer": "Fluorine",
+    "explanation": "Fluorine (F) has the highest electronegativity value (3.98 on the Pauling scale) of all elements. This is why it forms very strong polar bonds."
+  },
+  {
+    "id": "chem_059",
+    "topic": "Bonding",
+    "question": "What type of intermolecular force exists between water molecules?",
+    "choices": [
+      "London dispersion",
+      "Dipole-dipole",
+      "Hydrogen bonding",
+      "Ionic bonding"
+    ],
+    "answer": "Hydrogen bonding",
+    "explanation": "Water molecules form hydrogen bonds \u2014 a special strong dipole-dipole attraction between the O-H bond in one molecule and the lone pair of oxygen in another. This gives water its unusually high boiling point."
+  },
+  {
+    "id": "chem_060",
+    "topic": "Bonding",
+    "question": "Which of the following molecules has a trigonal planar shape?",
+    "choices": [
+      "H2O",
+      "NH3",
+      "CH4",
+      "BF3"
+    ],
+    "answer": "BF3",
+    "explanation": "BF3 (boron trifluoride) has 3 bonding pairs and no lone pairs around the central atom, giving it a trigonal planar shape with 120\u00b0 bond angles."
+  },
+  {
+    "id": "chem_061",
+    "topic": "Acids and Bases",
+    "question": "According to the Br\u00f8nsted-Lowry definition, an acid is a substance that:",
+    "choices": [
+      "Produces OH- ions in water",
+      "Accepts a proton (H+)",
+      "Donates a proton (H+)",
+      "Accepts an electron pair"
+    ],
+    "answer": "Donates a proton (H+)",
+    "explanation": "Br\u00f8nsted-Lowry acids are proton donors \u2014 they give away H+ ions. Br\u00f8nsted-Lowry bases are proton acceptors. This definition is broader than the Arrhenius definition."
+  },
+  {
+    "id": "chem_062",
+    "topic": "Acids and Bases",
+    "question": "Which of the following is a strong acid?",
+    "choices": [
+      "Acetic acid (CH3COOH)",
+      "Carbonic acid (H2CO3)",
+      "Hydrochloric acid (HCl)",
+      "Phosphoric acid (H3PO4)"
+    ],
+    "answer": "Hydrochloric acid (HCl)",
+    "explanation": "HCl is a strong acid \u2014 it completely dissociates into H+ and Cl- ions in water. Acetic, carbonic, and phosphoric acids are weak acids that only partially dissociate."
+  },
+  {
+    "id": "chem_063",
+    "topic": "Acids and Bases",
+    "question": "A buffer solution resists changes in:",
+    "choices": [
+      "Temperature",
+      "Concentration",
+      "pH",
+      "Color"
+    ],
+    "answer": "pH",
+    "explanation": "A buffer is a solution that resists significant changes in pH when small amounts of acid or base are added. It typically contains a weak acid and its conjugate base (or vice versa)."
+  },
+  {
+    "id": "chem_064",
+    "topic": "Redox",
+    "question": "Which element is reduced in the reaction: Fe2O3 + 3CO \u2192 2Fe + 3CO2?",
+    "choices": [
+      "Fe",
+      "O",
+      "C",
+      "All elements"
+    ],
+    "answer": "Fe",
+    "explanation": "In Fe2O3, iron has oxidation state +3. In the product Fe, it is 0. A decrease in oxidation state = reduction. Iron gains electrons and is reduced."
+  },
+  {
+    "id": "chem_065",
+    "topic": "Redox",
+    "question": "The substance that causes another substance to be oxidized is called the:",
+    "choices": [
+      "Reducing agent",
+      "Oxidizing agent",
+      "Catalyst",
+      "Electrolyte"
+    ],
+    "answer": "Oxidizing agent",
+    "explanation": "The oxidizing agent accepts electrons from the reducing agent, causing the reducing agent to be oxidized. The oxidizing agent itself gets reduced."
+  },
+  {
+    "id": "chem_066",
+    "topic": "Gas Laws",
+    "question": "A gas occupies 5.0 L at 300 K. At constant pressure, what volume does it occupy at 600 K?",
+    "choices": [
+      "2.5 L",
+      "5.0 L",
+      "10.0 L",
+      "15.0 L"
+    ],
+    "answer": "10.0 L",
+    "explanation": "Charles's Law: V1/T1 = V2/T2. (5.0)/(300) = V2/(600). V2 = 10.0 L. When temperature doubles at constant pressure, volume doubles."
+  },
+  {
+    "id": "chem_067",
+    "topic": "Gas Laws",
+    "question": "The ideal gas law is expressed as:",
+    "choices": [
+      "PV = nRT",
+      "PV = mRT",
+      "PV = kT",
+      "P = nRT/m"
+    ],
+    "answer": "PV = nRT",
+    "explanation": "The ideal gas law PV = nRT combines Boyle's, Charles's, and Avogadro's Laws. P = pressure, V = volume, n = moles, R = gas constant, T = temperature (Kelvin)."
+  },
+  {
+    "id": "chem_068",
+    "topic": "Nuclear Chemistry",
+    "question": "What is the product of uranium-238 after it undergoes alpha decay?",
+    "choices": [
+      "Thorium-234",
+      "Radium-234",
+      "Lead-206",
+      "Thorium-236"
+    ],
+    "answer": "Thorium-234",
+    "explanation": "Alpha decay: mass number decreases by 4, atomic number decreases by 2. Uranium-238 (Z=92) \u2192 Thorium-234 (Z=90). The alpha particle carries away 2 protons and 2 neutrons."
+  },
+  {
+    "id": "chem_069",
+    "topic": "Nuclear Chemistry",
+    "question": "Nuclear fusion is the process by which:",
+    "choices": [
+      "A heavy nucleus splits into lighter nuclei",
+      "Two light nuclei combine to form a heavier nucleus",
+      "Electrons are emitted from the nucleus",
+      "Gamma rays are released from unstable atoms"
+    ],
+    "answer": "Two light nuclei combine to form a heavier nucleus",
+    "explanation": "Fusion combines light nuclei (like hydrogen isotopes) into heavier ones, releasing enormous energy. This is the reaction that powers stars, including our Sun."
+  },
+  {
+    "id": "chem_070",
+    "topic": "Organic Chemistry",
+    "question": "Which functional group identifies a ketone?",
+    "choices": [
+      "R-OH",
+      "R-CHO",
+      "R-CO-R'",
+      "R-COOH"
+    ],
+    "answer": "R-CO-R'",
+    "explanation": "Ketones contain a carbonyl group (C=O) bonded to two carbon atoms (R-CO-R'). If the carbonyl is at the end of the chain (bonded to at least one H), it is an aldehyde (R-CHO)."
+  },
+  {
+    "id": "chem_071",
+    "topic": "Organic Chemistry",
+    "question": "What is the name of the process by which crude oil is separated into fractions based on boiling points?",
+    "choices": [
+      "Cracking",
+      "Fractional distillation",
+      "Combustion",
+      "Polymerization"
+    ],
+    "answer": "Fractional distillation",
+    "explanation": "Fractional distillation separates petroleum into components (gasoline, diesel, kerosene, etc.) by heating and collecting fractions at different boiling points. Shorter chains have lower boiling points."
+  },
+  {
+    "id": "chem_072",
+    "topic": "Solutions",
+    "question": "A solution that cannot dissolve any more solute at a given temperature is:",
+    "choices": [
+      "Unsaturated",
+      "Dilute",
+      "Saturated",
+      "Supersaturated"
+    ],
+    "answer": "Saturated",
+    "explanation": "A saturated solution holds the maximum amount of dissolved solute at a given temperature. An unsaturated solution can dissolve more solute; a supersaturated solution holds more than the normal maximum."
+  },
+  {
+    "id": "chem_073",
+    "topic": "Solutions",
+    "question": "Which factor does NOT increase the rate at which a solid solute dissolves?",
+    "choices": [
+      "Stirring",
+      "Increasing temperature",
+      "Decreasing particle size",
+      "Increasing pressure"
+    ],
+    "answer": "Increasing pressure",
+    "explanation": "Pressure affects the solubility of gases in liquids (Henry's Law) but has little effect on the dissolution rate of solids. Stirring, heating, and grinding increase dissolution rate for solids."
+  },
+  {
+    "id": "chem_074",
+    "topic": "Thermochemistry",
+    "question": "An exothermic reaction:",
+    "choices": [
+      "Absorbs heat from the surroundings",
+      "Has a positive \u0394H",
+      "Releases heat to the surroundings",
+      "Requires a catalyst"
+    ],
+    "answer": "Releases heat to the surroundings",
+    "explanation": "Exothermic reactions release energy (heat) to the surroundings. \u0394H is negative for exothermic reactions. Combustion and neutralization are common examples."
+  },
+  {
+    "id": "chem_075",
+    "topic": "Thermochemistry",
+    "question": "Hess's Law states that the total enthalpy change of a reaction:",
+    "choices": [
+      "Depends on the path taken",
+      "Is always positive",
+      "Is independent of the pathway taken",
+      "Equals the activation energy"
+    ],
+    "answer": "Is independent of the pathway taken",
+    "explanation": "Hess's Law: the total enthalpy change depends only on initial and final states, not the steps in between. This allows calculation of \u0394H for reactions that can't be measured directly."
+  },
+  {
+    "id": "chemistry_jan26_02",
+    "subject": "chemistry",
+    "topic": "Chemistry",
+    "question": "3 foil experiment? forms of the element oxygen. These two forms of",
+    "choices": [
+      "Atoms are hard, indivisible spheres. oxygen have",
+      "Electrons in an atom are negatively charged. (1) the same molecular structures and the same",
+      "different molecular structures and the same",
+      "different molecular structures and different"
+    ],
+    "answer": "Electrons in an atom are negatively charged. (1) the same molecular structures and the same",
+    "explanation": "Correct answer is choice (2). From NYS Regents January 2026.",
+    "source": "NYS Regents January 2026"
+  },
+  {
+    "id": "chemistry_jan26_37",
+    "subject": "chemistry",
+    "topic": "Chemistry",
+    "question": "protons and 49 neutrons? properties",
+    "choices": [
+      "lithium and fl uorine",
+      "sodium and chlorine",
+      "magnesium and oxygen",
+      "calcium and sulfur"
+    ],
+    "answer": "magnesium and oxygen",
+    "explanation": "Correct answer is choice (3). From NYS Regents January 2026.",
+    "source": "NYS Regents January 2026"
+  },
+  {
+    "id": "chemistry_jan26_38",
+    "subject": "chemistry",
+    "topic": "Chemistry",
+    "question": "Which particle model diagram represents a sample of fl uorine at STP? = an atom of an element 33 Which element could be represented by the X in the oxide formula, X O? = an atom of a different element",
+    "choices": [
+      "12 g",
+      "27 g",
+      "60. g",
+      "69 g"
+    ],
+    "answer": "12 g",
+    "explanation": "Correct answer is choice (1). From NYS Regents January 2026.",
+    "source": "NYS Regents January 2026"
+  },
+  {
+    "id": "chemistry_jan26_39",
+    "subject": "chemistry",
+    "topic": "Chemistry",
+    "question": "Based on Table F, which compound is most 44 Given the equation and graph representing a soluble in water? reaction:",
+    "choices": [
+      "Ag CrO",
+      "AgNO",
+      "CuCO",
+      "Cu (PO )"
+    ],
+    "answer": "AgNO",
+    "explanation": "Correct answer is choice (2). From NYS Regents January 2026.",
+    "source": "NYS Regents January 2026"
+  },
+  {
+    "id": "chemistry_jan26_40",
+    "subject": "chemistry",
+    "topic": "Chemistry",
+    "question": "Which solution has the lowest freezing point?",
+    "choices": [
+      "1.0 M NaCl(aq)",
+      "1.0 M C H O (aq)",
+      "2.0 M NaCl(aq)",
+      "2.0 M C H O (aq)"
+    ],
+    "answer": "2.0 M NaCl(aq)",
+    "explanation": "Correct answer is choice (3). From NYS Regents January 2026.",
+    "source": "NYS Regents January 2026"
+  },
+  {
+    "id": "chemistry_jan26_41",
+    "subject": "chemistry",
+    "topic": "Chemistry",
+    "question": "What is the amount of heat energy required to completely vaporize a 12.5-gram sample of 0.080 H O( ) at 373 K and 1.0 atmosphere?",
+    "choices": [
+      "4180 J",
+      "5230 J",
+      "19 500 J",
+      "28 300 J"
+    ],
+    "answer": "28 300 J",
+    "explanation": "Correct answer is choice (4). From NYS Regents January 2026.",
+    "source": "NYS Regents January 2026"
+  },
+  {
+    "id": "chemistry_jan26_42",
+    "subject": "chemistry",
+    "topic": "Chemistry",
+    "question": "A 2.0-gram sample of solid iron, Fe(s), reacts with 25 mL of 0.10 M HCl(aq). Which conditions will 0.020 produce the fastest reaction rate?",
+    "choices": [
+      "powdered iron at 273 K",
+      "powdered iron at 303 K",
+      "strip of iron at 273 K",
+      "strip of iron at 303 K"
+    ],
+    "answer": "powdered iron at 303 K",
+    "explanation": "Correct answer is choice (2). From NYS Regents January 2026.",
+    "source": "NYS Regents January 2026"
+  },
+  {
+    "id": "chemistry_jan26_43",
+    "subject": "chemistry",
+    "topic": "Chemistry",
+    "question": "Which term describes a system with a sealed 100.-mL fl ask that contains 50. grams of water at 25\u00b0C?",
+    "choices": [
+      "12 s",
+      "22 s",
+      "50. s",
+      "70. s"
+    ],
+    "answer": "12 s",
+    "explanation": "Correct answer is choice (1). From NYS Regents January 2026.",
+    "source": "NYS Regents January 2026"
+  },
+  {
+    "id": "chemistry_jan26_45",
+    "subject": "chemistry",
+    "topic": "Chemistry",
+    "question": "Given the equation representing a chemical system at equilibrium in a sealed, rigid container: H (g) 1 I (g) 1 energy 2HI(g) When the temperature of the system in the container is increased, the equilibrium shifts to",
+    "choices": [
+      "right and the concentration of HI(g) decreases",
+      "right and the concentration of HI(g) increases",
+      "left and the concentration of HI(g) decreases",
+      "left and the concentration of HI(g) increases"
+    ],
+    "answer": "right and the concentration of HI(g) increases",
+    "explanation": "Correct answer is choice (2). From NYS Regents January 2026.",
+    "source": "NYS Regents January 2026"
+  },
+  {
+    "id": "chemistry_jan26_46",
+    "subject": "chemistry",
+    "topic": "Chemistry",
+    "question": "Given the formula of a compound: H C H H H H H H C C C C C H H H H H H C H What is a chemical name for this compound?",
+    "choices": [
+      "4-methylhexane",
+      "3-methylhexane",
+      "3,4-dimethylpentane",
+      "2,3-dimethylpentane"
+    ],
+    "answer": "2,3-dimethylpentane",
+    "explanation": "Correct answer is choice (4). From NYS Regents January 2026.",
+    "source": "NYS Regents January 2026"
+  },
+  {
+    "id": "chemistry_jan26_47",
+    "subject": "chemistry",
+    "topic": "Chemistry",
+    "question": "What is the oxidation state of chlorine in the compound KClO ?",
+    "choices": [
+      "11",
+      "21",
+      "15",
+      "17"
+    ],
+    "answer": "15",
+    "explanation": "Correct answer is choice (3). From NYS Regents January 2026.",
+    "source": "NYS Regents January 2026"
+  },
+  {
+    "id": "chemistry_jan26_48",
+    "subject": "chemistry",
+    "topic": "Chemistry",
+    "question": "Given the equation representing a reversible reaction: NH (g) 1 H O( ) NH 1(aq) 1 OH2(aq) 3 2 4 According to one acid-base theory, the reactant in the reverse reaction that donates an H1 ion is",
+    "choices": [
+      "NH (g)",
+      "H O( )",
+      "NH 1(aq)",
+      "OH2(aq)"
+    ],
+    "answer": "NH 1(aq)",
+    "explanation": "Correct answer is choice (3). From NYS Regents January 2026.",
+    "source": "NYS Regents January 2026"
+  },
+  {
+    "id": "chemistry_jan26_49",
+    "subject": "chemistry",
+    "topic": "Chemistry",
+    "question": "When the pH value of a solution is changed from 4.0 to 7.0, what is the change in the concentration of hydronium ions?",
+    "choices": [
+      "decreased by a factor of 1000",
+      "decreased by a factor of 3",
+      "increased by a factor of 1000",
+      "increased by a factor of 3"
+    ],
+    "answer": "decreased by a factor of 1000",
+    "explanation": "Correct answer is choice (1). From NYS Regents January 2026.",
+    "source": "NYS Regents January 2026"
+  },
+  {
+    "id": "chemistry_jan26_50",
+    "subject": "chemistry",
+    "topic": "Chemistry",
+    "question": "The diagram below represents a radioactive emission from a sample of chromium-51 passing through an electric fi eld between two oppositely charged metal plates. Chromium-51 Positively 1 1 1 1 1 1 1 1 1 charged plate Pb block Negatively 2 2 2 2 2 2 2 2 2 charged plate Which type of radioactive emission is represented in the diagram?",
+    "choices": [
+      "alpha particle",
+      "beta particle",
+      "gamma radiation",
+      "positron"
+    ],
+    "answer": "gamma radiation",
+    "explanation": "Correct answer is choice (3). From NYS Regents January 2026.",
+    "source": "NYS Regents January 2026"
+  }
 ]

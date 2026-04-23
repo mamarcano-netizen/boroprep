@@ -1,67 +1,847 @@
 [
-  {"id":"eng_001","topic":"Reading Comprehension","question":"When a question asks for the 'main idea' of a passage, you should look for:","choices":["The first sentence only","The most interesting detail","The central point the whole passage is about","The last paragraph only"],"answer":"The central point the whole passage is about","explanation":"The main idea is what the entire passage is mostly about. It's usually found in the introduction or conclusion, and all the details support it."},
-  {"id":"eng_002","topic":"Literary Devices","question":"'The wind whispered through the trees' is an example of:","choices":["Simile","Metaphor","Personification","Alliteration"],"answer":"Personification","explanation":"Personification gives human qualities to non-human things. Wind can't really whisper — that's a human action. Giving wind the ability to whisper is personification."},
-  {"id":"eng_003","topic":"Literary Devices","question":"'Her smile was like sunshine' is an example of:","choices":["Metaphor","Simile","Hyperbole","Irony"],"answer":"Simile","explanation":"A simile compares two things using 'like' or 'as'. 'Her smile was like sunshine' uses 'like' to compare her smile to sunshine. A metaphor would say 'Her smile WAS sunshine.'"},
-  {"id":"eng_004","topic":"Literary Devices","question":"'I've told you a million times!' is an example of:","choices":["Simile","Understatement","Hyperbole","Metaphor"],"answer":"Hyperbole","explanation":"Hyperbole is extreme exaggeration for effect. Nobody has literally said something a million times. It's used to express strong emotion or emphasis."},
-  {"id":"eng_005","topic":"Writing","question":"Which sentence is the best thesis statement for an essay?","choices":["Dogs are nice animals.","This essay is about dogs.","Dogs make better pets than cats because they are loyal, trainable, and social.","I like dogs."],"answer":"Dogs make better pets than cats because they are loyal, trainable, and social.","explanation":"A good thesis states your argument AND the reasons. It tells the reader exactly what you'll prove. The other options are too vague or just state a topic."},
-  {"id":"eng_006","topic":"Grammar","question":"Which sentence uses correct punctuation?","choices":["Its a nice day.","It's a nice day.","Its' a nice day.","It is' a nice day."],"answer":"It's a nice day.","explanation":"'It's' with an apostrophe means 'it is'. 'Its' without an apostrophe is possessive (belonging to it). Since we mean 'it is a nice day', we use 'it's'."},
-  {"id":"eng_007","topic":"Reading Comprehension","question":"When an author uses evidence to support a claim, the writing is called:","choices":["Narrative","Descriptive","Argumentative","Poetic"],"answer":"Argumentative","explanation":"Argumentative writing makes a claim and supports it with evidence and reasoning. This is the main type of writing tested on the ELA Regents."},
-  {"id":"eng_008","topic":"Literary Devices","question":"The theme of a story is best described as:","choices":["The plot summary","The main character","The central message or lesson","The setting"],"answer":"The central message or lesson","explanation":"Theme is the deeper meaning or message the author wants you to take away. For example, a story about a boy who lies might have the theme 'honesty is important.'"},
-  {"id":"eng_009","topic":"Literary Devices","question":"'Peter Piper picked a peck of pickled peppers' uses which literary device?","choices":["Alliteration","Onomatopoeia","Simile","Irony"],"answer":"Alliteration","explanation":"Alliteration is the repetition of the same consonant sound at the beginning of nearby words. The repeated 'p' sound in this phrase is a classic example."},
-  {"id":"eng_010","topic":"Literary Devices","question":"'Buzz,' 'sizzle,' and 'crash' are examples of:","choices":["Alliteration","Onomatopoeia","Metaphor","Personification"],"answer":"Onomatopoeia","explanation":"Onomatopoeia refers to words that phonetically imitate the sound they describe. 'Buzz' sounds like a bee, 'sizzle' sounds like frying, 'crash' sounds like an impact."},
-  {"id":"eng_011","topic":"Literary Devices","question":"When the audience knows something the characters don't, this is called:","choices":["Verbal irony","Situational irony","Dramatic irony","Foreshadowing"],"answer":"Dramatic irony","explanation":"Dramatic irony occurs when the audience has information that a character lacks, creating tension or humor. A classic example is the audience knowing the villain is behind the door."},
-  {"id":"eng_012","topic":"Literary Devices","question":"'Life is a journey' is an example of:","choices":["Simile","Hyperbole","Metaphor","Allusion"],"answer":"Metaphor","explanation":"A metaphor directly states one thing IS another, without using 'like' or 'as'. Saying 'Life is a journey' equates life directly to a journey, implying we travel through it."},
-  {"id":"eng_013","topic":"Literary Devices","question":"A reference to a well-known person, place, event, or work is called:","choices":["Allusion","Illusion","Metaphor","Symbol"],"answer":"Allusion","explanation":"An allusion is an indirect reference to something outside the text (a historical event, myth, literary work, etc.). Authors use allusions to add meaning without explaining fully."},
-  {"id":"eng_014","topic":"Literary Devices","question":"What is the term for hints or clues about what will happen later in a story?","choices":["Flashback","Foreshadowing","Irony","Exposition"],"answer":"Foreshadowing","explanation":"Foreshadowing is when the author provides early hints of future events, building suspense and preparing the reader. It's different from a flashback, which shows past events."},
-  {"id":"eng_015","topic":"Literary Devices","question":"The perspective from which a story is told is called:","choices":["Theme","Tone","Point of view","Setting"],"answer":"Point of view","explanation":"Point of view (POV) refers to who is telling the story. First person uses 'I'; third person limited follows one character; third person omniscient knows all characters' thoughts."},
-  {"id":"eng_016","topic":"Reading Comprehension","question":"Which reading strategy helps you understand unfamiliar words in context?","choices":["Skipping them","Using context clues from surrounding sentences","Only using a dictionary","Ignoring the paragraph"],"answer":"Using context clues from surrounding sentences","explanation":"Context clues are hints in the surrounding text that help you infer the meaning of an unfamiliar word. This is a critical reading strategy tested on standardized exams."},
-  {"id":"eng_017","topic":"Reading Comprehension","question":"An author's purpose for writing a persuasive essay is to:","choices":["Entertain the reader","Inform about facts neutrally","Convince the reader to adopt a viewpoint","Describe a setting vividly"],"answer":"Convince the reader to adopt a viewpoint","explanation":"Persuasive (argumentative) writing aims to change the reader's mind or move them to action. The three main author's purposes are: persuade, inform, and entertain."},
-  {"id":"eng_018","topic":"Reading Comprehension","question":"A text that presents multiple sides of an issue without taking a stance is:","choices":["Persuasive","Expository","Satirical","Narrative"],"answer":"Expository","explanation":"Expository writing explains or informs in a balanced, objective way. It presents facts and explanations without trying to persuade or tell a story."},
-  {"id":"eng_019","topic":"Reading Comprehension","question":"To make an inference, a reader must:","choices":["Restate exactly what the text says","Combine text evidence with prior knowledge to draw a conclusion","Summarize the entire passage","Find the main character"],"answer":"Combine text evidence with prior knowledge to draw a conclusion","explanation":"An inference is a logical conclusion that goes beyond what is directly stated. It requires combining clues in the text with what you already know."},
-  {"id":"eng_020","topic":"Writing","question":"In a well-structured paragraph, the topic sentence:","choices":["Appears only at the end","States the main idea of the paragraph","Provides evidence","Summarizes the whole essay"],"answer":"States the main idea of the paragraph","explanation":"The topic sentence introduces the paragraph's main idea and tells the reader what the paragraph will be about. All supporting sentences in the paragraph should relate back to it."},
-  {"id":"eng_021","topic":"Writing","question":"Which transition word best shows contrast between two ideas?","choices":["Furthermore","In addition","However","Therefore"],"answer":"However","explanation":"'However' signals a contrast or shift in direction between two ideas. 'Furthermore' and 'in addition' add information; 'therefore' shows a result."},
-  {"id":"eng_022","topic":"Writing","question":"What is the purpose of a concluding paragraph in an essay?","choices":["To introduce new evidence","To restate the thesis and summarize main points","To list sources","To begin a new argument"],"answer":"To restate the thesis and summarize main points","explanation":"A conclusion wraps up the essay by restating the thesis in new words and summarizing the key supporting points. It should not introduce brand new information."},
-  {"id":"eng_023","topic":"Writing","question":"Which of the following best supports a claim in an argumentative essay?","choices":["Personal opinion only","A statistic from a credible source","An anecdote from a friend","A question without an answer"],"answer":"A statistic from a credible source","explanation":"Strong evidence in argumentative writing includes statistics, facts, expert quotes, and examples from credible sources. Personal opinions and anecdotes without context are weak evidence."},
-  {"id":"eng_024","topic":"Writing","question":"In a research essay, you must cite sources primarily to:","choices":["Make the essay longer","Give credit to original authors and support credibility","Show you read many books","Confuse the reader"],"answer":"Give credit to original authors and support credibility","explanation":"Citations give credit to original sources and allow readers to verify your evidence. Failing to cite sources is plagiarism, a serious academic offense."},
-  {"id":"eng_025","topic":"Literary Devices","question":"When a character faces an internal struggle (e.g., deciding between right and wrong), it is called:","choices":["External conflict","Man vs. nature","Internal conflict","Man vs. society"],"answer":"Internal conflict","explanation":"Internal conflict is a struggle within a character's own mind — between desires, values, or emotions. External conflict involves a character vs. an outside force."},
-  {"id":"eng_026","topic":"Literary Devices","question":"Which literary device involves the repetition of vowel sounds in nearby words?","choices":["Alliteration","Assonance","Consonance","Rhyme"],"answer":"Assonance","explanation":"Assonance is the repetition of vowel sounds within nearby words, e.g., 'The rain in Spain stays mainly on the plain.' It creates a musical quality in writing."},
-  {"id":"eng_027","topic":"Literary Devices","question":"A story within a story is an example of which narrative technique?","choices":["Flashback","Frame narrative","Foreshadowing","Stream of consciousness"],"answer":"Frame narrative","explanation":"A frame narrative is a story within a story — an outer narrative that encloses an inner one. 'The Canterbury Tales' and 'Frankenstein' use this structure."},
-  {"id":"eng_028","topic":"Reading Comprehension","question":"The tone of a text refers to the author's:","choices":["Moral lesson","Attitude toward the subject","Plot structure","Choice of setting"],"answer":"Attitude toward the subject","explanation":"Tone describes the author's emotional attitude (e.g., sarcastic, hopeful, somber, critical). It differs from mood, which is the feeling the reader gets from the text."},
-  {"id":"eng_029","topic":"Literary Devices","question":"The repetition of a word or phrase at the beginning of successive clauses is called:","choices":["Anaphora","Epistrophe","Alliteration","Assonance"],"answer":"Anaphora","explanation":"Anaphora is the repetition of a word or phrase at the beginning of successive lines or clauses, e.g., 'We shall fight on the beaches, we shall fight on the landing grounds...'"},
-  {"id":"eng_030","topic":"Writing","question":"Which sentence uses the most precise and vivid language?","choices":["The dog ran fast.","The dog moved.","The greyhound sprinted across the field.","A thing went by fast."],"answer":"The greyhound sprinted across the field.","explanation":"Precise, vivid language uses specific nouns ('greyhound' instead of 'dog') and strong verbs ('sprinted' instead of 'ran fast'). This creates a clearer picture for the reader."},
-  {"id":"eng_031","topic":"Grammar","question":"Which sentence contains a dangling modifier?","choices":["Running to the store, Maria slipped.","Running to the store, the rain started.","Maria ran to the store quickly.","The rain started while Maria ran."],"answer":"Running to the store, the rain started.","explanation":"A dangling modifier occurs when the phrase doesn't logically modify the subject that follows. The rain cannot run to the store — the sentence needs a person as the subject."},
-  {"id":"eng_032","topic":"Grammar","question":"Which sentence is in passive voice?","choices":["The cat chased the mouse.","The book was written by the author.","She wrote the report.","He made a mistake."],"answer":"The book was written by the author.","explanation":"Passive voice places the receiver of the action as the subject: 'The book was written.' Active voice: 'The author wrote the book.' Active voice is generally preferred in formal writing."},
-  {"id":"eng_033","topic":"Reading Comprehension","question":"When analyzing a poem, 'imagery' refers to:","choices":["The poem's rhyme scheme","Descriptive language that appeals to the senses","The number of stanzas","The poem's speaker"],"answer":"Descriptive language that appeals to the senses","explanation":"Imagery is language that appeals to sight, sound, smell, taste, or touch. Poets use imagery to create vivid mental pictures and emotional responses."},
-  {"id":"eng_034","topic":"Literary Devices","question":"A symbol in literature is:","choices":["The time period of the story","An object, person, or place that represents something beyond its literal meaning","The author's biography","The story's climax"],"answer":"An object, person, or place that represents something beyond its literal meaning","explanation":"Symbols add deeper meaning. For example, a dove often symbolizes peace, a red rose symbolizes love, and a storm can symbolize conflict or danger."},
-  {"id":"eng_035","topic":"Writing","question":"What is the best way to strengthen a weak argument in an essay?","choices":["Repeat the claim more times","Add more adjectives","Include credible evidence and address counterarguments","Write longer sentences"],"answer":"Include credible evidence and address counterarguments","explanation":"A strong argument is supported by solid evidence and acknowledges opposing views (counterarguments) while explaining why your position is still correct. This shows critical thinking."},
-  {"id":"eng_036","topic":"Literary Devices","question":"In Shakespeare's Romeo and Juliet, Romeo's death due to a miscommunication is an example of:","choices":["Dramatic irony","Situational irony","Verbal irony","Foreshadowing"],"answer":"Situational irony","explanation":"Situational irony occurs when the opposite of what is expected happens. Romeo dying right before Juliet wakes up — the 'solution' (arriving in time) fails in the worst way — is situational irony."},
-  {"id":"eng_037","topic":"Reading Comprehension","question":"A primary source is:","choices":["A textbook summarizing events","An encyclopedia entry","A firsthand account such as a diary, letter, or original speech","A documentary about a historical event"],"answer":"A firsthand account such as a diary, letter, or original speech","explanation":"Primary sources are created by those directly involved in events (diaries, speeches, original documents). Secondary sources analyze or interpret primary sources."},
-  {"id":"eng_038","topic":"Writing","question":"Which sentence has a comma splice error?","choices":["I went to the store, and I bought milk.","I went to the store, I bought milk.","I went to the store; I bought milk.","I went to the store to buy milk."],"answer":"I went to the store, I bought milk.","explanation":"A comma splice joins two independent clauses with only a comma. Fix it by adding a coordinating conjunction (', and'), using a semicolon, or separating into two sentences."},
-  {"id":"eng_039","topic":"Literary Devices","question":"The sequence of events in a story is called the:","choices":["Theme","Tone","Plot","Setting"],"answer":"Plot","explanation":"Plot is the sequence of events in a story. The typical plot structure includes exposition, rising action, climax, falling action, and resolution."},
-  {"id":"eng_040","topic":"Reading Comprehension","question":"What is the difference between explicit information and implicit information in a text?","choices":["Explicit is hidden; implicit is stated directly","Explicit is stated directly; implicit must be inferred","They are the same","Explicit is opinion; implicit is fact"],"answer":"Explicit is stated directly; implicit must be inferred","explanation":"Explicit information is clearly stated in the text. Implicit information is suggested but not directly stated — the reader must 'read between the lines' to understand it."},
-  {"id":"eng_041","topic":"Writing","question":"When writing a summary, you should:","choices":["Include your opinions","Copy sentences directly from the text","Paraphrase the main ideas in your own words","Write more than the original text"],"answer":"Paraphrase the main ideas in your own words","explanation":"A summary captures the main ideas of a text in your own words, without copying directly and without adding personal opinion. It is shorter than the original."},
-  {"id":"eng_042","topic":"Literary Devices","question":"The climax of a story is:","choices":["The introduction of characters","The most intense or turning point moment","The final resolution","The background setting"],"answer":"The most intense or turning point moment","explanation":"The climax is the highest point of tension in the plot, the moment of greatest conflict or decision that determines the outcome of the story."},
-  {"id":"eng_043","topic":"Grammar","question":"Which sentence uses a semicolon correctly?","choices":["She loves reading; and writing.","She loves reading; she also loves writing.","She; loves reading and writing.","She loves reading, she; loves writing."],"answer":"She loves reading; she also loves writing.","explanation":"Semicolons connect two independent clauses (complete sentences) that are closely related. Each clause must be able to stand alone as a complete sentence."},
-  {"id":"eng_044","topic":"Reading Comprehension","question":"Which question requires higher-order thinking (analysis) rather than simple recall?","choices":["What year was the story set?","Who is the main character?","Why does the author contrast the two characters?","What color is the character's hair?"],"answer":"Why does the author contrast the two characters?","explanation":"Higher-order questions require analysis, evaluation, or synthesis — going beyond facts to explain meaning, purpose, or effect. This is the level tested on the Regents ELA exam."},
-  {"id":"eng_045","topic":"Literary Devices","question":"When an author's attitude seems mocking or contradictory to what is literally said, this is:","choices":["Hyperbole","Verbal irony (sarcasm)","Personification","Alliteration"],"answer":"Verbal irony (sarcasm)","explanation":"Verbal irony occurs when what is said is the opposite of what is meant. Sarcasm is a harsh form of verbal irony. Example: 'Oh great, another Monday' — not actually great."},
-  {"id":"eng_046","topic":"Writing","question":"What is plagiarism?","choices":["Quoting a source with citation","Writing your own ideas","Using someone's words or ideas without giving credit","Paraphrasing with a citation"],"answer":"Using someone's words or ideas without giving credit","explanation":"Plagiarism is presenting someone else's work as your own without proper attribution. It is an academic offense and can be avoided by citing all sources."},
-  {"id":"eng_047","topic":"Literary Devices","question":"Which term describes the time and place in which a story occurs?","choices":["Theme","Tone","Conflict","Setting"],"answer":"Setting","explanation":"Setting includes the time (historical period, time of day) and place (geography, environment) of a story. Setting often influences mood, character, and plot."},
-  {"id":"eng_048","topic":"Reading Comprehension","question":"An author who presents a biased argument likely:","choices":["Uses only facts","Presents all sides equally","Favors one side and may omit contradicting evidence","Never uses evidence"],"answer":"Favors one side and may omit contradicting evidence","explanation":"Bias means the author shows unfair preference for one viewpoint, often by selecting only supporting evidence, using emotional language, or ignoring counterarguments."},
-  {"id":"eng_049","topic":"Writing","question":"The purpose of a hook in an introductory paragraph is to:","choices":["State your thesis immediately","Introduce evidence","Grab the reader's attention","List your three main points"],"answer":"Grab the reader's attention","explanation":"A hook is an engaging opening — a question, quote, anecdote, or surprising fact — that draws the reader in and makes them want to continue reading."},
-  {"id":"eng_050","topic":"Literary Devices","question":"What is the difference between the narrator and the author?","choices":["They are always the same person","The narrator is the voice telling the story; the author is the real person who wrote it","The author is inside the story; the narrator is outside","There is no difference in fiction"],"answer":"The narrator is the voice telling the story; the author is the real person who wrote it","explanation":"The narrator is the fictional voice inside the text. The author is the real person who created the text. In first-person narratives, the narrator is a character, not the author themselves."},
-  {"id":"eng_051","topic":"Grammar","question":"Which sentence is grammatically correct?","choices":["Me and him went to the store.","Him and me went to the store.","He and I went to the store.","Him and I went to the store."],"answer":"He and I went to the store.","explanation":"Subject pronouns (I, he, she, we, they) are used as subjects of verbs. Test: remove the other person — 'I went' is correct, 'me went' is not. So 'He and I went' is correct."},
-  {"id":"eng_052","topic":"Grammar","question":"Identify the subject and verb that agree in this sentence: 'Neither the players nor the coach _____ satisfied.'","choices":["are","were","have been","is"],"answer":"is","explanation":"In 'neither...nor' constructions, the verb agrees with the noun closest to it. 'Coach' is singular and closest to the verb, so use 'is.'"},
-  {"id":"eng_053","topic":"Grammar","question":"Which sentence correctly uses an apostrophe?","choices":["The dogs bone was buried.","The dog's bone was buried.","The dogs' bone was buried.","The dogs's bone was buried."],"answer":"The dog's bone was buried.","explanation":"Singular possessive: add apostrophe + s. One dog owns the bone: 'dog's.' For multiple dogs, it would be 'dogs' bone.' 'Dogs' with no apostrophe is just a plural, not possessive."},
-  {"id":"eng_054","topic":"Reading Comprehension","question":"What is the difference between a fact and an opinion?","choices":["Facts are always interesting; opinions are boring","Facts can be proven; opinions express personal beliefs or judgments","Opinions are always wrong","Facts change; opinions stay the same"],"answer":"Facts can be proven; opinions express personal beliefs or judgments","explanation":"Facts are verifiable statements supported by evidence (e.g., 'Water boils at 100°C'). Opinions reflect personal judgments, feelings, or beliefs (e.g., 'This book is boring'). Critical readers distinguish between them."},
-  {"id":"eng_055","topic":"Reading Comprehension","question":"When an author uses a rhetorical question, they:","choices":["Expect the reader to answer in writing","Want to start a debate","Ask a question for effect, not expecting an answer","Test the reader's knowledge"],"answer":"Ask a question for effect, not expecting an answer","explanation":"Rhetorical questions are used to make a point or provoke thought, not to receive a literal answer. E.g., 'How many lives must be lost before we act?' — the answer is implied."},
-  {"id":"eng_056","topic":"Literary Devices","question":"Which term describes a central character who changes significantly during a story?","choices":["Flat character","Static character","Dynamic character","Foil character"],"answer":"Dynamic character","explanation":"A dynamic character undergoes significant internal change during the story. A static character remains essentially the same. A foil contrasts with the protagonist to highlight traits."},
-  {"id":"eng_057","topic":"Literary Devices","question":"A character who serves to highlight the qualities of another character through contrast is called a:","choices":["Protagonist","Antagonist","Foil","Round character"],"answer":"Foil","explanation":"A foil character has contrasting traits that emphasize the qualities of another character (usually the protagonist). For example, Draco Malfoy is a foil to Harry Potter, highlighting Harry's courage and generosity."},
-  {"id":"eng_058","topic":"Writing","question":"When analyzing a text, you should always support your claims with:","choices":["Personal feelings alone","Textual evidence (quotes or paraphrases) and analysis","A summary of the plot","Comparisons to movies"],"answer":"Textual evidence (quotes or paraphrases) and analysis","explanation":"Strong literary analysis requires concrete textual evidence — direct quotes or paraphrases from the text — followed by your explanation of how that evidence supports your argument."},
-  {"id":"eng_059","topic":"Writing","question":"The structure of a typical argumentative essay is:","choices":["Introduction, body paragraphs, counterargument, conclusion","Hook only, then conclusion","Body paragraphs without an introduction","Evidence before the thesis"],"answer":"Introduction, body paragraphs, counterargument, conclusion","explanation":"A complete argumentative essay includes: introduction with thesis, body paragraphs with evidence, a counterargument (with refutation), and a conclusion. Addressing counterarguments strengthens your position."},
-  {"id":"eng_060","topic":"Literary Devices","question":"Which of the following is an example of a paradox?","choices":["The sun is bright.","War is peace.","The dog ran fast.","She sang beautifully."],"answer":"War is peace.","explanation":"A paradox is a seemingly contradictory statement that reveals a deeper truth. 'War is peace' (from Orwell's 1984) appears logically impossible but makes a satirical point about propaganda."},
-  {"id":"eng_061","topic":"Reading Comprehension","question":"An author's 'voice' in writing refers to:","choices":["Their speaking volume","The distinctive style, tone, and personality that comes through in their writing","The number of characters they use","Their preferred topic"],"answer":"The distinctive style, tone, and personality that comes through in their writing","explanation":"Voice is the unique personality of the writing — word choice, sentence structure, tone, and perspective. Each author has a distinctive voice that makes their work recognizable."},
-  {"id":"eng_062","topic":"Grammar","question":"Which type of sentence has two independent clauses joined by a coordinating conjunction?","choices":["Simple sentence","Complex sentence","Compound sentence","Compound-complex sentence"],"answer":"Compound sentence","explanation":"A compound sentence joins two independent clauses with a coordinating conjunction (FANBOYS: for, and, nor, but, or, yet, so) or a semicolon. Each clause could stand alone."},
-  {"id":"eng_063","topic":"Literary Devices","question":"Satire is a literary technique that:","choices":["Praises political leaders","Uses humor, irony, and exaggeration to criticize and expose human vices","Only appears in poetry","Creates a tragic mood"],"answer":"Uses humor, irony, and exaggeration to criticize and expose human vices","explanation":"Satire mocks individuals, institutions, or society using wit and irony to expose and critique flaws. Examples include Orwell's Animal Farm (politics) and Swift's A Modest Proposal (poverty)."},
-  {"id":"eng_064","topic":"Reading Comprehension","question":"In poetry, what is the term for the repetition of similar sounds at the end of lines?","choices":["Rhythm","Rhyme","Meter","Alliteration"],"answer":"Rhyme","explanation":"Rhyme is the repetition of similar ending sounds in words at the ends of lines. The pattern of rhymes in a poem is its rhyme scheme, labeled with letters (ABAB, AABB, etc.)."},
-  {"id":"eng_065","topic":"Writing","question":"Which revision best improves the sentence: 'There are many reasons why exercise is good.'?","choices":["There are a lot of reasons why exercise might be beneficial.","Exercise improves cardiovascular health, strengthens muscles, and boosts mood.","Exercise is good for many reasons.","Many people think exercise is good."],"answer":"Exercise improves cardiovascular health, strengthens muscles, and boosts mood.","explanation":"Effective revision replaces vague, weak language with specific details. The improved sentence names concrete benefits, showing rather than telling and avoiding the weak 'there are' construction."}
+  {
+    "id": "eng_001",
+    "topic": "Reading Comprehension",
+    "question": "When a question asks for the 'main idea' of a passage, you should look for:",
+    "choices": [
+      "The first sentence only",
+      "The most interesting detail",
+      "The central point the whole passage is about",
+      "The last paragraph only"
+    ],
+    "answer": "The central point the whole passage is about",
+    "explanation": "The main idea is what the entire passage is mostly about. It's usually found in the introduction or conclusion, and all the details support it."
+  },
+  {
+    "id": "eng_002",
+    "topic": "Literary Devices",
+    "question": "'The wind whispered through the trees' is an example of:",
+    "choices": [
+      "Simile",
+      "Metaphor",
+      "Personification",
+      "Alliteration"
+    ],
+    "answer": "Personification",
+    "explanation": "Personification gives human qualities to non-human things. Wind can't really whisper \u2014 that's a human action. Giving wind the ability to whisper is personification."
+  },
+  {
+    "id": "eng_003",
+    "topic": "Literary Devices",
+    "question": "'Her smile was like sunshine' is an example of:",
+    "choices": [
+      "Metaphor",
+      "Simile",
+      "Hyperbole",
+      "Irony"
+    ],
+    "answer": "Simile",
+    "explanation": "A simile compares two things using 'like' or 'as'. 'Her smile was like sunshine' uses 'like' to compare her smile to sunshine. A metaphor would say 'Her smile WAS sunshine.'"
+  },
+  {
+    "id": "eng_004",
+    "topic": "Literary Devices",
+    "question": "'I've told you a million times!' is an example of:",
+    "choices": [
+      "Simile",
+      "Understatement",
+      "Hyperbole",
+      "Metaphor"
+    ],
+    "answer": "Hyperbole",
+    "explanation": "Hyperbole is extreme exaggeration for effect. Nobody has literally said something a million times. It's used to express strong emotion or emphasis."
+  },
+  {
+    "id": "eng_005",
+    "topic": "Writing",
+    "question": "Which sentence is the best thesis statement for an essay?",
+    "choices": [
+      "Dogs are nice animals.",
+      "This essay is about dogs.",
+      "Dogs make better pets than cats because they are loyal, trainable, and social.",
+      "I like dogs."
+    ],
+    "answer": "Dogs make better pets than cats because they are loyal, trainable, and social.",
+    "explanation": "A good thesis states your argument AND the reasons. It tells the reader exactly what you'll prove. The other options are too vague or just state a topic."
+  },
+  {
+    "id": "eng_006",
+    "topic": "Grammar",
+    "question": "Which sentence uses correct punctuation?",
+    "choices": [
+      "Its a nice day.",
+      "It's a nice day.",
+      "Its' a nice day.",
+      "It is' a nice day."
+    ],
+    "answer": "It's a nice day.",
+    "explanation": "'It's' with an apostrophe means 'it is'. 'Its' without an apostrophe is possessive (belonging to it). Since we mean 'it is a nice day', we use 'it's'."
+  },
+  {
+    "id": "eng_007",
+    "topic": "Reading Comprehension",
+    "question": "When an author uses evidence to support a claim, the writing is called:",
+    "choices": [
+      "Narrative",
+      "Descriptive",
+      "Argumentative",
+      "Poetic"
+    ],
+    "answer": "Argumentative",
+    "explanation": "Argumentative writing makes a claim and supports it with evidence and reasoning. This is the main type of writing tested on the ELA Regents."
+  },
+  {
+    "id": "eng_008",
+    "topic": "Literary Devices",
+    "question": "The theme of a story is best described as:",
+    "choices": [
+      "The plot summary",
+      "The main character",
+      "The central message or lesson",
+      "The setting"
+    ],
+    "answer": "The central message or lesson",
+    "explanation": "Theme is the deeper meaning or message the author wants you to take away. For example, a story about a boy who lies might have the theme 'honesty is important.'"
+  },
+  {
+    "id": "eng_009",
+    "topic": "Literary Devices",
+    "question": "'Peter Piper picked a peck of pickled peppers' uses which literary device?",
+    "choices": [
+      "Alliteration",
+      "Onomatopoeia",
+      "Simile",
+      "Irony"
+    ],
+    "answer": "Alliteration",
+    "explanation": "Alliteration is the repetition of the same consonant sound at the beginning of nearby words. The repeated 'p' sound in this phrase is a classic example."
+  },
+  {
+    "id": "eng_010",
+    "topic": "Literary Devices",
+    "question": "'Buzz,' 'sizzle,' and 'crash' are examples of:",
+    "choices": [
+      "Alliteration",
+      "Onomatopoeia",
+      "Metaphor",
+      "Personification"
+    ],
+    "answer": "Onomatopoeia",
+    "explanation": "Onomatopoeia refers to words that phonetically imitate the sound they describe. 'Buzz' sounds like a bee, 'sizzle' sounds like frying, 'crash' sounds like an impact."
+  },
+  {
+    "id": "eng_011",
+    "topic": "Literary Devices",
+    "question": "When the audience knows something the characters don't, this is called:",
+    "choices": [
+      "Verbal irony",
+      "Situational irony",
+      "Dramatic irony",
+      "Foreshadowing"
+    ],
+    "answer": "Dramatic irony",
+    "explanation": "Dramatic irony occurs when the audience has information that a character lacks, creating tension or humor. A classic example is the audience knowing the villain is behind the door."
+  },
+  {
+    "id": "eng_012",
+    "topic": "Literary Devices",
+    "question": "'Life is a journey' is an example of:",
+    "choices": [
+      "Simile",
+      "Hyperbole",
+      "Metaphor",
+      "Allusion"
+    ],
+    "answer": "Metaphor",
+    "explanation": "A metaphor directly states one thing IS another, without using 'like' or 'as'. Saying 'Life is a journey' equates life directly to a journey, implying we travel through it."
+  },
+  {
+    "id": "eng_013",
+    "topic": "Literary Devices",
+    "question": "A reference to a well-known person, place, event, or work is called:",
+    "choices": [
+      "Allusion",
+      "Illusion",
+      "Metaphor",
+      "Symbol"
+    ],
+    "answer": "Allusion",
+    "explanation": "An allusion is an indirect reference to something outside the text (a historical event, myth, literary work, etc.). Authors use allusions to add meaning without explaining fully."
+  },
+  {
+    "id": "eng_014",
+    "topic": "Literary Devices",
+    "question": "What is the term for hints or clues about what will happen later in a story?",
+    "choices": [
+      "Flashback",
+      "Foreshadowing",
+      "Irony",
+      "Exposition"
+    ],
+    "answer": "Foreshadowing",
+    "explanation": "Foreshadowing is when the author provides early hints of future events, building suspense and preparing the reader. It's different from a flashback, which shows past events."
+  },
+  {
+    "id": "eng_015",
+    "topic": "Literary Devices",
+    "question": "The perspective from which a story is told is called:",
+    "choices": [
+      "Theme",
+      "Tone",
+      "Point of view",
+      "Setting"
+    ],
+    "answer": "Point of view",
+    "explanation": "Point of view (POV) refers to who is telling the story. First person uses 'I'; third person limited follows one character; third person omniscient knows all characters' thoughts."
+  },
+  {
+    "id": "eng_016",
+    "topic": "Reading Comprehension",
+    "question": "Which reading strategy helps you understand unfamiliar words in context?",
+    "choices": [
+      "Skipping them",
+      "Using context clues from surrounding sentences",
+      "Only using a dictionary",
+      "Ignoring the paragraph"
+    ],
+    "answer": "Using context clues from surrounding sentences",
+    "explanation": "Context clues are hints in the surrounding text that help you infer the meaning of an unfamiliar word. This is a critical reading strategy tested on standardized exams."
+  },
+  {
+    "id": "eng_017",
+    "topic": "Reading Comprehension",
+    "question": "An author's purpose for writing a persuasive essay is to:",
+    "choices": [
+      "Entertain the reader",
+      "Inform about facts neutrally",
+      "Convince the reader to adopt a viewpoint",
+      "Describe a setting vividly"
+    ],
+    "answer": "Convince the reader to adopt a viewpoint",
+    "explanation": "Persuasive (argumentative) writing aims to change the reader's mind or move them to action. The three main author's purposes are: persuade, inform, and entertain."
+  },
+  {
+    "id": "eng_018",
+    "topic": "Reading Comprehension",
+    "question": "A text that presents multiple sides of an issue without taking a stance is:",
+    "choices": [
+      "Persuasive",
+      "Expository",
+      "Satirical",
+      "Narrative"
+    ],
+    "answer": "Expository",
+    "explanation": "Expository writing explains or informs in a balanced, objective way. It presents facts and explanations without trying to persuade or tell a story."
+  },
+  {
+    "id": "eng_019",
+    "topic": "Reading Comprehension",
+    "question": "To make an inference, a reader must:",
+    "choices": [
+      "Restate exactly what the text says",
+      "Combine text evidence with prior knowledge to draw a conclusion",
+      "Summarize the entire passage",
+      "Find the main character"
+    ],
+    "answer": "Combine text evidence with prior knowledge to draw a conclusion",
+    "explanation": "An inference is a logical conclusion that goes beyond what is directly stated. It requires combining clues in the text with what you already know."
+  },
+  {
+    "id": "eng_020",
+    "topic": "Writing",
+    "question": "In a well-structured paragraph, the topic sentence:",
+    "choices": [
+      "Appears only at the end",
+      "States the main idea of the paragraph",
+      "Provides evidence",
+      "Summarizes the whole essay"
+    ],
+    "answer": "States the main idea of the paragraph",
+    "explanation": "The topic sentence introduces the paragraph's main idea and tells the reader what the paragraph will be about. All supporting sentences in the paragraph should relate back to it."
+  },
+  {
+    "id": "eng_021",
+    "topic": "Writing",
+    "question": "Which transition word best shows contrast between two ideas?",
+    "choices": [
+      "Furthermore",
+      "In addition",
+      "However",
+      "Therefore"
+    ],
+    "answer": "However",
+    "explanation": "'However' signals a contrast or shift in direction between two ideas. 'Furthermore' and 'in addition' add information; 'therefore' shows a result."
+  },
+  {
+    "id": "eng_022",
+    "topic": "Writing",
+    "question": "What is the purpose of a concluding paragraph in an essay?",
+    "choices": [
+      "To introduce new evidence",
+      "To restate the thesis and summarize main points",
+      "To list sources",
+      "To begin a new argument"
+    ],
+    "answer": "To restate the thesis and summarize main points",
+    "explanation": "A conclusion wraps up the essay by restating the thesis in new words and summarizing the key supporting points. It should not introduce brand new information."
+  },
+  {
+    "id": "eng_023",
+    "topic": "Writing",
+    "question": "Which of the following best supports a claim in an argumentative essay?",
+    "choices": [
+      "Personal opinion only",
+      "A statistic from a credible source",
+      "An anecdote from a friend",
+      "A question without an answer"
+    ],
+    "answer": "A statistic from a credible source",
+    "explanation": "Strong evidence in argumentative writing includes statistics, facts, expert quotes, and examples from credible sources. Personal opinions and anecdotes without context are weak evidence."
+  },
+  {
+    "id": "eng_024",
+    "topic": "Writing",
+    "question": "In a research essay, you must cite sources primarily to:",
+    "choices": [
+      "Make the essay longer",
+      "Give credit to original authors and support credibility",
+      "Show you read many books",
+      "Confuse the reader"
+    ],
+    "answer": "Give credit to original authors and support credibility",
+    "explanation": "Citations give credit to original sources and allow readers to verify your evidence. Failing to cite sources is plagiarism, a serious academic offense."
+  },
+  {
+    "id": "eng_025",
+    "topic": "Literary Devices",
+    "question": "When a character faces an internal struggle (e.g., deciding between right and wrong), it is called:",
+    "choices": [
+      "External conflict",
+      "Man vs. nature",
+      "Internal conflict",
+      "Man vs. society"
+    ],
+    "answer": "Internal conflict",
+    "explanation": "Internal conflict is a struggle within a character's own mind \u2014 between desires, values, or emotions. External conflict involves a character vs. an outside force."
+  },
+  {
+    "id": "eng_026",
+    "topic": "Literary Devices",
+    "question": "Which literary device involves the repetition of vowel sounds in nearby words?",
+    "choices": [
+      "Alliteration",
+      "Assonance",
+      "Consonance",
+      "Rhyme"
+    ],
+    "answer": "Assonance",
+    "explanation": "Assonance is the repetition of vowel sounds within nearby words, e.g., 'The rain in Spain stays mainly on the plain.' It creates a musical quality in writing."
+  },
+  {
+    "id": "eng_027",
+    "topic": "Literary Devices",
+    "question": "A story within a story is an example of which narrative technique?",
+    "choices": [
+      "Flashback",
+      "Frame narrative",
+      "Foreshadowing",
+      "Stream of consciousness"
+    ],
+    "answer": "Frame narrative",
+    "explanation": "A frame narrative is a story within a story \u2014 an outer narrative that encloses an inner one. 'The Canterbury Tales' and 'Frankenstein' use this structure."
+  },
+  {
+    "id": "eng_028",
+    "topic": "Reading Comprehension",
+    "question": "The tone of a text refers to the author's:",
+    "choices": [
+      "Moral lesson",
+      "Attitude toward the subject",
+      "Plot structure",
+      "Choice of setting"
+    ],
+    "answer": "Attitude toward the subject",
+    "explanation": "Tone describes the author's emotional attitude (e.g., sarcastic, hopeful, somber, critical). It differs from mood, which is the feeling the reader gets from the text."
+  },
+  {
+    "id": "eng_029",
+    "topic": "Literary Devices",
+    "question": "The repetition of a word or phrase at the beginning of successive clauses is called:",
+    "choices": [
+      "Anaphora",
+      "Epistrophe",
+      "Alliteration",
+      "Assonance"
+    ],
+    "answer": "Anaphora",
+    "explanation": "Anaphora is the repetition of a word or phrase at the beginning of successive lines or clauses, e.g., 'We shall fight on the beaches, we shall fight on the landing grounds...'"
+  },
+  {
+    "id": "eng_030",
+    "topic": "Writing",
+    "question": "Which sentence uses the most precise and vivid language?",
+    "choices": [
+      "The dog ran fast.",
+      "The dog moved.",
+      "The greyhound sprinted across the field.",
+      "A thing went by fast."
+    ],
+    "answer": "The greyhound sprinted across the field.",
+    "explanation": "Precise, vivid language uses specific nouns ('greyhound' instead of 'dog') and strong verbs ('sprinted' instead of 'ran fast'). This creates a clearer picture for the reader."
+  },
+  {
+    "id": "eng_031",
+    "topic": "Grammar",
+    "question": "Which sentence contains a dangling modifier?",
+    "choices": [
+      "Running to the store, Maria slipped.",
+      "Running to the store, the rain started.",
+      "Maria ran to the store quickly.",
+      "The rain started while Maria ran."
+    ],
+    "answer": "Running to the store, the rain started.",
+    "explanation": "A dangling modifier occurs when the phrase doesn't logically modify the subject that follows. The rain cannot run to the store \u2014 the sentence needs a person as the subject."
+  },
+  {
+    "id": "eng_032",
+    "topic": "Grammar",
+    "question": "Which sentence is in passive voice?",
+    "choices": [
+      "The cat chased the mouse.",
+      "The book was written by the author.",
+      "She wrote the report.",
+      "He made a mistake."
+    ],
+    "answer": "The book was written by the author.",
+    "explanation": "Passive voice places the receiver of the action as the subject: 'The book was written.' Active voice: 'The author wrote the book.' Active voice is generally preferred in formal writing."
+  },
+  {
+    "id": "eng_033",
+    "topic": "Reading Comprehension",
+    "question": "When analyzing a poem, 'imagery' refers to:",
+    "choices": [
+      "The poem's rhyme scheme",
+      "Descriptive language that appeals to the senses",
+      "The number of stanzas",
+      "The poem's speaker"
+    ],
+    "answer": "Descriptive language that appeals to the senses",
+    "explanation": "Imagery is language that appeals to sight, sound, smell, taste, or touch. Poets use imagery to create vivid mental pictures and emotional responses."
+  },
+  {
+    "id": "eng_034",
+    "topic": "Literary Devices",
+    "question": "A symbol in literature is:",
+    "choices": [
+      "The time period of the story",
+      "An object, person, or place that represents something beyond its literal meaning",
+      "The author's biography",
+      "The story's climax"
+    ],
+    "answer": "An object, person, or place that represents something beyond its literal meaning",
+    "explanation": "Symbols add deeper meaning. For example, a dove often symbolizes peace, a red rose symbolizes love, and a storm can symbolize conflict or danger."
+  },
+  {
+    "id": "eng_035",
+    "topic": "Writing",
+    "question": "What is the best way to strengthen a weak argument in an essay?",
+    "choices": [
+      "Repeat the claim more times",
+      "Add more adjectives",
+      "Include credible evidence and address counterarguments",
+      "Write longer sentences"
+    ],
+    "answer": "Include credible evidence and address counterarguments",
+    "explanation": "A strong argument is supported by solid evidence and acknowledges opposing views (counterarguments) while explaining why your position is still correct. This shows critical thinking."
+  },
+  {
+    "id": "eng_036",
+    "topic": "Literary Devices",
+    "question": "In Shakespeare's Romeo and Juliet, Romeo's death due to a miscommunication is an example of:",
+    "choices": [
+      "Dramatic irony",
+      "Situational irony",
+      "Verbal irony",
+      "Foreshadowing"
+    ],
+    "answer": "Situational irony",
+    "explanation": "Situational irony occurs when the opposite of what is expected happens. Romeo dying right before Juliet wakes up \u2014 the 'solution' (arriving in time) fails in the worst way \u2014 is situational irony."
+  },
+  {
+    "id": "eng_037",
+    "topic": "Reading Comprehension",
+    "question": "A primary source is:",
+    "choices": [
+      "A textbook summarizing events",
+      "An encyclopedia entry",
+      "A firsthand account such as a diary, letter, or original speech",
+      "A documentary about a historical event"
+    ],
+    "answer": "A firsthand account such as a diary, letter, or original speech",
+    "explanation": "Primary sources are created by those directly involved in events (diaries, speeches, original documents). Secondary sources analyze or interpret primary sources."
+  },
+  {
+    "id": "eng_038",
+    "topic": "Writing",
+    "question": "Which sentence has a comma splice error?",
+    "choices": [
+      "I went to the store, and I bought milk.",
+      "I went to the store, I bought milk.",
+      "I went to the store; I bought milk.",
+      "I went to the store to buy milk."
+    ],
+    "answer": "I went to the store, I bought milk.",
+    "explanation": "A comma splice joins two independent clauses with only a comma. Fix it by adding a coordinating conjunction (', and'), using a semicolon, or separating into two sentences."
+  },
+  {
+    "id": "eng_039",
+    "topic": "Literary Devices",
+    "question": "The sequence of events in a story is called the:",
+    "choices": [
+      "Theme",
+      "Tone",
+      "Plot",
+      "Setting"
+    ],
+    "answer": "Plot",
+    "explanation": "Plot is the sequence of events in a story. The typical plot structure includes exposition, rising action, climax, falling action, and resolution."
+  },
+  {
+    "id": "eng_040",
+    "topic": "Reading Comprehension",
+    "question": "What is the difference between explicit information and implicit information in a text?",
+    "choices": [
+      "Explicit is hidden; implicit is stated directly",
+      "Explicit is stated directly; implicit must be inferred",
+      "They are the same",
+      "Explicit is opinion; implicit is fact"
+    ],
+    "answer": "Explicit is stated directly; implicit must be inferred",
+    "explanation": "Explicit information is clearly stated in the text. Implicit information is suggested but not directly stated \u2014 the reader must 'read between the lines' to understand it."
+  },
+  {
+    "id": "eng_041",
+    "topic": "Writing",
+    "question": "When writing a summary, you should:",
+    "choices": [
+      "Include your opinions",
+      "Copy sentences directly from the text",
+      "Paraphrase the main ideas in your own words",
+      "Write more than the original text"
+    ],
+    "answer": "Paraphrase the main ideas in your own words",
+    "explanation": "A summary captures the main ideas of a text in your own words, without copying directly and without adding personal opinion. It is shorter than the original."
+  },
+  {
+    "id": "eng_042",
+    "topic": "Literary Devices",
+    "question": "The climax of a story is:",
+    "choices": [
+      "The introduction of characters",
+      "The most intense or turning point moment",
+      "The final resolution",
+      "The background setting"
+    ],
+    "answer": "The most intense or turning point moment",
+    "explanation": "The climax is the highest point of tension in the plot, the moment of greatest conflict or decision that determines the outcome of the story."
+  },
+  {
+    "id": "eng_043",
+    "topic": "Grammar",
+    "question": "Which sentence uses a semicolon correctly?",
+    "choices": [
+      "She loves reading; and writing.",
+      "She loves reading; she also loves writing.",
+      "She; loves reading and writing.",
+      "She loves reading, she; loves writing."
+    ],
+    "answer": "She loves reading; she also loves writing.",
+    "explanation": "Semicolons connect two independent clauses (complete sentences) that are closely related. Each clause must be able to stand alone as a complete sentence."
+  },
+  {
+    "id": "eng_044",
+    "topic": "Reading Comprehension",
+    "question": "Which question requires higher-order thinking (analysis) rather than simple recall?",
+    "choices": [
+      "What year was the story set?",
+      "Who is the main character?",
+      "Why does the author contrast the two characters?",
+      "What color is the character's hair?"
+    ],
+    "answer": "Why does the author contrast the two characters?",
+    "explanation": "Higher-order questions require analysis, evaluation, or synthesis \u2014 going beyond facts to explain meaning, purpose, or effect. This is the level tested on the Regents ELA exam."
+  },
+  {
+    "id": "eng_045",
+    "topic": "Literary Devices",
+    "question": "When an author's attitude seems mocking or contradictory to what is literally said, this is:",
+    "choices": [
+      "Hyperbole",
+      "Verbal irony (sarcasm)",
+      "Personification",
+      "Alliteration"
+    ],
+    "answer": "Verbal irony (sarcasm)",
+    "explanation": "Verbal irony occurs when what is said is the opposite of what is meant. Sarcasm is a harsh form of verbal irony. Example: 'Oh great, another Monday' \u2014 not actually great."
+  },
+  {
+    "id": "eng_046",
+    "topic": "Writing",
+    "question": "What is plagiarism?",
+    "choices": [
+      "Quoting a source with citation",
+      "Writing your own ideas",
+      "Using someone's words or ideas without giving credit",
+      "Paraphrasing with a citation"
+    ],
+    "answer": "Using someone's words or ideas without giving credit",
+    "explanation": "Plagiarism is presenting someone else's work as your own without proper attribution. It is an academic offense and can be avoided by citing all sources."
+  },
+  {
+    "id": "eng_047",
+    "topic": "Literary Devices",
+    "question": "Which term describes the time and place in which a story occurs?",
+    "choices": [
+      "Theme",
+      "Tone",
+      "Conflict",
+      "Setting"
+    ],
+    "answer": "Setting",
+    "explanation": "Setting includes the time (historical period, time of day) and place (geography, environment) of a story. Setting often influences mood, character, and plot."
+  },
+  {
+    "id": "eng_048",
+    "topic": "Reading Comprehension",
+    "question": "An author who presents a biased argument likely:",
+    "choices": [
+      "Uses only facts",
+      "Presents all sides equally",
+      "Favors one side and may omit contradicting evidence",
+      "Never uses evidence"
+    ],
+    "answer": "Favors one side and may omit contradicting evidence",
+    "explanation": "Bias means the author shows unfair preference for one viewpoint, often by selecting only supporting evidence, using emotional language, or ignoring counterarguments."
+  },
+  {
+    "id": "eng_049",
+    "topic": "Writing",
+    "question": "The purpose of a hook in an introductory paragraph is to:",
+    "choices": [
+      "State your thesis immediately",
+      "Introduce evidence",
+      "Grab the reader's attention",
+      "List your three main points"
+    ],
+    "answer": "Grab the reader's attention",
+    "explanation": "A hook is an engaging opening \u2014 a question, quote, anecdote, or surprising fact \u2014 that draws the reader in and makes them want to continue reading."
+  },
+  {
+    "id": "eng_050",
+    "topic": "Literary Devices",
+    "question": "What is the difference between the narrator and the author?",
+    "choices": [
+      "They are always the same person",
+      "The narrator is the voice telling the story; the author is the real person who wrote it",
+      "The author is inside the story; the narrator is outside",
+      "There is no difference in fiction"
+    ],
+    "answer": "The narrator is the voice telling the story; the author is the real person who wrote it",
+    "explanation": "The narrator is the fictional voice inside the text. The author is the real person who created the text. In first-person narratives, the narrator is a character, not the author themselves."
+  },
+  {
+    "id": "eng_051",
+    "topic": "Grammar",
+    "question": "Which sentence is grammatically correct?",
+    "choices": [
+      "Me and him went to the store.",
+      "Him and me went to the store.",
+      "He and I went to the store.",
+      "Him and I went to the store."
+    ],
+    "answer": "He and I went to the store.",
+    "explanation": "Subject pronouns (I, he, she, we, they) are used as subjects of verbs. Test: remove the other person \u2014 'I went' is correct, 'me went' is not. So 'He and I went' is correct."
+  },
+  {
+    "id": "eng_052",
+    "topic": "Grammar",
+    "question": "Identify the subject and verb that agree in this sentence: 'Neither the players nor the coach _____ satisfied.'",
+    "choices": [
+      "are",
+      "were",
+      "have been",
+      "is"
+    ],
+    "answer": "is",
+    "explanation": "In 'neither...nor' constructions, the verb agrees with the noun closest to it. 'Coach' is singular and closest to the verb, so use 'is.'"
+  },
+  {
+    "id": "eng_053",
+    "topic": "Grammar",
+    "question": "Which sentence correctly uses an apostrophe?",
+    "choices": [
+      "The dogs bone was buried.",
+      "The dog's bone was buried.",
+      "The dogs' bone was buried.",
+      "The dogs's bone was buried."
+    ],
+    "answer": "The dog's bone was buried.",
+    "explanation": "Singular possessive: add apostrophe + s. One dog owns the bone: 'dog's.' For multiple dogs, it would be 'dogs' bone.' 'Dogs' with no apostrophe is just a plural, not possessive."
+  },
+  {
+    "id": "eng_054",
+    "topic": "Reading Comprehension",
+    "question": "What is the difference between a fact and an opinion?",
+    "choices": [
+      "Facts are always interesting; opinions are boring",
+      "Facts can be proven; opinions express personal beliefs or judgments",
+      "Opinions are always wrong",
+      "Facts change; opinions stay the same"
+    ],
+    "answer": "Facts can be proven; opinions express personal beliefs or judgments",
+    "explanation": "Facts are verifiable statements supported by evidence (e.g., 'Water boils at 100\u00b0C'). Opinions reflect personal judgments, feelings, or beliefs (e.g., 'This book is boring'). Critical readers distinguish between them."
+  },
+  {
+    "id": "eng_055",
+    "topic": "Reading Comprehension",
+    "question": "When an author uses a rhetorical question, they:",
+    "choices": [
+      "Expect the reader to answer in writing",
+      "Want to start a debate",
+      "Ask a question for effect, not expecting an answer",
+      "Test the reader's knowledge"
+    ],
+    "answer": "Ask a question for effect, not expecting an answer",
+    "explanation": "Rhetorical questions are used to make a point or provoke thought, not to receive a literal answer. E.g., 'How many lives must be lost before we act?' \u2014 the answer is implied."
+  },
+  {
+    "id": "eng_056",
+    "topic": "Literary Devices",
+    "question": "Which term describes a central character who changes significantly during a story?",
+    "choices": [
+      "Flat character",
+      "Static character",
+      "Dynamic character",
+      "Foil character"
+    ],
+    "answer": "Dynamic character",
+    "explanation": "A dynamic character undergoes significant internal change during the story. A static character remains essentially the same. A foil contrasts with the protagonist to highlight traits."
+  },
+  {
+    "id": "eng_057",
+    "topic": "Literary Devices",
+    "question": "A character who serves to highlight the qualities of another character through contrast is called a:",
+    "choices": [
+      "Protagonist",
+      "Antagonist",
+      "Foil",
+      "Round character"
+    ],
+    "answer": "Foil",
+    "explanation": "A foil character has contrasting traits that emphasize the qualities of another character (usually the protagonist). For example, Draco Malfoy is a foil to Harry Potter, highlighting Harry's courage and generosity."
+  },
+  {
+    "id": "eng_058",
+    "topic": "Writing",
+    "question": "When analyzing a text, you should always support your claims with:",
+    "choices": [
+      "Personal feelings alone",
+      "Textual evidence (quotes or paraphrases) and analysis",
+      "A summary of the plot",
+      "Comparisons to movies"
+    ],
+    "answer": "Textual evidence (quotes or paraphrases) and analysis",
+    "explanation": "Strong literary analysis requires concrete textual evidence \u2014 direct quotes or paraphrases from the text \u2014 followed by your explanation of how that evidence supports your argument."
+  },
+  {
+    "id": "eng_059",
+    "topic": "Writing",
+    "question": "The structure of a typical argumentative essay is:",
+    "choices": [
+      "Introduction, body paragraphs, counterargument, conclusion",
+      "Hook only, then conclusion",
+      "Body paragraphs without an introduction",
+      "Evidence before the thesis"
+    ],
+    "answer": "Introduction, body paragraphs, counterargument, conclusion",
+    "explanation": "A complete argumentative essay includes: introduction with thesis, body paragraphs with evidence, a counterargument (with refutation), and a conclusion. Addressing counterarguments strengthens your position."
+  },
+  {
+    "id": "eng_060",
+    "topic": "Literary Devices",
+    "question": "Which of the following is an example of a paradox?",
+    "choices": [
+      "The sun is bright.",
+      "War is peace.",
+      "The dog ran fast.",
+      "She sang beautifully."
+    ],
+    "answer": "War is peace.",
+    "explanation": "A paradox is a seemingly contradictory statement that reveals a deeper truth. 'War is peace' (from Orwell's 1984) appears logically impossible but makes a satirical point about propaganda."
+  },
+  {
+    "id": "eng_061",
+    "topic": "Reading Comprehension",
+    "question": "An author's 'voice' in writing refers to:",
+    "choices": [
+      "Their speaking volume",
+      "The distinctive style, tone, and personality that comes through in their writing",
+      "The number of characters they use",
+      "Their preferred topic"
+    ],
+    "answer": "The distinctive style, tone, and personality that comes through in their writing",
+    "explanation": "Voice is the unique personality of the writing \u2014 word choice, sentence structure, tone, and perspective. Each author has a distinctive voice that makes their work recognizable."
+  },
+  {
+    "id": "eng_062",
+    "topic": "Grammar",
+    "question": "Which type of sentence has two independent clauses joined by a coordinating conjunction?",
+    "choices": [
+      "Simple sentence",
+      "Complex sentence",
+      "Compound sentence",
+      "Compound-complex sentence"
+    ],
+    "answer": "Compound sentence",
+    "explanation": "A compound sentence joins two independent clauses with a coordinating conjunction (FANBOYS: for, and, nor, but, or, yet, so) or a semicolon. Each clause could stand alone."
+  },
+  {
+    "id": "eng_063",
+    "topic": "Literary Devices",
+    "question": "Satire is a literary technique that:",
+    "choices": [
+      "Praises political leaders",
+      "Uses humor, irony, and exaggeration to criticize and expose human vices",
+      "Only appears in poetry",
+      "Creates a tragic mood"
+    ],
+    "answer": "Uses humor, irony, and exaggeration to criticize and expose human vices",
+    "explanation": "Satire mocks individuals, institutions, or society using wit and irony to expose and critique flaws. Examples include Orwell's Animal Farm (politics) and Swift's A Modest Proposal (poverty)."
+  },
+  {
+    "id": "eng_064",
+    "topic": "Reading Comprehension",
+    "question": "In poetry, what is the term for the repetition of similar sounds at the end of lines?",
+    "choices": [
+      "Rhythm",
+      "Rhyme",
+      "Meter",
+      "Alliteration"
+    ],
+    "answer": "Rhyme",
+    "explanation": "Rhyme is the repetition of similar ending sounds in words at the ends of lines. The pattern of rhymes in a poem is its rhyme scheme, labeled with letters (ABAB, AABB, etc.)."
+  },
+  {
+    "id": "eng_065",
+    "topic": "Writing",
+    "question": "Which revision best improves the sentence: 'There are many reasons why exercise is good.'?",
+    "choices": [
+      "There are a lot of reasons why exercise might be beneficial.",
+      "Exercise improves cardiovascular health, strengthens muscles, and boosts mood.",
+      "Exercise is good for many reasons.",
+      "Many people think exercise is good."
+    ],
+    "answer": "Exercise improves cardiovascular health, strengthens muscles, and boosts mood.",
+    "explanation": "Effective revision replaces vague, weak language with specific details. The improved sentence names concrete benefits, showing rather than telling and avoiding the weak 'there are' construction."
+  }
 ]

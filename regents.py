@@ -11,6 +11,8 @@ SUBJECTS = {
     "global": {"name": "Global History", "emoji": "🌍", "color": "#7f8c8d"},
     "english": {"name": "English (ELA)", "emoji": "📖", "color": "#8e44ad"},
     "earthscience": {"name": "Earth Science", "emoji": "🌎", "color": "#27ae60"},
+    "earth_space_sciences": {"name": "Earth & Space Sciences", "emoji": "🚀", "color": "#1abc9c"},
+    "life_science_biology": {"name": "Life Science: Biology", "emoji": "🔬", "color": "#2ecc71"},
 }
 
 QUESTIONS_DIR = os.path.join(os.path.dirname(__file__), "questions")

@@ -1,0 +1,380 @@
+[
+  {
+    "id": "lsb_2",
+    "subject": "life_science_biology",
+    "topic": "General",
+    "question": "Which statement describes how a process that occurs at X within the models results in the\nspecialized cells seen in the fetus\u2019s leg?",
+    "choices": [
+      "A fertilized egg cell divides into muscle and bone cells with different DNA.",
+      "An egg cell and a sperm cell can each change into muscle or bone cells in the\ndeveloping fetus.",
+      "A cell in a developing fetus can divide into muscle and bone cells with the same\nDNA, but the cells have different shapes and functions.",
+      "A developing fetus has some muscle and bone cells from its mother and some from\nits father."
+    ],
+    "answer": "A cell in a developing fetus can divide into muscle and bone cells with the same\nDNA, but the cells have different shapes and functions.",
+    "explanation": "This is from the January 2026 Life Science: Biology Regents Exam."
+  },
+  {
+    "id": "lsb_4",
+    "subject": "life_science_biology",
+    "topic": "General",
+    "question": "A researcher wants to determine the cause of the amount of variation seen between identical\ntwins at 50 years old when compared to twins at 3 years old. Which question should they ask to\nhelp them determine the cause?",
+    "choices": [
+      "How does the number of methyl groups attached to the DNA of 50-year-olds compare\nto 3-year-olds?",
+      "Why does the DNA in 3-year-olds and 50-year-olds contain the same type of bases?",
+      "If methyl groups are attached to the DNA of identical twins, how will they be inherited\nby offspring?",
+      "How does the DNA sequence in the cells of 3-year-old twins and 50-year-old twins\ncompare?"
+    ],
+    "answer": "How does the number of methyl groups attached to the DNA of 50-year-olds compare\nto 3-year-olds?",
+    "explanation": "This is from the January 2026 Life Science: Biology Regents Exam."
+  },
+  {
+    "id": "lsb_5",
+    "subject": "life_science_biology",
+    "topic": "General",
+    "question": "One of the 50-year-old twins, twin C, has been identifi ed as being at risk for developing diabetes\nbecause a specifi c gene has been methylated. The same gene in twin D does not show signs of\nthis change. How might genetic technology be used to prevent twin C from developing diabetes\nlater in life?",
+    "choices": [
+      "Use splicing enzymes to remove the methyl groups on the amino acid sequence of\nthe gene that causes diabetes.",
+      "Develop and use medications that would remove methyl groups to allow normal gene\nexpression.",
+      "Develop medications that are able to add methyl groups to other regions of the DNA\nof twin C.",
+      "Using splicing enzymes to add methyl groups to twin C\u2019s proteins to prevent diabetes."
+    ],
+    "answer": "Develop and use medications that would remove methyl groups to allow normal gene\nexpression.",
+    "explanation": "This is from the January 2026 Life Science: Biology Regents Exam."
+  },
+  {
+    "id": "lsb_6",
+    "subject": "life_science_biology",
+    "topic": "General",
+    "question": "Which question would help a student gather information to correctly show the role of DNA in\nthe passing of traits from the original Hydrilla plant to the offspring that grow when broken off?",
+    "choices": [
+      "Do the new Hydrilla offspring have traits identical to the original because they\nreceived half of their DNA from each of their parent plants?",
+      "Do the offspring have traits identical to the original population because the DNA\nin the new Hydrilla population is the same as the DNA in the broken pieces of the\nparent plant?",
+      "Do the plants in the new population of Hydrilla have different traits from the parent\nplants because they have different amounts of DNA from each other?",
+      "Do the gametes produced by"
+    ],
+    "answer": "Do the offspring have traits identical to the original population because the DNA\nin the new Hydrilla population is the same as the DNA in the broken pieces of the\nparent plant?",
+    "explanation": "This is from the January 2026 Life Science: Biology Regents Exam."
+  },
+  {
+    "id": "lsb_8",
+    "subject": "life_science_biology",
+    "topic": "General",
+    "question": "Which statement provides evidence from the mathematical representations provided and\nsupports the claim that Hydrilla\u2019s ability to effi ciently capture resources will have negative\neffects on the biodiversity of the waterway in which they live?",
+    "choices": [
+      "Hydrilla can produce more branches in fi ve weeks than native pondweed, resulting\nin more oxygen being produced by cellular respiration. This causes a decrease in the\nnumber of other organisms found in the ecosystem.",
+      "Hydrilla can double its new growth every week, which uses excessive amounts of\nnitrogen from the environment for lipid production. This results in fewer organisms\nbeing able to survive.",
+      "Hydrilla form longer branches than native pondweed, which absorb sunlight at a\nfaster rate. This reduces a needed resource and decreases biodiversity.",
+      "Hydrilla produce roughly 15 times the number of branches than that of native\npondweed."
+    ],
+    "answer": "Hydrilla form longer branches than native pondweed, which absorb sunlight at a\nfaster rate. This reduces a needed resource and decreases biodiversity.",
+    "explanation": "This is from the January 2026 Life Science: Biology Regents Exam."
+  },
+  {
+    "id": "lsb_9",
+    "subject": "life_science_biology",
+    "topic": "General",
+    "question": "Which solution would best control the Hydrilla population in bodies of water without harming\nnative populations?",
+    "choices": [
+      "recruiting volunteers to remove pondweed out of a local waterway before fi shing season",
+      "applying herbicides to waterways where Hydrilla are located at the start of boating season",
+      "applying chemicals that coat the surface of water, blocking light in ponds",
+      "requiring boats to be inspected for"
+    ],
+    "answer": "requiring boats to be inspected for",
+    "explanation": "This is from the January 2026 Life Science: Biology Regents Exam."
+  },
+  {
+    "id": "lsb_10",
+    "subject": "life_science_biology",
+    "topic": "General",
+    "question": "Which statement provides evidence that supports the claim that the complex interactions of\nbottom-up and top-down cascading play a role in maintaining relatively consistent numbers of\norganisms in a stable ecosystem?",
+    "choices": [
+      "When both pike and phytoplankton populations increase in number, the ecosystem\nremains stable, indicating that all the organisms survive.",
+      "As either pike or phytoplankton decrease in number, the stability of the ecosystem is\ngreatly reduced.",
+      "A signifi cant increase in zooplankton population will cause a top-down ecosystem to\nbecome unstable but have no effect on bottom-up ecosystems.",
+      "In a top-down cascade, zooplankton help maintain ecosystem stability, while carp\nhelp maintain ecosystem stability in a bottom-up cascade."
+    ],
+    "answer": "As either pike or phytoplankton decrease in number, the stability of the ecosystem is\ngreatly reduced.",
+    "explanation": "This is from the January 2026 Life Science: Biology Regents Exam."
+  },
+  {
+    "id": "lsb_11",
+    "subject": "life_science_biology",
+    "topic": "General",
+    "question": "Which statement best uses the process of carbon cycling in the biosphere to explain why\nphytoplankton function as a keystone species for this ecosystem?",
+    "choices": [
+      "The phytoplankton return carbon to the atmosphere in the form of carbon dioxide by\nphotosynthesis, and that carbon can be consumed by other organisms.",
+      "The atmosphere absorbs carbon as part of the products excreted by phytoplankton,\nand that carbon can be used by other animals.",
+      "The phytoplankton return carbon to the geosphere in the form of carbon dioxide by\ndecomposing, and that carbon can be consumed by other organisms.",
+      "The hydrosphere provides carbon dioxide to the phytoplankton, which allows\nphytoplankton to provide nutrients to other animals."
+    ],
+    "answer": "The hydrosphere provides carbon dioxide to the phytoplankton, which allows\nphytoplankton to provide nutrients to other animals.",
+    "explanation": "This is from the January 2026 Life Science: Biology Regents Exam."
+  },
+  {
+    "id": "lsb_13",
+    "subject": "life_science_biology",
+    "topic": "General",
+    "question": "Which statement would provide evidence that increased elk survival in Yellowstone is related to\nherd behavior?",
+    "choices": [
+      "The GPS information showed that larger elk herds had identical survival rates to elk\ntraveling alone.",
+      "The GPS information indicated that elk herds began to graze in different regions of\nthe park where the number of wolves was lower.",
+      "The GPS information indicated that the change in the grazing pattern of elk herds\nincreased the chances that some elk would be safe while most of the population\nwould be preyed upon.",
+      "The GPS information indicated that as wolves moved into areas where elk herds feed,\nthe elk herds remained in the same areas."
+    ],
+    "answer": "The GPS information indicated that elk herds began to graze in different regions of\nthe park where the number of wolves was lower.",
+    "explanation": "This is from the January 2026 Life Science: Biology Regents Exam."
+  },
+  {
+    "id": "lsb_14",
+    "subject": "life_science_biology",
+    "topic": "General",
+    "question": "Which statement supports the claim that the structure of DNA determines the structure of the\nFel d 1 protein molecule produced by cat cells?",
+    "choices": [
+      "Proteins within the DNA of cat cells store the code for specifi c amino acids that are\nrequired to produce Fel d 1.",
+      "DNA within cat cells codes for a specifi c sequence of amino acids resulting in the\nproduction of Fel d 1 in some cells.",
+      "The specifi c amino acid sequence present in cat cells produces the necessary DNA to\nsynthesize Fel d 1 in some cells.",
+      "DNA needed by cat cells is stored within the nucleus and released when"
+    ],
+    "answer": "DNA within cat cells codes for a specifi c sequence of amino acids resulting in the\nproduction of Fel d 1 in some cells.",
+    "explanation": "This is from the January 2026 Life Science: Biology Regents Exam."
+  },
+  {
+    "id": "lsb_16",
+    "subject": "life_science_biology",
+    "topic": "General",
+    "question": "Which statement explains the variation shown by week 10 in the amount of Fel d 1 per gram of\nhair in the cats in Group A?",
+    "choices": [
+      "The antibodies in the food acted as a genetic factor by preventing the cells of the\nsalivary glands in the cat from producing as much Fel d 1.",
+      "The antibodies in the food acted as an environmental factor by preventing the cells of\nthe salivary glands in the cat from producing as much Fel d 1.",
+      "The antibodies in the food acted as a genetic factor by binding to much of the Fel d 1\nproduced by the cats.",
+      "The antibodies in the food acted as an environmental factor by binding to much of\nthe"
+    ],
+    "answer": "The antibodies in the food acted as an environmental factor by binding to much of\nthe",
+    "explanation": "This is from the January 2026 Life Science: Biology Regents Exam."
+  },
+  {
+    "id": "lsb_17",
+    "subject": "life_science_biology",
+    "topic": "General",
+    "question": "Which claim regarding the genetic makeup of the kittens produced by this technology is\nsupported by the information provided?",
+    "choices": [
+      "All cells within the bodies of the kittens will contain the genetic change, so it can be\npassed on to future offspring.",
+      "Only the skin and salivary gland cells of the kittens will inherit the genetic change, so\nit can not be passed on to future offspring.",
+      "Half of the kitten\u2019s cells will contain the edited genes, so it will have a 50% chance of\npassing the new gene on to future offspring.",
+      "Only the reproductive cells will contain the genetic change from the edited DNA, so\nthe trait will be passed on to future offspring."
+    ],
+    "answer": "All cells within the bodies of the kittens will contain the genetic change, so it can be\npassed on to future offspring.",
+    "explanation": "This is from the January 2026 Life Science: Biology Regents Exam."
+  },
+  {
+    "id": "lsb_19",
+    "subject": "life_science_biology",
+    "topic": "General",
+    "question": "Using evidence from the graph, which statement best explains the resistance ratio of diamondback\nmoths?",
+    "choices": [
+      "The proportion of the population that was resistant to butane-fi pronil decreased over\ntime because moths with resistance are less likely to survive and reproduce.",
+      "The proportion of the population that was resistant to butane-fi pronil increased over\ntime because moths without resistance are more likely to survive and reproduce.",
+      "The proportion of the population that was resistant to butane-fi pronil increased over\ntime because moths with resistance are more likely to survive and reproduce.",
+      "Total resistance in the moth population does not change, but the proportion of resistant\nmoths increases because the offspring are more likely to survive and reproduce."
+    ],
+    "answer": "The proportion of the population that was resistant to butane-fi pronil increased over\ntime because moths with resistance are more likely to survive and reproduce.",
+    "explanation": "This is from the January 2026 Life Science: Biology Regents Exam."
+  },
+  {
+    "id": "lsb_21",
+    "subject": "life_science_biology",
+    "topic": "General",
+    "question": "Which statement best explains the variation in mortality observed in the two groups of\ndiamondback moth larvae?",
+    "choices": [
+      "Group 1 larvae most likely have the trait for resistance to Bt toxins because the\nmortality is higher.",
+      "Group 2 larvae most likely have the trait for resistance to Bt toxins because the\nmortality is lower.",
+      "Group 1 larvae most likely have the trait for resistance to chemical pesticides because\nthe mortality is lower.",
+      "Group 2 larvae most likely have the trait for resistance to chemical pesticides because\nthe mortality is higher."
+    ],
+    "answer": "Group 2 larvae most likely have the trait for resistance to Bt toxins because the\nmortality is lower.",
+    "explanation": "This is from the January 2026 Life Science: Biology Regents Exam."
+  },
+  {
+    "id": "lsb_26",
+    "subject": "life_science_biology",
+    "topic": "General",
+    "question": "Which evidence best supports the claim that a mutation would change the structure of insulin?",
+    "choices": [
+      "If the instructions that code for Cys change, then a different amino acid might be\nincluded in the amino acid chain, decreasing the ability to form a disulfi de bridge,\nwhich will change the structure of insulin.",
+      "If the instructions that code for Tyr change, then a different amino acid might be\nincluded in the amino acid chain, decreasing the ability to form a disulfi de bridge,\nwhich will change the structure of insulin.",
+      "If the instructions that code for a different amino acid changed to code for Cys,\nthe location of the disulfi de bridge would change, decreasing the ability to form a\ndisulfi de bridge, which will maintain the structure of insulin.",
+      "If the instructions that code for a different amino acid changed to code for"
+    ],
+    "answer": "If the instructions that code for Cys change, then a different amino acid might be\nincluded in the amino acid chain, decreasing the ability to form a disulfi de bridge,\nwhich will change the structure of insulin.",
+    "explanation": "This is from the January 2026 Life Science: Biology Regents Exam."
+  },
+  {
+    "id": "lsb_28",
+    "subject": "life_science_biology",
+    "topic": "General",
+    "question": "Which solution could a community use to most effectively reduce the impact of human activity\non the honeybee populations?",
+    "choices": [
+      "Apply herbicides to limit the growth of plants that compete with bee food sources.",
+      "Create gardens and public spaces with native fl owering plants.",
+      "Create enclosed spaces around the hives so that bees will be unable to leave the area.",
+      "Apply pesticides to eliminate other insects that feed on pollen and nectar."
+    ],
+    "answer": "Create gardens and public spaces with native fl owering plants.",
+    "explanation": "This is from the January 2026 Life Science: Biology Regents Exam."
+  },
+  {
+    "id": "lsb_29",
+    "subject": "life_science_biology",
+    "topic": "General",
+    "question": "Based on the information above, how does the waggle dance of an individual bee have a benefi cial\neffect for the hive?",
+    "choices": [
+      "Being able to communicate through the waggle dance allows bees to fi nd other\nhives and share resources with them.",
+      "Being able to communicate through the waggle dance allows bees in the hive to\nbetter avoid predators.",
+      "Being able to communicate through the waggle dance allows bees in the hive to\ngather resources more effi ciently.",
+      "Being able to communicate through the waggle dance allows bees in the hive to\nrecognize which plants are food sources."
+    ],
+    "answer": "Being able to communicate through the waggle dance allows bees in the hive to\ngather resources more effi ciently.",
+    "explanation": "This is from the January 2026 Life Science: Biology Regents Exam."
+  },
+  {
+    "id": "lsb_31",
+    "subject": "life_science_biology",
+    "topic": "General",
+    "question": "Based on the data provided, which explanation best describes the effectiveness of using oxalic\nacid treatments every 18 days to reduce the number of invasive Varroa mites over time?",
+    "choices": [
+      "This treatment would be effective because the number of living mites continues to\ndecrease for several weeks after oxalic acid exposure.",
+      "This treatment would not be effective because an individual Varroa mite would\nbecome resistant to oxalic acid if they are treated frequently.",
+      "This treatment would not be effective because Varroa mites that have a natural\nresistance to oxalic acid would survive and reproduce.",
+      "This treatment would be effective because it gives the"
+    ],
+    "answer": "This treatment would not be effective because Varroa mites that have a natural\nresistance to oxalic acid would survive and reproduce.",
+    "explanation": "This is from the January 2026 Life Science: Biology Regents Exam."
+  },
+  {
+    "id": "lsb_33",
+    "subject": "life_science_biology",
+    "topic": "General",
+    "question": "Which line of empirical evidence supports the claim that African baboons share a common\nancestor?",
+    "choices": [
+      "Changes in mtDNA affected skull shape over generations.",
+      "The skulls of modern baboons are identical in groups A and C.",
+      "Changes in mtDNA originated from one location.",
+      "Longer facial fur resulted from nDNA changes in groups A and B."
+    ],
+    "answer": "Changes in mtDNA originated from one location.",
+    "explanation": "This is from the January 2026 Life Science: Biology Regents Exam."
+  },
+  {
+    "id": "lsb_34",
+    "subject": "life_science_biology",
+    "topic": "General",
+    "question": "Which evidence best explains how the evolution of African baboons is the result of an\nenvironmental factor?",
+    "choices": [
+      "The facial hair of P. papio best protects it from desert sandstorms.",
+      "The jaw of P. kindae makes it better suited for diverse environments.",
+      "The facial hair of P. hamadryas allows it to blend in with the tall trees.",
+      "The jaw of P. ursinus makes it better suited for a rainforest environment."
+    ],
+    "answer": "The jaw of P. kindae makes it better suited for diverse environments.",
+    "explanation": "This is from the January 2026 Life Science: Biology Regents Exam."
+  },
+  {
+    "id": "lsb_36",
+    "subject": "life_science_biology",
+    "topic": "General",
+    "question": "Which statement provides evidence that explains how an environmental factor could cause a\nchange in gene frequency for the likelihood of social behaviors in African baboons?",
+    "choices": [
+      "When average rainfall increases, increased grooming behavior decreases the probability\nof passing genes to offspring for the likelihood of participating in social grooming.",
+      "When average rainfall increases, increased grooming behavior increases the probability of\npassing genes to offspring for the likelihood of participating in social grooming.",
+      "When average rainfall decreases, increased grooming behavior decreases the probability\nof passing genes to offspring for likelihood of participating in social grooming.",
+      "When average rainfall decreases, increased grooming behavior increases the probability\nof passing genes to offspring for the likelihood of participating in social grooming."
+    ],
+    "answer": "When average rainfall decreases, increased grooming behavior increases the probability\nof passing genes to offspring for the likelihood of participating in social grooming.",
+    "explanation": "This is from the January 2026 Life Science: Biology Regents Exam."
+  },
+  {
+    "id": "lsb_37",
+    "subject": "life_science_biology",
+    "topic": "General",
+    "question": "Using the model, which statement best identifi es the energy conversion that occurs in the\npitcher plant?",
+    "choices": [
+      "The chemical energy in carbon dioxide is transformed into light energy for glucose\nand oxygen.",
+      "Light energy allows carbon dioxide to enter the leaf and allows glucose to exit.",
+      "Light energy is captured by the leaf and converted into stored energy within the\nchemical bonds of glucose.",
+      "The chemical energy in glucose is converted into light energy, stored in oxygen."
+    ],
+    "answer": "Light energy is captured by the leaf and converted into stored energy within the\nchemical bonds of glucose.",
+    "explanation": "This is from the January 2026 Life Science: Biology Regents Exam."
+  },
+  {
+    "id": "lsb_38",
+    "subject": "life_science_biology",
+    "topic": "General",
+    "question": "Which of these statements best predicts the movement of carbon between Earth\u2019s spheres that\nproduced the differences in carbon dioxide concentrations when the pitcher opens up?",
+    "choices": [
+      "Carbon dioxide in the biosphere will move into the hydrosphere because the\nhydrosphere has a higher carbon dioxide concentration.",
+      "Carbon dioxide in the atmosphere will move into the biosphere because the\nconcentration of carbon dioxide is greater in the atmosphere.",
+      "Carbon dioxide from the hydrosphere will move into the biosphere because the\nconcentration of carbon dioxide is greater in the biosphere.",
+      "Carbon dioxide from the biosphere will move into the atmosphere because the\nbiosphere has a higher carbon dioxide concentration."
+    ],
+    "answer": "Carbon dioxide from the biosphere will move into the atmosphere because the\nbiosphere has a higher carbon dioxide concentration.",
+    "explanation": "This is from the January 2026 Life Science: Biology Regents Exam."
+  },
+  {
+    "id": "lsb_39",
+    "subject": "life_science_biology",
+    "topic": "General",
+    "question": "How does this evidence support the scientists\u2019 claim that increased nitrogen makes the pitcher\nplants more effective at cycling carbon?",
+    "choices": [
+      "Pitcher plants that have suffi cient nitrogen in their soil have less of a need to undergo\nphotosynthesis, so they produce fewer pitchers.",
+      "The pitcher plants in higher-nitrogen soils have less of a need to consume insects, so\nthey are able to use more of their leaves for photosynthesis.",
+      "The pitcher plants in high-nitrogen soils grow more fl at leaves because they need\nother elements from insects to combine with nitrogen.",
+      "Pitcher plants produce more fl at leaves so that they are better at obtaining nitrogen\nfrom the soil."
+    ],
+    "answer": "The pitcher plants in higher-nitrogen soils have less of a need to consume insects, so\nthey are able to use more of their leaves for photosynthesis.",
+    "explanation": "This is from the January 2026 Life Science: Biology Regents Exam."
+  },
+  {
+    "id": "lsb_41",
+    "subject": "life_science_biology",
+    "topic": "General",
+    "question": "Which question would help scientists understand why the spotted zebra\u2019s coat pattern is different\nfrom its striped parents?",
+    "choices": [
+      "Are the pattern differences in the zebras the result of heritable variations in DNA\nbetween parents and their offspring?",
+      "Will the spotted coat pattern increase in frequency in the population because the trait\nis advantageous?",
+      "How does the amount of DNA in the spotted zebra\u2019s skin cells compare with the\namount in the skin cells of the parents?",
+      "Does the pattern in the offspring differ from the parents because it needs to blend in\nbetter with the environment?"
+    ],
+    "answer": "Are the pattern differences in the zebras the result of heritable variations in DNA\nbetween parents and their offspring?",
+    "explanation": "This is from the January 2026 Life Science: Biology Regents Exam."
+  },
+  {
+    "id": "lsb_43",
+    "subject": "life_science_biology",
+    "topic": "General",
+    "question": "The researchers claimed that an environmental factor may have affected the evolution of the\nzebra\u2019s striped coat. Which row of the table uses evidence gathered by the researchers to justify\nwhy their claim is correct or incorrect?\nRow Claim Reasoning\nFlies are more attracted to the impala\u2019s solid coat, resulting in",
+    "choices": [
+      "Correct more fl ies biting the zebras, and decreasing the zebras\u2019 chance of\nsurviving and reproducing.\nStripes reduce the number of biting fl ies landing on zebras,",
+      "Correct resulting in a decrease in the chance of disease from fl ies, and\nincreasing the zebras\u2019 chance of surviving and reproducing.\nStripes increase the number of biting fl ies landing on zebras,",
+      "Incorrect resulting in an increase in the chance of disease from fl ies, and\ndecreasing the zebras\u2019 chance of surviving and reproducing.\nFlies are more attracted to the impala\u2019s solid coat, resulting in",
+      "Incorrect fewer fl ies biting the zebras, and increasing the zebras\u2019 chance of\nsurviving and reproducing."
+    ],
+    "answer": "Correct resulting in a decrease in the chance of disease from fl ies, and\nincreasing the zebras\u2019 chance of surviving and reproducing.\nStripes increase the number of biting fl ies landing on zebras,",
+    "explanation": "This is from the January 2026 Life Science: Biology Regents Exam."
+  },
+  {
+    "id": "lsb_44",
+    "subject": "life_science_biology",
+    "topic": "General",
+    "question": "Which statement best uses the data gathered by the researchers to predict the variation and\ndistribution of coat patterns in future generations of plains zebras?",
+    "choices": [
+      "The probability of fi nding zebras with varied coat patterns will be highest in\nLake Mburo National Park because the population there is small and isolated.",
+      "The probability of fi nding zebras with varied coat patterns will be lowest in\nLake Mburo National Park because the population there is small and isolated.",
+      "The probability of fi nding zebras with varied coat patterns will be highest in\nEtosha National Park because the population there is small and isolated.",
+      "The probability of fi nding zebras with varied coat patterns will be lowest in"
+    ],
+    "answer": "The probability of fi nding zebras with varied coat patterns will be highest in\nLake Mburo National Park because the population there is small and isolated.",
+    "explanation": "This is from the January 2026 Life Science: Biology Regents Exam."
+  }
+]

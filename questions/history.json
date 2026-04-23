@@ -1,72 +1,1197 @@
 [
-  {"id":"hist_001","topic":"Civil War","question":"What was the main cause of the Civil War?","choices":["Taxation","Slavery","Immigration","Trade"],"answer":"Slavery","explanation":"While multiple issues existed, slavery was the central conflict. Southern states wanted to preserve slavery, especially as new western territories were added to the US."},
-  {"id":"hist_002","topic":"Constitution","question":"The Bill of Rights protects citizens from:","choices":["Foreign invasion","Government overreach","Economic hardship","Natural disasters"],"answer":"Government overreach","explanation":"The Bill of Rights (first 10 amendments) limits government power and protects individual freedoms like speech, religion, and assembly."},
-  {"id":"hist_003","topic":"Industrialization","question":"The Industrial Revolution moved workers from:","choices":["Cities to farms","Farms to factories","Factories to mines","Mines to offices"],"answer":"Farms to factories","explanation":"Industrialization shifted the economy from farming to manufacturing. People moved to cities to work in factories, changing American life dramatically."},
-  {"id":"hist_004","topic":"WWI","question":"Which event directly triggered World War I?","choices":["The bombing of Pearl Harbor","The assassination of Archduke Franz Ferdinand","The sinking of the Lusitania","The invasion of Poland"],"answer":"The assassination of Archduke Franz Ferdinand","explanation":"The assassination of Austria-Hungary's Archduke Franz Ferdinand in 1914 triggered a chain of alliances that pulled Europe into war."},
-  {"id":"hist_005","topic":"Great Depression","question":"What caused the stock market crash of 1929?","choices":["War spending","Overspeculation and buying on margin","High taxes","Too much government control"],"answer":"Overspeculation and buying on margin","explanation":"People borrowed money to buy stocks expecting prices to keep rising. When prices fell, they couldn't repay loans, causing banks to fail and the Depression to begin."},
-  {"id":"hist_006","topic":"Civil Rights","question":"The Civil Rights Act of 1964 prohibited:","choices":["Voting","Discrimination based on race","Immigration","Labor unions"],"answer":"Discrimination based on race","explanation":"The Civil Rights Act made it illegal to discriminate based on race, color, religion, sex, or national origin in employment and public places."},
-  {"id":"hist_007","topic":"Cold War","question":"The Cold War was mainly a conflict between:","choices":["US and Germany","US and China","US and USSR","US and Japan"],"answer":"US and USSR","explanation":"The Cold War (1947-1991) was a political and ideological struggle between the United States (democracy/capitalism) and the Soviet Union (communism)."},
-  {"id":"hist_008","topic":"Civil War","question":"The Emancipation Proclamation (1863) declared:","choices":["The end of the Civil War","All enslaved people in Confederate states to be free","Slavery illegal everywhere in the United States","The abolition of the slave trade"],"answer":"All enslaved people in Confederate states to be free","explanation":"Lincoln's Emancipation Proclamation declared enslaved people in rebel Confederate states free, shifting the war's purpose toward abolition. It did not apply to border states."},
-  {"id":"hist_009","topic":"Civil War","question":"The Battle of Gettysburg is significant because:","choices":["It was the first battle of the Civil War","It was the turning point; the Confederacy never recovered","It ended the Civil War","The North was defeated there"],"answer":"It was the turning point; the Confederacy never recovered","explanation":"Gettysburg (July 1-3, 1863) was the bloodiest battle of the Civil War and the furthest Confederate advance into the North. After this defeat, the Confederacy went on the defensive."},
-  {"id":"hist_010","topic":"Civil War","question":"Which amendment abolished slavery throughout the United States?","choices":["13th Amendment","14th Amendment","15th Amendment","10th Amendment"],"answer":"13th Amendment","explanation":"The 13th Amendment (1865) abolished slavery and involuntary servitude in the United States. The 14th granted citizenship to formerly enslaved people; the 15th gave Black men the right to vote."},
-  {"id":"hist_011","topic":"Constitution","question":"How many branches of government does the US Constitution establish?","choices":["Two","Three","Four","Five"],"answer":"Three","explanation":"The Constitution establishes three branches: the Legislative (Congress — makes laws), Executive (President — enforces laws), and Judicial (Supreme Court — interprets laws)."},
-  {"id":"hist_012","topic":"Constitution","question":"The system where each branch of government can limit the power of the others is called:","choices":["Federalism","Separation of powers","Checks and balances","Judicial review"],"answer":"Checks and balances","explanation":"Checks and balances prevent any one branch from becoming too powerful. For example, Congress can override a presidential veto, and the Supreme Court can strike down unconstitutional laws."},
-  {"id":"hist_013","topic":"Constitution","question":"The First Amendment protects freedom of:","choices":["Privacy","Speech, religion, press, assembly, and petition","Bearing arms","Equal protection"],"answer":"Speech, religion, press, assembly, and petition","explanation":"The First Amendment protects five fundamental freedoms: speech, religion, press, peaceful assembly, and the right to petition the government. These are central to American democracy."},
-  {"id":"hist_014","topic":"Constitution","question":"Which constitutional principle divides power between national and state governments?","choices":["Separation of powers","Judicial review","Federalism","Popular sovereignty"],"answer":"Federalism","explanation":"Federalism divides governmental power between the federal (national) government and state governments. Each level has certain powers; some are shared."},
-  {"id":"hist_015","topic":"Industrialization","question":"Which invention by Eli Whitney dramatically increased the demand for enslaved labor in the South?","choices":["Steam engine","Cotton gin","Telegraph","Railroad"],"answer":"Cotton gin","explanation":"The cotton gin (1793) quickly separated cotton fibers from seeds, making cotton processing far more efficient. This increased cotton production and paradoxically increased demand for enslaved labor to grow more cotton."},
-  {"id":"hist_016","topic":"Industrialization","question":"The Gilded Age (late 1800s) was characterized by:","choices":["Widespread equality","Rapid industrial growth and extreme wealth inequality","Agricultural dominance","Isolationist foreign policy only"],"answer":"Rapid industrial growth and extreme wealth inequality","explanation":"The Gilded Age saw massive industrial growth and the rise of powerful 'robber barons' like Rockefeller and Carnegie alongside widespread poverty among workers. Twain coined the term to mock its glittery surface hiding inequality."},
-  {"id":"hist_017","topic":"Industrialization","question":"What was the main purpose of labor unions in the late 1800s?","choices":["To support business owners","To improve wages and working conditions for workers","To oppose immigration","To expand the military"],"answer":"To improve wages and working conditions for workers","explanation":"Labor unions organized workers to collectively bargain for better wages, shorter hours, safer working conditions, and an end to child labor. Early unions faced violent opposition from employers and government."},
-  {"id":"hist_018","topic":"Industrialization","question":"The transcontinental railroad, completed in 1869, connected:","choices":["New York to Florida","California to Texas","The East Coast to California","Chicago to New Orleans"],"answer":"The East Coast to California","explanation":"The First Transcontinental Railroad connected the existing eastern railroad network to Sacramento, California, dramatically cutting cross-country travel from months to days and accelerating westward expansion."},
-  {"id":"hist_019","topic":"WWI","question":"The US entered World War I in 1917 primarily because of:","choices":["The assassination of Franz Ferdinand","German submarine warfare and the Zimmermann Telegram","The invasion of Poland","The fall of France"],"answer":"German submarine warfare and the Zimmermann Telegram","explanation":"Germany's unrestricted submarine warfare (sinking American ships) and the Zimmermann Telegram (asking Mexico to attack the U.S.) convinced Congress to declare war on Germany in April 1917."},
-  {"id":"hist_020","topic":"WWI","question":"President Wilson's Fourteen Points proposed:","choices":["Harsh punishment for Germany","A League of Nations and self-determination of peoples","US annexation of German colonies","Military alliances with European powers"],"answer":"A League of Nations and self-determination of peoples","explanation":"Wilson's 1918 Fourteen Points outlined a peace plan based on self-determination of nations and the creation of a League of Nations. The Senate rejected U.S. membership in the League."},
-  {"id":"hist_021","topic":"Great Depression","question":"President Roosevelt's New Deal programs were designed to:","choices":["Reduce government's role in the economy","Provide relief, recovery, and reform during the Depression","Prepare for World War II","Expand military spending"],"answer":"Provide relief, recovery, and reform during the Depression","explanation":"FDR's New Deal created jobs (CCC, WPA), regulated banking (FDIC), and provided social insurance (Social Security), expanding the federal government's role in citizens' welfare."},
-  {"id":"hist_022","topic":"Great Depression","question":"The Dust Bowl of the 1930s was caused by:","choices":["Industrial pollution","Drought and poor farming practices that destroyed topsoil","A government farming policy","A volcanic eruption"],"answer":"Drought and poor farming practices that destroyed topsoil","explanation":"Years of drought combined with over-plowing that removed prairie grasses turned the Great Plains into a 'Dust Bowl.' Massive dust storms destroyed farms and forced hundreds of thousands to migrate west."},
-  {"id":"hist_023","topic":"Civil Rights","question":"Which Supreme Court case overturned the 'separate but equal' doctrine?","choices":["Plessy v. Ferguson","Marbury v. Madison","Brown v. Board of Education","Roe v. Wade"],"answer":"Brown v. Board of Education","explanation":"In 1954, the Supreme Court unanimously ruled in Brown v. Board of Education that racial segregation in public schools was unconstitutional, overturning Plessy v. Ferguson (1896)."},
-  {"id":"hist_024","topic":"Civil Rights","question":"The Montgomery Bus Boycott began in 1955 when Rosa Parks:","choices":["Started a march to Washington","Refused to give up her bus seat to a white man","Organized a sit-in at a lunch counter","Led a voter registration drive"],"answer":"Refused to give up her bus seat to a white man","explanation":"Rosa Parks' arrest for refusing to give up her seat sparked a 381-day boycott of Montgomery's buses, led by Dr. Martin Luther King Jr. It ended with the Supreme Court ruling bus segregation unconstitutional."},
-  {"id":"hist_025","topic":"Civil Rights","question":"Martin Luther King Jr.'s strategy was based on:","choices":["Armed resistance","Economic boycotts and violence","Nonviolent direct action and civil disobedience","Legal challenges only"],"answer":"Nonviolent direct action and civil disobedience","explanation":"King's philosophy of nonviolent direct action (inspired by Gandhi) involved peaceful protests, marches, sit-ins, and boycotts to expose the injustice of segregation and win public sympathy."},
-  {"id":"hist_026","topic":"Cold War","question":"The Truman Doctrine (1947) pledged U.S. support to:","choices":["Communist nations","Nations threatened by communist takeover","U.S. allies in Western Europe only","The United Nations"],"answer":"Nations threatened by communist takeover","explanation":"The Truman Doctrine stated the U.S. would support free peoples resisting communist subjugation, specifically providing aid to Greece and Turkey. It became the foundation of Cold War containment policy."},
-  {"id":"hist_027","topic":"Cold War","question":"The Vietnam War ended with:","choices":["U.S. victory","A peaceful negotiated settlement","The fall of Saigon and communist reunification of Vietnam","A permanent division of Vietnam"],"answer":"The fall of Saigon and communist reunification of Vietnam","explanation":"After U.S. withdrawal in 1973, North Vietnam defeated South Vietnam in 1975. Saigon fell on April 30, 1975, and Vietnam was reunified under communist rule."},
-  {"id":"hist_028","topic":"Civil War","question":"What role did Harriet Tubman play before and during the Civil War?","choices":["She was a Confederate spy","She led the Underground Railroad and later served as a Union spy","She was a nurse only","She wrote abolitionist literature"],"answer":"She led the Underground Railroad and later served as a Union spy","explanation":"Harriet Tubman escaped slavery and then made approximately 13 missions to rescue over 70 enslaved people via the Underground Railroad. During the Civil War she served as a spy and scout for the Union Army."},
-  {"id":"hist_029","topic":"Industrialization","question":"The Sherman Antitrust Act (1890) was passed to:","choices":["Encourage monopolies","Break up trusts and promote business competition","Protect workers' rights","Regulate immigration"],"answer":"Break up trusts and promote business competition","explanation":"The Sherman Antitrust Act was the first federal law to limit the power of monopolies (trusts). It aimed to preserve competition and prevent companies like Standard Oil from controlling entire industries."},
-  {"id":"hist_030","topic":"WWI","question":"The 'home front' during WWI included all of the following EXCEPT:","choices":["Women working in factories","War bond drives","Rationing of food and materials","Increasing immigration from Europe"],"answer":"Increasing immigration from Europe","explanation":"WWI actually decreased European immigration to the U.S. The home front was characterized by industrial mobilization, women entering the workforce, bond drives, and rationing to support the war effort."},
-  {"id":"hist_031","topic":"Great Depression","question":"Which bank policy did the New Deal create to protect depositors' savings?","choices":["The Federal Reserve","FDIC (Federal Deposit Insurance Corporation)","The World Bank","Social Security"],"answer":"FDIC (Federal Deposit Insurance Corporation)","explanation":"The FDIC (1933) insures bank deposits so if a bank fails, depositors don't lose their savings. Before the FDIC, bank failures during the Depression wiped out millions of Americans' savings."},
-  {"id":"hist_032","topic":"Civil Rights","question":"The Voting Rights Act of 1965 specifically:","choices":["Gave women the right to vote","Outlawed poll taxes and literacy tests used to suppress Black voting","Lowered the voting age to 18","Required voter registration 30 days in advance"],"answer":"Outlawed poll taxes and literacy tests used to suppress Black voting","explanation":"The Voting Rights Act banned discriminatory voting practices like literacy tests and poll taxes that had been used to disenfranchise Black voters in the South for decades."},
-  {"id":"hist_033","topic":"Cold War","question":"The Space Race between the U.S. and USSR was sparked by:","choices":["The moon landing","The launch of Sputnik by the USSR in 1957","The building of the Berlin Wall","The Cuban Missile Crisis"],"answer":"The launch of Sputnik by the USSR in 1957","explanation":"The Soviet Union launched Sputnik, the first artificial satellite, in October 1957. This shocked Americans and launched the Space Race, leading to NASA's formation and ultimately the Apollo moon landing."},
-  {"id":"hist_034","topic":"Constitution","question":"The process by which the Constitution can be changed is called:","choices":["Judicial review","Referendum","Amendment","Veto"],"answer":"Amendment","explanation":"The Constitution can be changed through the amendment process: two-thirds of Congress proposes, and three-fourths of states must ratify. There are currently 27 amendments."},
-  {"id":"hist_035","topic":"Civil War","question":"Reconstruction (1865-1877) aimed to:","choices":["Punish the South permanently","Restore the Southern states to the Union and address the rights of freedmen","Expand slavery to new territories","Build railroads in the North"],"answer":"Restore the Southern states to the Union and address the rights of freedmen","explanation":"Reconstruction sought to rebuild the South, integrate formerly enslaved people into society as citizens, and restore the Union. It ended prematurely with the Compromise of 1877."},
-  {"id":"hist_036","topic":"Industrialization","question":"Muckrakers in the Progressive Era were journalists who:","choices":["Promoted business interests","Exposed corruption and social problems to push for reform","Wrote government propaganda","Celebrated industrial progress"],"answer":"Exposed corruption and social problems to push for reform","explanation":"Muckrakers like Upton Sinclair (The Jungle), Ida Tarbell, and Jacob Riis used investigative journalism to expose corporate abuses, government corruption, and poor living conditions, sparking Progressive Era reforms."},
-  {"id":"hist_037","topic":"WWI","question":"The 19th Amendment (1920), partially resulting from women's WWI contributions, granted:","choices":["Women the right to work","Women the right to vote","Equal pay for equal work","Women access to education"],"answer":"Women the right to vote","explanation":"Women's significant contributions to the WWI effort (working in factories, nursing) strengthened suffragist arguments. The 19th Amendment gave women the right to vote in 1920."},
-  {"id":"hist_038","topic":"Great Depression","question":"The Social Security Act (1935) primarily provided:","choices":["Free healthcare","Unemployment and retirement benefits","Welfare for all citizens","Job guarantees"],"answer":"Unemployment and retirement benefits","explanation":"The Social Security Act created a federal pension system for retired workers and unemployment insurance. It was one of the most significant New Deal programs and still exists today."},
-  {"id":"hist_039","topic":"Civil Rights","question":"The 'Letter from Birmingham Jail' (1963) was written by Martin Luther King Jr. to:","choices":["President Kennedy","White moderate clergy who criticized the protests","George Wallace","The Supreme Court"],"answer":"White moderate clergy who criticized the protests","explanation":"King wrote the letter responding to white moderate clergy who called the civil rights protests 'unwise and untimely.' He defended nonviolent direct action and the urgency of the fight for equality."},
-  {"id":"hist_040","topic":"Cold War","question":"The policy of Mutually Assured Destruction (MAD) during the Cold War meant:","choices":["Both sides would win a nuclear war","A nuclear attack by either side would result in the total destruction of both","Only one side had enough nuclear weapons","The U.S. had superior weapons"],"answer":"A nuclear attack by either side would result in the total destruction of both","explanation":"MAD held that since both superpowers had enough nuclear weapons to destroy each other, neither would launch a first strike. This grim logic helped prevent direct nuclear conflict during the Cold War."},
-  {"id":"hist_041","topic":"Constitution","question":"What is the primary purpose of the Supreme Court in the U.S. system?","choices":["To make new laws","To enforce laws","To interpret whether laws are constitutional","To advise the President"],"answer":"To interpret whether laws are constitutional","explanation":"The Supreme Court's power of judicial review (established in Marbury v. Madison, 1803) allows it to strike down laws that violate the Constitution. This is its most important power."},
-  {"id":"hist_042","topic":"Industrialization","question":"Immigration to the U.S. between 1880-1920 was primarily from:","choices":["East Asia and Latin America","Southern and Eastern Europe","Western Europe as in earlier periods","Africa and the Middle East"],"answer":"Southern and Eastern Europe","explanation":"The 'new immigration' of 1880-1920 brought millions from Italy, Poland, Russia, Austria-Hungary, and other Southern/Eastern European countries. They settled in urban industrial areas and faced significant discrimination."},
-  {"id":"hist_043","topic":"Civil Rights","question":"The Harlem Renaissance of the 1920s was:","choices":["A political movement for voting rights","A cultural flowering of African American art, music, and literature in New York","A religious revival","An economic development program"],"answer":"A cultural flowering of African American art, music, and literature in New York","explanation":"The Harlem Renaissance produced landmark works by Langston Hughes, Zora Neale Hurston, Duke Ellington, and others. It celebrated Black culture and challenged racial stereotypes."},
-  {"id":"hist_044","topic":"Civil War","question":"The Missouri Compromise, Kansas-Nebraska Act, and Compromise of 1850 all dealt with:","choices":["Taxation of Southern goods","Whether new western territories would be free or slave states","The rights of Native Americans","Immigration policy"],"answer":"Whether new western territories would be free or slave states","explanation":"All three compromises attempted to balance free and slave states as the U.S. expanded westward. The repeated need for compromise showed the impossibility of permanently avoiding the slavery question."},
-  {"id":"hist_045","topic":"WWI","question":"What was the significance of the Lusitania's sinking for American public opinion?","choices":["It immediately brought the U.S. into the war","It had no effect on public opinion","It increased anti-German sentiment and support for eventual U.S. involvement","It caused the U.S. to declare war on Britain"],"answer":"It increased anti-German sentiment and support for eventual U.S. involvement","explanation":"The sinking of the British ocean liner Lusitania (May 1915), killing 1,198 people including 128 Americans, outraged American public opinion and increased support for joining the war against Germany."},
-  {"id":"hist_046","topic":"Great Depression","question":"Hoovervilles during the Great Depression were:","choices":["Government-built housing","Shantytown camps of homeless people named mockingly after President Hoover","Herbert Hoover's public works projects","Soup kitchen lines"],"answer":"Shantytown camps of homeless people named mockingly after President Hoover","explanation":"Hoovervilles were shantytowns built by homeless people from scrap materials. They were named mockingly after President Hoover, who was blamed for the Depression's severity and his inadequate response."},
-  {"id":"hist_047","topic":"Cold War","question":"The fall of the Berlin Wall in 1989 symbolized:","choices":["The start of the Cold War","The end of communist rule in Eastern Europe","Germany declaring war","NATO expanding into the East"],"answer":"The end of communist rule in Eastern Europe","explanation":"The fall of the Berlin Wall on November 9, 1989 symbolized the collapse of communist regimes across Eastern Europe. Germany reunified in 1990, and the Soviet Union dissolved in 1991, ending the Cold War."},
-  {"id":"hist_048","topic":"Constitution","question":"Marbury v. Madison (1803) established the principle of:","choices":["States' rights","Separation of church and state","Judicial review","Executive privilege"],"answer":"Judicial review","explanation":"Chief Justice John Marshall established judicial review in Marbury v. Madison, giving the Supreme Court the power to declare laws unconstitutional. This power is not explicitly in the Constitution but has been fundamental ever since."},
-  {"id":"hist_049","topic":"Industrialization","question":"The Pure Food and Drug Act (1906) was passed largely due to:","choices":["Business lobbying","Upton Sinclair's 'The Jungle' exposing the meatpacking industry","A disease outbreak","A request from farmers"],"answer":"Upton Sinclair's 'The Jungle' exposing the meatpacking industry","explanation":"Sinclair's novel exposed horrifying unsanitary conditions in Chicago meatpacking plants. Public outrage led directly to the Pure Food and Drug Act (1906) and the Meat Inspection Act, founding today's FDA."},
-  {"id":"hist_050","topic":"Civil Rights","question":"What was the purpose of the March on Washington (August 28, 1963)?","choices":["To protest the Vietnam War","To demand civil rights legislation and jobs for Black Americans","To celebrate the Civil Rights Act","To call for desegregation of the military"],"answer":"To demand civil rights legislation and jobs for Black Americans","explanation":"Over 250,000 people gathered at the Lincoln Memorial to demand civil rights and economic justice. It was there that King delivered his 'I Have a Dream' speech, helping build public support for the Civil Rights Act of 1964."},
-  {"id":"hist_051","topic":"Constitution","question":"Which constitutional amendment gave women the right to vote?","choices":["13th Amendment","15th Amendment","17th Amendment","19th Amendment"],"answer":"19th Amendment","explanation":"The 19th Amendment (1920) prohibited denying the right to vote based on sex, giving women the right to vote nationwide after decades of suffragist activism."},
-  {"id":"hist_052","topic":"Constitution","question":"The 14th Amendment (1868) was significant because it:","choices":["Abolished slavery","Gave women the right to vote","Granted citizenship to formerly enslaved people and guaranteed equal protection","Gave African Americans the right to vote"],"answer":"Granted citizenship to formerly enslaved people and guaranteed equal protection","explanation":"The 14th Amendment defined citizenship (overturning Dred Scott), required equal protection and due process for all citizens, and became the constitutional basis for most civil rights cases."},
-  {"id":"hist_053","topic":"Constitution","question":"The Bill of Rights was added to the Constitution primarily because:","choices":["The original Constitution was too long","Anti-Federalists demanded protection of individual rights before ratifying","The states needed more power","The president needed more authority"],"answer":"Anti-Federalists demanded protection of individual rights before ratifying","explanation":"Anti-Federalists feared a strong central government would threaten individual liberties. The Bill of Rights (first 10 amendments) was added in 1791 as a compromise to gain ratification."},
-  {"id":"hist_054","topic":"Reconstruction","question":"The 'Black Codes' enacted by Southern states after the Civil War were designed to:","choices":["Provide education and land to freed people","Restrict the freedom and rights of formerly enslaved people","Encourage Northern investment in the South","Punish Confederate leaders"],"answer":"Restrict the freedom and rights of formerly enslaved people","explanation":"Black Codes restricted where freed people could work and live, forced them into labor contracts, and limited their legal rights — essentially re-creating conditions close to slavery."},
-  {"id":"hist_055","topic":"Reconstruction","question":"Sharecropping in the post-Civil War South trapped many Black farmers because:","choices":["They owned the land","Interest rates were fixed by law","They were always in debt to the landowner for supplies","The government controlled wages"],"answer":"They were always in debt to the landowner for supplies","explanation":"Sharecroppers rented land and borrowed seed and tools from the landowner. High interest and low crop prices kept them perpetually in debt — a form of economic bondage replacing slavery."},
-  {"id":"hist_056","topic":"Progressive Era","question":"The goal of the Progressive Era (1890s-1920s) was primarily to:","choices":["Return to an agricultural economy","Reform government and business to address the problems of industrialization","Expand U.S. territories abroad","Isolate the United States from world affairs"],"answer":"Reform government and business to address the problems of industrialization","explanation":"Progressives sought to regulate big business, end political corruption, improve workers' rights, and use government to protect the public welfare in response to the Gilded Age's inequality."},
-  {"id":"hist_057","topic":"Progressive Era","question":"President Theodore Roosevelt's 'Square Deal' targeted all of the following EXCEPT:","choices":["Conservation of natural resources","Regulation of big business","Expansion of military power","Consumer protection"],"answer":"Expansion of military power","explanation":"Roosevelt's Square Deal addressed the three C's: Control of corporations, Consumer protection, and Conservation of natural resources. Military expansion was not a domestic Progressive priority."},
-  {"id":"hist_058","topic":"WWI","question":"The U.S. policy of selling weapons and supplies to Allied nations before entering WWI was controversial because:","choices":["It was illegal under the Constitution","Critics said it would draw the U.S. into war and violated neutrality","It bankrupted the government","The Allies didn't need the supplies"],"answer":"Critics said it would draw the U.S. into war and violated neutrality","explanation":"Selling arms to Britain and France while Germany used submarines to cut supply lines put the U.S. on a collision course with Germany, eventually drawing America into the war."},
-  {"id":"hist_059","topic":"WWII","question":"The GI Bill (Servicemen's Readjustment Act of 1944) provided WWII veterans with:","choices":["Reparations for wartime losses","Free college education, home loans, and job training","Guaranteed government jobs","A monthly pension for life"],"answer":"Free college education, home loans, and job training","explanation":"The GI Bill enabled millions of veterans to attend college, buy homes, and start businesses. It dramatically expanded the middle class and shaped postwar America."},
-  {"id":"hist_060","topic":"WWII","question":"Japanese American internment during WWII was justified by the government as:","choices":["Legal punishment for Japanese ancestry","Military necessity to protect against potential espionage","An economic program","A relocation program to better jobs"],"answer":"Military necessity to protect against potential espionage","explanation":"Executive Order 9066 (1942) ordered the forced relocation of Japanese Americans into internment camps under the guise of military necessity. No Japanese American was ever convicted of espionage. Korematsu v. U.S. later upheld (though the ruling has since been repudiated) the policy."},
-  {"id":"hist_061","topic":"Cold War","question":"The domino theory, used to justify U.S. involvement in Vietnam, argued that:","choices":["Communist nations would eventually democratize","If one country fell to communism, neighboring countries would too","Military force always stops communism","Nuclear weapons could win any war"],"answer":"If one country fell to communism, neighboring countries would too","explanation":"The domino theory held that communism's spread was like falling dominoes — if one nation fell, its neighbors would follow. This logic justified U.S. military intervention in Southeast Asia."},
-  {"id":"hist_062","topic":"Cold War","question":"The policy of détente under President Nixon aimed to:","choices":["Increase military spending","Ease tensions with the Soviet Union and China through diplomacy","Contain communism through force","Break up the Soviet Union"],"answer":"Ease tensions with the Soviet Union and China through diplomacy","explanation":"Nixon's détente reduced Cold War tensions through diplomatic engagement, signing the SALT I arms treaty with the USSR and reopening relations with China. It was a shift from confrontation to negotiation."},
-  {"id":"hist_063","topic":"Immigration","question":"The Chinese Exclusion Act (1882) was significant because it:","choices":["Encouraged Chinese immigration","Was the first major law restricting immigration based on nationality and race","Ended all immigration to the U.S.","Gave Chinese immigrants citizenship rights"],"answer":"Was the first major law restricting immigration based on nationality and race","explanation":"The Chinese Exclusion Act banned Chinese laborers from entering the U.S. and barred Chinese immigrants from citizenship. It was the first major federal restriction on immigration by ethnicity."},
-  {"id":"hist_064","topic":"Immigration","question":"The 'melting pot' metaphor describes America as a place where:","choices":["Cultures remain separate and distinct","Immigrants give up all their culture immediately","Diverse cultures blend together to form a new American culture","Only European cultures are welcome"],"answer":"Diverse cultures blend together to form a new American culture","explanation":"The melting pot metaphor suggests immigrants' cultures fuse together to create a new, unified American identity. Critics prefer the 'salad bowl' metaphor, which celebrates cultural diversity without assimilation."},
-  {"id":"hist_065","topic":"Civil War","question":"The concept of 'popular sovereignty,' as applied to territories, meant:","choices":["Congress would decide slavery in each territory","The President would decide","Settlers in a territory would vote on whether to allow slavery","The Supreme Court would decide"],"answer":"Settlers in a territory would vote on whether to allow slavery","explanation":"Popular sovereignty proposed letting territorial settlers vote on slavery. It was championed by Stephen Douglas and implemented in the Kansas-Nebraska Act (1854), leading to violent conflict known as 'Bleeding Kansas.'"},
-  {"id":"hist_066","topic":"Industrialization","question":"Andrew Carnegie's practice of controlling all stages of his steel business — from raw materials to retail — is an example of:","choices":["Horizontal integration","Vertical integration","Trust-busting","Socialism"],"answer":"Vertical integration","explanation":"Vertical integration controls every step of production: Carnegie owned mines, railroads, and mills. Horizontal integration controls competitors in the same industry (like Rockefeller's Standard Oil)."},
-  {"id":"hist_067","topic":"Great Depression","question":"The New Deal's Tennessee Valley Authority (TVA) was primarily created to:","choices":["Regulate Wall Street","Provide electricity and flood control in the rural South","Build highways across the country","Regulate the agricultural market"],"answer":"Provide electricity and flood control in the rural South","explanation":"The TVA built dams that controlled flooding, generated hydroelectric power, and brought electricity to rural Appalachian communities that private companies had ignored."},
-  {"id":"hist_068","topic":"Civil Rights","question":"Freedom Riders in 1961 tested whether:","choices":["Schools were desegregated","The Supreme Court rulings desegregating interstate bus terminals were being enforced","Restaurants were open to Black customers","Voting rights were protected in the South"],"answer":"The Supreme Court rulings desegregating interstate bus terminals were being enforced","explanation":"Freedom Riders — Black and white activists — rode interstate buses into the Deep South to test Supreme Court rulings banning segregation in interstate travel facilities. They faced violent mob attacks."},
-  {"id":"hist_069","topic":"WWI","question":"The Red Scare of 1919-1920 was caused by:","choices":["Fear of Native American uprising","Fear of communist revolution spreading to the U.S. after the Bolshevik Revolution in Russia","Germany's refusal to pay reparations","The stock market crash"],"answer":"Fear of communist revolution spreading to the U.S. after the Bolshevik Revolution in Russia","explanation":"The Bolshevik Revolution in Russia (1917) and labor strikes in the U.S. created widespread fear of communist infiltration. This led to deportations of suspected radicals and suppression of civil liberties."},
-  {"id":"hist_070","topic":"Constitution","question":"Judicial review, the power of courts to declare laws unconstitutional, was established by which Supreme Court case?","choices":["Brown v. Board of Education","McCulloch v. Maryland","Plessy v. Ferguson","Marbury v. Madison"],"answer":"Marbury v. Madison","explanation":"Chief Justice John Marshall's 1803 decision in Marbury v. Madison established judicial review — the Supreme Court's power to declare acts of Congress unconstitutional. This power is not explicitly in the Constitution."}
+  {
+    "id": "hist_001",
+    "topic": "Civil War",
+    "question": "What was the main cause of the Civil War?",
+    "choices": [
+      "Taxation",
+      "Slavery",
+      "Immigration",
+      "Trade"
+    ],
+    "answer": "Slavery",
+    "explanation": "While multiple issues existed, slavery was the central conflict. Southern states wanted to preserve slavery, especially as new western territories were added to the US."
+  },
+  {
+    "id": "hist_002",
+    "topic": "Constitution",
+    "question": "The Bill of Rights protects citizens from:",
+    "choices": [
+      "Foreign invasion",
+      "Government overreach",
+      "Economic hardship",
+      "Natural disasters"
+    ],
+    "answer": "Government overreach",
+    "explanation": "The Bill of Rights (first 10 amendments) limits government power and protects individual freedoms like speech, religion, and assembly."
+  },
+  {
+    "id": "hist_003",
+    "topic": "Industrialization",
+    "question": "The Industrial Revolution moved workers from:",
+    "choices": [
+      "Cities to farms",
+      "Farms to factories",
+      "Factories to mines",
+      "Mines to offices"
+    ],
+    "answer": "Farms to factories",
+    "explanation": "Industrialization shifted the economy from farming to manufacturing. People moved to cities to work in factories, changing American life dramatically."
+  },
+  {
+    "id": "hist_004",
+    "topic": "WWI",
+    "question": "Which event directly triggered World War I?",
+    "choices": [
+      "The bombing of Pearl Harbor",
+      "The assassination of Archduke Franz Ferdinand",
+      "The sinking of the Lusitania",
+      "The invasion of Poland"
+    ],
+    "answer": "The assassination of Archduke Franz Ferdinand",
+    "explanation": "The assassination of Austria-Hungary's Archduke Franz Ferdinand in 1914 triggered a chain of alliances that pulled Europe into war."
+  },
+  {
+    "id": "hist_005",
+    "topic": "Great Depression",
+    "question": "What caused the stock market crash of 1929?",
+    "choices": [
+      "War spending",
+      "Overspeculation and buying on margin",
+      "High taxes",
+      "Too much government control"
+    ],
+    "answer": "Overspeculation and buying on margin",
+    "explanation": "People borrowed money to buy stocks expecting prices to keep rising. When prices fell, they couldn't repay loans, causing banks to fail and the Depression to begin."
+  },
+  {
+    "id": "hist_006",
+    "topic": "Civil Rights",
+    "question": "The Civil Rights Act of 1964 prohibited:",
+    "choices": [
+      "Voting",
+      "Discrimination based on race",
+      "Immigration",
+      "Labor unions"
+    ],
+    "answer": "Discrimination based on race",
+    "explanation": "The Civil Rights Act made it illegal to discriminate based on race, color, religion, sex, or national origin in employment and public places."
+  },
+  {
+    "id": "hist_007",
+    "topic": "Cold War",
+    "question": "The Cold War was mainly a conflict between:",
+    "choices": [
+      "US and Germany",
+      "US and China",
+      "US and USSR",
+      "US and Japan"
+    ],
+    "answer": "US and USSR",
+    "explanation": "The Cold War (1947-1991) was a political and ideological struggle between the United States (democracy/capitalism) and the Soviet Union (communism)."
+  },
+  {
+    "id": "hist_008",
+    "topic": "Civil War",
+    "question": "The Emancipation Proclamation (1863) declared:",
+    "choices": [
+      "The end of the Civil War",
+      "All enslaved people in Confederate states to be free",
+      "Slavery illegal everywhere in the United States",
+      "The abolition of the slave trade"
+    ],
+    "answer": "All enslaved people in Confederate states to be free",
+    "explanation": "Lincoln's Emancipation Proclamation declared enslaved people in rebel Confederate states free, shifting the war's purpose toward abolition. It did not apply to border states."
+  },
+  {
+    "id": "hist_009",
+    "topic": "Civil War",
+    "question": "The Battle of Gettysburg is significant because:",
+    "choices": [
+      "It was the first battle of the Civil War",
+      "It was the turning point; the Confederacy never recovered",
+      "It ended the Civil War",
+      "The North was defeated there"
+    ],
+    "answer": "It was the turning point; the Confederacy never recovered",
+    "explanation": "Gettysburg (July 1-3, 1863) was the bloodiest battle of the Civil War and the furthest Confederate advance into the North. After this defeat, the Confederacy went on the defensive."
+  },
+  {
+    "id": "hist_010",
+    "topic": "Civil War",
+    "question": "Which amendment abolished slavery throughout the United States?",
+    "choices": [
+      "13th Amendment",
+      "14th Amendment",
+      "15th Amendment",
+      "10th Amendment"
+    ],
+    "answer": "13th Amendment",
+    "explanation": "The 13th Amendment (1865) abolished slavery and involuntary servitude in the United States. The 14th granted citizenship to formerly enslaved people; the 15th gave Black men the right to vote."
+  },
+  {
+    "id": "hist_011",
+    "topic": "Constitution",
+    "question": "How many branches of government does the US Constitution establish?",
+    "choices": [
+      "Two",
+      "Three",
+      "Four",
+      "Five"
+    ],
+    "answer": "Three",
+    "explanation": "The Constitution establishes three branches: the Legislative (Congress \u2014 makes laws), Executive (President \u2014 enforces laws), and Judicial (Supreme Court \u2014 interprets laws)."
+  },
+  {
+    "id": "hist_012",
+    "topic": "Constitution",
+    "question": "The system where each branch of government can limit the power of the others is called:",
+    "choices": [
+      "Federalism",
+      "Separation of powers",
+      "Checks and balances",
+      "Judicial review"
+    ],
+    "answer": "Checks and balances",
+    "explanation": "Checks and balances prevent any one branch from becoming too powerful. For example, Congress can override a presidential veto, and the Supreme Court can strike down unconstitutional laws."
+  },
+  {
+    "id": "hist_013",
+    "topic": "Constitution",
+    "question": "The First Amendment protects freedom of:",
+    "choices": [
+      "Privacy",
+      "Speech, religion, press, assembly, and petition",
+      "Bearing arms",
+      "Equal protection"
+    ],
+    "answer": "Speech, religion, press, assembly, and petition",
+    "explanation": "The First Amendment protects five fundamental freedoms: speech, religion, press, peaceful assembly, and the right to petition the government. These are central to American democracy."
+  },
+  {
+    "id": "hist_014",
+    "topic": "Constitution",
+    "question": "Which constitutional principle divides power between national and state governments?",
+    "choices": [
+      "Separation of powers",
+      "Judicial review",
+      "Federalism",
+      "Popular sovereignty"
+    ],
+    "answer": "Federalism",
+    "explanation": "Federalism divides governmental power between the federal (national) government and state governments. Each level has certain powers; some are shared."
+  },
+  {
+    "id": "hist_015",
+    "topic": "Industrialization",
+    "question": "Which invention by Eli Whitney dramatically increased the demand for enslaved labor in the South?",
+    "choices": [
+      "Steam engine",
+      "Cotton gin",
+      "Telegraph",
+      "Railroad"
+    ],
+    "answer": "Cotton gin",
+    "explanation": "The cotton gin (1793) quickly separated cotton fibers from seeds, making cotton processing far more efficient. This increased cotton production and paradoxically increased demand for enslaved labor to grow more cotton."
+  },
+  {
+    "id": "hist_016",
+    "topic": "Industrialization",
+    "question": "The Gilded Age (late 1800s) was characterized by:",
+    "choices": [
+      "Widespread equality",
+      "Rapid industrial growth and extreme wealth inequality",
+      "Agricultural dominance",
+      "Isolationist foreign policy only"
+    ],
+    "answer": "Rapid industrial growth and extreme wealth inequality",
+    "explanation": "The Gilded Age saw massive industrial growth and the rise of powerful 'robber barons' like Rockefeller and Carnegie alongside widespread poverty among workers. Twain coined the term to mock its glittery surface hiding inequality."
+  },
+  {
+    "id": "hist_017",
+    "topic": "Industrialization",
+    "question": "What was the main purpose of labor unions in the late 1800s?",
+    "choices": [
+      "To support business owners",
+      "To improve wages and working conditions for workers",
+      "To oppose immigration",
+      "To expand the military"
+    ],
+    "answer": "To improve wages and working conditions for workers",
+    "explanation": "Labor unions organized workers to collectively bargain for better wages, shorter hours, safer working conditions, and an end to child labor. Early unions faced violent opposition from employers and government."
+  },
+  {
+    "id": "hist_018",
+    "topic": "Industrialization",
+    "question": "The transcontinental railroad, completed in 1869, connected:",
+    "choices": [
+      "New York to Florida",
+      "California to Texas",
+      "The East Coast to California",
+      "Chicago to New Orleans"
+    ],
+    "answer": "The East Coast to California",
+    "explanation": "The First Transcontinental Railroad connected the existing eastern railroad network to Sacramento, California, dramatically cutting cross-country travel from months to days and accelerating westward expansion."
+  },
+  {
+    "id": "hist_019",
+    "topic": "WWI",
+    "question": "The US entered World War I in 1917 primarily because of:",
+    "choices": [
+      "The assassination of Franz Ferdinand",
+      "German submarine warfare and the Zimmermann Telegram",
+      "The invasion of Poland",
+      "The fall of France"
+    ],
+    "answer": "German submarine warfare and the Zimmermann Telegram",
+    "explanation": "Germany's unrestricted submarine warfare (sinking American ships) and the Zimmermann Telegram (asking Mexico to attack the U.S.) convinced Congress to declare war on Germany in April 1917."
+  },
+  {
+    "id": "hist_020",
+    "topic": "WWI",
+    "question": "President Wilson's Fourteen Points proposed:",
+    "choices": [
+      "Harsh punishment for Germany",
+      "A League of Nations and self-determination of peoples",
+      "US annexation of German colonies",
+      "Military alliances with European powers"
+    ],
+    "answer": "A League of Nations and self-determination of peoples",
+    "explanation": "Wilson's 1918 Fourteen Points outlined a peace plan based on self-determination of nations and the creation of a League of Nations. The Senate rejected U.S. membership in the League."
+  },
+  {
+    "id": "hist_021",
+    "topic": "Great Depression",
+    "question": "President Roosevelt's New Deal programs were designed to:",
+    "choices": [
+      "Reduce government's role in the economy",
+      "Provide relief, recovery, and reform during the Depression",
+      "Prepare for World War II",
+      "Expand military spending"
+    ],
+    "answer": "Provide relief, recovery, and reform during the Depression",
+    "explanation": "FDR's New Deal created jobs (CCC, WPA), regulated banking (FDIC), and provided social insurance (Social Security), expanding the federal government's role in citizens' welfare."
+  },
+  {
+    "id": "hist_022",
+    "topic": "Great Depression",
+    "question": "The Dust Bowl of the 1930s was caused by:",
+    "choices": [
+      "Industrial pollution",
+      "Drought and poor farming practices that destroyed topsoil",
+      "A government farming policy",
+      "A volcanic eruption"
+    ],
+    "answer": "Drought and poor farming practices that destroyed topsoil",
+    "explanation": "Years of drought combined with over-plowing that removed prairie grasses turned the Great Plains into a 'Dust Bowl.' Massive dust storms destroyed farms and forced hundreds of thousands to migrate west."
+  },
+  {
+    "id": "hist_023",
+    "topic": "Civil Rights",
+    "question": "Which Supreme Court case overturned the 'separate but equal' doctrine?",
+    "choices": [
+      "Plessy v. Ferguson",
+      "Marbury v. Madison",
+      "Brown v. Board of Education",
+      "Roe v. Wade"
+    ],
+    "answer": "Brown v. Board of Education",
+    "explanation": "In 1954, the Supreme Court unanimously ruled in Brown v. Board of Education that racial segregation in public schools was unconstitutional, overturning Plessy v. Ferguson (1896)."
+  },
+  {
+    "id": "hist_024",
+    "topic": "Civil Rights",
+    "question": "The Montgomery Bus Boycott began in 1955 when Rosa Parks:",
+    "choices": [
+      "Started a march to Washington",
+      "Refused to give up her bus seat to a white man",
+      "Organized a sit-in at a lunch counter",
+      "Led a voter registration drive"
+    ],
+    "answer": "Refused to give up her bus seat to a white man",
+    "explanation": "Rosa Parks' arrest for refusing to give up her seat sparked a 381-day boycott of Montgomery's buses, led by Dr. Martin Luther King Jr. It ended with the Supreme Court ruling bus segregation unconstitutional."
+  },
+  {
+    "id": "hist_025",
+    "topic": "Civil Rights",
+    "question": "Martin Luther King Jr.'s strategy was based on:",
+    "choices": [
+      "Armed resistance",
+      "Economic boycotts and violence",
+      "Nonviolent direct action and civil disobedience",
+      "Legal challenges only"
+    ],
+    "answer": "Nonviolent direct action and civil disobedience",
+    "explanation": "King's philosophy of nonviolent direct action (inspired by Gandhi) involved peaceful protests, marches, sit-ins, and boycotts to expose the injustice of segregation and win public sympathy."
+  },
+  {
+    "id": "hist_026",
+    "topic": "Cold War",
+    "question": "The Truman Doctrine (1947) pledged U.S. support to:",
+    "choices": [
+      "Communist nations",
+      "Nations threatened by communist takeover",
+      "U.S. allies in Western Europe only",
+      "The United Nations"
+    ],
+    "answer": "Nations threatened by communist takeover",
+    "explanation": "The Truman Doctrine stated the U.S. would support free peoples resisting communist subjugation, specifically providing aid to Greece and Turkey. It became the foundation of Cold War containment policy."
+  },
+  {
+    "id": "hist_027",
+    "topic": "Cold War",
+    "question": "The Vietnam War ended with:",
+    "choices": [
+      "U.S. victory",
+      "A peaceful negotiated settlement",
+      "The fall of Saigon and communist reunification of Vietnam",
+      "A permanent division of Vietnam"
+    ],
+    "answer": "The fall of Saigon and communist reunification of Vietnam",
+    "explanation": "After U.S. withdrawal in 1973, North Vietnam defeated South Vietnam in 1975. Saigon fell on April 30, 1975, and Vietnam was reunified under communist rule."
+  },
+  {
+    "id": "hist_028",
+    "topic": "Civil War",
+    "question": "What role did Harriet Tubman play before and during the Civil War?",
+    "choices": [
+      "She was a Confederate spy",
+      "She led the Underground Railroad and later served as a Union spy",
+      "She was a nurse only",
+      "She wrote abolitionist literature"
+    ],
+    "answer": "She led the Underground Railroad and later served as a Union spy",
+    "explanation": "Harriet Tubman escaped slavery and then made approximately 13 missions to rescue over 70 enslaved people via the Underground Railroad. During the Civil War she served as a spy and scout for the Union Army."
+  },
+  {
+    "id": "hist_029",
+    "topic": "Industrialization",
+    "question": "The Sherman Antitrust Act (1890) was passed to:",
+    "choices": [
+      "Encourage monopolies",
+      "Break up trusts and promote business competition",
+      "Protect workers' rights",
+      "Regulate immigration"
+    ],
+    "answer": "Break up trusts and promote business competition",
+    "explanation": "The Sherman Antitrust Act was the first federal law to limit the power of monopolies (trusts). It aimed to preserve competition and prevent companies like Standard Oil from controlling entire industries."
+  },
+  {
+    "id": "hist_030",
+    "topic": "WWI",
+    "question": "The 'home front' during WWI included all of the following EXCEPT:",
+    "choices": [
+      "Women working in factories",
+      "War bond drives",
+      "Rationing of food and materials",
+      "Increasing immigration from Europe"
+    ],
+    "answer": "Increasing immigration from Europe",
+    "explanation": "WWI actually decreased European immigration to the U.S. The home front was characterized by industrial mobilization, women entering the workforce, bond drives, and rationing to support the war effort."
+  },
+  {
+    "id": "hist_031",
+    "topic": "Great Depression",
+    "question": "Which bank policy did the New Deal create to protect depositors' savings?",
+    "choices": [
+      "The Federal Reserve",
+      "FDIC (Federal Deposit Insurance Corporation)",
+      "The World Bank",
+      "Social Security"
+    ],
+    "answer": "FDIC (Federal Deposit Insurance Corporation)",
+    "explanation": "The FDIC (1933) insures bank deposits so if a bank fails, depositors don't lose their savings. Before the FDIC, bank failures during the Depression wiped out millions of Americans' savings."
+  },
+  {
+    "id": "hist_032",
+    "topic": "Civil Rights",
+    "question": "The Voting Rights Act of 1965 specifically:",
+    "choices": [
+      "Gave women the right to vote",
+      "Outlawed poll taxes and literacy tests used to suppress Black voting",
+      "Lowered the voting age to 18",
+      "Required voter registration 30 days in advance"
+    ],
+    "answer": "Outlawed poll taxes and literacy tests used to suppress Black voting",
+    "explanation": "The Voting Rights Act banned discriminatory voting practices like literacy tests and poll taxes that had been used to disenfranchise Black voters in the South for decades."
+  },
+  {
+    "id": "hist_033",
+    "topic": "Cold War",
+    "question": "The Space Race between the U.S. and USSR was sparked by:",
+    "choices": [
+      "The moon landing",
+      "The launch of Sputnik by the USSR in 1957",
+      "The building of the Berlin Wall",
+      "The Cuban Missile Crisis"
+    ],
+    "answer": "The launch of Sputnik by the USSR in 1957",
+    "explanation": "The Soviet Union launched Sputnik, the first artificial satellite, in October 1957. This shocked Americans and launched the Space Race, leading to NASA's formation and ultimately the Apollo moon landing."
+  },
+  {
+    "id": "hist_034",
+    "topic": "Constitution",
+    "question": "The process by which the Constitution can be changed is called:",
+    "choices": [
+      "Judicial review",
+      "Referendum",
+      "Amendment",
+      "Veto"
+    ],
+    "answer": "Amendment",
+    "explanation": "The Constitution can be changed through the amendment process: two-thirds of Congress proposes, and three-fourths of states must ratify. There are currently 27 amendments."
+  },
+  {
+    "id": "hist_035",
+    "topic": "Civil War",
+    "question": "Reconstruction (1865-1877) aimed to:",
+    "choices": [
+      "Punish the South permanently",
+      "Restore the Southern states to the Union and address the rights of freedmen",
+      "Expand slavery to new territories",
+      "Build railroads in the North"
+    ],
+    "answer": "Restore the Southern states to the Union and address the rights of freedmen",
+    "explanation": "Reconstruction sought to rebuild the South, integrate formerly enslaved people into society as citizens, and restore the Union. It ended prematurely with the Compromise of 1877."
+  },
+  {
+    "id": "hist_036",
+    "topic": "Industrialization",
+    "question": "Muckrakers in the Progressive Era were journalists who:",
+    "choices": [
+      "Promoted business interests",
+      "Exposed corruption and social problems to push for reform",
+      "Wrote government propaganda",
+      "Celebrated industrial progress"
+    ],
+    "answer": "Exposed corruption and social problems to push for reform",
+    "explanation": "Muckrakers like Upton Sinclair (The Jungle), Ida Tarbell, and Jacob Riis used investigative journalism to expose corporate abuses, government corruption, and poor living conditions, sparking Progressive Era reforms."
+  },
+  {
+    "id": "hist_037",
+    "topic": "WWI",
+    "question": "The 19th Amendment (1920), partially resulting from women's WWI contributions, granted:",
+    "choices": [
+      "Women the right to work",
+      "Women the right to vote",
+      "Equal pay for equal work",
+      "Women access to education"
+    ],
+    "answer": "Women the right to vote",
+    "explanation": "Women's significant contributions to the WWI effort (working in factories, nursing) strengthened suffragist arguments. The 19th Amendment gave women the right to vote in 1920."
+  },
+  {
+    "id": "hist_038",
+    "topic": "Great Depression",
+    "question": "The Social Security Act (1935) primarily provided:",
+    "choices": [
+      "Free healthcare",
+      "Unemployment and retirement benefits",
+      "Welfare for all citizens",
+      "Job guarantees"
+    ],
+    "answer": "Unemployment and retirement benefits",
+    "explanation": "The Social Security Act created a federal pension system for retired workers and unemployment insurance. It was one of the most significant New Deal programs and still exists today."
+  },
+  {
+    "id": "hist_039",
+    "topic": "Civil Rights",
+    "question": "The 'Letter from Birmingham Jail' (1963) was written by Martin Luther King Jr. to:",
+    "choices": [
+      "President Kennedy",
+      "White moderate clergy who criticized the protests",
+      "George Wallace",
+      "The Supreme Court"
+    ],
+    "answer": "White moderate clergy who criticized the protests",
+    "explanation": "King wrote the letter responding to white moderate clergy who called the civil rights protests 'unwise and untimely.' He defended nonviolent direct action and the urgency of the fight for equality."
+  },
+  {
+    "id": "hist_040",
+    "topic": "Cold War",
+    "question": "The policy of Mutually Assured Destruction (MAD) during the Cold War meant:",
+    "choices": [
+      "Both sides would win a nuclear war",
+      "A nuclear attack by either side would result in the total destruction of both",
+      "Only one side had enough nuclear weapons",
+      "The U.S. had superior weapons"
+    ],
+    "answer": "A nuclear attack by either side would result in the total destruction of both",
+    "explanation": "MAD held that since both superpowers had enough nuclear weapons to destroy each other, neither would launch a first strike. This grim logic helped prevent direct nuclear conflict during the Cold War."
+  },
+  {
+    "id": "hist_041",
+    "topic": "Constitution",
+    "question": "What is the primary purpose of the Supreme Court in the U.S. system?",
+    "choices": [
+      "To make new laws",
+      "To enforce laws",
+      "To interpret whether laws are constitutional",
+      "To advise the President"
+    ],
+    "answer": "To interpret whether laws are constitutional",
+    "explanation": "The Supreme Court's power of judicial review (established in Marbury v. Madison, 1803) allows it to strike down laws that violate the Constitution. This is its most important power."
+  },
+  {
+    "id": "hist_042",
+    "topic": "Industrialization",
+    "question": "Immigration to the U.S. between 1880-1920 was primarily from:",
+    "choices": [
+      "East Asia and Latin America",
+      "Southern and Eastern Europe",
+      "Western Europe as in earlier periods",
+      "Africa and the Middle East"
+    ],
+    "answer": "Southern and Eastern Europe",
+    "explanation": "The 'new immigration' of 1880-1920 brought millions from Italy, Poland, Russia, Austria-Hungary, and other Southern/Eastern European countries. They settled in urban industrial areas and faced significant discrimination."
+  },
+  {
+    "id": "hist_043",
+    "topic": "Civil Rights",
+    "question": "The Harlem Renaissance of the 1920s was:",
+    "choices": [
+      "A political movement for voting rights",
+      "A cultural flowering of African American art, music, and literature in New York",
+      "A religious revival",
+      "An economic development program"
+    ],
+    "answer": "A cultural flowering of African American art, music, and literature in New York",
+    "explanation": "The Harlem Renaissance produced landmark works by Langston Hughes, Zora Neale Hurston, Duke Ellington, and others. It celebrated Black culture and challenged racial stereotypes."
+  },
+  {
+    "id": "hist_044",
+    "topic": "Civil War",
+    "question": "The Missouri Compromise, Kansas-Nebraska Act, and Compromise of 1850 all dealt with:",
+    "choices": [
+      "Taxation of Southern goods",
+      "Whether new western territories would be free or slave states",
+      "The rights of Native Americans",
+      "Immigration policy"
+    ],
+    "answer": "Whether new western territories would be free or slave states",
+    "explanation": "All three compromises attempted to balance free and slave states as the U.S. expanded westward. The repeated need for compromise showed the impossibility of permanently avoiding the slavery question."
+  },
+  {
+    "id": "hist_045",
+    "topic": "WWI",
+    "question": "What was the significance of the Lusitania's sinking for American public opinion?",
+    "choices": [
+      "It immediately brought the U.S. into the war",
+      "It had no effect on public opinion",
+      "It increased anti-German sentiment and support for eventual U.S. involvement",
+      "It caused the U.S. to declare war on Britain"
+    ],
+    "answer": "It increased anti-German sentiment and support for eventual U.S. involvement",
+    "explanation": "The sinking of the British ocean liner Lusitania (May 1915), killing 1,198 people including 128 Americans, outraged American public opinion and increased support for joining the war against Germany."
+  },
+  {
+    "id": "hist_046",
+    "topic": "Great Depression",
+    "question": "Hoovervilles during the Great Depression were:",
+    "choices": [
+      "Government-built housing",
+      "Shantytown camps of homeless people named mockingly after President Hoover",
+      "Herbert Hoover's public works projects",
+      "Soup kitchen lines"
+    ],
+    "answer": "Shantytown camps of homeless people named mockingly after President Hoover",
+    "explanation": "Hoovervilles were shantytowns built by homeless people from scrap materials. They were named mockingly after President Hoover, who was blamed for the Depression's severity and his inadequate response."
+  },
+  {
+    "id": "hist_047",
+    "topic": "Cold War",
+    "question": "The fall of the Berlin Wall in 1989 symbolized:",
+    "choices": [
+      "The start of the Cold War",
+      "The end of communist rule in Eastern Europe",
+      "Germany declaring war",
+      "NATO expanding into the East"
+    ],
+    "answer": "The end of communist rule in Eastern Europe",
+    "explanation": "The fall of the Berlin Wall on November 9, 1989 symbolized the collapse of communist regimes across Eastern Europe. Germany reunified in 1990, and the Soviet Union dissolved in 1991, ending the Cold War."
+  },
+  {
+    "id": "hist_048",
+    "topic": "Constitution",
+    "question": "Marbury v. Madison (1803) established the principle of:",
+    "choices": [
+      "States' rights",
+      "Separation of church and state",
+      "Judicial review",
+      "Executive privilege"
+    ],
+    "answer": "Judicial review",
+    "explanation": "Chief Justice John Marshall established judicial review in Marbury v. Madison, giving the Supreme Court the power to declare laws unconstitutional. This power is not explicitly in the Constitution but has been fundamental ever since."
+  },
+  {
+    "id": "hist_049",
+    "topic": "Industrialization",
+    "question": "The Pure Food and Drug Act (1906) was passed largely due to:",
+    "choices": [
+      "Business lobbying",
+      "Upton Sinclair's 'The Jungle' exposing the meatpacking industry",
+      "A disease outbreak",
+      "A request from farmers"
+    ],
+    "answer": "Upton Sinclair's 'The Jungle' exposing the meatpacking industry",
+    "explanation": "Sinclair's novel exposed horrifying unsanitary conditions in Chicago meatpacking plants. Public outrage led directly to the Pure Food and Drug Act (1906) and the Meat Inspection Act, founding today's FDA."
+  },
+  {
+    "id": "hist_050",
+    "topic": "Civil Rights",
+    "question": "What was the purpose of the March on Washington (August 28, 1963)?",
+    "choices": [
+      "To protest the Vietnam War",
+      "To demand civil rights legislation and jobs for Black Americans",
+      "To celebrate the Civil Rights Act",
+      "To call for desegregation of the military"
+    ],
+    "answer": "To demand civil rights legislation and jobs for Black Americans",
+    "explanation": "Over 250,000 people gathered at the Lincoln Memorial to demand civil rights and economic justice. It was there that King delivered his 'I Have a Dream' speech, helping build public support for the Civil Rights Act of 1964."
+  },
+  {
+    "id": "hist_051",
+    "topic": "Constitution",
+    "question": "Which constitutional amendment gave women the right to vote?",
+    "choices": [
+      "13th Amendment",
+      "15th Amendment",
+      "17th Amendment",
+      "19th Amendment"
+    ],
+    "answer": "19th Amendment",
+    "explanation": "The 19th Amendment (1920) prohibited denying the right to vote based on sex, giving women the right to vote nationwide after decades of suffragist activism."
+  },
+  {
+    "id": "hist_052",
+    "topic": "Constitution",
+    "question": "The 14th Amendment (1868) was significant because it:",
+    "choices": [
+      "Abolished slavery",
+      "Gave women the right to vote",
+      "Granted citizenship to formerly enslaved people and guaranteed equal protection",
+      "Gave African Americans the right to vote"
+    ],
+    "answer": "Granted citizenship to formerly enslaved people and guaranteed equal protection",
+    "explanation": "The 14th Amendment defined citizenship (overturning Dred Scott), required equal protection and due process for all citizens, and became the constitutional basis for most civil rights cases."
+  },
+  {
+    "id": "hist_053",
+    "topic": "Constitution",
+    "question": "The Bill of Rights was added to the Constitution primarily because:",
+    "choices": [
+      "The original Constitution was too long",
+      "Anti-Federalists demanded protection of individual rights before ratifying",
+      "The states needed more power",
+      "The president needed more authority"
+    ],
+    "answer": "Anti-Federalists demanded protection of individual rights before ratifying",
+    "explanation": "Anti-Federalists feared a strong central government would threaten individual liberties. The Bill of Rights (first 10 amendments) was added in 1791 as a compromise to gain ratification."
+  },
+  {
+    "id": "hist_054",
+    "topic": "Reconstruction",
+    "question": "The 'Black Codes' enacted by Southern states after the Civil War were designed to:",
+    "choices": [
+      "Provide education and land to freed people",
+      "Restrict the freedom and rights of formerly enslaved people",
+      "Encourage Northern investment in the South",
+      "Punish Confederate leaders"
+    ],
+    "answer": "Restrict the freedom and rights of formerly enslaved people",
+    "explanation": "Black Codes restricted where freed people could work and live, forced them into labor contracts, and limited their legal rights \u2014 essentially re-creating conditions close to slavery."
+  },
+  {
+    "id": "hist_055",
+    "topic": "Reconstruction",
+    "question": "Sharecropping in the post-Civil War South trapped many Black farmers because:",
+    "choices": [
+      "They owned the land",
+      "Interest rates were fixed by law",
+      "They were always in debt to the landowner for supplies",
+      "The government controlled wages"
+    ],
+    "answer": "They were always in debt to the landowner for supplies",
+    "explanation": "Sharecroppers rented land and borrowed seed and tools from the landowner. High interest and low crop prices kept them perpetually in debt \u2014 a form of economic bondage replacing slavery."
+  },
+  {
+    "id": "hist_056",
+    "topic": "Progressive Era",
+    "question": "The goal of the Progressive Era (1890s-1920s) was primarily to:",
+    "choices": [
+      "Return to an agricultural economy",
+      "Reform government and business to address the problems of industrialization",
+      "Expand U.S. territories abroad",
+      "Isolate the United States from world affairs"
+    ],
+    "answer": "Reform government and business to address the problems of industrialization",
+    "explanation": "Progressives sought to regulate big business, end political corruption, improve workers' rights, and use government to protect the public welfare in response to the Gilded Age's inequality."
+  },
+  {
+    "id": "hist_057",
+    "topic": "Progressive Era",
+    "question": "President Theodore Roosevelt's 'Square Deal' targeted all of the following EXCEPT:",
+    "choices": [
+      "Conservation of natural resources",
+      "Regulation of big business",
+      "Expansion of military power",
+      "Consumer protection"
+    ],
+    "answer": "Expansion of military power",
+    "explanation": "Roosevelt's Square Deal addressed the three C's: Control of corporations, Consumer protection, and Conservation of natural resources. Military expansion was not a domestic Progressive priority."
+  },
+  {
+    "id": "hist_058",
+    "topic": "WWI",
+    "question": "The U.S. policy of selling weapons and supplies to Allied nations before entering WWI was controversial because:",
+    "choices": [
+      "It was illegal under the Constitution",
+      "Critics said it would draw the U.S. into war and violated neutrality",
+      "It bankrupted the government",
+      "The Allies didn't need the supplies"
+    ],
+    "answer": "Critics said it would draw the U.S. into war and violated neutrality",
+    "explanation": "Selling arms to Britain and France while Germany used submarines to cut supply lines put the U.S. on a collision course with Germany, eventually drawing America into the war."
+  },
+  {
+    "id": "hist_059",
+    "topic": "WWII",
+    "question": "The GI Bill (Servicemen's Readjustment Act of 1944) provided WWII veterans with:",
+    "choices": [
+      "Reparations for wartime losses",
+      "Free college education, home loans, and job training",
+      "Guaranteed government jobs",
+      "A monthly pension for life"
+    ],
+    "answer": "Free college education, home loans, and job training",
+    "explanation": "The GI Bill enabled millions of veterans to attend college, buy homes, and start businesses. It dramatically expanded the middle class and shaped postwar America."
+  },
+  {
+    "id": "hist_060",
+    "topic": "WWII",
+    "question": "Japanese American internment during WWII was justified by the government as:",
+    "choices": [
+      "Legal punishment for Japanese ancestry",
+      "Military necessity to protect against potential espionage",
+      "An economic program",
+      "A relocation program to better jobs"
+    ],
+    "answer": "Military necessity to protect against potential espionage",
+    "explanation": "Executive Order 9066 (1942) ordered the forced relocation of Japanese Americans into internment camps under the guise of military necessity. No Japanese American was ever convicted of espionage. Korematsu v. U.S. later upheld (though the ruling has since been repudiated) the policy."
+  },
+  {
+    "id": "hist_061",
+    "topic": "Cold War",
+    "question": "The domino theory, used to justify U.S. involvement in Vietnam, argued that:",
+    "choices": [
+      "Communist nations would eventually democratize",
+      "If one country fell to communism, neighboring countries would too",
+      "Military force always stops communism",
+      "Nuclear weapons could win any war"
+    ],
+    "answer": "If one country fell to communism, neighboring countries would too",
+    "explanation": "The domino theory held that communism's spread was like falling dominoes \u2014 if one nation fell, its neighbors would follow. This logic justified U.S. military intervention in Southeast Asia."
+  },
+  {
+    "id": "hist_062",
+    "topic": "Cold War",
+    "question": "The policy of d\u00e9tente under President Nixon aimed to:",
+    "choices": [
+      "Increase military spending",
+      "Ease tensions with the Soviet Union and China through diplomacy",
+      "Contain communism through force",
+      "Break up the Soviet Union"
+    ],
+    "answer": "Ease tensions with the Soviet Union and China through diplomacy",
+    "explanation": "Nixon's d\u00e9tente reduced Cold War tensions through diplomatic engagement, signing the SALT I arms treaty with the USSR and reopening relations with China. It was a shift from confrontation to negotiation."
+  },
+  {
+    "id": "hist_063",
+    "topic": "Immigration",
+    "question": "The Chinese Exclusion Act (1882) was significant because it:",
+    "choices": [
+      "Encouraged Chinese immigration",
+      "Was the first major law restricting immigration based on nationality and race",
+      "Ended all immigration to the U.S.",
+      "Gave Chinese immigrants citizenship rights"
+    ],
+    "answer": "Was the first major law restricting immigration based on nationality and race",
+    "explanation": "The Chinese Exclusion Act banned Chinese laborers from entering the U.S. and barred Chinese immigrants from citizenship. It was the first major federal restriction on immigration by ethnicity."
+  },
+  {
+    "id": "hist_064",
+    "topic": "Immigration",
+    "question": "The 'melting pot' metaphor describes America as a place where:",
+    "choices": [
+      "Cultures remain separate and distinct",
+      "Immigrants give up all their culture immediately",
+      "Diverse cultures blend together to form a new American culture",
+      "Only European cultures are welcome"
+    ],
+    "answer": "Diverse cultures blend together to form a new American culture",
+    "explanation": "The melting pot metaphor suggests immigrants' cultures fuse together to create a new, unified American identity. Critics prefer the 'salad bowl' metaphor, which celebrates cultural diversity without assimilation."
+  },
+  {
+    "id": "hist_065",
+    "topic": "Civil War",
+    "question": "The concept of 'popular sovereignty,' as applied to territories, meant:",
+    "choices": [
+      "Congress would decide slavery in each territory",
+      "The President would decide",
+      "Settlers in a territory would vote on whether to allow slavery",
+      "The Supreme Court would decide"
+    ],
+    "answer": "Settlers in a territory would vote on whether to allow slavery",
+    "explanation": "Popular sovereignty proposed letting territorial settlers vote on slavery. It was championed by Stephen Douglas and implemented in the Kansas-Nebraska Act (1854), leading to violent conflict known as 'Bleeding Kansas.'"
+  },
+  {
+    "id": "hist_066",
+    "topic": "Industrialization",
+    "question": "Andrew Carnegie's practice of controlling all stages of his steel business \u2014 from raw materials to retail \u2014 is an example of:",
+    "choices": [
+      "Horizontal integration",
+      "Vertical integration",
+      "Trust-busting",
+      "Socialism"
+    ],
+    "answer": "Vertical integration",
+    "explanation": "Vertical integration controls every step of production: Carnegie owned mines, railroads, and mills. Horizontal integration controls competitors in the same industry (like Rockefeller's Standard Oil)."
+  },
+  {
+    "id": "hist_067",
+    "topic": "Great Depression",
+    "question": "The New Deal's Tennessee Valley Authority (TVA) was primarily created to:",
+    "choices": [
+      "Regulate Wall Street",
+      "Provide electricity and flood control in the rural South",
+      "Build highways across the country",
+      "Regulate the agricultural market"
+    ],
+    "answer": "Provide electricity and flood control in the rural South",
+    "explanation": "The TVA built dams that controlled flooding, generated hydroelectric power, and brought electricity to rural Appalachian communities that private companies had ignored."
+  },
+  {
+    "id": "hist_068",
+    "topic": "Civil Rights",
+    "question": "Freedom Riders in 1961 tested whether:",
+    "choices": [
+      "Schools were desegregated",
+      "The Supreme Court rulings desegregating interstate bus terminals were being enforced",
+      "Restaurants were open to Black customers",
+      "Voting rights were protected in the South"
+    ],
+    "answer": "The Supreme Court rulings desegregating interstate bus terminals were being enforced",
+    "explanation": "Freedom Riders \u2014 Black and white activists \u2014 rode interstate buses into the Deep South to test Supreme Court rulings banning segregation in interstate travel facilities. They faced violent mob attacks."
+  },
+  {
+    "id": "hist_069",
+    "topic": "WWI",
+    "question": "The Red Scare of 1919-1920 was caused by:",
+    "choices": [
+      "Fear of Native American uprising",
+      "Fear of communist revolution spreading to the U.S. after the Bolshevik Revolution in Russia",
+      "Germany's refusal to pay reparations",
+      "The stock market crash"
+    ],
+    "answer": "Fear of communist revolution spreading to the U.S. after the Bolshevik Revolution in Russia",
+    "explanation": "The Bolshevik Revolution in Russia (1917) and labor strikes in the U.S. created widespread fear of communist infiltration. This led to deportations of suspected radicals and suppression of civil liberties."
+  },
+  {
+    "id": "hist_070",
+    "topic": "Constitution",
+    "question": "Judicial review, the power of courts to declare laws unconstitutional, was established by which Supreme Court case?",
+    "choices": [
+      "Brown v. Board of Education",
+      "McCulloch v. Maryland",
+      "Plessy v. Ferguson",
+      "Marbury v. Madison"
+    ],
+    "answer": "Marbury v. Madison",
+    "explanation": "Chief Justice John Marshall's 1803 decision in Marbury v. Madison established judicial review \u2014 the Supreme Court's power to declare acts of Congress unconstitutional. This power is not explicitly in the Constitution."
+  },
+  {
+    "id": "us_history_jan26_01",
+    "subject": "us_history",
+    "topic": "US History",
+    "question": "Based on this excerpt, what is the author\u2019s point 2 Which document most closely reflects the ideas of view about the role of government in the about government expressed by John Robinson in Plymouth Colony? this address?",
+    "choices": [
+      "Separate leaders for church and state should (1) Mayflower Compact",
+      "People have the right to rebel against the (3) Stamp Act",
+      "The power to govern belongs to the people.",
+      "Rulers must be given absolute authority to"
+    ],
+    "answer": "The power to govern belongs to the people.",
+    "explanation": "Correct answer is choice (3). From NYS Regents January 2026.",
+    "source": "NYS Regents January 2026"
+  },
+  {
+    "id": "us_history_jan26_03",
+    "subject": "us_history",
+    "topic": "US History",
+    "question": "This passage was written during the 4 Which claim about the proposed United States Constitution is being made by the author of this",
+    "choices": [
+      "debate over the adoption of the Articles of",
+      "ratification of the United States Constitution (1) The new Constitution gave the states enough",
+      "The system of federalism is best for the new",
+      "The two-party system would lead to rebellion"
+    ],
+    "answer": "ratification of the United States Constitution (1) The new Constitution gave the states enough",
+    "explanation": "Correct answer is choice (2). From NYS Regents January 2026.",
+    "source": "NYS Regents January 2026"
+  },
+  {
+    "id": "us_history_jan26_05",
+    "subject": "us_history",
+    "topic": "US History",
+    "question": "Which statement best describes the claims made 6 What was one result of President Jackson\u2019s by President Andrew Jackson in this passage? message to Congress?",
+    "choices": [
+      "The United States government must obey (1) Trail of Tears",
+      "White settlers must work harder to get along (3) Dred Scott decision",
+      "Native Americans had agreed to assimilate",
+      "The relocation of Native Americans will assist"
+    ],
+    "answer": "The relocation of Native Americans will assist",
+    "explanation": "Correct answer is choice (4). From NYS Regents January 2026.",
+    "source": "NYS Regents January 2026"
+  },
+  {
+    "id": "us_history_jan26_07",
+    "subject": "us_history",
+    "topic": "US History",
+    "question": "This certificate supports a national commitment 8 What area of the United States was most affected to what policy? by the program described in this document?",
+    "choices": [
+      "Monroe Doctrine (1) the Southwest deserts",
+      "isolationism (2) the Great Plains",
+      "Manifest Destiny (3) the Hudson Valley",
+      "d\u00e9tente (4) the Pacific Northwest"
+    ],
+    "answer": "Manifest Destiny (3) the Hudson Valley",
+    "explanation": "Correct answer is choice (3). From NYS Regents January 2026.",
+    "source": "NYS Regents January 2026"
+  },
+  {
+    "id": "us_history_jan26_09",
+    "subject": "us_history",
+    "topic": "US History",
+    "question": "Which phrase is most closely associated with the 10 What was an effect of the Supreme Court\u2019s ideas expressed in this excerpt? decision in Plessy v. Ferguson?",
+    "choices": [
+      "\u201cseparate but equal\u201d (1) The Freedmen\u2019s Bureau was established.",
+      "\u201cclear and present danger\u201d (2) The Underground Railroad was formed.",
+      "\u201call men are created equal\u201d (3) The practice of segregation was reinforced.",
+      "\u201cnecessary and proper\u201d (4) Voting rights were enhanced by grandfather"
+    ],
+    "answer": "\u201cseparate but equal\u201d (1) The Freedmen\u2019s Bureau was established.",
+    "explanation": "Correct answer is choice (1). From NYS Regents January 2026.",
+    "source": "NYS Regents January 2026"
+  },
+  {
+    "id": "us_history_jan26_11",
+    "subject": "us_history",
+    "topic": "US History",
+    "question": "The purpose of this photograph was to 12 Individuals who were influenced by the work of Jacob Riis would most likely agree that",
+    "choices": [
+      "raise public awareness for conditions in the",
+      "support unrestricted immigration (2) monopolistic business practices should be",
+      "expose the unsafe working conditions in encouraged",
+      "promote the use of child labor (4) social and economic reforms should be"
+    ],
+    "answer": "raise public awareness for conditions in the",
+    "explanation": "Correct answer is choice (1). From NYS Regents January 2026.",
+    "source": "NYS Regents January 2026"
+  },
+  {
+    "id": "us_history_jan26_13",
+    "subject": "us_history",
+    "topic": "US History",
+    "question": "Photographs such as these were often published to 14 What was one outcome of the destruction of the USS Maine?",
+    "choices": [
+      "increase newspaper sales",
+      "discourage investigative journalists (1) Spanish officials responsible for the",
+      "support restrictions on the freedom of the destruction were put on trial.",
+      "Spain paid to rebuild the ship and compensate"
+    ],
+    "answer": "increase newspaper sales",
+    "explanation": "Correct answer is choice (1). From NYS Regents January 2026.",
+    "source": "NYS Regents January 2026"
+  },
+  {
+    "id": "us_history_jan26_15",
+    "subject": "us_history",
+    "topic": "US History",
+    "question": "Which constitutional provision supports President 16 Which United States economic policy did Theodore Roosevelt\u2019s view regarding large President Roosevelt\u2019s message challenge? corporations?",
+    "choices": [
+      "reserved powers of the states (2) laissez-faire",
+      "presidential veto (3) protectionism",
+      "eminent domain (4) supply-side",
+      "congressional power to regulate interstate"
+    ],
+    "answer": "congressional power to regulate interstate",
+    "explanation": "Correct answer is choice (4). From NYS Regents January 2026.",
+    "source": "NYS Regents January 2026"
+  },
+  {
+    "id": "us_history_jan26_17",
+    "subject": "us_history",
+    "topic": "US History",
+    "question": "In this address, why does President Woodrow 18 How did Congress respond to President Wilson\u2019s Wilson conclude that neutrality is no longer a 1917 address? practical United States policy?",
+    "choices": [
+      "The German government has invaded United representatives.",
+      "United States ships and citizens are being (3) They placed an embargo on all goods shipped",
+      "The Allies have committed several acts of (4) They asked the League of Nations to stop",
+      "Germany broke a series of peace treaties."
+    ],
+    "answer": "United States ships and citizens are being (3) They placed an embargo on all goods shipped",
+    "explanation": "Correct answer is choice (2). From NYS Regents January 2026.",
+    "source": "NYS Regents January 2026"
+  },
+  {
+    "id": "us_history_jan26_19",
+    "subject": "us_history",
+    "topic": "US History",
+    "question": "The purpose of this 1936 poster was to encourage Americans to",
+    "choices": [
+      "sign up for government jobs",
+      "receive low-cost medical insurance",
+      "enroll in a national retirement system",
+      "exercise their right to vote in national elections"
+    ],
+    "answer": "enroll in a national retirement system",
+    "explanation": "Correct answer is choice (3). From NYS Regents January 2026.",
+    "source": "NYS Regents January 2026"
+  },
+  {
+    "id": "us_history_jan26_20",
+    "subject": "us_history",
+    "topic": "US History",
+    "question": "The purpose of the Nuremberg Trials referred to in this passage was to",
+    "choices": [
+      "force Germany to pay war reparations",
+      "punish Germany for the blitzkrieg military campaign through Europe",
+      "warn the German people about the Nazi party",
+      "hold German leaders accountable for crimes against humanity"
+    ],
+    "answer": "hold German leaders accountable for crimes against humanity",
+    "explanation": "Correct answer is choice (4). From NYS Regents January 2026.",
+    "source": "NYS Regents January 2026"
+  },
+  {
+    "id": "us_history_jan26_21",
+    "subject": "us_history",
+    "topic": "US History",
+    "question": "What was the United States response to the situation shown on this map?",
+    "choices": [
+      "providing financial aid to Western European nations",
+      "immediate military action against the Soviet Union",
+      "a call for the United Nations to send forces to Eastern Europe",
+      "withdrawal of financial support for the North Atlantic Treaty Organization (NATO)"
+    ],
+    "answer": "providing financial aid to Western European nations",
+    "explanation": "Correct answer is choice (1). From NYS Regents January 2026.",
+    "source": "NYS Regents January 2026"
+  },
+  {
+    "id": "us_history_jan26_22",
+    "subject": "us_history",
+    "topic": "US History",
+    "question": "A historian would find these excerpts useful for studying the",
+    "choices": [
+      "impact of the Red Scare on civil liberties",
+      "opposition to New Deal reforms",
+      "debates over international affairs",
+      "concerns over executive cabinet appointments"
+    ],
+    "answer": "impact of the Red Scare on civil liberties",
+    "explanation": "Correct answer is choice (1). From NYS Regents January 2026.",
+    "source": "NYS Regents January 2026"
+  },
+  {
+    "id": "us_history_jan26_23",
+    "subject": "us_history",
+    "topic": "US History",
+    "question": "This cartoonist is criticizing President Dwight D. Eisenhower for failing to",
+    "choices": [
+      "provide government support for public housing",
+      "promote equality for African Americans",
+      "address natural disasters in the South",
+      "enforce strict public safety measures"
+    ],
+    "answer": "promote equality for African Americans",
+    "explanation": "Correct answer is choice (2). From NYS Regents January 2026.",
+    "source": "NYS Regents January 2026"
+  },
+  {
+    "id": "us_history_jan26_24",
+    "subject": "us_history",
+    "topic": "US History",
+    "question": "In 1957, President Eisenhower dealt with a civil rights crisis in Little Rock, Arkansas, by sending troops to",
+    "choices": [
+      "enforce a Supreme Court decision on school integration",
+      "protect freedom riders on interstate buses",
+      "arrest leaders of the Ku Klux Klan",
+      "stop the violence during voter registration drives"
+    ],
+    "answer": "enforce a Supreme Court decision on school integration",
+    "explanation": "Correct answer is choice (1). From NYS Regents January 2026.",
+    "source": "NYS Regents January 2026"
+  },
+  {
+    "id": "us_history_jan26_25",
+    "subject": "us_history",
+    "topic": "US History",
+    "question": "What was one outcome associated with the Watergate affair?",
+    "choices": [
+      "The Vietnam War continued to expand.",
+      "Trade with China expanded rapidly.",
+      "Support for immigration reform increased.",
+      "President Nixon eventually resigned from the presidency."
+    ],
+    "answer": "President Nixon eventually resigned from the presidency.",
+    "explanation": "Correct answer is choice (4). From NYS Regents January 2026.",
+    "source": "NYS Regents January 2026"
+  },
+  {
+    "id": "us_history_jan26_26",
+    "subject": "us_history",
+    "topic": "US History",
+    "question": "Which statement is best supported by the idea expressed in this cartoon?",
+    "choices": [
+      "War powers are divided equally between the executive and legislative branches.",
+      "The legislative branch has refused to exercise its war powers.",
+      "The war powers of the executive branch have expanded.",
+      "The war powers of the executive branch are often checked by the judicial branch."
+    ],
+    "answer": "The war powers of the executive branch have expanded.",
+    "explanation": "Correct answer is choice (3). From NYS Regents January 2026.",
+    "source": "NYS Regents January 2026"
+  },
+  {
+    "id": "us_history_jan26_27",
+    "subject": "us_history",
+    "topic": "US History",
+    "question": "Which problem is represented in this cartoon?",
+    "choices": [
+      "Americans were confused by the wording of the new law.",
+      "The Patriot Act did not apply to enough people in the United States.",
+      "The Patriot Act, while keeping the nation safe, would violate the rights of individuals.",
+      "Individuals were concerned that the Patriot Act did not make the nation safe enough."
+    ],
+    "answer": "The Patriot Act, while keeping the nation safe, would violate the rights of individuals.",
+    "explanation": "Correct answer is choice (3). From NYS Regents January 2026.",
+    "source": "NYS Regents January 2026"
+  },
+  {
+    "id": "us_history_jan26_28",
+    "subject": "us_history",
+    "topic": "US History",
+    "question": "Which event most directly led to the passage of the Patriot Act?",
+    "choices": [
+      "Iraq\u2019s invasion of Kuwait",
+      "end of the Cold War",
+      "Soviet launching of Sputnik",
+      "terrorist attacks on the United States on September 11, 2001"
+    ],
+    "answer": "terrorist attacks on the United States on September 11, 2001",
+    "explanation": "Correct answer is choice (4). From NYS Regents January 2026.",
+    "source": "NYS Regents January 2026"
+  }
 ]
