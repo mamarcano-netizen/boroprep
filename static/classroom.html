@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="manifest" href="/static/manifest.json" />
+  <meta name="theme-color" content="#4f46e5" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BoroPrep — Group Classroom</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <style>
+    .code-display { font-size: 3rem; font-weight: 800; color: var(--primary); letter-spacing: 0.2em; text-align: center; margin: 12px 0; }
+    .leaderboard-row { display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; border-bottom: 1px solid var(--border); font-size: 0.95rem; }
+    .leaderboard-row:last-child { border-bottom: none; }
+    .leaderboard-rank { font-weight: 800; color: var(--muted); width: 28px; }
+    .leaderboard-name { flex: 1; font-weight: 600; }
+    .leaderboard-score { font-weight: 800; color: var(--primary); }
+    .leaderboard-row.me { background: #eef2ff; border-radius: 8px; }
+    body.dark .leaderboard-row.me { background: #1e1b4b; }
+    .player-pill { display: inline-block; background: #f1f5f9; border-radius: 20px; padding: 4px 12px; font-size: 0.85rem; font-weight: 600; margin: 4px; }
+    body.dark .player-pill { background: #1e293b; }
+    .session-layout { display: grid; grid-template-columns: 1fr 280px; gap: 20px; }
+    @media (max-width: 768px) { .session-layout { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-logo">🗽 Boro<span>Prep</span></div>
+    <div class="nav-menu"><a href="/dashboard" class="nav-btn">Home</a></div>
+  </nav>
+
+  <aside class="sidebar">
+    <div class="sidebar-logo">🗽 Boro<span>Prep</span></div>
+    <div class="sidebar-section">Menu</div>
+    <a href="/dashboard" class="sidebar-link">🏠 Dashboard</a>
+    <a href="/study" class="sidebar-link">📝 Study</a>
+    <a href="/study?mode=photo" class="sidebar-link">📸 Photo Help</a>
+    <a href="/multiplayer" class="sidebar-link">🎮 Play vs Friends</a>
+    <a href="/classroom" class="sidebar-link active">📚 Group Classroom</a>
+    <a href="/essay" class="sidebar-link">✍️ Essay Grader</a>
+    <a href="/parent" class="sidebar-link">👪 Parent View</a>
+    <div class="sidebar-divider"></div>
+    <div class="sidebar-section">Accessibility</div>
+    <button class="sidebar-link" id="sb-tts">🔊 Read Aloud</button>
+    <button class="sidebar-link" id="sb-simple">✏️ Simple Words</button>
+    <button class="sidebar-link" id="sb-dark">🌙 Dark Mode</button>
+    <div class="sidebar-bottom">
+      <div class="sidebar-divider"></div>
+      <a href="/dashboard" class="sidebar-link">🚪 Back</a>
+    </div>
+  </aside>
+
+  <div class="desktop-main">
+
+  <!-- Lobby -->
+  <div id="lobby" class="container" style="padding:24px 16px;max-width:480px">
+    <h2 style="font-size:1.4rem;font-weight:800;margin-bottom:8px">📚 Group Study Room</h2>
+    <p style="color:var(--muted);margin-bottom:24px">Study together — see everyone's score live!</p>
+
+    <button class="btn btn-primary" id="create-btn" style="width:100%;margin-bottom:12px">🏫 Create a Room</button>
+
+    <div style="text-align:center;color:var(--muted);margin:16px 0">— or join —</div>
+
+    <div class="form-group">
+      <label>Room Code</label>
+      <input type="text" id="join-code" placeholder="ABC123" maxlength="6"
+        style="text-transform:uppercase;letter-spacing:0.15em;font-size:1.3rem;text-align:center" />
+    </div>
+    <button class="btn btn-outline" id="join-btn" style="width:100%">Join Room</button>
+    <p id="lobby-error" class="error-msg hidden" style="margin-top:8px"></p>
+  </div>
+
+  <!-- Waiting Room -->
+  <div id="waiting-room" class="container hidden" style="padding:24px 16px;max-width:480px;text-align:center">
+    <h2 style="font-size:1.2rem;font-weight:800;margin-bottom:4px">Room Code</h2>
+    <div class="code-display" id="room-code-display"></div>
+    <p style="color:var(--muted);margin-bottom:20px">Share this code with your class!</p>
+
+    <div class="card" style="padding:16px;margin-bottom:16px;text-align:left">
+      <div style="font-weight:700;margin-bottom:10px">Players joined:</div>
+      <div id="players-list"></div>
+    </div>
+
+    <div id="host-controls" class="hidden" style="margin-bottom:12px">
+      <div class="form-group" style="text-align:left">
+        <label>Subject to study</label>
+        <select id="subject-select" style="width:100%;padding:10px;border:1px solid var(--border);border-radius:8px;font-size:0.95rem">
+          <option value="chemistry">⚗️ Chemistry</option>
+          <option value="algebra1">📐 Algebra I</option>
+          <option value="geometry">📏 Geometry</option>
+          <option value="physics">⚡ Physics</option>
+          <option value="biology">🧬 Living Environment</option>
+          <option value="earthscience">🌍 Earth Science</option>
+        </select>
+      </div>
+      <button class="btn btn-success" id="start-btn" style="width:100%">▶ Start Study Session</button>
+    </div>
+    <p style="color:var(--muted);font-size:0.85rem" id="waiting-msg">Waiting for host to start...</p>
+  </div>
+
+  <!-- Active Session -->
+  <div id="session" class="study-page hidden" style="padding:20px 16px">
+    <div class="session-layout">
+      <!-- Questions side -->
+      <div>
+        <div class="card question-card" id="question-card">
+          <div class="question-num" id="q-num">Question 1</div>
+          <div class="question-text" id="q-text"></div>
+          <div class="choices" id="q-choices"></div>
+          <div id="q-explanation" class="hidden" style="margin-top:12px"></div>
+          <div id="q-done" class="hidden" style="text-align:center;padding:24px;color:var(--muted)">
+            <div style="font-size:2rem;margin-bottom:8px">🎉</div>
+            <div style="font-weight:700">You finished all questions!</div>
+            <div style="font-size:0.88rem;margin-top:6px">Watch the leaderboard while others finish.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Leaderboard side -->
+      <div>
+        <div class="card" style="padding:16px">
+          <div style="font-weight:800;margin-bottom:12px">🏆 Live Leaderboard</div>
+          <div id="leaderboard-list"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Final Results -->
+  <div id="results" class="study-page hidden" style="padding:20px 16px;max-width:480px;margin:0 auto">
+    <div class="card score-card" style="text-align:center">
+      <div style="font-size:3rem;margin-bottom:8px">🎓</div>
+      <h2 style="margin-bottom:4px">Session Complete!</h2>
+      <p style="color:var(--muted);margin-bottom:20px">Final standings</p>
+      <div id="final-leaderboard" style="margin-bottom:20px;text-align:left"></div>
+      <div id="winner-celebration" class="hidden" style="background:#fef3c7;border-radius:10px;padding:12px;margin-bottom:16px;font-weight:700"></div>
+      <a href="/classroom" class="btn btn-primary">New Session</a>
+      <a href="/dashboard" class="btn btn-outline" style="margin-top:10px">Dashboard</a>
+    </div>
+  </div>
+
+  </div><!-- /desktop-main -->
+
+  <script>
+    (function(){var s=localStorage.getItem("bp_dark");if(s==="1"||(s===null&&window.matchMedia?.("(prefers-color-scheme: dark)").matches))document.body.classList.add("dark");})();
+
+    // Dark mode toggle
+    document.getElementById("sb-dark")?.addEventListener("click",()=>{
+      document.body.classList.toggle("dark");
+      localStorage.setItem("bp_dark", document.body.classList.contains("dark") ? "1" : "0");
+    });
+
+    let roomCode = "", playerName = "", isHost = false;
+    let questions = [], currentQ = 0, myScore = 0;
+    let pollTimer = null;
+
+    function show(id) {
+      ["lobby","waiting-room","session","results"].forEach(x => {
+        document.getElementById(x).classList.toggle("hidden", x !== id);
+      });
+    }
+
+    function showError(msg) {
+      const el = document.getElementById("lobby-error");
+      el.textContent = msg;
+      el.classList.remove("hidden");
+    }
+
+    // Create room
+    document.getElementById("create-btn").addEventListener("click", async () => {
+      const res = await fetch("/api/room/create", {method:"POST"});
+      if (!res.ok) return showError("Failed to create room");
+      const data = await res.json();
+      roomCode = data.code;
+      playerName = data.player_name;
+      isHost = true;
+      document.getElementById("room-code-display").textContent = roomCode;
+      document.getElementById("host-controls").classList.remove("hidden");
+      document.getElementById("waiting-msg").classList.add("hidden");
+      show("waiting-room");
+      startWaitingPoll();
+    });
+
+    // Join room
+    document.getElementById("join-btn").addEventListener("click", async () => {
+      const code = document.getElementById("join-code").value.trim().toUpperCase();
+      if (code.length !== 6) return showError("Enter a 6-character code");
+      const res = await fetch(`/api/room/join/${code}`, {method:"POST"});
+      if (!res.ok) return showError("Room not found");
+      const data = await res.json();
+      roomCode = data.code;
+      playerName = data.player_name;
+      isHost = false;
+      document.getElementById("room-code-display").textContent = roomCode;
+      show("waiting-room");
+      startWaitingPoll();
+    });
+
+    function startWaitingPoll() {
+      clearInterval(pollTimer);
+      pollTimer = setInterval(async () => {
+        const res = await fetch(`/api/room/state/${roomCode}`);
+        if (!res.ok) return;
+        const state = await res.json();
+        // Update player list
+        const list = document.getElementById("players-list");
+        list.innerHTML = Object.keys(state.players).map(p =>
+          `<span class="player-pill">${p === playerName ? "⭐ " : ""}${p}</span>`
+        ).join("");
+        // If started, fetch questions and begin
+        if (state.started) {
+          clearInterval(pollTimer);
+          await loadSession();
+        }
+      }, 2000);
+    }
+
+    // Start session (host only)
+    document.getElementById("start-btn").addEventListener("click", async () => {
+      await fetch(`/api/room/start/${roomCode}`, {method:"POST"});
+      clearInterval(pollTimer);
+      await loadSession();
+    });
+
+    async function loadSession() {
+      const subject = document.getElementById("subject-select")?.value || "chemistry";
+      const res = await fetch(`/api/questions/${subject}?limit=10`);
+      questions = await res.json();
+      currentQ = 0;
+      myScore = 0;
+      show("session");
+      renderQuestion();
+      startSessionPoll();
+    }
+
+    function renderQuestion() {
+      if (currentQ >= questions.length) {
+        document.getElementById("question-card").classList.add("hidden");
+        document.getElementById("q-done").classList.remove("hidden");
+        return;
+      }
+      const q = questions[currentQ];
+      document.getElementById("q-num").textContent = `Question ${currentQ + 1} of ${questions.length}`;
+      document.getElementById("q-text").textContent = q.question;
+      document.getElementById("q-explanation").classList.add("hidden");
+      document.getElementById("q-explanation").innerHTML = "";
+
+      const choicesEl = document.getElementById("q-choices");
+      choicesEl.innerHTML = q.choices.map(c =>
+        `<button class="choice-btn" data-val="${c}">${c}</button>`
+      ).join("");
+
+      choicesEl.querySelectorAll(".choice-btn").forEach(btn => {
+        btn.addEventListener("click", () => handleAnswer(btn.dataset.val, q));
+      });
+    }
+
+    async function handleAnswer(answer, q) {
+      // Disable all buttons
+      document.querySelectorAll(".choice-btn").forEach(b => {
+        b.disabled = true;
+        if (b.dataset.val === q.answer) b.classList.add("correct");
+        else if (b.dataset.val === answer && answer !== q.answer) b.classList.add("wrong");
+      });
+
+      const correct = answer === q.answer;
+      if (correct) myScore++;
+
+      // Post to room
+      await fetch("/api/room/answer", {
+        method: "POST",
+        headers: {"Content-Type":"application/json"},
+        body: JSON.stringify({code: roomCode, player_name: playerName, answer})
+      });
+
+      // Show explanation if available
+      if (q.explanation) {
+        const expl = document.getElementById("q-explanation");
+        expl.innerHTML = `<div class="${correct ? "explanation correct" : "explanation wrong"}">${correct ? "✅" : "❌"} ${q.explanation}</div>`;
+        expl.classList.remove("hidden");
+      }
+
+      // Advance after 1.5s
+      setTimeout(() => {
+        currentQ++;
+        renderQuestion();
+      }, 1500);
+    }
+
+    function startSessionPoll() {
+      clearInterval(pollTimer);
+      pollTimer = setInterval(async () => {
+        const res = await fetch(`/api/room/state/${roomCode}`);
+        if (!res.ok) return;
+        const state = await res.json();
+        renderLeaderboard(state.players, document.getElementById("leaderboard-list"));
+        // End when current_q reaches total
+        if (state.current_q >= state.total_q) {
+          clearInterval(pollTimer);
+          setTimeout(() => showResults(state.players), 1000);
+        }
+      }, 3000);
+    }
+
+    function renderLeaderboard(players, el) {
+      const sorted = Object.entries(players).sort((a,b) => b[1]-a[1]);
+      el.innerHTML = sorted.map(([name, score], i) => {
+        const medal = i === 0 ? "🥇" : i === 1 ? "🥈" : i === 2 ? "🥉" : `${i+1}.`;
+        return `<div class="leaderboard-row${name===playerName?" me":""}">
+          <span class="leaderboard-rank">${medal}</span>
+          <span class="leaderboard-name">${name}</span>
+          <span class="leaderboard-score">${score} pts</span>
+        </div>`;
+      }).join("");
+    }
+
+    function showResults(players) {
+      clearInterval(pollTimer);
+      show("results");
+      const el = document.getElementById("final-leaderboard");
+      renderLeaderboard(players, el);
+      const sorted = Object.entries(players).sort((a,b) => b[1]-a[1]);
+      if (sorted.length && sorted[0][1] > 0) {
+        const winner = sorted[0][0];
+        const cel = document.getElementById("winner-celebration");
+        cel.textContent = `🎉 ${winner} wins with ${sorted[0][1]} points!`;
+        cel.classList.remove("hidden");
+      }
+    }
+  </script>
+</body>
+</html>
